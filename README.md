@@ -7,3 +7,5 @@
 </h1>
 
 <h4 align="center">Luau bindings for .NET</h4>
+
+**ONLY WORKS ON LINUX FOR NOW**
