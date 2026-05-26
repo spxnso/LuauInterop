@@ -600,19 +600,19 @@ namespace Luau.Native
 
         [LibraryImport(LuauLibraryName)]
         [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
-        internal static partial IntPtr luaL_newstate();
+        public static partial IntPtr luaL_newstate();
 
         [LibraryImport(LuauLibraryName)]
         [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
-        internal static partial void luaL_openlibs(lua_State L);
+        public static partial void luaL_openlibs(lua_State L);
 
         [LibraryImport(LuauLibraryName)]
         [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
-        internal static partial IntPtr luau_compile(IntPtr source, UIntPtr size, IntPtr options, out UIntPtr outsize);
+        public static partial IntPtr luau_compile(IntPtr source, UIntPtr size, IntPtr options, out UIntPtr outsize);
 
         [LibraryImport("libc", EntryPoint = "free")]
         [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
-        internal static partial void free(IntPtr ptr);
+        public static partial void free(IntPtr ptr);
 
         #region Library functions
 
