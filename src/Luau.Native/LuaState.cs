@@ -190,7 +190,7 @@ namespace Luau.Native
         public bool GetReadonly(int idx) => NativeMethods.lua_getreadonly(Handle, idx) != 0;
         public void SetSafeEnv(int idx, bool enabled) => NativeMethods.lua_setsafeenv(Handle, idx, enabled ? 1 : 0);
         public int GetMetatable(int objindex) => NativeMethods.lua_getmetatable(Handle, objindex);
-        public void GetFEnv(int idx) => NativeMethods.lua_getfenv(Handle, idx);
+        public void GetFenv(int idx) => NativeMethods.lua_getfenv(Handle, idx);
         #endregion
 
         #region Set functions
@@ -201,7 +201,7 @@ namespace Luau.Native
         public void RawSetI(int idx, int n) => NativeMethods.lua_rawseti(Handle, idx, n);
         public void RawSetPTagged(int idx, IntPtr p, int tag) => NativeMethods.lua_rawsetptagged(Handle, idx, p, tag);
         public int SetMetatable(int objindex) => NativeMethods.lua_setmetatable(Handle, objindex);
-        public int SetFEnv(int idx) => NativeMethods.lua_setfenv(Handle, idx);
+        public int SetFenv(int idx) => NativeMethods.lua_setfenv(Handle, idx);
         #endregion
 
         #region Load and call
