@@ -480,6 +480,3 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
-
-# Test application
-src/Luau.Console
