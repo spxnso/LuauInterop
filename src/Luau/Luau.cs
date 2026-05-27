@@ -7,6 +7,7 @@ using Luau.Runtime;
 
 namespace Luau
 {
+    // TODO: XML documentation for all public members
     public class Luau : IDisposable
     {
         public LuaState State { get; private set; }
@@ -65,7 +66,7 @@ namespace Luau
                 State = default;
             }
         }
-        
+
         public LuauChunk Compile(string chunk, LuauCompileOptions? options = null)
         {
             return LuauCompiler.Compile(chunk, options);
