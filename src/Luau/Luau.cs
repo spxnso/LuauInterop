@@ -11,6 +11,8 @@ namespace Luau
     {
         public LuaState State { get; private set; }
 
+        public bool IsDisposed { get; private set; }
+
         public Luau()
         {
             State = new(NativeMethods.luaL_newstate());
@@ -23,21 +25,26 @@ namespace Luau
             get
             {
                 ThrowIfDisposed();
-                State.GetGlobal(name);
-                var value = GetObject(-1);
-                Pop(1);
-                return value;
+
+                try
+                {
+                    State.GetGlobal(name);
+                    var value = GetObject(-1);
+                    return value;
+                }
+                finally
+                {
+                    Pop(1);
+                }
             }
             set
             {
                 ThrowIfDisposed();
+
                 PushObject(value);
                 State.SetGlobal(name);
             }
         }
-
-        ~Luau() => Dispose(false);
-
 
         public void Dispose()
         {
@@ -47,13 +54,18 @@ namespace Luau
 
         protected virtual void Dispose(bool disposing)
         {
+            if (IsDisposed)
+                return;
+
+            IsDisposed = true;
+
             if (!State.IsNull)
             {
                 State.Close();
                 State = default;
             }
         }
-
+        
         public LuauChunk Compile(string chunk, LuauCompileOptions? options = null)
         {
             return LuauCompiler.Compile(chunk, options);
@@ -143,8 +155,8 @@ namespace Luau
                 case LuauType.Integer:
                     return State.ToInteger64(index, out _);
                 case LuauType.String:
-                    IntPtr ptr = State.ToLString(index, out _);
-                    string? s = ptr == IntPtr.Zero ? null : Marshal.PtrToStringUTF8(ptr);
+                    IntPtr ptr = State.ToLString(index, out UIntPtr len);
+                    string? s = ptr == IntPtr.Zero ? null : Marshal.PtrToStringUTF8(ptr, (int)len);
                     return new LuauValue(LuauType.String, number: 0, integer: 0, reference: s);
                 case LuauType.Function:
                     int reference = State.Ref(index);
@@ -218,6 +230,9 @@ namespace Luau
         {
             if (value is LuauBase luauBase)
             {
+                if (!ReferenceEquals(luauBase.Owner, this))
+                    throw new InvalidOperationException("Cross-VM usage is not allowed.");
+
                 luauBase.PushReference();
                 return;
             }
@@ -328,7 +343,7 @@ namespace Luau
 
         private void ThrowIfDisposed()
         {
-            if (State.IsNull)
+            if (State.IsNull || IsDisposed)
                 throw new ObjectDisposedException(nameof(Luau));
         }
     }
