@@ -195,6 +195,19 @@ namespace Luau
             State.OpenLibraries();
         }
 
+        public int OpenBase() => State.OpenBase();
+        public int OpenCoroutine() => State.OpenCoroutine();
+        public int OpenTable() => State.OpenTable();
+        public int OpenOS() => State.OpenOS();
+        public int OpenString() => State.OpenString();
+        public int OpenBit32() => State.OpenBit32();
+        public int OpenBuffer() => State.OpenBuffer();
+        public int OpenUtf8() => State.OpenUtf8();
+        public int OpenMath() => State.OpenMath();
+        public int OpenDebug() => State.OpenDebug();
+        public int OpenVector() => State.OpenVector();
+        public int OpenInteger() => State.OpenInteger();
+
         public void Pop(int n)
         {
             ThrowIfDisposed();
