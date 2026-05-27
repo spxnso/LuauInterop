@@ -1,21 +1,24 @@
 ﻿using System;
-using System.IO;
-using System.Runtime.InteropServices;
 using System.Text;
-using Luau.Native;
+using Luau;
 
-class Program {
-    static void Main(string[] args) {
-        LuaState L = new(NativeMethods.luaL_newstate());
+class Program
+{
+    static void Main(string[] args)
+    {
+        using var state = new Luau.Luau();
 
-        try {
-            L.OpenLibraries();
+        try
+        {
+            state.OpenLibraries();
+            state.State.Sandbox();
 
-            // Awesome stuff here.
-        } catch (Exception ex) {
+            state.DoString(File.ReadAllText("input.luau"));
+
+        }
+        catch (Luau.LuauException ex)
+        {
             Console.WriteLine($"Error: {ex.Message}");
-        } finally {
-            L.Close();
         }
     }
-};
+}
