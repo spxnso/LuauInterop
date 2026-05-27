@@ -483,3 +483,6 @@ $RECYCLE.BIN/
 
 # Build files
 build
+
+# Glue file
+glue.c
