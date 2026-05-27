@@ -4,9 +4,10 @@ namespace Luau
 {
     public abstract class LuauBase(Luau owner, int reference) : IDisposable
     {
-        public Luau Owner { get; set; } = owner;
-        public bool IsDisposed { get; set; }
-        public int Reference { get; set; } = reference;
+        public Luau Owner { get; } = owner;
+        public int Reference { get; } = reference;
+
+        public bool IsDisposed { get; private set; }
 
         ~LuauBase()
         {
@@ -32,8 +33,10 @@ namespace Luau
 
         protected void ThrowIfDisposed()
         {
-            if (IsDisposed || Owner.State.IsNull)
-                throw new ObjectDisposedException(GetType().Name);
+            ObjectDisposedException.ThrowIf(
+                IsDisposed || Owner.State.IsNull,
+                GetType().Name
+            );
         }
 
         internal protected void PushReference()
