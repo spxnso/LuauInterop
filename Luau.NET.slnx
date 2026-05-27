@@ -4,4 +4,7 @@
     <Project Path="src/Luau.Native/Luau.Native.csproj" />
     <Project Path="src/Luau/Luau.csproj" />
   </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Luau.Tests/Luau.Tests.csproj" />
+  </Folder>
 </Solution>
