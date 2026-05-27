@@ -34,10 +34,9 @@ namespace Luau.Compilation
                 return new LuauChunk(bytecode, outsize);
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Console.WriteLine("An error occurred during compilation.");
-                throw new LuauException("An error occurred during compilation.");
+                throw new LuauException("An error occurred during compilation.", ex);
             }
             finally
             {
