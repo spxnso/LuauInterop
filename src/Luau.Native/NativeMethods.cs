@@ -226,7 +226,7 @@ namespace Luau.Native
         [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
         public static partial void lua_pushinteger(lua_State L, int n);
 
-        [LibraryImport(LuauLibraryName, StringMarshalling = StringMarshalling.Utf8)]
+        [LibraryImport(LuauLibraryName)]
         [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
         public static partial void lua_pushinteger64(lua_State L, long n);
 
@@ -663,6 +663,17 @@ namespace Luau.Native
         [LibraryImport(LuauLibraryName, StringMarshalling = StringMarshalling.Utf8)]
         [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
         public static partial int luaopen_integer(lua_State L);
+        #endregion
+
+        #region Sandboxing functions
+        [LibraryImport(LuauLibraryName, StringMarshalling = StringMarshalling.Utf8)]
+        [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+        public static partial void luaL_sandbox(lua_State L);
+
+        [LibraryImport(LuauLibraryName, StringMarshalling = StringMarshalling.Utf8)]
+        [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+        public static partial void luaL_sandboxthread(lua_State L);
+        
         #endregion
     }
 }
