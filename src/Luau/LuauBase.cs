@@ -9,11 +9,6 @@ namespace Luau
 
         public bool IsDisposed { get; private set; }
 
-        ~LuauBase()
-        {
-            Dispose(false);
-        }
-
         public void Dispose()
         {
             Dispose(true);
