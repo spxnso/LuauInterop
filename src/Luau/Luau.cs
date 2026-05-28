@@ -313,38 +313,21 @@ namespace Luau
 
             LuauType type = (LuauType)State.Type(index);
 
-            switch (type)
+            return type switch
             {
-                case LuauType.Nil:
-                    return null;
-                case LuauType.Boolean:
-                    return State.ToBoolean(index);
-                case LuauType.Number:
-                    return State.ToNumber(index);
-                case LuauType.Integer:
-                    return State.ToInteger64(index, out _);
-                case LuauType.String:
-                    IntPtr ptr = State.ToLString(index, out _);
-                    return ptr == IntPtr.Zero ? null : Marshal.PtrToStringUTF8(ptr);
-                case LuauType.Function:
-                    int reference = State.Ref(index);
-                    return new LuauFunction(this, reference);
-                case LuauType.Table:
-                    int tableReference = State.Ref(index);
-                    return new LuauTable(this, tableReference);
-                case LuauType.UserData:
-                    int userdataReference = State.Ref(index);
-                    return new LuauUserData(this, userdataReference);
-                case LuauType.Vector:
-                    return ReadVector(index);
-                case LuauType.Buffer:
-                    return ReadBuffer(index);
-                case LuauType.Thread:
-                    int threadReference = State.Ref(index);
-                    return new LuauThread(this, threadReference);
-                default:
-                    throw new NotSupportedException($"Unsupported Lua type: {type}");
-            }
+                LuauType.Nil => null,
+                LuauType.Boolean => State.ToBoolean(index),
+                LuauType.Number => State.ToNumber(index),
+                LuauType.Integer => State.ToInteger64(index, out _),
+                LuauType.String => Marshal.PtrToStringUTF8(State.ToLString(index, out _)),
+                LuauType.Function => new LuauFunction(this, State.Ref(index)),
+                LuauType.Table => new LuauTable(this, State.Ref(index)),
+                LuauType.UserData => new LuauUserData(this, State.Ref(index)),
+                LuauType.Vector => ReadVector(index),
+                LuauType.Buffer => ReadBuffer(index),
+                LuauType.Thread => new LuauThread(this, State.Ref(index)),
+                _ => throw new NotSupportedException($"Unsupported Luau type: {type}")
+            };
         }
 
         private LuauVector ReadVector(int index)
