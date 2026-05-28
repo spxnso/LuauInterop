@@ -6,13 +6,8 @@
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 
-
     <PackageId>LuauInterop.Native</PackageId>
-    <Version>1.0.0</Version>
-    <Authors>spxnso</Authors>
     <Description>Native runtime libraries for LuauInterop.</Description>
-    <RepositoryUrl>https://github.com/spxnso/LuauInterop</RepositoryUrl>
-    <PackageLicense>MIT</PackageLicense>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
