@@ -5,8 +5,6 @@ set "SCRIPT_DIR=%~dp0"
 
 for %%I in ("%SCRIPT_DIR%..") do set "ROOT=%%~fI"
 
-echo // hi luau > "%ROOT%\glue.c"
-
 set "BUILD_DIR=%ROOT%\build"
 
 if exist "%BUILD_DIR%" rmdir /s /q "%BUILD_DIR%"
@@ -31,4 +29,3 @@ echo Done! luau.dll copied to %OUT_DIR%
 :: Cleanup
 cd /d "%ROOT%"
 rmdir /s /q "%BUILD_DIR%"
-del "%ROOT%\glue.c"

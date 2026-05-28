@@ -1,5 +1,4 @@
 #!/bin/bash
-
 set -e
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -11,9 +10,6 @@ else
     LIB_NAME="libluau.so"
     JOBS=$(nproc)
 fi
-
-# Create an empty glue.c file because it is required by CMakeLists.txt
-echo "// hi luau" > glue.c
 
 # Build
 rm -rf build
@@ -30,4 +26,3 @@ echo "Done! $LIB_NAME copied to src/Luau.Native/runtimes/$PLATFORM/native/"
 # Cleanup
 cd ..
 rm -rf build
-rm glue.c

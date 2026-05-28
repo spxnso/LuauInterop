@@ -187,3 +187,6 @@ EXPORTS
     ; Sandboxing
     luaL_sandbox
     luaL_sandboxthread
+
+    ; Memory
+    lua_free
