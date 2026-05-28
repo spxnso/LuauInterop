@@ -1,82 +1,32 @@
-<h1 align="center">
-  <br>
-    <img src="./assets/icon.png" width="200" />
-  <br>
-      LuauInterop
-  <br>
-</h1>
+![LuauInterop](assets/icon-200x200.png)
 
-<h4 align="center">Luau bindings for .NET</h4>
+# LuauInterop
 
-Bridge between Luau and DotNet. **LuauInterop** allows you to use [Luau](https://luau.org) directly from C#.
+Luau bindings for .NET
 
-> ⚠️ **Status**: This project is still in active development.
->
-> This project is not meant to be published on a package manager until it becomes stable, as we are still looking for bugs and potential memory leaks.
+[![NuGet](https://img.shields.io/nuget/v/LuauInterop.svg)](https://www.nuget.org/packages/LuauInterop)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/LuauInterop.svg)](https://www.nuget.org/packages/LuauInterop)
+[![CI](https://github.com/spxnso/LuauInterop/actions/workflows/ci.yml/badge.svg)](https://github.com/spxnso/LuauInterop/actions/workflows/ci.yml)
+[![License](https://img.shields.io/github/license/spxnso/LuauInterop.svg)](https://github.com/spxnso/LuauInterop/blob/master/LICENSE)
+
+---
+
+Luau bindings for .NET. Run Luau scripts, compile bytecode, and interact with the Luau VM directly from C#.
 
 ## Installation
 
-Clone the repository and build from source:
-
 ```bash
-git clone https://github.com/spxnso/Luau.NET.git
-cd Luau.NET
+dotnet add package LuauInterop
+dotnet add package LuauInterop.Native
 ```
 
-## Getting Started
-
-### Creating a Luau State
+## Quick Start
 
 ```csharp
-using LuauInterop;
+using var luau = new Luau.Luau();
+luau.OpenLibraries();
 
-// Create a new Luau state
-var luau = new Luau();
-
-// Don't forget to dispose when done
-using (luau) 
-{
-    // Your code here
-}
+var results = luau.DoString("return 1 + 1");
+Console.WriteLine(results[0]); // 2
 ```
 
-### Executing Luau Code
-
-```csharp
-using LuauInterop;
-
-using (var luau = new Luau())
-{
-    // Execute a simple expression
-    var result = luau.DoString("return 10 + 3 * (5 + 2)");
-    double sum = (double)result[0]; // 55
-}
-```
-
-### Opening Standard Libraries
-
-Luau provides various standard libraries. Open them before using:
-
-```csharp
-using (var luau = new Luau())
-{
-    // Open all standard libraries
-    luau.OpenLibraries();
-    
-    // Or open specific libraries
-    // luau.OpenBase();
-    // luau.OpenString();
-    // luau.OpenMath();
-    // luau.OpenTable();
-    // luau.OpenCoroutine();
-    // etc.
-}
-```
-
-I will add documentation soon.
-
-## License
-
-LuauInterop is licensed under the MIT License. See [LICENSE](LICENSE) for details.
-
-Luau is provided under the MIT License. See [external/luau/LICENSE.txt](external/luau/LICENSE.txt) for details.
