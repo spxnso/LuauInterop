@@ -1,0 +1,42 @@
+name: Build Native
+
+on:
+  workflow_dispatch:
+  release:
+    types: [ published ]
+
+jobs:
+  build-native:
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            script: scripts/build-native.sh
+          - os: macos-latest
+            script: scripts/build-native.sh
+          - os: windows-latest
+            script: scripts/build-native.bat
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Build native (Windows)
+        if: matrix.os == 'windows-latest'
+        run: scripts/build-native.bat
+
+      - name: Build native (Unix)
+        if: matrix.os != 'windows-latest'
+        run: |
+          chmod +x ${{ matrix.script }}
+          ${{ matrix.script }}
+
+      - name: Upload native artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: native-${{ matrix.os }}
+          path: src/Luau.Native/runtimes/
+          retention-days: 30
