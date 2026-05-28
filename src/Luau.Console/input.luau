@@ -1,2 +1,1 @@
-local msg = "Hello, C#"
-print(msg)
+print("Hello, Dotnet!")
