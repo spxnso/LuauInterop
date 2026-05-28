@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/spxnso/LuauInterop/compare/v1.0.0...v1.0.1) (2026-05-28)
+
+
+### Bug Fixes
+
+* add `submodules` to publish job ([e1b48bd](https://github.com/spxnso/LuauInterop/commit/e1b48bdedec37e910e9e6074e000387833e2e456))
+
 ## 1.0.0 (2026-05-28)
 
 
