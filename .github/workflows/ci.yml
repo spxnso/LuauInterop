@@ -20,12 +20,6 @@ jobs:
         with:
           dotnet-version: 10.x
 
-      - name: Download native artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: native-ubuntu-latest
-          path: src/Luau.Native/runtimes/
-
       - name: Restore
         run: dotnet restore
 
