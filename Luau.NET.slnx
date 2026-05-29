@@ -1,9 +1,9 @@
 <Solution>
   <Folder Name="/src/">
-    <Project Path="src/Luau.Native/Luau.Native.csproj" />
-    <Project Path="src/Luau/Luau.csproj" />
+    <Project Path="src/LuauInterop.Native/LuauInterop.Native.csproj" />
+    <Project Path="src/LuauInterop/LuauInterop.csproj" />
   </Folder>
   <Folder Name="/tests/">
-    <Project Path="tests/Luau.Tests/Luau.Tests.csproj" />
+    <Project Path="tests/LuauInterop.Tests/LuauInterop.Tests.csproj" />
   </Folder>
 </Solution>
