@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.2](https://github.com/spxnso/LuauInterop/compare/v1.0.1...v1.0.2) (2026-05-29)
+
+
+### Bug Fixes
+
+* add README.md to package inclusion ([85adf4f](https://github.com/spxnso/LuauInterop/commit/85adf4fce33501d44792bb47f27284b437ded76c))
+* change path to `docfx.json` and `_site` ([5e73f07](https://github.com/spxnso/LuauInterop/commit/5e73f07b3be495ede902f7dff92af332c0b4d3af))
+* disable assembly info generation ([e0522b1](https://github.com/spxnso/LuauInterop/commit/e0522b14da35def99ad347151181444d12a2e8e9))
+
 ## [1.0.1](https://github.com/spxnso/LuauInterop/compare/v1.0.0...v1.0.1) (2026-05-28)
 
 
