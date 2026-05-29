@@ -677,7 +677,13 @@ public static partial class NativeMethods
     public static partial void luaL_sandboxthread(lua_State L);
     #endregion
 
+    #region FFlags
     [LibraryImport(LuauLibraryName, StringMarshalling = StringMarshalling.Utf8)]
     [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
     public static partial void luau_setfflag(string name, int value);
+
+    [LibraryImport(LuauLibraryName, StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+    public static partial int luau_getfflag(string name);
+    #endregion
 }

@@ -229,6 +229,17 @@ public class Luau : IDisposable
     }
 
     /// <summary>
+    /// Gets the value of an FFlag in the Luau VM.
+    /// </summary>
+    /// <param name="name">The name of the FFlag to get.</param>
+    /// <returns><see langword="true"/> if the FFlag is enabled, or <see langword="false"/> if it is disabled.</returns>
+    public bool GetFFlag(string name)
+    {
+        ThrowIfDisposed();
+        return NativeMethods.luau_getfflag(name) != 0;
+    }
+
+    /// <summary>
     /// Gets the value at the specified index on the stack.
     /// </summary>
     /// <param name="index">The index of the value to get.</param>
