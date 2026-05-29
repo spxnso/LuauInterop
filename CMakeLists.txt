@@ -11,7 +11,11 @@ set(LUAU_BUILD_WEB OFF CACHE BOOL "" FORCE)
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/external/luau)
 
-add_library(luau SHARED ${CMAKE_SOURCE_DIR}/glue.c)
+add_library(luau SHARED ${CMAKE_SOURCE_DIR}/glue.cpp)
+
+target_include_directories(luau PRIVATE
+    ${CMAKE_SOURCE_DIR}/external/luau/Common/include
+)
 
 target_link_libraries(luau PRIVATE
     Luau.VM
