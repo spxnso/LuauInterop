@@ -9,15 +9,18 @@ jobs:
   build-native:
     permissions:
       contents: write
+
     strategy:
       matrix:
         include:
           - os: ubuntu-24.04
-            script: scripts/build-native.sh
+            script: scripts/build-linux-x64.sh
+
           - os: macos-latest
-            script: scripts/build-native.sh
+            script: scripts/build-macos-x64.sh
+
           - os: windows-latest
-            script: scripts/build-native.bat
+            script: scripts/build-win-x64.ps1
 
     runs-on: ${{ matrix.os }}
 
@@ -28,22 +31,28 @@ jobs:
 
       - name: Build native (Windows)
         if: matrix.os == 'windows-latest'
-        run: scripts/build-native.bat
+        shell: pwsh
+        run: ./${{ matrix.script }}
 
       - name: Build native (Unix)
         if: matrix.os != 'windows-latest'
+
         run: |
           chmod +x ${{ matrix.script }}
-          ${{ matrix.script }}
+          ./${{ matrix.script }}
 
       - name: Commit native libs
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/Luau.Native/runtimes/
+
+          git add src/LuauInterop.Native/runtimes/
+
           git diff --cached --quiet && echo "No changes" && exit 0
+
           git commit -m "chore: update native libs [${{ matrix.os }}]"
+
           for i in 1 2 3 4 5; do
             git pull --rebase && git push && break || sleep $((i * 5))
           done

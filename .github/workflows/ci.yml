@@ -20,8 +20,8 @@ jobs:
 
       - name: Build native
         run: |
-          chmod +x scripts/build-native.sh
-          scripts/build-native.sh
+          chmod +x scripts/build-linux-x64.sh
+          scripts/build-linux-x64.sh
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
