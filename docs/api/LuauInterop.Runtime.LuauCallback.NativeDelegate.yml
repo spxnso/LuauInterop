@@ -1,0 +1,105 @@
+### YamlMime:ManagedReference
+items:
+- uid: LuauInterop.Runtime.LuauCallback.NativeDelegate
+  commentId: T:LuauInterop.Runtime.LuauCallback.NativeDelegate
+  id: LuauCallback.NativeDelegate
+  parent: LuauInterop.Runtime
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: LuauCallback.NativeDelegate
+  nameWithType: LuauCallback.NativeDelegate
+  fullName: LuauInterop.Runtime.LuauCallback.NativeDelegate
+  type: Delegate
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauCallback.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: NativeDelegate
+    path: ../src/LuauInterop/Runtime/LuauCallback.cs
+    startLine: 33
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  summary: The native delegate that wraps the managed function.
+  example: []
+  syntax:
+    content: public delegate int LuauCallback.NativeDelegate(LuaState state)
+    parameters:
+    - id: state
+      type: LuauInterop.Native.LuaState
+    return:
+      type: System.Int32
+    content.vb: Public Delegate Function LuauCallback.NativeDelegate(state As LuaState) As Integer
+references:
+- uid: LuauInterop.Runtime
+  commentId: N:LuauInterop.Runtime
+  href: LuauInterop.html
+  name: LuauInterop.Runtime
+  nameWithType: LuauInterop.Runtime
+  fullName: LuauInterop.Runtime
+  spec.csharp:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Runtime
+    name: Runtime
+    href: LuauInterop.Runtime.html
+  spec.vb:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Runtime
+    name: Runtime
+    href: LuauInterop.Runtime.html
+- uid: LuauInterop.Native.LuaState
+  commentId: T:LuauInterop.Native.LuaState
+  parent: LuauInterop.Native
+  href: LuauInterop.Native.LuaState.html
+  name: LuaState
+  nameWithType: LuaState
+  fullName: LuauInterop.Native.LuaState
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: LuauInterop.Native
+  commentId: N:LuauInterop.Native
+  href: LuauInterop.html
+  name: LuauInterop.Native
+  nameWithType: LuauInterop.Native
+  fullName: LuauInterop.Native
+  spec.csharp:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Native
+    name: Native
+    href: LuauInterop.Native.html
+  spec.vb:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Native
+    name: Native
+    href: LuauInterop.Native.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

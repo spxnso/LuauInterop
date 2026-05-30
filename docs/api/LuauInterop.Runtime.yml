@@ -4,8 +4,12 @@ items:
   commentId: N:LuauInterop.Runtime
   id: LuauInterop.Runtime
   children:
+  - LuauInterop.Runtime.LuauCallback
+  - LuauInterop.Runtime.LuauCallback.NativeDelegate
   - LuauInterop.Runtime.LuauCoStatus
+  - LuauInterop.Runtime.LuauDelegate
   - LuauInterop.Runtime.LuauGCOperation
+  - LuauInterop.Runtime.LuauLibrary
   - LuauInterop.Runtime.LuauStatus
   - LuauInterop.Runtime.LuauThread
   langs:
@@ -18,6 +22,36 @@ items:
   assemblies:
   - LuauInterop
 references:
+- uid: LuauInterop.Runtime.LuauCallback
+  commentId: T:LuauInterop.Runtime.LuauCallback
+  parent: LuauInterop.Runtime
+  href: LuauInterop.Runtime.LuauCallback.html
+  name: LuauCallback
+  nameWithType: LuauCallback
+  fullName: LuauInterop.Runtime.LuauCallback
+- uid: LuauInterop.Runtime.LuauCallback.NativeDelegate
+  commentId: T:LuauInterop.Runtime.LuauCallback.NativeDelegate
+  parent: LuauInterop.Runtime
+  href: LuauInterop.Runtime.LuauCallback.html
+  name: LuauCallback.NativeDelegate
+  nameWithType: LuauCallback.NativeDelegate
+  fullName: LuauInterop.Runtime.LuauCallback.NativeDelegate
+  spec.csharp:
+  - uid: LuauInterop.Runtime.LuauCallback
+    name: LuauCallback
+    href: LuauInterop.Runtime.LuauCallback.html
+  - name: .
+  - uid: LuauInterop.Runtime.LuauCallback.NativeDelegate
+    name: NativeDelegate
+    href: LuauInterop.Runtime.LuauCallback.NativeDelegate.html
+  spec.vb:
+  - uid: LuauInterop.Runtime.LuauCallback
+    name: LuauCallback
+    href: LuauInterop.Runtime.LuauCallback.html
+  - name: .
+  - uid: LuauInterop.Runtime.LuauCallback.NativeDelegate
+    name: NativeDelegate
+    href: LuauInterop.Runtime.LuauCallback.NativeDelegate.html
 - uid: LuauInterop.Runtime.LuauCoStatus
   commentId: T:LuauInterop.Runtime.LuauCoStatus
   parent: LuauInterop.Runtime
@@ -25,6 +59,12 @@ references:
   name: LuauCoStatus
   nameWithType: LuauCoStatus
   fullName: LuauInterop.Runtime.LuauCoStatus
+- uid: LuauInterop.Runtime.LuauDelegate
+  commentId: T:LuauInterop.Runtime.LuauDelegate
+  href: LuauInterop.Runtime.LuauDelegate.html
+  name: LuauDelegate
+  nameWithType: LuauDelegate
+  fullName: LuauInterop.Runtime.LuauDelegate
 - uid: LuauInterop.Runtime.LuauGCOperation
   commentId: T:LuauInterop.Runtime.LuauGCOperation
   parent: LuauInterop.Runtime
@@ -32,6 +72,13 @@ references:
   name: LuauGCOperation
   nameWithType: LuauGCOperation
   fullName: LuauInterop.Runtime.LuauGCOperation
+- uid: LuauInterop.Runtime.LuauLibrary
+  commentId: T:LuauInterop.Runtime.LuauLibrary
+  parent: LuauInterop.Runtime
+  href: LuauInterop.Runtime.LuauLibrary.html
+  name: LuauLibrary
+  nameWithType: LuauLibrary
+  fullName: LuauInterop.Runtime.LuauLibrary
 - uid: LuauInterop.Runtime.LuauStatus
   commentId: T:LuauInterop.Runtime.LuauStatus
   parent: LuauInterop.Runtime

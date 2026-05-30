@@ -83,7 +83,7 @@ luau.DoString(@"
 var co = luau["co"] as LuauThread;
 using (co)
 {
-    var r1 = co.Resume((double)10); // Don't forget to cast to double!
+    var r1 = co.Resume(10); // Don't forget to cast to double!
     Console.WriteLine(r1[0]); // 11
 
     var r2 = co.Resume();
@@ -110,6 +110,21 @@ var results = luau.DoString(@"
 ");
 
 Console.WriteLine(results[0]);
+```
+
+## Callbacks
+
+```csharp
+luau.RegisterCallback("add", (vm, state) =>
+{
+    double a = (double)(vm.GetObject(1, state) ?? 0);
+    double b = (double)(vm.GetObject(2, state) ?? 0);
+    state.PushNumber(a + b);
+    return 1; // number of return values
+});
+
+var results = luau.DoString("return add(10, 20)");
+Console.WriteLine(results[0]); // 30
 ```
 
 ## Error Handling

@@ -26,18 +26,18 @@ fn.Call();
 Passing a reference-backed object to a different `Luau` instance throws `InvalidOperationException`:
 
 ```csharp
-using var luauA = new Luau.Luau();
-using var luauB = new Luau.Luau();
+using var luauA = new Luau();
+using var luauB = new Luau();
 
 luauA.DoString("function f() end");
 var fn = luauA["f"] as LuauFunction;
 
-luauB["f"] = fn; // throws — cross-VM usage is not allowed
+luauB["f"] = fn; // cross-VM usage is not allowed
 ```
 
 ## VM Disposal
 
-Disposing the `Luau` instance closes the native state. Any wrappers still alive after that are inert — their `IsDisposed` flag reflects the owner's disposal state.
+Disposing the `Luau` instance closes the native state.
 
 ```csharp
 var fn = luau["myFunc"] as LuauFunction;

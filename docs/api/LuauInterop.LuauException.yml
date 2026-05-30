@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauException.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: LuauException
     path: ../src/LuauInterop/LuauException.cs
@@ -67,7 +67,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauException.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: .ctor
     path: ../src/LuauInterop/LuauException.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauException.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: .ctor
     path: ../src/LuauInterop/LuauException.cs

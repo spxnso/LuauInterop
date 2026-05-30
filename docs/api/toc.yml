@@ -68,16 +68,38 @@ items:
   name: LuauInterop.Runtime
   type: Namespace
   items:
+  - uid: LuauInterop.Runtime.LuauCallback
+    name: LuauCallback
+    type: Class
+  - uid: LuauInterop.Runtime.LuauCallback.NativeDelegate
+    name: LuauCallback.NativeDelegate
+    type: Delegate
   - uid: LuauInterop.Runtime.LuauCoStatus
     name: LuauCoStatus
     type: Enum
+  - uid: LuauInterop.Runtime.LuauDelegate
+    name: LuauDelegate
+    type: Class
   - uid: LuauInterop.Runtime.LuauGCOperation
     name: LuauGCOperation
+    type: Enum
+  - uid: LuauInterop.Runtime.LuauLibrary
+    name: LuauLibrary
     type: Enum
   - uid: LuauInterop.Runtime.LuauStatus
     name: LuauStatus
     type: Enum
   - uid: LuauInterop.Runtime.LuauThread
     name: LuauThread
+    type: Class
+- uid: LuauInterop.Sandbox
+  name: LuauInterop.Sandbox
+  type: Namespace
+  items:
+  - uid: LuauInterop.Sandbox.LuauSandbox
+    name: LuauSandbox
+    type: Class
+  - uid: LuauInterop.Sandbox.LuauSandboxOptions
+    name: LuauSandboxOptions
     type: Class
 memberLayout: SamePage

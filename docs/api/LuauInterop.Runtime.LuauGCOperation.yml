@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauGCOperation.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: LuauGCOperation
     path: ../src/LuauInterop/Runtime/LuauGCOperation.cs
@@ -50,7 +50,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauGCOperation.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Stop
     path: ../src/LuauInterop/Runtime/LuauGCOperation.cs
@@ -76,7 +76,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauGCOperation.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Restart
     path: ../src/LuauInterop/Runtime/LuauGCOperation.cs
@@ -102,7 +102,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauGCOperation.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Collect
     path: ../src/LuauInterop/Runtime/LuauGCOperation.cs
@@ -128,7 +128,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauGCOperation.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Count
     path: ../src/LuauInterop/Runtime/LuauGCOperation.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauGCOperation.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: CountBytes
     path: ../src/LuauInterop/Runtime/LuauGCOperation.cs
@@ -180,7 +180,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauGCOperation.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: IsRunning
     path: ../src/LuauInterop/Runtime/LuauGCOperation.cs
@@ -206,7 +206,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauGCOperation.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Step
     path: ../src/LuauInterop/Runtime/LuauGCOperation.cs
@@ -232,7 +232,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauGCOperation.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: SetGoal
     path: ../src/LuauInterop/Runtime/LuauGCOperation.cs
@@ -258,7 +258,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauGCOperation.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: SetStepMultiplier
     path: ../src/LuauInterop/Runtime/LuauGCOperation.cs
@@ -284,7 +284,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauGCOperation.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: SetStepSize
     path: ../src/LuauInterop/Runtime/LuauGCOperation.cs

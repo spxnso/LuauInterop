@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Objects/LuauVector.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: LuauVector
     path: ../src/LuauInterop/Objects/LuauVector.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Objects/LuauVector.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: .ctor
     path: ../src/LuauInterop/Objects/LuauVector.cs
@@ -87,7 +87,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Objects/LuauVector.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: X
     path: ../src/LuauInterop/Objects/LuauVector.cs
@@ -116,7 +116,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Objects/LuauVector.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Y
     path: ../src/LuauInterop/Objects/LuauVector.cs
@@ -145,7 +145,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Objects/LuauVector.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Z
     path: ../src/LuauInterop/Objects/LuauVector.cs
@@ -174,7 +174,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Objects/LuauVector.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: ToString
     path: ../src/LuauInterop/Objects/LuauVector.cs

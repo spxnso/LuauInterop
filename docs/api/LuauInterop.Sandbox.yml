@@ -1,0 +1,53 @@
+### YamlMime:ManagedReference
+items:
+- uid: LuauInterop.Sandbox
+  commentId: N:LuauInterop.Sandbox
+  id: LuauInterop.Sandbox
+  children:
+  - LuauInterop.Sandbox.LuauSandbox
+  - LuauInterop.Sandbox.LuauSandboxOptions
+  langs:
+  - csharp
+  - vb
+  name: LuauInterop.Sandbox
+  nameWithType: LuauInterop.Sandbox
+  fullName: LuauInterop.Sandbox
+  type: Namespace
+  assemblies:
+  - LuauInterop.Sandbox
+references:
+- uid: LuauInterop.Sandbox.LuauSandbox
+  commentId: T:LuauInterop.Sandbox.LuauSandbox
+  href: LuauInterop.Sandbox.LuauSandbox.html
+  name: LuauSandbox
+  nameWithType: LuauSandbox
+  fullName: LuauInterop.Sandbox.LuauSandbox
+- uid: LuauInterop.Sandbox.LuauSandboxOptions
+  commentId: T:LuauInterop.Sandbox.LuauSandboxOptions
+  parent: LuauInterop.Sandbox
+  href: LuauInterop.Sandbox.LuauSandboxOptions.html
+  name: LuauSandboxOptions
+  nameWithType: LuauSandboxOptions
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions
+- uid: LuauInterop.Sandbox
+  commentId: N:LuauInterop.Sandbox
+  href: LuauInterop.html
+  name: LuauInterop.Sandbox
+  nameWithType: LuauInterop.Sandbox
+  fullName: LuauInterop.Sandbox
+  spec.csharp:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Sandbox
+    name: Sandbox
+    href: LuauInterop.Sandbox.html
+  spec.vb:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Sandbox
+    name: Sandbox
+    href: LuauInterop.Sandbox.html

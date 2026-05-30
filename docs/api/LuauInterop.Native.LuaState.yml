@@ -170,7 +170,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: LuaState
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -204,7 +204,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: .ctor
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -238,7 +238,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Handle
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -265,7 +265,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: op_Implicit
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -299,7 +299,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: op_Implicit
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -333,7 +333,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: IsNull
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -362,7 +362,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Close
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -388,7 +388,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: NewThread
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -416,7 +416,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: MainThread
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -444,7 +444,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: ResetThread
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -470,7 +470,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: IsThreadReset
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -498,7 +498,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: AbsIndex
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -532,7 +532,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: GetTop
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -560,7 +560,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: SetTop
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -592,7 +592,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: PushValue
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -624,7 +624,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Remove
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -656,7 +656,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Insert
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -688,7 +688,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Replace
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -720,7 +720,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: CheckStack
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -754,7 +754,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: RawCheckStack
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -788,7 +788,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: XMove
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -822,7 +822,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: XPush
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -856,7 +856,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: IsNumber
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -890,7 +890,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: IsString
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -924,7 +924,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: IsCFunction
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -958,7 +958,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: IsLFunction
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -992,7 +992,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: IsUserdata
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1026,7 +1026,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Type
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1060,7 +1060,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: TypeName
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1094,7 +1094,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Equal
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1130,7 +1130,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: RawEqual
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1166,7 +1166,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: LessThan
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1202,7 +1202,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: ToNumberX
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1238,7 +1238,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: ToIntegerX
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1274,7 +1274,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: ToUnsignedX
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1310,7 +1310,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: ToVector
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1344,7 +1344,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: ToBoolean
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1378,7 +1378,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: ToNumber
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1412,7 +1412,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: ToInteger64
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1448,7 +1448,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: ToLString
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1484,7 +1484,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: ToStringAtom
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1520,7 +1520,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: ToLStringAtom
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1558,7 +1558,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: NameCallAtom
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1592,7 +1592,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: ObjLen
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1626,7 +1626,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: ToCFunction
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1660,7 +1660,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: ToLightUserdata
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1694,7 +1694,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: ToLightUserdataTagged
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1730,7 +1730,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: ToUserdata
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1764,7 +1764,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: ToUserdataTagged
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1800,7 +1800,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: UserdataTag
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1834,7 +1834,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: LightUserdataTag
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1868,7 +1868,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: ToThread
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1902,7 +1902,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: ToBuffer
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1938,7 +1938,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: ToPointer
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1972,7 +1972,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: PushNil
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -1998,7 +1998,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: PushNumber
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2030,7 +2030,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: PushInteger
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2062,7 +2062,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: PushInteger64
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2094,7 +2094,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: PushUnsigned
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2126,7 +2126,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: PushVector
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2162,7 +2162,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: PushLString
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2196,7 +2196,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: PushString
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2228,7 +2228,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: PushVFString
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2264,7 +2264,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: PushCClosureK
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2302,7 +2302,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: PushBoolean
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2334,7 +2334,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: PushThread
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2362,7 +2362,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: PushLightUserdataTagged
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2396,7 +2396,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: NewUserdataTagged
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2432,7 +2432,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: NewUserdataTaggedWithMetatable
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2468,7 +2468,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: NewUserdataDtor
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2504,7 +2504,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: NewBuffer
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2538,7 +2538,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: GetTable
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2572,7 +2572,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: GetField
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2608,7 +2608,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: GetGlobal
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2642,7 +2642,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: RawGetField
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2678,7 +2678,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: RawGet
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2712,7 +2712,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: RawGetI
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2748,7 +2748,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: RawGetPTagged
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2786,7 +2786,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: CreateTable
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2820,7 +2820,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: SetReadonly
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2854,7 +2854,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: GetReadonly
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2888,7 +2888,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: SetSafeEnv
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2922,7 +2922,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: GetMetatable
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2956,7 +2956,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: GetFenv
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -2988,7 +2988,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: SetTable
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3020,7 +3020,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: SetField
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3054,7 +3054,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: SetGlobal
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3086,7 +3086,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: RawSetField
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3120,7 +3120,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: RawSet
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3152,7 +3152,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: RawSetI
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3186,7 +3186,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: RawSetPTagged
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3222,7 +3222,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: SetMetatable
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3256,7 +3256,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: SetFenv
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3290,7 +3290,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Load
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3330,7 +3330,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Call
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3364,7 +3364,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: PCall
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3402,7 +3402,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: CPCall
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3438,7 +3438,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Yield
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3472,7 +3472,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Break
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3500,7 +3500,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Resume
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3536,7 +3536,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: ResumeError
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3567,7 +3567,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Status
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3595,7 +3595,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: IsYieldable
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3623,7 +3623,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: GetThreadData
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3651,7 +3651,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: SetThreadData
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3683,7 +3683,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: CoStatus
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3714,7 +3714,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: GC
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3750,7 +3750,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: SetMemCat
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3782,7 +3782,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: TotalBytes
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3816,7 +3816,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Error
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3842,7 +3842,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Next
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3876,7 +3876,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: RawIter
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3912,7 +3912,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Concat
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3944,7 +3944,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: EncodePointer
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -3978,7 +3978,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: SetUserdataTag
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4012,7 +4012,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: SetUserdataDtor
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4046,7 +4046,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: GetUserdataDtor
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4080,7 +4080,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: SetUserdataMetatable
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4112,7 +4112,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: GetUserdataMetatable
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4144,7 +4144,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: RegisterUserdataDirectAccess
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4184,7 +4184,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: RegisterUserdataDirectFieldGet
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4220,7 +4220,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: SetLightUserdataName
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4254,7 +4254,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: GetLightUserdataName
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4288,7 +4288,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: CloneFunction
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4320,7 +4320,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: ClearTable
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4352,7 +4352,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: CloneTable
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4384,7 +4384,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: GetAllocF
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4418,7 +4418,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Ref
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4452,7 +4452,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Unref
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4484,7 +4484,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: OpenLibraries
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4510,7 +4510,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: OpenBase
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4538,7 +4538,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: OpenCoroutine
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4566,7 +4566,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: OpenTable
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4594,7 +4594,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: OpenOS
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4622,7 +4622,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: OpenString
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4650,7 +4650,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: OpenBit32
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4678,7 +4678,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: OpenBuffer
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4706,7 +4706,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: OpenUtf8
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4734,7 +4734,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: OpenMath
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4762,7 +4762,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: OpenDebug
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4790,7 +4790,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: OpenVector
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4818,7 +4818,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: OpenInteger
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4846,7 +4846,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: StackDepth
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4874,7 +4874,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: GetInfo
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4912,7 +4912,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: GetArgument
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4948,7 +4948,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: GetLocal
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -4984,7 +4984,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: SetLocal
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -5020,7 +5020,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: GetUpvalue
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -5056,7 +5056,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: SetUpvalue
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -5092,7 +5092,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: SingleStep
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -5124,7 +5124,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Breakpoint
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -5162,7 +5162,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: GetCoverage
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -5198,7 +5198,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: GetCounters
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -5236,7 +5236,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: DebugTrace
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -5264,7 +5264,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Sandbox
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -5290,7 +5290,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: SandboxThread
     path: ../src/LuauInterop.Native/LuaState.cs

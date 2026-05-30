@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauStatus.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: LuauStatus
     path: ../src/LuauInterop/Runtime/LuauStatus.cs
@@ -47,7 +47,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauStatus.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: OK
     path: ../src/LuauInterop/Runtime/LuauStatus.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauStatus.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Yield
     path: ../src/LuauInterop/Runtime/LuauStatus.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauStatus.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: ErrRun
     path: ../src/LuauInterop/Runtime/LuauStatus.cs
@@ -125,7 +125,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauStatus.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: ErrSyntax
     path: ../src/LuauInterop/Runtime/LuauStatus.cs
@@ -151,7 +151,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauStatus.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: ErrMem
     path: ../src/LuauInterop/Runtime/LuauStatus.cs
@@ -177,7 +177,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauStatus.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: ErrErr
     path: ../src/LuauInterop/Runtime/LuauStatus.cs
@@ -203,7 +203,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauStatus.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Break
     path: ../src/LuauInterop/Runtime/LuauStatus.cs

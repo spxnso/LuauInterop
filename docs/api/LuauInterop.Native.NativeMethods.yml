@@ -27,7 +27,6 @@ items:
   - LuauInterop.Native.NativeMethods.lua_encodepointer(System.IntPtr,System.UIntPtr)
   - LuauInterop.Native.NativeMethods.lua_equal(System.IntPtr,System.Int32,System.Int32)
   - LuauInterop.Native.NativeMethods.lua_error(System.IntPtr)
-  - LuauInterop.Native.NativeMethods.lua_free(System.IntPtr)
   - LuauInterop.Native.NativeMethods.lua_gc(System.IntPtr,System.Int32,System.Int32)
   - LuauInterop.Native.NativeMethods.lua_getallocf(System.IntPtr,System.IntPtr@)
   - LuauInterop.Native.NativeMethods.lua_getargument(System.IntPtr,System.Int32,System.Int32)
@@ -162,7 +161,10 @@ items:
   - LuauInterop.Native.NativeMethods.luaopen_utf8(System.IntPtr)
   - LuauInterop.Native.NativeMethods.luaopen_vector(System.IntPtr)
   - LuauInterop.Native.NativeMethods.luau_compile(System.IntPtr,System.UIntPtr,System.IntPtr,System.UIntPtr@)
+  - LuauInterop.Native.NativeMethods.luau_free(System.IntPtr)
+  - LuauInterop.Native.NativeMethods.luau_getfflag(System.String)
   - LuauInterop.Native.NativeMethods.luau_load(System.IntPtr,System.String,System.IntPtr,System.UIntPtr,System.Int32)
+  - LuauInterop.Native.NativeMethods.luau_pushcsharpfunc(System.IntPtr,System.IntPtr)
   - LuauInterop.Native.NativeMethods.luau_setfflag(System.String,System.Int32)
   langs:
   - csharp
@@ -174,7 +176,7 @@ items:
   source:
     id: NativeMethods
     path: /home/spxnso/Programming/CSharp/LuauInterop/src/LuauInterop.Native/obj/Release/net10.0/Microsoft.Interop.LibraryImportGenerator/Microsoft.Interop.LibraryImportGenerator/LibraryImports.g.cs
-    startLine: 1759
+    startLine: 1829
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -941,7 +943,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/NativeMethods.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: lua_tonumberx
     path: ../src/LuauInterop.Native/NativeMethods.cs
@@ -979,7 +981,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/NativeMethods.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: lua_tointegerx
     path: ../src/LuauInterop.Native/NativeMethods.cs
@@ -1017,7 +1019,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/NativeMethods.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: lua_tounsignedx
     path: ../src/LuauInterop.Native/NativeMethods.cs
@@ -1111,7 +1113,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/NativeMethods.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: lua_tointeger64
     path: ../src/LuauInterop.Native/NativeMethods.cs
@@ -1149,7 +1151,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/NativeMethods.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: lua_tolstring
     path: ../src/LuauInterop.Native/NativeMethods.cs
@@ -1187,7 +1189,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/NativeMethods.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: lua_tostringatom
     path: ../src/LuauInterop.Native/NativeMethods.cs
@@ -1225,7 +1227,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/NativeMethods.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: lua_tolstringatom
     path: ../src/LuauInterop.Native/NativeMethods.cs
@@ -1265,7 +1267,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/NativeMethods.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: lua_namecallatom
     path: ../src/LuauInterop.Native/NativeMethods.cs
@@ -1557,7 +1559,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/NativeMethods.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: lua_tobuffer
     path: ../src/LuauInterop.Native/NativeMethods.cs
@@ -1781,7 +1783,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/NativeMethods.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: lua_pushlstring
     path: ../src/LuauInterop.Native/NativeMethods.cs
@@ -1817,7 +1819,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/NativeMethods.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: lua_pushstring
     path: ../src/LuauInterop.Native/NativeMethods.cs
@@ -1851,7 +1853,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/NativeMethods.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: lua_pushvfstring
     path: ../src/LuauInterop.Native/NativeMethods.cs
@@ -1917,7 +1919,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/NativeMethods.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: lua_pushcclosurek
     path: ../src/LuauInterop.Native/NativeMethods.cs
@@ -2183,7 +2185,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/NativeMethods.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: lua_getfield
     path: ../src/LuauInterop.Native/NativeMethods.cs
@@ -2221,7 +2223,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/NativeMethods.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: lua_rawgetfield
     path: ../src/LuauInterop.Native/NativeMethods.cs
@@ -2541,7 +2543,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/NativeMethods.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: lua_setfield
     path: ../src/LuauInterop.Native/NativeMethods.cs
@@ -2577,7 +2579,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/NativeMethods.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: lua_rawsetfield
     path: ../src/LuauInterop.Native/NativeMethods.cs
@@ -2753,7 +2755,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/NativeMethods.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: luau_load
     path: ../src/LuauInterop.Native/NativeMethods.cs
@@ -3539,7 +3541,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/NativeMethods.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: lua_registeruserdatadirectfieldget
     path: ../src/LuauInterop.Native/NativeMethods.cs
@@ -3709,7 +3711,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/NativeMethods.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: lua_setlightuserdataname
     path: ../src/LuauInterop.Native/NativeMethods.cs
@@ -3851,7 +3853,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/NativeMethods.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: lua_getallocf
     path: ../src/LuauInterop.Native/NativeMethods.cs
@@ -3967,7 +3969,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/NativeMethods.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: lua_getinfo
     path: ../src/LuauInterop.Native/NativeMethods.cs
@@ -4347,7 +4349,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/NativeMethods.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: luau_compile
     path: ../src/LuauInterop.Native/NativeMethods.cs
@@ -4373,30 +4375,30 @@ items:
   nameWithType.vb: NativeMethods.luau_compile(IntPtr, UIntPtr, IntPtr, UIntPtr)
   fullName.vb: LuauInterop.Native.NativeMethods.luau_compile(System.IntPtr, System.UIntPtr, System.IntPtr, System.UIntPtr)
   name.vb: luau_compile(IntPtr, UIntPtr, IntPtr, UIntPtr)
-- uid: LuauInterop.Native.NativeMethods.lua_free(System.IntPtr)
-  commentId: M:LuauInterop.Native.NativeMethods.lua_free(System.IntPtr)
-  id: lua_free(System.IntPtr)
+- uid: LuauInterop.Native.NativeMethods.luau_free(System.IntPtr)
+  commentId: M:LuauInterop.Native.NativeMethods.luau_free(System.IntPtr)
+  id: luau_free(System.IntPtr)
   parent: LuauInterop.Native.NativeMethods
   langs:
   - csharp
   - vb
-  name: lua_free(nint)
-  nameWithType: NativeMethods.lua_free(nint)
-  fullName: LuauInterop.Native.NativeMethods.lua_free(nint)
+  name: luau_free(nint)
+  nameWithType: NativeMethods.luau_free(nint)
+  fullName: LuauInterop.Native.NativeMethods.luau_free(nint)
   type: Method
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
   syntax:
-    content: public static extern void lua_free(nint ptr)
+    content: public static extern void luau_free(nint ptr)
     parameters:
     - id: ptr
       type: System.IntPtr
-    content.vb: Public Shared Sub lua_free(ptr As IntPtr)
-  overload: LuauInterop.Native.NativeMethods.lua_free*
-  nameWithType.vb: NativeMethods.lua_free(IntPtr)
-  fullName.vb: LuauInterop.Native.NativeMethods.lua_free(System.IntPtr)
-  name.vb: lua_free(IntPtr)
+    content.vb: Public Shared Sub luau_free(ptr As IntPtr)
+  overload: LuauInterop.Native.NativeMethods.luau_free*
+  nameWithType.vb: NativeMethods.luau_free(IntPtr)
+  fullName.vb: LuauInterop.Native.NativeMethods.luau_free(System.IntPtr)
+  name.vb: luau_free(IntPtr)
 - uid: LuauInterop.Native.NativeMethods.luaopen_base(System.IntPtr)
   commentId: M:LuauInterop.Native.NativeMethods.luaopen_base(System.IntPtr)
   id: luaopen_base(System.IntPtr)
@@ -4771,11 +4773,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/NativeMethods.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: luau_setfflag
     path: ../src/LuauInterop.Native/NativeMethods.cs
-    startLine: 679
+    startLine: 680
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4791,6 +4793,66 @@ items:
   nameWithType.vb: NativeMethods.luau_setfflag(String, Integer)
   fullName.vb: LuauInterop.Native.NativeMethods.luau_setfflag(String, Integer)
   name.vb: luau_setfflag(String, Integer)
+- uid: LuauInterop.Native.NativeMethods.luau_getfflag(System.String)
+  commentId: M:LuauInterop.Native.NativeMethods.luau_getfflag(System.String)
+  id: luau_getfflag(System.String)
+  parent: LuauInterop.Native.NativeMethods
+  langs:
+  - csharp
+  - vb
+  name: luau_getfflag(string)
+  nameWithType: NativeMethods.luau_getfflag(string)
+  fullName: LuauInterop.Native.NativeMethods.luau_getfflag(string)
+  type: Method
+  source:
+    remote:
+      path: src/LuauInterop.Native/NativeMethods.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: luau_getfflag
+    path: ../src/LuauInterop.Native/NativeMethods.cs
+    startLine: 684
+  assemblies:
+  - LuauInterop.Native
+  namespace: LuauInterop.Native
+  syntax:
+    content: public static int luau_getfflag(string name)
+    parameters:
+    - id: name
+      type: System.String
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function luau_getfflag(name As String) As Integer
+  overload: LuauInterop.Native.NativeMethods.luau_getfflag*
+  nameWithType.vb: NativeMethods.luau_getfflag(String)
+  fullName.vb: LuauInterop.Native.NativeMethods.luau_getfflag(String)
+  name.vb: luau_getfflag(String)
+- uid: LuauInterop.Native.NativeMethods.luau_pushcsharpfunc(System.IntPtr,System.IntPtr)
+  commentId: M:LuauInterop.Native.NativeMethods.luau_pushcsharpfunc(System.IntPtr,System.IntPtr)
+  id: luau_pushcsharpfunc(System.IntPtr,System.IntPtr)
+  parent: LuauInterop.Native.NativeMethods
+  langs:
+  - csharp
+  - vb
+  name: luau_pushcsharpfunc(nint, nint)
+  nameWithType: NativeMethods.luau_pushcsharpfunc(nint, nint)
+  fullName: LuauInterop.Native.NativeMethods.luau_pushcsharpfunc(nint, nint)
+  type: Method
+  assemblies:
+  - LuauInterop.Native
+  namespace: LuauInterop.Native
+  syntax:
+    content: public static extern void luau_pushcsharpfunc(nint state, nint fnPtr)
+    parameters:
+    - id: state
+      type: System.IntPtr
+    - id: fnPtr
+      type: System.IntPtr
+    content.vb: Public Shared Sub luau_pushcsharpfunc(state As IntPtr, fnPtr As IntPtr)
+  overload: LuauInterop.Native.NativeMethods.luau_pushcsharpfunc*
+  nameWithType.vb: NativeMethods.luau_pushcsharpfunc(IntPtr, IntPtr)
+  fullName.vb: LuauInterop.Native.NativeMethods.luau_pushcsharpfunc(System.IntPtr, System.IntPtr)
+  name.vb: luau_pushcsharpfunc(IntPtr, IntPtr)
 references:
 - uid: LuauInterop.Native
   commentId: N:LuauInterop.Native
@@ -6117,13 +6179,13 @@ references:
   name: luau_compile
   nameWithType: NativeMethods.luau_compile
   fullName: LuauInterop.Native.NativeMethods.luau_compile
-- uid: LuauInterop.Native.NativeMethods.lua_free*
-  commentId: Overload:LuauInterop.Native.NativeMethods.lua_free
+- uid: LuauInterop.Native.NativeMethods.luau_free*
+  commentId: Overload:LuauInterop.Native.NativeMethods.luau_free
   isExternal: true
-  href: LuauInterop.Native.NativeMethods.html#LuauInterop_Native_NativeMethods_lua_free_System_IntPtr_
-  name: lua_free
-  nameWithType: NativeMethods.lua_free
-  fullName: LuauInterop.Native.NativeMethods.lua_free
+  href: LuauInterop.Native.NativeMethods.html#LuauInterop_Native_NativeMethods_luau_free_System_IntPtr_
+  name: luau_free
+  nameWithType: NativeMethods.luau_free
+  fullName: LuauInterop.Native.NativeMethods.luau_free
 - uid: LuauInterop.Native.NativeMethods.luaopen_base*
   commentId: Overload:LuauInterop.Native.NativeMethods.luaopen_base
   isExternal: true
@@ -6228,3 +6290,16 @@ references:
   name: luau_setfflag
   nameWithType: NativeMethods.luau_setfflag
   fullName: LuauInterop.Native.NativeMethods.luau_setfflag
+- uid: LuauInterop.Native.NativeMethods.luau_getfflag*
+  commentId: Overload:LuauInterop.Native.NativeMethods.luau_getfflag
+  href: LuauInterop.Native.NativeMethods.html#LuauInterop_Native_NativeMethods_luau_getfflag_System_String_
+  name: luau_getfflag
+  nameWithType: NativeMethods.luau_getfflag
+  fullName: LuauInterop.Native.NativeMethods.luau_getfflag
+- uid: LuauInterop.Native.NativeMethods.luau_pushcsharpfunc*
+  commentId: Overload:LuauInterop.Native.NativeMethods.luau_pushcsharpfunc
+  isExternal: true
+  href: LuauInterop.Native.NativeMethods.html#LuauInterop_Native_NativeMethods_luau_pushcsharpfunc_System_IntPtr_System_IntPtr_
+  name: luau_pushcsharpfunc
+  nameWithType: NativeMethods.luau_pushcsharpfunc
+  fullName: LuauInterop.Native.NativeMethods.luau_pushcsharpfunc

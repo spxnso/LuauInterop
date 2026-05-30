@@ -4,7 +4,11 @@
   href: quickstart.md
 - name: Values and Types
   href: values.md
+- name: Callbacks
+  href: callbacks.md
 - name: Compilation
   href: compilation.md
 - name: Resource Management
   href: disposables.md
+- name: Sandboxing
+  href: sandboxing.md

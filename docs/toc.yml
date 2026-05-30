@@ -10,7 +10,11 @@
       href: docs/values.md
     - name: Compilation
       href: docs/compilation.md
+    - name: Callbacks
+      href: docs/callbacks.md
     - name: Resource Management
       href: docs/disposables.md
+    - name: Sandboxing
+      href: docs/sandboxing.md
 - name: API Reference
   href: api/

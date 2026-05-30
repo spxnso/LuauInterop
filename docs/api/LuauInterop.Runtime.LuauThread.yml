@@ -7,6 +7,7 @@ items:
   children:
   - LuauInterop.Runtime.LuauThread.#ctor(LuauInterop.Luau,System.Int32)
   - LuauInterop.Runtime.LuauThread.Close
+  - LuauInterop.Runtime.LuauThread.Resume(LuauInterop.LuauChunk,System.Object[])
   - LuauInterop.Runtime.LuauThread.Resume(System.Object[])
   - LuauInterop.Runtime.LuauThread.Status
   langs:
@@ -19,11 +20,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauThread.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: LuauThread
     path: ../src/LuauInterop/Runtime/LuauThread.cs
-    startLine: 5
+    startLine: 6
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Runtime
@@ -40,6 +41,7 @@ items:
   - LuauInterop.LuauBase.Reference
   - LuauInterop.LuauBase.IsDisposed
   - LuauInterop.LuauBase.Dispose
+  - LuauInterop.LuauBase.PushReference
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
@@ -60,11 +62,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauThread.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: .ctor
     path: ../src/LuauInterop/Runtime/LuauThread.cs
-    startLine: 5
+    startLine: 6
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Runtime
@@ -94,11 +96,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauThread.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Status
     path: ../src/LuauInterop/Runtime/LuauThread.cs
-    startLine: 7
+    startLine: 8
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Runtime
@@ -123,7 +125,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauThread.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Close
     path: ../src/LuauInterop/Runtime/LuauThread.cs
@@ -149,7 +151,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauThread.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Resume
     path: ../src/LuauInterop/Runtime/LuauThread.cs
@@ -169,6 +171,42 @@ items:
   nameWithType.vb: LuauThread.Resume(ParamArray Object())
   fullName.vb: LuauInterop.Runtime.LuauThread.Resume(ParamArray Object())
   name.vb: Resume(ParamArray Object())
+- uid: LuauInterop.Runtime.LuauThread.Resume(LuauInterop.LuauChunk,System.Object[])
+  commentId: M:LuauInterop.Runtime.LuauThread.Resume(LuauInterop.LuauChunk,System.Object[])
+  id: Resume(LuauInterop.LuauChunk,System.Object[])
+  parent: LuauInterop.Runtime.LuauThread
+  langs:
+  - csharp
+  - vb
+  name: Resume(LuauChunk, params object?[])
+  nameWithType: LuauThread.Resume(LuauChunk, params object?[])
+  fullName: LuauInterop.Runtime.LuauThread.Resume(LuauInterop.LuauChunk, params object?[])
+  type: Method
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauThread.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: Resume
+    path: ../src/LuauInterop/Runtime/LuauThread.cs
+    startLine: 39
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  syntax:
+    content: public object?[] Resume(LuauChunk chunk, params object?[] args)
+    parameters:
+    - id: chunk
+      type: LuauInterop.LuauChunk
+    - id: args
+      type: System.Object[]
+    return:
+      type: System.Object[]
+    content.vb: Public Function [Resume](chunk As LuauChunk, ParamArray args As Object()) As Object()
+  overload: LuauInterop.Runtime.LuauThread.Resume*
+  nameWithType.vb: LuauThread.Resume(LuauChunk, ParamArray Object())
+  fullName.vb: LuauInterop.Runtime.LuauThread.Resume(LuauInterop.LuauChunk, ParamArray Object())
+  name.vb: Resume(LuauChunk, ParamArray Object())
 references:
 - uid: LuauInterop.Runtime
   commentId: N:LuauInterop.Runtime
@@ -256,6 +294,25 @@ references:
   - uid: LuauInterop.LuauBase.Dispose
     name: Dispose
     href: LuauInterop.LuauBase.html#LuauInterop_LuauBase_Dispose
+  - name: (
+  - name: )
+- uid: LuauInterop.LuauBase.PushReference
+  commentId: M:LuauInterop.LuauBase.PushReference
+  parent: LuauInterop.LuauBase
+  href: LuauInterop.LuauBase.html#LuauInterop_LuauBase_PushReference
+  name: PushReference()
+  nameWithType: LuauBase.PushReference()
+  fullName: LuauInterop.LuauBase.PushReference()
+  spec.csharp:
+  - uid: LuauInterop.LuauBase.PushReference
+    name: PushReference
+    href: LuauInterop.LuauBase.html#LuauInterop_LuauBase_PushReference
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LuauInterop.LuauBase.PushReference
+    name: PushReference
+    href: LuauInterop.LuauBase.html#LuauInterop_LuauBase_PushReference
   - name: (
   - name: )
 - uid: System.Object.Equals(System.Object)
@@ -541,3 +598,10 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object
   - name: (
   - name: )
+- uid: LuauInterop.LuauChunk
+  commentId: T:LuauInterop.LuauChunk
+  parent: LuauInterop
+  href: LuauInterop.LuauChunk.html
+  name: LuauChunk
+  nameWithType: LuauChunk
+  fullName: LuauInterop.LuauChunk

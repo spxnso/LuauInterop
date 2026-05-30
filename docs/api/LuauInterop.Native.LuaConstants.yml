@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaConstants.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: LuaConstants
     path: ../src/LuauInterop.Native/LuaConstants.cs
@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaConstants.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: LUAI_MAXCSTACK
     path: ../src/LuauInterop.Native/LuaConstants.cs
@@ -84,7 +84,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaConstants.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: LUA_MULTRET
     path: ../src/LuauInterop.Native/LuaConstants.cs
@@ -111,7 +111,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaConstants.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: LUA_REGISTRYINDEX
     path: ../src/LuauInterop.Native/LuaConstants.cs
@@ -138,7 +138,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaConstants.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: LUA_ENVIRONINDEX
     path: ../src/LuauInterop.Native/LuaConstants.cs
@@ -165,7 +165,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaConstants.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: LUA_GLOBALSINDEX
     path: ../src/LuauInterop.Native/LuaConstants.cs

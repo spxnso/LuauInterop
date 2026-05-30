@@ -27,7 +27,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauType.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: LuauType
     path: ../src/LuauInterop/LuauType.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauType.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Nil
     path: ../src/LuauInterop/LuauType.cs
@@ -80,7 +80,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauType.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Boolean
     path: ../src/LuauInterop/LuauType.cs
@@ -106,7 +106,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauType.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: LightUserData
     path: ../src/LuauInterop/LuauType.cs
@@ -132,7 +132,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauType.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Number
     path: ../src/LuauInterop/LuauType.cs
@@ -158,7 +158,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauType.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Integer
     path: ../src/LuauInterop/LuauType.cs
@@ -184,7 +184,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauType.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Vector
     path: ../src/LuauInterop/LuauType.cs
@@ -210,7 +210,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauType.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: String
     path: ../src/LuauInterop/LuauType.cs
@@ -236,7 +236,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauType.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Table
     path: ../src/LuauInterop/LuauType.cs
@@ -262,7 +262,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauType.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Function
     path: ../src/LuauInterop/LuauType.cs
@@ -288,7 +288,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauType.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: UserData
     path: ../src/LuauInterop/LuauType.cs
@@ -314,7 +314,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauType.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Thread
     path: ../src/LuauInterop/LuauType.cs
@@ -340,7 +340,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauType.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Buffer
     path: ../src/LuauInterop/LuauType.cs

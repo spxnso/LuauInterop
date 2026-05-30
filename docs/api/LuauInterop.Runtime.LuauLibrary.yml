@@ -1,0 +1,382 @@
+### YamlMime:ManagedReference
+items:
+- uid: LuauInterop.Runtime.LuauLibrary
+  commentId: T:LuauInterop.Runtime.LuauLibrary
+  id: LuauLibrary
+  parent: LuauInterop.Runtime
+  children:
+  - LuauInterop.Runtime.LuauLibrary.Base
+  - LuauInterop.Runtime.LuauLibrary.Bit32
+  - LuauInterop.Runtime.LuauLibrary.Buffer
+  - LuauInterop.Runtime.LuauLibrary.Coroutine
+  - LuauInterop.Runtime.LuauLibrary.Debug
+  - LuauInterop.Runtime.LuauLibrary.Integer
+  - LuauInterop.Runtime.LuauLibrary.Math
+  - LuauInterop.Runtime.LuauLibrary.OS
+  - LuauInterop.Runtime.LuauLibrary.String
+  - LuauInterop.Runtime.LuauLibrary.Table
+  - LuauInterop.Runtime.LuauLibrary.Utf8
+  - LuauInterop.Runtime.LuauLibrary.Vector
+  langs:
+  - csharp
+  - vb
+  name: LuauLibrary
+  nameWithType: LuauLibrary
+  fullName: LuauInterop.Runtime.LuauLibrary
+  type: Enum
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauLibrary.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: LuauLibrary
+    path: ../src/LuauInterop/Runtime/LuauLibrary.cs
+    startLine: 2
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  syntax:
+    content: public enum LuauLibrary
+    content.vb: Public Enum LuauLibrary
+- uid: LuauInterop.Runtime.LuauLibrary.Base
+  commentId: F:LuauInterop.Runtime.LuauLibrary.Base
+  id: Base
+  parent: LuauInterop.Runtime.LuauLibrary
+  langs:
+  - csharp
+  - vb
+  name: Base
+  nameWithType: LuauLibrary.Base
+  fullName: LuauInterop.Runtime.LuauLibrary.Base
+  type: Field
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauLibrary.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: Base
+    path: ../src/LuauInterop/Runtime/LuauLibrary.cs
+    startLine: 4
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  syntax:
+    content: Base = 0
+    return:
+      type: LuauInterop.Runtime.LuauLibrary
+- uid: LuauInterop.Runtime.LuauLibrary.Coroutine
+  commentId: F:LuauInterop.Runtime.LuauLibrary.Coroutine
+  id: Coroutine
+  parent: LuauInterop.Runtime.LuauLibrary
+  langs:
+  - csharp
+  - vb
+  name: Coroutine
+  nameWithType: LuauLibrary.Coroutine
+  fullName: LuauInterop.Runtime.LuauLibrary.Coroutine
+  type: Field
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauLibrary.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: Coroutine
+    path: ../src/LuauInterop/Runtime/LuauLibrary.cs
+    startLine: 5
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  syntax:
+    content: Coroutine = 1
+    return:
+      type: LuauInterop.Runtime.LuauLibrary
+- uid: LuauInterop.Runtime.LuauLibrary.Table
+  commentId: F:LuauInterop.Runtime.LuauLibrary.Table
+  id: Table
+  parent: LuauInterop.Runtime.LuauLibrary
+  langs:
+  - csharp
+  - vb
+  name: Table
+  nameWithType: LuauLibrary.Table
+  fullName: LuauInterop.Runtime.LuauLibrary.Table
+  type: Field
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauLibrary.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: Table
+    path: ../src/LuauInterop/Runtime/LuauLibrary.cs
+    startLine: 6
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  syntax:
+    content: Table = 2
+    return:
+      type: LuauInterop.Runtime.LuauLibrary
+- uid: LuauInterop.Runtime.LuauLibrary.OS
+  commentId: F:LuauInterop.Runtime.LuauLibrary.OS
+  id: OS
+  parent: LuauInterop.Runtime.LuauLibrary
+  langs:
+  - csharp
+  - vb
+  name: OS
+  nameWithType: LuauLibrary.OS
+  fullName: LuauInterop.Runtime.LuauLibrary.OS
+  type: Field
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauLibrary.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: OS
+    path: ../src/LuauInterop/Runtime/LuauLibrary.cs
+    startLine: 7
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  syntax:
+    content: OS = 3
+    return:
+      type: LuauInterop.Runtime.LuauLibrary
+- uid: LuauInterop.Runtime.LuauLibrary.String
+  commentId: F:LuauInterop.Runtime.LuauLibrary.String
+  id: String
+  parent: LuauInterop.Runtime.LuauLibrary
+  langs:
+  - csharp
+  - vb
+  name: String
+  nameWithType: LuauLibrary.String
+  fullName: LuauInterop.Runtime.LuauLibrary.String
+  type: Field
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauLibrary.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: String
+    path: ../src/LuauInterop/Runtime/LuauLibrary.cs
+    startLine: 8
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  syntax:
+    content: String = 4
+    return:
+      type: LuauInterop.Runtime.LuauLibrary
+- uid: LuauInterop.Runtime.LuauLibrary.Bit32
+  commentId: F:LuauInterop.Runtime.LuauLibrary.Bit32
+  id: Bit32
+  parent: LuauInterop.Runtime.LuauLibrary
+  langs:
+  - csharp
+  - vb
+  name: Bit32
+  nameWithType: LuauLibrary.Bit32
+  fullName: LuauInterop.Runtime.LuauLibrary.Bit32
+  type: Field
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauLibrary.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: Bit32
+    path: ../src/LuauInterop/Runtime/LuauLibrary.cs
+    startLine: 9
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  syntax:
+    content: Bit32 = 5
+    return:
+      type: LuauInterop.Runtime.LuauLibrary
+- uid: LuauInterop.Runtime.LuauLibrary.Buffer
+  commentId: F:LuauInterop.Runtime.LuauLibrary.Buffer
+  id: Buffer
+  parent: LuauInterop.Runtime.LuauLibrary
+  langs:
+  - csharp
+  - vb
+  name: Buffer
+  nameWithType: LuauLibrary.Buffer
+  fullName: LuauInterop.Runtime.LuauLibrary.Buffer
+  type: Field
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauLibrary.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: Buffer
+    path: ../src/LuauInterop/Runtime/LuauLibrary.cs
+    startLine: 10
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  syntax:
+    content: Buffer = 6
+    return:
+      type: LuauInterop.Runtime.LuauLibrary
+- uid: LuauInterop.Runtime.LuauLibrary.Utf8
+  commentId: F:LuauInterop.Runtime.LuauLibrary.Utf8
+  id: Utf8
+  parent: LuauInterop.Runtime.LuauLibrary
+  langs:
+  - csharp
+  - vb
+  name: Utf8
+  nameWithType: LuauLibrary.Utf8
+  fullName: LuauInterop.Runtime.LuauLibrary.Utf8
+  type: Field
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauLibrary.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: Utf8
+    path: ../src/LuauInterop/Runtime/LuauLibrary.cs
+    startLine: 11
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  syntax:
+    content: Utf8 = 7
+    return:
+      type: LuauInterop.Runtime.LuauLibrary
+- uid: LuauInterop.Runtime.LuauLibrary.Math
+  commentId: F:LuauInterop.Runtime.LuauLibrary.Math
+  id: Math
+  parent: LuauInterop.Runtime.LuauLibrary
+  langs:
+  - csharp
+  - vb
+  name: Math
+  nameWithType: LuauLibrary.Math
+  fullName: LuauInterop.Runtime.LuauLibrary.Math
+  type: Field
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauLibrary.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: Math
+    path: ../src/LuauInterop/Runtime/LuauLibrary.cs
+    startLine: 12
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  syntax:
+    content: Math = 8
+    return:
+      type: LuauInterop.Runtime.LuauLibrary
+- uid: LuauInterop.Runtime.LuauLibrary.Debug
+  commentId: F:LuauInterop.Runtime.LuauLibrary.Debug
+  id: Debug
+  parent: LuauInterop.Runtime.LuauLibrary
+  langs:
+  - csharp
+  - vb
+  name: Debug
+  nameWithType: LuauLibrary.Debug
+  fullName: LuauInterop.Runtime.LuauLibrary.Debug
+  type: Field
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauLibrary.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: Debug
+    path: ../src/LuauInterop/Runtime/LuauLibrary.cs
+    startLine: 13
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  syntax:
+    content: Debug = 9
+    return:
+      type: LuauInterop.Runtime.LuauLibrary
+- uid: LuauInterop.Runtime.LuauLibrary.Vector
+  commentId: F:LuauInterop.Runtime.LuauLibrary.Vector
+  id: Vector
+  parent: LuauInterop.Runtime.LuauLibrary
+  langs:
+  - csharp
+  - vb
+  name: Vector
+  nameWithType: LuauLibrary.Vector
+  fullName: LuauInterop.Runtime.LuauLibrary.Vector
+  type: Field
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauLibrary.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: Vector
+    path: ../src/LuauInterop/Runtime/LuauLibrary.cs
+    startLine: 14
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  syntax:
+    content: Vector = 10
+    return:
+      type: LuauInterop.Runtime.LuauLibrary
+- uid: LuauInterop.Runtime.LuauLibrary.Integer
+  commentId: F:LuauInterop.Runtime.LuauLibrary.Integer
+  id: Integer
+  parent: LuauInterop.Runtime.LuauLibrary
+  langs:
+  - csharp
+  - vb
+  name: Integer
+  nameWithType: LuauLibrary.Integer
+  fullName: LuauInterop.Runtime.LuauLibrary.Integer
+  type: Field
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauLibrary.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: Integer
+    path: ../src/LuauInterop/Runtime/LuauLibrary.cs
+    startLine: 15
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  syntax:
+    content: Integer = 11
+    return:
+      type: LuauInterop.Runtime.LuauLibrary
+references:
+- uid: LuauInterop.Runtime
+  commentId: N:LuauInterop.Runtime
+  href: LuauInterop.html
+  name: LuauInterop.Runtime
+  nameWithType: LuauInterop.Runtime
+  fullName: LuauInterop.Runtime
+  spec.csharp:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Runtime
+    name: Runtime
+    href: LuauInterop.Runtime.html
+  spec.vb:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Runtime
+    name: Runtime
+    href: LuauInterop.Runtime.html
+- uid: LuauInterop.Runtime.LuauLibrary
+  commentId: T:LuauInterop.Runtime.LuauLibrary
+  parent: LuauInterop.Runtime
+  href: LuauInterop.Runtime.LuauLibrary.html
+  name: LuauLibrary
+  nameWithType: LuauLibrary
+  fullName: LuauInterop.Runtime.LuauLibrary

@@ -1,0 +1,913 @@
+### YamlMime:ManagedReference
+items:
+- uid: LuauInterop.Runtime.LuauCallback
+  commentId: T:LuauInterop.Runtime.LuauCallback
+  id: LuauCallback
+  parent: LuauInterop.Runtime
+  children:
+  - LuauInterop.Runtime.LuauCallback.#ctor(LuauInterop.Luau,System.Func{LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32})
+  - LuauInterop.Runtime.LuauCallback.Dispose
+  - LuauInterop.Runtime.LuauCallback.Dispose(System.Boolean)
+  - LuauInterop.Runtime.LuauCallback.Finalize
+  - LuauInterop.Runtime.LuauCallback.FunctionPointer
+  - LuauInterop.Runtime.LuauCallback.IsDisposed
+  - LuauInterop.Runtime.LuauCallback.Managed
+  - LuauInterop.Runtime.LuauCallback.Native
+  - LuauInterop.Runtime.LuauCallback.Owner
+  - LuauInterop.Runtime.LuauCallback.Pin
+  langs:
+  - csharp
+  - vb
+  name: LuauCallback
+  nameWithType: LuauCallback
+  fullName: LuauInterop.Runtime.LuauCallback
+  type: Class
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauCallback.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: LuauCallback
+    path: ../src/LuauInterop/Runtime/LuauCallback.cs
+    startLine: 10
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  summary: A C# function exposed to Luau.
+  example: []
+  syntax:
+    content: 'public class LuauCallback : IDisposable'
+    content.vb: Public Class LuauCallback Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: LuauInterop.Runtime.LuauCallback.FunctionPointer
+  commentId: P:LuauInterop.Runtime.LuauCallback.FunctionPointer
+  id: FunctionPointer
+  parent: LuauInterop.Runtime.LuauCallback
+  langs:
+  - csharp
+  - vb
+  name: FunctionPointer
+  nameWithType: LuauCallback.FunctionPointer
+  fullName: LuauInterop.Runtime.LuauCallback.FunctionPointer
+  type: Property
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauCallback.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: FunctionPointer
+    path: ../src/LuauInterop/Runtime/LuauCallback.cs
+    startLine: 18
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  summary: The function pointer to pass to Luau.
+  example: []
+  syntax:
+    content: public nint FunctionPointer { get; }
+    parameters: []
+    return:
+      type: System.IntPtr
+    content.vb: Public ReadOnly Property FunctionPointer As IntPtr
+  overload: LuauInterop.Runtime.LuauCallback.FunctionPointer*
+- uid: LuauInterop.Runtime.LuauCallback.Managed
+  commentId: P:LuauInterop.Runtime.LuauCallback.Managed
+  id: Managed
+  parent: LuauInterop.Runtime.LuauCallback
+  langs:
+  - csharp
+  - vb
+  name: Managed
+  nameWithType: LuauCallback.Managed
+  fullName: LuauInterop.Runtime.LuauCallback.Managed
+  type: Property
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauCallback.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: Managed
+    path: ../src/LuauInterop/Runtime/LuauCallback.cs
+    startLine: 23
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  summary: The managed function that this callback wraps.
+  example: []
+  syntax:
+    content: public Func<Luau, LuaState, int> Managed { get; }
+    parameters: []
+    return:
+      type: System.Func{LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32}
+    content.vb: Public ReadOnly Property Managed As Func(Of Luau, LuaState, Integer)
+  overload: LuauInterop.Runtime.LuauCallback.Managed*
+- uid: LuauInterop.Runtime.LuauCallback.Owner
+  commentId: P:LuauInterop.Runtime.LuauCallback.Owner
+  id: Owner
+  parent: LuauInterop.Runtime.LuauCallback
+  langs:
+  - csharp
+  - vb
+  name: Owner
+  nameWithType: LuauCallback.Owner
+  fullName: LuauInterop.Runtime.LuauCallback.Owner
+  type: Property
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauCallback.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: Owner
+    path: ../src/LuauInterop/Runtime/LuauCallback.cs
+    startLine: 28
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  summary: The <xref href="LuauInterop.Luau" data-throw-if-not-resolved="false"></xref> instance that owns this object.
+  example: []
+  syntax:
+    content: public Luau Owner { get; }
+    parameters: []
+    return:
+      type: LuauInterop.Luau
+    content.vb: Public ReadOnly Property Owner As Luau
+  overload: LuauInterop.Runtime.LuauCallback.Owner*
+- uid: LuauInterop.Runtime.LuauCallback.Native
+  commentId: P:LuauInterop.Runtime.LuauCallback.Native
+  id: Native
+  parent: LuauInterop.Runtime.LuauCallback
+  langs:
+  - csharp
+  - vb
+  name: Native
+  nameWithType: LuauCallback.Native
+  fullName: LuauInterop.Runtime.LuauCallback.Native
+  type: Property
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauCallback.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: Native
+    path: ../src/LuauInterop/Runtime/LuauCallback.cs
+    startLine: 38
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  summary: The native delegate instance, which is passed to Luau.
+  example: []
+  syntax:
+    content: public LuauCallback.NativeDelegate Native { get; }
+    parameters: []
+    return:
+      type: LuauInterop.Runtime.LuauCallback.NativeDelegate
+    content.vb: Public ReadOnly Property Native As LuauCallback.NativeDelegate
+  overload: LuauInterop.Runtime.LuauCallback.Native*
+- uid: LuauInterop.Runtime.LuauCallback.Pin
+  commentId: P:LuauInterop.Runtime.LuauCallback.Pin
+  id: Pin
+  parent: LuauInterop.Runtime.LuauCallback
+  langs:
+  - csharp
+  - vb
+  name: Pin
+  nameWithType: LuauCallback.Pin
+  fullName: LuauInterop.Runtime.LuauCallback.Pin
+  type: Property
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauCallback.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: Pin
+    path: ../src/LuauInterop/Runtime/LuauCallback.cs
+    startLine: 43
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  summary: The pinned handle for the native delegate, to prevent GC collection.
+  example: []
+  syntax:
+    content: public GCHandle Pin { get; }
+    parameters: []
+    return:
+      type: System.Runtime.InteropServices.GCHandle
+    content.vb: Public ReadOnly Property Pin As GCHandle
+  overload: LuauInterop.Runtime.LuauCallback.Pin*
+- uid: LuauInterop.Runtime.LuauCallback.IsDisposed
+  commentId: P:LuauInterop.Runtime.LuauCallback.IsDisposed
+  id: IsDisposed
+  parent: LuauInterop.Runtime.LuauCallback
+  langs:
+  - csharp
+  - vb
+  name: IsDisposed
+  nameWithType: LuauCallback.IsDisposed
+  fullName: LuauInterop.Runtime.LuauCallback.IsDisposed
+  type: Property
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauCallback.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: IsDisposed
+    path: ../src/LuauInterop/Runtime/LuauCallback.cs
+    startLine: 48
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  summary: Whether this object has been disposed.
+  example: []
+  syntax:
+    content: public bool IsDisposed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsDisposed As Boolean
+  overload: LuauInterop.Runtime.LuauCallback.IsDisposed*
+- uid: LuauInterop.Runtime.LuauCallback.#ctor(LuauInterop.Luau,System.Func{LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32})
+  commentId: M:LuauInterop.Runtime.LuauCallback.#ctor(LuauInterop.Luau,System.Func{LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32})
+  id: '#ctor(LuauInterop.Luau,System.Func{LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32})'
+  parent: LuauInterop.Runtime.LuauCallback
+  langs:
+  - csharp
+  - vb
+  name: LuauCallback(Luau, Func<Luau, LuaState, int>)
+  nameWithType: LuauCallback.LuauCallback(Luau, Func<Luau, LuaState, int>)
+  fullName: LuauInterop.Runtime.LuauCallback.LuauCallback(LuauInterop.Luau, System.Func<LuauInterop.Luau, LuauInterop.Native.LuaState, int>)
+  type: Constructor
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauCallback.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: .ctor
+    path: ../src/LuauInterop/Runtime/LuauCallback.cs
+    startLine: 50
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  syntax:
+    content: public LuauCallback(Luau owner, Func<Luau, LuaState, int> managed)
+    parameters:
+    - id: owner
+      type: LuauInterop.Luau
+    - id: managed
+      type: System.Func{LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32}
+    content.vb: Public Sub New(owner As Luau, managed As Func(Of Luau, LuaState, Integer))
+  overload: LuauInterop.Runtime.LuauCallback.#ctor*
+  nameWithType.vb: LuauCallback.New(Luau, Func(Of Luau, LuaState, Integer))
+  fullName.vb: LuauInterop.Runtime.LuauCallback.New(LuauInterop.Luau, System.Func(Of LuauInterop.Luau, LuauInterop.Native.LuaState, Integer))
+  name.vb: New(Luau, Func(Of Luau, LuaState, Integer))
+- uid: LuauInterop.Runtime.LuauCallback.Finalize
+  commentId: M:LuauInterop.Runtime.LuauCallback.Finalize
+  id: Finalize
+  parent: LuauInterop.Runtime.LuauCallback
+  langs:
+  - csharp
+  - vb
+  name: ~LuauCallback()
+  nameWithType: LuauCallback.~LuauCallback()
+  fullName: LuauInterop.Runtime.LuauCallback.~LuauCallback()
+  type: Method
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauCallback.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: Finalize
+    path: ../src/LuauInterop/Runtime/LuauCallback.cs
+    startLine: 72
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  syntax:
+    content: protected ~LuauCallback()
+    content.vb: 'Protected '
+  overload: LuauInterop.Runtime.LuauCallback.Finalize*
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: LuauInterop.Runtime.LuauCallback.Dispose
+  commentId: M:LuauInterop.Runtime.LuauCallback.Dispose
+  id: Dispose
+  parent: LuauInterop.Runtime.LuauCallback
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: LuauCallback.Dispose()
+  fullName: LuauInterop.Runtime.LuauCallback.Dispose()
+  type: Method
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauCallback.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: Dispose
+    path: ../src/LuauInterop/Runtime/LuauCallback.cs
+    startLine: 77
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: LuauInterop.Runtime.LuauCallback.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: LuauInterop.Runtime.LuauCallback.Dispose(System.Boolean)
+  commentId: M:LuauInterop.Runtime.LuauCallback.Dispose(System.Boolean)
+  id: Dispose(System.Boolean)
+  parent: LuauInterop.Runtime.LuauCallback
+  langs:
+  - csharp
+  - vb
+  name: Dispose(bool)
+  nameWithType: LuauCallback.Dispose(bool)
+  fullName: LuauInterop.Runtime.LuauCallback.Dispose(bool)
+  type: Method
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauCallback.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: Dispose
+    path: ../src/LuauInterop/Runtime/LuauCallback.cs
+    startLine: 83
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  syntax:
+    content: protected virtual void Dispose(bool disposing)
+    parameters:
+    - id: disposing
+      type: System.Boolean
+    content.vb: Protected Overridable Sub Dispose(disposing As Boolean)
+  overload: LuauInterop.Runtime.LuauCallback.Dispose*
+  nameWithType.vb: LuauCallback.Dispose(Boolean)
+  fullName.vb: LuauInterop.Runtime.LuauCallback.Dispose(Boolean)
+  name.vb: Dispose(Boolean)
+references:
+- uid: LuauInterop.Runtime
+  commentId: N:LuauInterop.Runtime
+  href: LuauInterop.html
+  name: LuauInterop.Runtime
+  nameWithType: LuauInterop.Runtime
+  fullName: LuauInterop.Runtime
+  spec.csharp:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Runtime
+    name: Runtime
+    href: LuauInterop.Runtime.html
+  spec.vb:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Runtime
+    name: Runtime
+    href: LuauInterop.Runtime.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: LuauInterop.Runtime.LuauCallback.FunctionPointer*
+  commentId: Overload:LuauInterop.Runtime.LuauCallback.FunctionPointer
+  href: LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback_FunctionPointer
+  name: FunctionPointer
+  nameWithType: LuauCallback.FunctionPointer
+  fullName: LuauInterop.Runtime.LuauCallback.FunctionPointer
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.intptr
+  name: nint
+  nameWithType: nint
+  fullName: nint
+  nameWithType.vb: IntPtr
+  fullName.vb: System.IntPtr
+  name.vb: IntPtr
+- uid: LuauInterop.Runtime.LuauCallback.Managed*
+  commentId: Overload:LuauInterop.Runtime.LuauCallback.Managed
+  href: LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback_Managed
+  name: Managed
+  nameWithType: LuauCallback.Managed
+  fullName: LuauInterop.Runtime.LuauCallback.Managed
+- uid: System.Func{LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32}
+  commentId: T:System.Func{LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32}
+  parent: System
+  definition: System.Func`3
+  href: https://learn.microsoft.com/dotnet/api/system.func-3
+  name: Func<Luau, LuaState, int>
+  nameWithType: Func<Luau, LuaState, int>
+  fullName: System.Func<LuauInterop.Luau, LuauInterop.Native.LuaState, int>
+  nameWithType.vb: Func(Of Luau, LuaState, Integer)
+  fullName.vb: System.Func(Of LuauInterop.Luau, LuauInterop.Native.LuaState, Integer)
+  name.vb: Func(Of Luau, LuaState, Integer)
+  spec.csharp:
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - uid: LuauInterop.Luau
+    name: Luau
+    href: LuauInterop.Luau.html
+  - name: ','
+  - name: " "
+  - uid: LuauInterop.Native.LuaState
+    name: LuaState
+    href: LuauInterop.Native.LuaState.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LuauInterop.Luau
+    name: Luau
+    href: LuauInterop.Luau.html
+  - name: ','
+  - name: " "
+  - uid: LuauInterop.Native.LuaState
+    name: LuaState
+    href: LuauInterop.Native.LuaState.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Func`3
+  commentId: T:System.Func`3
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-3
+  name: Func<T1, T2, TResult>
+  nameWithType: Func<T1, T2, TResult>
+  fullName: System.Func<T1, T2, TResult>
+  nameWithType.vb: Func(Of T1, T2, TResult)
+  fullName.vb: System.Func(Of T1, T2, TResult)
+  name.vb: Func(Of T1, T2, TResult)
+  spec.csharp:
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: LuauInterop.Luau
+  commentId: T:LuauInterop.Luau
+  parent: LuauInterop
+  href: LuauInterop.Luau.html
+  name: Luau
+  nameWithType: Luau
+  fullName: LuauInterop.Luau
+- uid: LuauInterop.Runtime.LuauCallback.Owner*
+  commentId: Overload:LuauInterop.Runtime.LuauCallback.Owner
+  href: LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback_Owner
+  name: Owner
+  nameWithType: LuauCallback.Owner
+  fullName: LuauInterop.Runtime.LuauCallback.Owner
+- uid: LuauInterop
+  commentId: N:LuauInterop
+  href: LuauInterop.html
+  name: LuauInterop
+  nameWithType: LuauInterop
+  fullName: LuauInterop
+- uid: LuauInterop.Runtime.LuauCallback.Native*
+  commentId: Overload:LuauInterop.Runtime.LuauCallback.Native
+  href: LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback_Native
+  name: Native
+  nameWithType: LuauCallback.Native
+  fullName: LuauInterop.Runtime.LuauCallback.Native
+- uid: LuauInterop.Runtime.LuauCallback.NativeDelegate
+  commentId: T:LuauInterop.Runtime.LuauCallback.NativeDelegate
+  parent: LuauInterop.Runtime
+  href: LuauInterop.Runtime.LuauCallback.html
+  name: LuauCallback.NativeDelegate
+  nameWithType: LuauCallback.NativeDelegate
+  fullName: LuauInterop.Runtime.LuauCallback.NativeDelegate
+  spec.csharp:
+  - uid: LuauInterop.Runtime.LuauCallback
+    name: LuauCallback
+    href: LuauInterop.Runtime.LuauCallback.html
+  - name: .
+  - uid: LuauInterop.Runtime.LuauCallback.NativeDelegate
+    name: NativeDelegate
+    href: LuauInterop.Runtime.LuauCallback.NativeDelegate.html
+  spec.vb:
+  - uid: LuauInterop.Runtime.LuauCallback
+    name: LuauCallback
+    href: LuauInterop.Runtime.LuauCallback.html
+  - name: .
+  - uid: LuauInterop.Runtime.LuauCallback.NativeDelegate
+    name: NativeDelegate
+    href: LuauInterop.Runtime.LuauCallback.NativeDelegate.html
+- uid: LuauInterop.Runtime.LuauCallback.Pin*
+  commentId: Overload:LuauInterop.Runtime.LuauCallback.Pin
+  href: LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback_Pin
+  name: Pin
+  nameWithType: LuauCallback.Pin
+  fullName: LuauInterop.Runtime.LuauCallback.Pin
+- uid: System.Runtime.InteropServices.GCHandle
+  commentId: T:System.Runtime.InteropServices.GCHandle
+  parent: System.Runtime.InteropServices
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.gchandle
+  name: GCHandle
+  nameWithType: GCHandle
+  fullName: System.Runtime.InteropServices.GCHandle
+- uid: System.Runtime.InteropServices
+  commentId: N:System.Runtime.InteropServices
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Runtime.InteropServices
+  nameWithType: System.Runtime.InteropServices
+  fullName: System.Runtime.InteropServices
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Runtime
+    name: Runtime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime
+  - name: .
+  - uid: System.Runtime.InteropServices
+    name: InteropServices
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.interopservices
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Runtime
+    name: Runtime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime
+  - name: .
+  - uid: System.Runtime.InteropServices
+    name: InteropServices
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.interopservices
+- uid: LuauInterop.Runtime.LuauCallback.IsDisposed*
+  commentId: Overload:LuauInterop.Runtime.LuauCallback.IsDisposed
+  href: LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback_IsDisposed
+  name: IsDisposed
+  nameWithType: LuauCallback.IsDisposed
+  fullName: LuauInterop.Runtime.LuauCallback.IsDisposed
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: LuauInterop.Runtime.LuauCallback.#ctor*
+  commentId: Overload:LuauInterop.Runtime.LuauCallback.#ctor
+  href: LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback__ctor_LuauInterop_Luau_System_Func_LuauInterop_Luau_LuauInterop_Native_LuaState_System_Int32__
+  name: LuauCallback
+  nameWithType: LuauCallback.LuauCallback
+  fullName: LuauInterop.Runtime.LuauCallback.LuauCallback
+  nameWithType.vb: LuauCallback.New
+  fullName.vb: LuauInterop.Runtime.LuauCallback.New
+  name.vb: New
+- uid: LuauInterop.Runtime.LuauCallback.Finalize*
+  commentId: Overload:LuauInterop.Runtime.LuauCallback.Finalize
+  href: LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback_Finalize
+  name: ~LuauCallback
+  nameWithType: LuauCallback.~LuauCallback
+  fullName: LuauInterop.Runtime.LuauCallback.~LuauCallback
+  spec.csharp:
+  - name: "~"
+  - uid: LuauInterop.Runtime.LuauCallback.Finalize*
+    name: LuauCallback
+    href: LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback_Finalize
+- uid: LuauInterop.Runtime.LuauCallback.Dispose*
+  commentId: Overload:LuauInterop.Runtime.LuauCallback.Dispose
+  href: LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback_Dispose
+  name: Dispose
+  nameWithType: LuauCallback.Dispose
+  fullName: LuauInterop.Runtime.LuauCallback.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

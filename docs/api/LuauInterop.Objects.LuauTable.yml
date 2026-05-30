@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Objects/LuauTable.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: LuauTable
     path: ../src/LuauInterop/Objects/LuauTable.cs
@@ -41,6 +41,7 @@ items:
   - LuauInterop.LuauBase.Reference
   - LuauInterop.LuauBase.IsDisposed
   - LuauInterop.LuauBase.Dispose
+  - LuauInterop.LuauBase.PushReference
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
@@ -61,7 +62,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Objects/LuauTable.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: .ctor
     path: ../src/LuauInterop/Objects/LuauTable.cs
@@ -95,7 +96,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Objects/LuauTable.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: this[]
     path: ../src/LuauInterop/Objects/LuauTable.cs
@@ -129,7 +130,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Objects/LuauTable.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: this[]
     path: ../src/LuauInterop/Objects/LuauTable.cs
@@ -163,7 +164,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Objects/LuauTable.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Length
     path: ../src/LuauInterop/Objects/LuauTable.cs
@@ -192,7 +193,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Objects/LuauTable.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Pairs
     path: ../src/LuauInterop/Objects/LuauTable.cs
@@ -293,6 +294,25 @@ references:
   - uid: LuauInterop.LuauBase.Dispose
     name: Dispose
     href: LuauInterop.LuauBase.html#LuauInterop_LuauBase_Dispose
+  - name: (
+  - name: )
+- uid: LuauInterop.LuauBase.PushReference
+  commentId: M:LuauInterop.LuauBase.PushReference
+  parent: LuauInterop.LuauBase
+  href: LuauInterop.LuauBase.html#LuauInterop_LuauBase_PushReference
+  name: PushReference()
+  nameWithType: LuauBase.PushReference()
+  fullName: LuauInterop.LuauBase.PushReference()
+  spec.csharp:
+  - uid: LuauInterop.LuauBase.PushReference
+    name: PushReference
+    href: LuauInterop.LuauBase.html#LuauInterop_LuauBase_PushReference
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LuauInterop.LuauBase.PushReference
+    name: PushReference
+    href: LuauInterop.LuauBase.html#LuauInterop_LuauBase_PushReference
   - name: (
   - name: )
 - uid: System.Object.Equals(System.Object)

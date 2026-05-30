@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Objects/LuauBuffer.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: LuauBuffer
     path: ../src/LuauInterop/Objects/LuauBuffer.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Objects/LuauBuffer.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: .ctor
     path: ../src/LuauInterop/Objects/LuauBuffer.cs
@@ -84,7 +84,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Objects/LuauBuffer.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Data
     path: ../src/LuauInterop/Objects/LuauBuffer.cs
@@ -113,7 +113,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Objects/LuauBuffer.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Length
     path: ../src/LuauInterop/Objects/LuauBuffer.cs
@@ -142,7 +142,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Objects/LuauBuffer.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: ToString
     path: ../src/LuauInterop/Objects/LuauBuffer.cs

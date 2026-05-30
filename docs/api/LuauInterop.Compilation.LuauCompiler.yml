@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Compilation/LuauCompiler.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: LuauCompiler
     path: ../src/LuauInterop/Compilation/LuauCompiler.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Compilation/LuauCompiler.cs
-      branch: docs
+      branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Compile
     path: ../src/LuauInterop/Compilation/LuauCompiler.cs

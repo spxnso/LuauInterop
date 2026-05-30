@@ -1,49 +1,41 @@
 ### YamlMime:ManagedReference
 items:
-- uid: LuauInterop.LuauBase
-  commentId: T:LuauInterop.LuauBase
-  id: LuauBase
-  parent: LuauInterop
+- uid: LuauInterop.Sandbox.LuauSandbox
+  commentId: T:LuauInterop.Sandbox.LuauSandbox
+  id: LuauSandbox
+  parent: LuauInterop.Sandbox
   children:
-  - LuauInterop.LuauBase.#ctor(LuauInterop.Luau,System.Int32)
-  - LuauInterop.LuauBase.Dispose
-  - LuauInterop.LuauBase.Dispose(System.Boolean)
-  - LuauInterop.LuauBase.Finalize
-  - LuauInterop.LuauBase.IsDisposed
-  - LuauInterop.LuauBase.Owner
-  - LuauInterop.LuauBase.PushReference
-  - LuauInterop.LuauBase.Reference
-  - LuauInterop.LuauBase.ThrowIfDisposed
+  - LuauInterop.Sandbox.LuauSandbox.#ctor(LuauInterop.Sandbox.LuauSandboxOptions)
+  - LuauInterop.Sandbox.LuauSandbox.Dispose
+  - LuauInterop.Sandbox.LuauSandbox.Dispose(System.Boolean)
+  - LuauInterop.Sandbox.LuauSandbox.Execute(System.String,System.String)
+  - LuauInterop.Sandbox.LuauSandbox.Finalize
+  - LuauInterop.Sandbox.LuauSandbox.IsDisposed
+  - LuauInterop.Sandbox.LuauSandbox.Luau
+  - LuauInterop.Sandbox.LuauSandbox.Options
   langs:
   - csharp
   - vb
-  name: LuauBase
-  nameWithType: LuauBase
-  fullName: LuauInterop.LuauBase
+  name: LuauSandbox
+  nameWithType: LuauSandbox
+  fullName: LuauInterop.Sandbox.LuauSandbox
   type: Class
   source:
     remote:
-      path: src/LuauInterop/LuauBase.cs
+      path: src/LuauInterop.Sandbox/LuauSandbox.cs
       branch: master
       repo: https://github.com/spxnso/LuauInterop
-    id: LuauBase
-    path: ../src/LuauInterop/LuauBase.cs
-    startLine: 7
+    id: LuauSandbox
+    path: ../src/LuauInterop.Sandbox/LuauSandbox.cs
+    startLine: 5
   assemblies:
-  - LuauInterop
-  namespace: LuauInterop
-  summary: Base class for all Luau objects that hold a reference to the Lua state.
-  example: []
+  - LuauInterop.Sandbox
+  namespace: LuauInterop.Sandbox
   syntax:
-    content: 'public abstract class LuauBase : IDisposable'
-    content.vb: Public MustInherit Class LuauBase Implements IDisposable
+    content: 'public class LuauSandbox : IDisposable'
+    content.vb: Public Class LuauSandbox Implements IDisposable
   inheritance:
   - System.Object
-  derivedClasses:
-  - LuauInterop.Objects.LuauFunction
-  - LuauInterop.Objects.LuauTable
-  - LuauInterop.Objects.LuauUserData
-  - LuauInterop.Runtime.LuauThread
   implements:
   - System.IDisposable
   inheritedMembers:
@@ -54,126 +46,28 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: LuauInterop.LuauBase.#ctor(LuauInterop.Luau,System.Int32)
-  commentId: M:LuauInterop.LuauBase.#ctor(LuauInterop.Luau,System.Int32)
-  id: '#ctor(LuauInterop.Luau,System.Int32)'
-  parent: LuauInterop.LuauBase
-  langs:
-  - csharp
-  - vb
-  name: LuauBase(Luau, int)
-  nameWithType: LuauBase.LuauBase(Luau, int)
-  fullName: LuauInterop.LuauBase.LuauBase(LuauInterop.Luau, int)
-  type: Constructor
-  source:
-    remote:
-      path: src/LuauInterop/LuauBase.cs
-      branch: master
-      repo: https://github.com/spxnso/LuauInterop
-    id: .ctor
-    path: ../src/LuauInterop/LuauBase.cs
-    startLine: 7
-  assemblies:
-  - LuauInterop
-  namespace: LuauInterop
-  summary: Base class for all Luau objects that hold a reference to the Lua state.
-  example: []
-  syntax:
-    content: protected LuauBase(Luau owner, int reference)
-    parameters:
-    - id: owner
-      type: LuauInterop.Luau
-    - id: reference
-      type: System.Int32
-    content.vb: Protected Sub New(owner As Luau, reference As Integer)
-  overload: LuauInterop.LuauBase.#ctor*
-  nameWithType.vb: LuauBase.New(Luau, Integer)
-  fullName.vb: LuauInterop.LuauBase.New(LuauInterop.Luau, Integer)
-  name.vb: New(Luau, Integer)
-- uid: LuauInterop.LuauBase.Owner
-  commentId: P:LuauInterop.LuauBase.Owner
-  id: Owner
-  parent: LuauInterop.LuauBase
-  langs:
-  - csharp
-  - vb
-  name: Owner
-  nameWithType: LuauBase.Owner
-  fullName: LuauInterop.LuauBase.Owner
-  type: Property
-  source:
-    remote:
-      path: src/LuauInterop/LuauBase.cs
-      branch: master
-      repo: https://github.com/spxnso/LuauInterop
-    id: Owner
-    path: ../src/LuauInterop/LuauBase.cs
-    startLine: 12
-  assemblies:
-  - LuauInterop
-  namespace: LuauInterop
-  summary: The <xref href="LuauInterop.Luau" data-throw-if-not-resolved="false"></xref> instance that owns this object.
-  example: []
-  syntax:
-    content: public Luau Owner { get; }
-    parameters: []
-    return:
-      type: LuauInterop.Luau
-    content.vb: Public ReadOnly Property Owner As Luau
-  overload: LuauInterop.LuauBase.Owner*
-- uid: LuauInterop.LuauBase.Reference
-  commentId: P:LuauInterop.LuauBase.Reference
-  id: Reference
-  parent: LuauInterop.LuauBase
-  langs:
-  - csharp
-  - vb
-  name: Reference
-  nameWithType: LuauBase.Reference
-  fullName: LuauInterop.LuauBase.Reference
-  type: Property
-  source:
-    remote:
-      path: src/LuauInterop/LuauBase.cs
-      branch: master
-      repo: https://github.com/spxnso/LuauInterop
-    id: Reference
-    path: ../src/LuauInterop/LuauBase.cs
-    startLine: 17
-  assemblies:
-  - LuauInterop
-  namespace: LuauInterop
-  summary: The reference to the Lua object in the registry.
-  example: []
-  syntax:
-    content: public int Reference { get; }
-    parameters: []
-    return:
-      type: System.Int32
-    content.vb: Public ReadOnly Property Reference As Integer
-  overload: LuauInterop.LuauBase.Reference*
-- uid: LuauInterop.LuauBase.IsDisposed
-  commentId: P:LuauInterop.LuauBase.IsDisposed
+- uid: LuauInterop.Sandbox.LuauSandbox.IsDisposed
+  commentId: P:LuauInterop.Sandbox.LuauSandbox.IsDisposed
   id: IsDisposed
-  parent: LuauInterop.LuauBase
+  parent: LuauInterop.Sandbox.LuauSandbox
   langs:
   - csharp
   - vb
   name: IsDisposed
-  nameWithType: LuauBase.IsDisposed
-  fullName: LuauInterop.LuauBase.IsDisposed
+  nameWithType: LuauSandbox.IsDisposed
+  fullName: LuauInterop.Sandbox.LuauSandbox.IsDisposed
   type: Property
   source:
     remote:
-      path: src/LuauInterop/LuauBase.cs
+      path: src/LuauInterop.Sandbox/LuauSandbox.cs
       branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: IsDisposed
-    path: ../src/LuauInterop/LuauBase.cs
-    startLine: 22
+    path: ../src/LuauInterop.Sandbox/LuauSandbox.cs
+    startLine: 10
   assemblies:
-  - LuauInterop
-  namespace: LuauInterop
+  - LuauInterop.Sandbox
+  namespace: LuauInterop.Sandbox
   summary: Whether this object has been disposed.
   example: []
   syntax:
@@ -182,157 +76,251 @@ items:
     return:
       type: System.Boolean
     content.vb: Public Property IsDisposed As Boolean
-  overload: LuauInterop.LuauBase.IsDisposed*
-- uid: LuauInterop.LuauBase.Finalize
-  commentId: M:LuauInterop.LuauBase.Finalize
-  id: Finalize
-  parent: LuauInterop.LuauBase
+  overload: LuauInterop.Sandbox.LuauSandbox.IsDisposed*
+- uid: LuauInterop.Sandbox.LuauSandbox.Options
+  commentId: P:LuauInterop.Sandbox.LuauSandbox.Options
+  id: Options
+  parent: LuauInterop.Sandbox.LuauSandbox
   langs:
   - csharp
   - vb
-  name: ~LuauBase()
-  nameWithType: LuauBase.~LuauBase()
-  fullName: LuauInterop.LuauBase.~LuauBase()
+  name: Options
+  nameWithType: LuauSandbox.Options
+  fullName: LuauInterop.Sandbox.LuauSandbox.Options
+  type: Property
+  source:
+    remote:
+      path: src/LuauInterop.Sandbox/LuauSandbox.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: Options
+    path: ../src/LuauInterop.Sandbox/LuauSandbox.cs
+    startLine: 15
+  assemblies:
+  - LuauInterop.Sandbox
+  namespace: LuauInterop.Sandbox
+  summary: The options used to create this sandbox.
+  example: []
+  syntax:
+    content: public LuauSandboxOptions Options { get; }
+    parameters: []
+    return:
+      type: LuauInterop.Sandbox.LuauSandboxOptions
+    content.vb: Public ReadOnly Property Options As LuauSandboxOptions
+  overload: LuauInterop.Sandbox.LuauSandbox.Options*
+- uid: LuauInterop.Sandbox.LuauSandbox.Luau
+  commentId: P:LuauInterop.Sandbox.LuauSandbox.Luau
+  id: Luau
+  parent: LuauInterop.Sandbox.LuauSandbox
+  langs:
+  - csharp
+  - vb
+  name: Luau
+  nameWithType: LuauSandbox.Luau
+  fullName: LuauInterop.Sandbox.LuauSandbox.Luau
+  type: Property
+  source:
+    remote:
+      path: src/LuauInterop.Sandbox/LuauSandbox.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: Luau
+    path: ../src/LuauInterop.Sandbox/LuauSandbox.cs
+    startLine: 20
+  assemblies:
+  - LuauInterop.Sandbox
+  namespace: LuauInterop.Sandbox
+  summary: The Luau state associated with this sandbox.
+  example: []
+  syntax:
+    content: public Luau Luau { get; }
+    parameters: []
+    return:
+      type: LuauInterop.Luau
+    content.vb: Public ReadOnly Property Luau As Luau
+  overload: LuauInterop.Sandbox.LuauSandbox.Luau*
+- uid: LuauInterop.Sandbox.LuauSandbox.#ctor(LuauInterop.Sandbox.LuauSandboxOptions)
+  commentId: M:LuauInterop.Sandbox.LuauSandbox.#ctor(LuauInterop.Sandbox.LuauSandboxOptions)
+  id: '#ctor(LuauInterop.Sandbox.LuauSandboxOptions)'
+  parent: LuauInterop.Sandbox.LuauSandbox
+  langs:
+  - csharp
+  - vb
+  name: LuauSandbox(LuauSandboxOptions?)
+  nameWithType: LuauSandbox.LuauSandbox(LuauSandboxOptions?)
+  fullName: LuauInterop.Sandbox.LuauSandbox.LuauSandbox(LuauInterop.Sandbox.LuauSandboxOptions?)
+  type: Constructor
+  source:
+    remote:
+      path: src/LuauInterop.Sandbox/LuauSandbox.cs
+      branch: master
+      repo: https://github.com/spxnso/LuauInterop
+    id: .ctor
+    path: ../src/LuauInterop.Sandbox/LuauSandbox.cs
+    startLine: 22
+  assemblies:
+  - LuauInterop.Sandbox
+  namespace: LuauInterop.Sandbox
+  syntax:
+    content: public LuauSandbox(LuauSandboxOptions? options = null)
+    parameters:
+    - id: options
+      type: LuauInterop.Sandbox.LuauSandboxOptions
+    content.vb: Public Sub New(options As LuauSandboxOptions = Nothing)
+  overload: LuauInterop.Sandbox.LuauSandbox.#ctor*
+  nameWithType.vb: LuauSandbox.New(LuauSandboxOptions)
+  fullName.vb: LuauInterop.Sandbox.LuauSandbox.New(LuauInterop.Sandbox.LuauSandboxOptions)
+  name.vb: New(LuauSandboxOptions)
+- uid: LuauInterop.Sandbox.LuauSandbox.Finalize
+  commentId: M:LuauInterop.Sandbox.LuauSandbox.Finalize
+  id: Finalize
+  parent: LuauInterop.Sandbox.LuauSandbox
+  langs:
+  - csharp
+  - vb
+  name: ~LuauSandbox()
+  nameWithType: LuauSandbox.~LuauSandbox()
+  fullName: LuauInterop.Sandbox.LuauSandbox.~LuauSandbox()
   type: Method
   source:
     remote:
-      path: src/LuauInterop/LuauBase.cs
+      path: src/LuauInterop.Sandbox/LuauSandbox.cs
       branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Finalize
-    path: ../src/LuauInterop/LuauBase.cs
-    startLine: 24
+    path: ../src/LuauInterop.Sandbox/LuauSandbox.cs
+    startLine: 35
   assemblies:
-  - LuauInterop
-  namespace: LuauInterop
+  - LuauInterop.Sandbox
+  namespace: LuauInterop.Sandbox
   syntax:
-    content: protected ~LuauBase()
+    content: protected ~LuauSandbox()
     content.vb: 'Protected '
-  overload: LuauInterop.LuauBase.Finalize*
+  overload: LuauInterop.Sandbox.LuauSandbox.Finalize*
   nameWithType.vb: ''
   fullName.vb: ''
   name.vb: ''
-- uid: LuauInterop.LuauBase.Dispose
-  commentId: M:LuauInterop.LuauBase.Dispose
+- uid: LuauInterop.Sandbox.LuauSandbox.Dispose
+  commentId: M:LuauInterop.Sandbox.LuauSandbox.Dispose
   id: Dispose
-  parent: LuauInterop.LuauBase
+  parent: LuauInterop.Sandbox.LuauSandbox
   langs:
   - csharp
   - vb
   name: Dispose()
-  nameWithType: LuauBase.Dispose()
-  fullName: LuauInterop.LuauBase.Dispose()
+  nameWithType: LuauSandbox.Dispose()
+  fullName: LuauInterop.Sandbox.LuauSandbox.Dispose()
   type: Method
   source:
     remote:
-      path: src/LuauInterop/LuauBase.cs
+      path: src/LuauInterop.Sandbox/LuauSandbox.cs
       branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Dispose
-    path: ../src/LuauInterop/LuauBase.cs
-    startLine: 29
+    path: ../src/LuauInterop.Sandbox/LuauSandbox.cs
+    startLine: 40
   assemblies:
-  - LuauInterop
-  namespace: LuauInterop
+  - LuauInterop.Sandbox
+  namespace: LuauInterop.Sandbox
   summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
   example: []
   syntax:
     content: public void Dispose()
     content.vb: Public Sub Dispose()
-  overload: LuauInterop.LuauBase.Dispose*
+  overload: LuauInterop.Sandbox.LuauSandbox.Dispose*
   implements:
   - System.IDisposable.Dispose
-- uid: LuauInterop.LuauBase.Dispose(System.Boolean)
-  commentId: M:LuauInterop.LuauBase.Dispose(System.Boolean)
+- uid: LuauInterop.Sandbox.LuauSandbox.Dispose(System.Boolean)
+  commentId: M:LuauInterop.Sandbox.LuauSandbox.Dispose(System.Boolean)
   id: Dispose(System.Boolean)
-  parent: LuauInterop.LuauBase
+  parent: LuauInterop.Sandbox.LuauSandbox
   langs:
   - csharp
   - vb
   name: Dispose(bool)
-  nameWithType: LuauBase.Dispose(bool)
-  fullName: LuauInterop.LuauBase.Dispose(bool)
+  nameWithType: LuauSandbox.Dispose(bool)
+  fullName: LuauInterop.Sandbox.LuauSandbox.Dispose(bool)
   type: Method
   source:
     remote:
-      path: src/LuauInterop/LuauBase.cs
+      path: src/LuauInterop.Sandbox/LuauSandbox.cs
       branch: master
       repo: https://github.com/spxnso/LuauInterop
     id: Dispose
-    path: ../src/LuauInterop/LuauBase.cs
-    startLine: 35
+    path: ../src/LuauInterop.Sandbox/LuauSandbox.cs
+    startLine: 46
   assemblies:
-  - LuauInterop
-  namespace: LuauInterop
+  - LuauInterop.Sandbox
+  namespace: LuauInterop.Sandbox
   syntax:
     content: protected virtual void Dispose(bool disposing)
     parameters:
     - id: disposing
       type: System.Boolean
     content.vb: Protected Overridable Sub Dispose(disposing As Boolean)
-  overload: LuauInterop.LuauBase.Dispose*
-  nameWithType.vb: LuauBase.Dispose(Boolean)
-  fullName.vb: LuauInterop.LuauBase.Dispose(Boolean)
+  overload: LuauInterop.Sandbox.LuauSandbox.Dispose*
+  nameWithType.vb: LuauSandbox.Dispose(Boolean)
+  fullName.vb: LuauInterop.Sandbox.LuauSandbox.Dispose(Boolean)
   name.vb: Dispose(Boolean)
-- uid: LuauInterop.LuauBase.ThrowIfDisposed
-  commentId: M:LuauInterop.LuauBase.ThrowIfDisposed
-  id: ThrowIfDisposed
-  parent: LuauInterop.LuauBase
+- uid: LuauInterop.Sandbox.LuauSandbox.Execute(System.String,System.String)
+  commentId: M:LuauInterop.Sandbox.LuauSandbox.Execute(System.String,System.String)
+  id: Execute(System.String,System.String)
+  parent: LuauInterop.Sandbox.LuauSandbox
   langs:
   - csharp
   - vb
-  name: ThrowIfDisposed()
-  nameWithType: LuauBase.ThrowIfDisposed()
-  fullName: LuauInterop.LuauBase.ThrowIfDisposed()
+  name: Execute(string, string)
+  nameWithType: LuauSandbox.Execute(string, string)
+  fullName: LuauInterop.Sandbox.LuauSandbox.Execute(string, string)
   type: Method
   source:
     remote:
-      path: src/LuauInterop/LuauBase.cs
+      path: src/LuauInterop.Sandbox/LuauSandbox.cs
       branch: master
       repo: https://github.com/spxnso/LuauInterop
-    id: ThrowIfDisposed
-    path: ../src/LuauInterop/LuauBase.cs
-    startLine: 46
+    id: Execute
+    path: ../src/LuauInterop.Sandbox/LuauSandbox.cs
+    startLine: 56
   assemblies:
-  - LuauInterop
-  namespace: LuauInterop
+  - LuauInterop.Sandbox
+  namespace: LuauInterop.Sandbox
   syntax:
-    content: protected void ThrowIfDisposed()
-    content.vb: Protected Sub ThrowIfDisposed()
-  overload: LuauInterop.LuauBase.ThrowIfDisposed*
-- uid: LuauInterop.LuauBase.PushReference
-  commentId: M:LuauInterop.LuauBase.PushReference
-  id: PushReference
-  parent: LuauInterop.LuauBase
-  langs:
-  - csharp
-  - vb
-  name: PushReference()
-  nameWithType: LuauBase.PushReference()
-  fullName: LuauInterop.LuauBase.PushReference()
-  type: Method
-  source:
-    remote:
-      path: src/LuauInterop/LuauBase.cs
-      branch: master
-      repo: https://github.com/spxnso/LuauInterop
-    id: PushReference
-    path: ../src/LuauInterop/LuauBase.cs
-    startLine: 54
-  assemblies:
-  - LuauInterop
-  namespace: LuauInterop
-  syntax:
-    content: public void PushReference()
-    content.vb: Public Sub PushReference()
-  overload: LuauInterop.LuauBase.PushReference*
+    content: public object?[] Execute(string source, string name = "script")
+    parameters:
+    - id: source
+      type: System.String
+    - id: name
+      type: System.String
+    return:
+      type: System.Object[]
+    content.vb: Public Function Execute(source As String, name As String = "script") As Object()
+  overload: LuauInterop.Sandbox.LuauSandbox.Execute*
+  nameWithType.vb: LuauSandbox.Execute(String, String)
+  fullName.vb: LuauInterop.Sandbox.LuauSandbox.Execute(String, String)
+  name.vb: Execute(String, String)
 references:
-- uid: LuauInterop
-  commentId: N:LuauInterop
+- uid: LuauInterop.Sandbox
+  commentId: N:LuauInterop.Sandbox
   href: LuauInterop.html
-  name: LuauInterop
-  nameWithType: LuauInterop
-  fullName: LuauInterop
+  name: LuauInterop.Sandbox
+  nameWithType: LuauInterop.Sandbox
+  fullName: LuauInterop.Sandbox
+  spec.csharp:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Sandbox
+    name: Sandbox
+    href: LuauInterop.Sandbox.html
+  spec.vb:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Sandbox
+    name: Sandbox
+    href: LuauInterop.Sandbox.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -578,51 +566,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: LuauInterop.LuauBase.#ctor*
-  commentId: Overload:LuauInterop.LuauBase.#ctor
-  href: LuauInterop.LuauBase.html#LuauInterop_LuauBase__ctor_LuauInterop_Luau_System_Int32_
-  name: LuauBase
-  nameWithType: LuauBase.LuauBase
-  fullName: LuauInterop.LuauBase.LuauBase
-  nameWithType.vb: LuauBase.New
-  fullName.vb: LuauInterop.LuauBase.New
-  name.vb: New
-- uid: LuauInterop.Luau
-  commentId: T:LuauInterop.Luau
-  parent: LuauInterop
-  href: LuauInterop.Luau.html
-  name: Luau
-  nameWithType: Luau
-  fullName: LuauInterop.Luau
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
-- uid: LuauInterop.LuauBase.Owner*
-  commentId: Overload:LuauInterop.LuauBase.Owner
-  href: LuauInterop.LuauBase.html#LuauInterop_LuauBase_Owner
-  name: Owner
-  nameWithType: LuauBase.Owner
-  fullName: LuauInterop.LuauBase.Owner
-- uid: LuauInterop.LuauBase.Reference*
-  commentId: Overload:LuauInterop.LuauBase.Reference
-  href: LuauInterop.LuauBase.html#LuauInterop_LuauBase_Reference
-  name: Reference
-  nameWithType: LuauBase.Reference
-  fullName: LuauInterop.LuauBase.Reference
-- uid: LuauInterop.LuauBase.IsDisposed*
-  commentId: Overload:LuauInterop.LuauBase.IsDisposed
-  href: LuauInterop.LuauBase.html#LuauInterop_LuauBase_IsDisposed
+- uid: LuauInterop.Sandbox.LuauSandbox.IsDisposed*
+  commentId: Overload:LuauInterop.Sandbox.LuauSandbox.IsDisposed
+  href: LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_IsDisposed
   name: IsDisposed
-  nameWithType: LuauBase.IsDisposed
-  fullName: LuauInterop.LuauBase.IsDisposed
+  nameWithType: LuauSandbox.IsDisposed
+  fullName: LuauInterop.Sandbox.LuauSandbox.IsDisposed
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -634,23 +583,64 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
-- uid: LuauInterop.LuauBase.Finalize*
-  commentId: Overload:LuauInterop.LuauBase.Finalize
-  href: LuauInterop.LuauBase.html#LuauInterop_LuauBase_Finalize
-  name: ~LuauBase
-  nameWithType: LuauBase.~LuauBase
-  fullName: LuauInterop.LuauBase.~LuauBase
+- uid: LuauInterop.Sandbox.LuauSandbox.Options*
+  commentId: Overload:LuauInterop.Sandbox.LuauSandbox.Options
+  href: LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_Options
+  name: Options
+  nameWithType: LuauSandbox.Options
+  fullName: LuauInterop.Sandbox.LuauSandbox.Options
+- uid: LuauInterop.Sandbox.LuauSandboxOptions
+  commentId: T:LuauInterop.Sandbox.LuauSandboxOptions
+  parent: LuauInterop.Sandbox
+  href: LuauInterop.Sandbox.LuauSandboxOptions.html
+  name: LuauSandboxOptions
+  nameWithType: LuauSandboxOptions
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions
+- uid: LuauInterop.Sandbox.LuauSandbox.Luau*
+  commentId: Overload:LuauInterop.Sandbox.LuauSandbox.Luau
+  href: LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_Luau
+  name: Luau
+  nameWithType: LuauSandbox.Luau
+  fullName: LuauInterop.Sandbox.LuauSandbox.Luau
+- uid: LuauInterop.Luau
+  commentId: T:LuauInterop.Luau
+  parent: LuauInterop
+  href: LuauInterop.Luau.html
+  name: Luau
+  nameWithType: Luau
+  fullName: LuauInterop.Luau
+- uid: LuauInterop
+  commentId: N:LuauInterop
+  href: LuauInterop.html
+  name: LuauInterop
+  nameWithType: LuauInterop
+  fullName: LuauInterop
+- uid: LuauInterop.Sandbox.LuauSandbox.#ctor*
+  commentId: Overload:LuauInterop.Sandbox.LuauSandbox.#ctor
+  href: LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox__ctor_LuauInterop_Sandbox_LuauSandboxOptions_
+  name: LuauSandbox
+  nameWithType: LuauSandbox.LuauSandbox
+  fullName: LuauInterop.Sandbox.LuauSandbox.LuauSandbox
+  nameWithType.vb: LuauSandbox.New
+  fullName.vb: LuauInterop.Sandbox.LuauSandbox.New
+  name.vb: New
+- uid: LuauInterop.Sandbox.LuauSandbox.Finalize*
+  commentId: Overload:LuauInterop.Sandbox.LuauSandbox.Finalize
+  href: LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_Finalize
+  name: ~LuauSandbox
+  nameWithType: LuauSandbox.~LuauSandbox
+  fullName: LuauInterop.Sandbox.LuauSandbox.~LuauSandbox
   spec.csharp:
   - name: "~"
-  - uid: LuauInterop.LuauBase.Finalize*
-    name: LuauBase
-    href: LuauInterop.LuauBase.html#LuauInterop_LuauBase_Finalize
-- uid: LuauInterop.LuauBase.Dispose*
-  commentId: Overload:LuauInterop.LuauBase.Dispose
-  href: LuauInterop.LuauBase.html#LuauInterop_LuauBase_Dispose
+  - uid: LuauInterop.Sandbox.LuauSandbox.Finalize*
+    name: LuauSandbox
+    href: LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_Finalize
+- uid: LuauInterop.Sandbox.LuauSandbox.Dispose*
+  commentId: Overload:LuauInterop.Sandbox.LuauSandbox.Dispose
+  href: LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_Dispose
   name: Dispose
-  nameWithType: LuauBase.Dispose
-  fullName: LuauInterop.LuauBase.Dispose
+  nameWithType: LuauSandbox.Dispose
+  fullName: LuauInterop.Sandbox.LuauSandbox.Dispose
 - uid: System.IDisposable.Dispose
   commentId: M:System.IDisposable.Dispose
   parent: System.IDisposable
@@ -673,15 +663,43 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
   - name: (
   - name: )
-- uid: LuauInterop.LuauBase.ThrowIfDisposed*
-  commentId: Overload:LuauInterop.LuauBase.ThrowIfDisposed
-  href: LuauInterop.LuauBase.html#LuauInterop_LuauBase_ThrowIfDisposed
-  name: ThrowIfDisposed
-  nameWithType: LuauBase.ThrowIfDisposed
-  fullName: LuauInterop.LuauBase.ThrowIfDisposed
-- uid: LuauInterop.LuauBase.PushReference*
-  commentId: Overload:LuauInterop.LuauBase.PushReference
-  href: LuauInterop.LuauBase.html#LuauInterop_LuauBase_PushReference
-  name: PushReference
-  nameWithType: LuauBase.PushReference
-  fullName: LuauInterop.LuauBase.PushReference
+- uid: LuauInterop.Sandbox.LuauSandbox.Execute*
+  commentId: Overload:LuauInterop.Sandbox.LuauSandbox.Execute
+  href: LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_Execute_System_String_System_String_
+  name: Execute
+  nameWithType: LuauSandbox.Execute
+  fullName: LuauInterop.Sandbox.LuauSandbox.Execute
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Object[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object[]
+  nameWithType: object[]
+  fullName: object[]
+  nameWithType.vb: Object()
+  fullName.vb: Object()
+  name.vb: Object()
+  spec.csharp:
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
