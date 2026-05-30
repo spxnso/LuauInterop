@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿using System.Runtime.ExceptionServices;
+using System.Runtime.InteropServices;
 using System.Text;
 
 using LuauInterop.Compilation;
@@ -13,6 +14,11 @@ namespace LuauInterop;
 /// </summary>
 public class Luau : IDisposable
 {
+    /// <summary>
+    /// List of callbacks registered in this instance.
+    /// </summary>
+    public readonly List<LuauCallback> Callbacks = [];
+
     /// <summary>
     /// Gets the underlying native Luau state.
     /// </summary>
@@ -57,6 +63,17 @@ public class Luau : IDisposable
         set
         {
             ThrowIfDisposed();
+
+            if (value is Delegate del)
+            {
+                var wrapper = new LuauDelegate(this, del);
+                var cb = new LuauCallback(this, (vm, state) => wrapper.Invoke(state));
+                Callbacks.Add(cb);
+                NativeMethods.luau_pushcsharpfunc(State.Handle, cb.FunctionPointer);
+                State.SetGlobal(name);
+                return;
+            }
+
             PushObject(value);
             State.SetGlobal(name);
         }
@@ -75,6 +92,10 @@ public class Luau : IDisposable
         if (IsDisposed) return;
         IsDisposed = true;
 
+        if (disposing)
+            foreach (LuauCallback cb in Callbacks)
+                cb.Dispose();
+
         if (!State.IsNull)
         {
             State.Close();
@@ -89,7 +110,6 @@ public class Luau : IDisposable
     /// <param name="options">Optional compiler options. Pass <see langword="null"/> to use defaults.</param>
     /// <returns>A compiled <see cref="LuauChunk"/>. Dispose it after use.</returns>
     public LuauChunk Compile(string chunk, LuauCompileOptions? options = null) => LuauCompiler.Compile(chunk, options);
-
 
     /// <summary>
     /// Executes a pre-compiled <see cref="LuauChunk"/>, returning any values it produces.
@@ -130,6 +150,108 @@ public class Luau : IDisposable
     }
 
     /// <summary>
+    /// Gets the error message from the top of the stack, if any, and pops it off the stack. If there is no error message, returns a default message.
+    /// </summary>
+    /// <returns>The error message from the top of the stack, or a default message if there is no error message.</returns>
+    /// <exception cref="ObjectDisposedException">Thrown if this instance has been disposed.</exception>
+    public string GetErrorMessage(LuaState state)
+    {
+        ThrowIfDisposed();
+        string message = "Unknown error";
+
+        try
+        {
+            IntPtr ptr = state.ToLString(state.AbsIndex(-1), out _);
+            if (ptr != IntPtr.Zero)
+                message = Marshal.PtrToStringUTF8(ptr) ?? message;
+        }
+        finally
+        {
+            Pop(1, state);
+        }
+
+        return message;
+    }
+
+    /// <inheritdoc cref="GetErrorMessage(LuaState)"/>
+    public string GetErrorMessage() => GetErrorMessage(State);
+
+    /// <summary>
+    /// Gets the value of an FFlag in the Luau VM.
+    /// </summary>
+    /// <param name="name">The name of the FFlag to get.</param>
+    /// <returns><see langword="true"/> if the FFlag is enabled, or <see langword="false"/> if it is disabled.</returns>
+    public bool GetFFlag(string name)
+    {
+        ThrowIfDisposed();
+        return NativeMethods.luau_getfflag(name) != 0;
+    }
+
+
+    /// <summary>
+    /// Gets the value at the specified index on the stack, converting it to an appropriate C# type.
+    /// </summary>
+    /// <param name="index">The index of the value to get.</param>
+    /// <param name="state">The Lua state to use for retrieving the value.</param>
+    /// <returns>The value at the specified index, converted to an appropriate C# type.</returns>
+    /// <exception cref="ObjectDisposedException">Thrown if this instance has been disposed.</exception>
+    public object? GetObject(int index, LuaState state)
+    {
+        LuauType type = (LuauType)state.Type(index);
+
+        return type switch
+        {
+            LuauType.Nil => null,
+            LuauType.Boolean => state.ToBoolean(index),
+            LuauType.Number => state.ToNumber(index),
+            LuauType.Integer => state.ToInteger64(index, out _),
+            LuauType.String => Marshal.PtrToStringUTF8(state.ToLString(index, out _)),
+            LuauType.Function => new LuauFunction(this, state.Ref(index)),
+            LuauType.Table => new LuauTable(this, state.Ref(index)),
+            LuauType.UserData => new LuauUserData(this, state.Ref(index)),
+            LuauType.Vector => ReadVector(index, state),
+            LuauType.Buffer => ReadBuffer(index, state),
+            LuauType.Thread => new LuauThread(this, state.Ref(index)),
+            _ => throw new NotSupportedException($"Unsupported Luau type: {type}")
+        };
+    }
+
+    /// <inheritdoc cref="GetObject(int, LuaState)"/>
+    public object? GetObject(int index) => GetObject(index, State);
+
+    /// <summary>
+    /// Gets the value at the specified index on the stack.
+    /// </summary>
+    /// <param name="index">The index of the value to get.</param>
+    /// <returns>The value at the specified index.</returns>
+    /// <exception cref="ObjectDisposedException">Thrown if this instance has been disposed.</exception>
+    public LuauValue GetValue(int index, LuaState state)
+    {
+        ThrowIfDisposed();
+
+        LuauType type = (LuauType)state.Type(index);
+
+        switch (type)
+        {
+            case LuauType.Nil: return LuauValue.Nil;
+            case LuauType.Boolean: return state.ToBoolean(index);
+            case LuauType.Number: return state.ToNumber(index);
+            case LuauType.Integer: return state.ToInteger64(index, out _);
+            case LuauType.String:
+                IntPtr ptr = state.ToLString(index, out UIntPtr len);
+                string? s = ptr == IntPtr.Zero ? null : Marshal.PtrToStringUTF8(ptr, (int)len);
+                return new LuauValue(LuauType.String, number: 0, integer: 0, reference: s);
+            case LuauType.Function:
+                return new LuauValue(LuauType.Function, number: state.Ref(index), integer: 0, reference: this);
+            default:
+                throw new NotSupportedException($"Unsupported Lua type: {type}");
+        }
+    }
+    
+    /// <inheritdoc cref="GetValue(int, LuaState)"/>
+    public LuauValue GetValue(int index) => GetValue(index, State);
+
+    /// <summary>
     /// Compiles a Luau source string and loads it onto the stack as a callable function,
     /// without executing it.
     /// </summary>
@@ -142,6 +264,25 @@ public class Luau : IDisposable
         ThrowIfDisposed();
         using var compiled = Compile(chunk);
         return (LuauStatus)State.Load(chunkName, compiled.Pointer, compiled.Size, 0);
+    }
+
+    /// <summary>
+    /// Compiles a Luau source string and loads it onto the stack as a callable function,
+    /// without executing it.
+    /// </summary>
+    /// <param name="chunk">The Luau source code to compile and load.</param>
+    /// <param name="targetState">The Lua state to load the compiled function onto. If the current state is different from the target state, the compiled function will be moved to the target state after loading.</param>
+    /// <param name="chunkName">A name for the chunk used in error messages. Defaults to <c>"chunk"</c>.</param>
+    /// <returns><see cref="LuauStatus.OK"/> on success, or an error status if compilation or loading fails.</returns>
+    /// <exception cref="ObjectDisposedException">Thrown if this instance has been disposed.</exception>
+    public LuauStatus LoadString(string chunk, LuaState targetState, string chunkName = "chunk")
+    {
+        ThrowIfDisposed();
+        using var compiled = Compile(chunk);
+        LuauStatus status = (LuauStatus)State.Load(chunkName, compiled.Pointer, compiled.Size, 0);
+        if (status == LuauStatus.OK)
+            State.XMove(targetState, 1);
+        return status;
     }
 
     /// <summary>
@@ -167,6 +308,42 @@ public class Luau : IDisposable
         ThrowIfDisposed();
 
         State.OpenLibraries();
+    }
+
+    /// <summary>
+    /// Opens all the specified Luau libraries into this state.
+    /// </summary>
+    /// <exception cref="ObjectDisposedException">Thrown if this instance has been disposed.</exception>
+    public void OpenLibraries(List<LuauLibrary> libraries)
+    {
+        ThrowIfDisposed();
+
+        foreach (LuauLibrary library in libraries)
+            OpenLibrary(library);
+    }
+
+
+    /// <summary>
+    /// Opens the specified standard Luau libraries into this state.
+    /// </summary>
+    /// <param name="library">The libraries to open.</param>
+    /// <exception cref="ObjectDisposedException">Thrown if this instance has been disposed.</exception>
+    public void OpenLibrary(LuauLibrary library)
+    {
+        ThrowIfDisposed();
+
+        if (library.HasFlag(LuauLibrary.Base)) OpenBase();
+        if (library.HasFlag(LuauLibrary.Bit32)) OpenBit32();
+        if (library.HasFlag(LuauLibrary.Buffer)) OpenBuffer();
+        if (library.HasFlag(LuauLibrary.Coroutine)) OpenCoroutine();
+        if (library.HasFlag(LuauLibrary.Debug)) OpenDebug();
+        if (library.HasFlag(LuauLibrary.Integer)) OpenInteger();
+        if (library.HasFlag(LuauLibrary.Math)) OpenMath();
+        if (library.HasFlag(LuauLibrary.OS)) OpenOS();
+        if (library.HasFlag(LuauLibrary.String)) OpenString();
+        if (library.HasFlag(LuauLibrary.Table)) OpenTable();
+        if (library.HasFlag(LuauLibrary.Utf8)) OpenUtf8();
+        if (library.HasFlag(LuauLibrary.Vector)) OpenVector();
     }
 
     /// <inheritdoc cref="OpenLibraries"/>
@@ -210,139 +387,53 @@ public class Luau : IDisposable
     /// Pops <paramref name="n"/> values off the top of the stack.
     /// </summary>
     /// <param name="n">The number of values to pop.</param>
+    /// <param name="state">The Lua state to pop values from.</param>
     /// <exception cref="ObjectDisposedException">Thrown if this instance has been disposed.</exception>
-    public void Pop(int n)
+    public void Pop(int n, LuaState state)
     {
         ThrowIfDisposed();
-        State.SetTop(-n - 1);
+        state.SetTop(-n - 1);
     }
+
+    /// <inheritdoc cref="Pop(int, LuaState)"/>
+    public void Pop(int n) => Pop(n, State);
 
     /// <summary>
     /// Pushes a <see cref="LuauValue"/> onto the stack.
     /// </summary>
     /// <param name="value">The value to push.</param>
+    /// <param name="state">The Lua state to push the value onto.</param>
     /// <exception cref="ObjectDisposedException">Thrown if this instance has been disposed.</exception>
-    public void Push(LuauValue value)
+    public void Push(LuauValue value, LuaState state)
     {
         ThrowIfDisposed();
-        PushValue(value, State);
+        PushValue(value, state);
     }
 
+    /// <inheritdoc cref="Push(LuauValue, LuaState)"/>
+    public void Push(LuauValue value) => Push(value, State);
+
     /// <summary>
-    /// Gets the value of an FFlag in the Luau VM.
+    /// Pushes a C# function onto the stack.
     /// </summary>
-    /// <param name="name">The name of the FFlag to get.</param>
-    /// <returns><see langword="true"/> if the FFlag is enabled, or <see langword="false"/> if it is disabled.</returns>
-    public bool GetFFlag(string name)
+    public void PushCallback(LuauCallback callback, LuaState state)
     {
         ThrowIfDisposed();
-        return NativeMethods.luau_getfflag(name) != 0;
+        NativeMethods.luau_pushcsharpfunc(state.Handle, callback.FunctionPointer);
     }
 
+    /// <inheritdoc cref="PushCallback(LuauCallback, LuaState)"/>
+    public void PushCallback(LuauCallback callback) => PushCallback(callback, State);
+
     /// <summary>
-    /// Gets the value at the specified index on the stack.
+    /// Pushes a C# object onto the stack, converting it to an appropriate Luau type.
     /// </summary>
-    /// <param name="index">The index of the value to get.</param>
-    /// <returns>The value at the specified index.</returns>
+    /// <param name="value">The object to push.</param>
+    /// <param name="state">The Lua state to push the object onto.</param>
     /// <exception cref="ObjectDisposedException">Thrown if this instance has been disposed.</exception>
-    public LuauValue GetValue(int index)
+    public void PushObject(object? value, LuaState state)
     {
         ThrowIfDisposed();
-
-        LuauType type = (LuauType)State.Type(index);
-
-        switch (type)
-        {
-            case LuauType.Nil: return LuauValue.Nil;
-            case LuauType.Boolean: return State.ToBoolean(index);
-            case LuauType.Number: return State.ToNumber(index);
-            case LuauType.Integer: return State.ToInteger64(index, out _);
-            case LuauType.String:
-                IntPtr ptr = State.ToLString(index, out UIntPtr len);
-                string? s = ptr == IntPtr.Zero ? null : Marshal.PtrToStringUTF8(ptr, (int)len);
-                return new LuauValue(LuauType.String, number: 0, integer: 0, reference: s);
-            case LuauType.Function:
-                return new LuauValue(LuauType.Function, number: State.Ref(index), integer: 0, reference: this);
-            default:
-                throw new NotSupportedException($"Unsupported Lua type: {type}");
-        }
-    }
-
-    /// <summary>
-    /// Sets an FFlag in the Luau VM. FFlags are used to enable or disable experimental features.
-    /// </summary>
-    /// <param name="name">The name of the FFlag to set.</param>
-    /// <param name="enabled">A value indicating whether the FFlag should be enabled.</param>
-    public void SetFFlag(string name, bool enabled)
-    {
-        ThrowIfDisposed();
-        NativeMethods.luau_setfflag(name, enabled ? 1 : 0);
-    }
-    
-    internal object?[] CollectResults(int stackBase)
-    {
-        int count = State.GetTop() - stackBase;
-        var results = new object?[count];
-
-        try
-        {
-            for (int i = 0; i < count; i++)
-                results[i] = GetObject(stackBase + i + 1);
-        }
-        finally
-        {
-            State.SetTop(stackBase);
-        }
-
-        return results;
-    }
-
-    internal object? GetObject(int index) => GetObject(index, State);
-
-    internal object? GetObject(int index, LuaState state)
-    {
-        LuauType type = (LuauType)state.Type(index);
-
-        return type switch
-        {
-            LuauType.Nil => null,
-            LuauType.Boolean => state.ToBoolean(index),
-            LuauType.Number => state.ToNumber(index),
-            LuauType.Integer => state.ToInteger64(index, out _),
-            LuauType.String => Marshal.PtrToStringUTF8(state.ToLString(index, out _)),
-            LuauType.Function => new LuauFunction(this, state.Ref(index)),
-            LuauType.Table => new LuauTable(this, state.Ref(index)),
-            LuauType.UserData => new LuauUserData(this, state.Ref(index)),
-            LuauType.Vector => ReadVector(index),
-            LuauType.Buffer => ReadBuffer(index),
-            LuauType.Thread => new LuauThread(this, state.Ref(index)),
-            _ => throw new NotSupportedException($"Unsupported Luau type: {type}")
-        };
-    }
-
-    internal string GetErrorMessage()
-    {
-        ThrowIfDisposed();
-        string message = "Unknown error";
-
-        try
-        {
-            IntPtr ptr = State.ToLString(State.AbsIndex(-1), out _);
-            if (ptr != IntPtr.Zero)
-                message = Marshal.PtrToStringUTF8(ptr) ?? message;
-        }
-        finally
-        {
-            Pop(1);
-        }
-
-        return message;
-    }
-
-    internal void PushObject(object? value) => PushObject(value, State);
-
-    internal void PushObject(object? value, LuaState state)
-    {
         switch (value)
         {
             case LuauBase luauBase:
@@ -361,16 +452,35 @@ public class Luau : IDisposable
                     Marshal.Copy(buffer.Data, 0, ptr, buffer.Length);
                 break;
 
+            case Func<Luau, int> fn:
+                var cb = new LuauCallback(this, (vm, state) => fn(vm));
+                Callbacks.Add(cb);
+                NativeMethods.luau_pushcsharpfunc(state.Handle, cb.FunctionPointer);
+                break;
+            case Delegate del:
+                var wrapper = new LuauDelegate(this, del);
+                var callback = new LuauCallback(this, (vm, s) => wrapper.Invoke(s));
+                Callbacks.Add(callback);
+                NativeMethods.luau_pushcsharpfunc(state.Handle, callback.FunctionPointer);
+                break;
             default:
                 PushValue(FromObject(value), state);
                 break;
         }
     }
 
-    internal void PushValue(LuauValue value) => PushValue(value, State);
+    /// <inheritdoc cref="PushObject(object?, LuaState)"/>
+    public void PushObject(object? value) => PushObject(value, State);
 
+    /// <summary>
+    /// Pushes a Luau value onto the stack.
+    /// </summary>
+    /// <param name="value">The value to push.</param>
+    /// <param name="state">The Lua state to push the value onto.</param>
+    /// <exception cref="ObjectDisposedException">Thrown if this instance has been disposed.</exception>
     internal void PushValue(LuauValue value, LuaState state)
     {
+        ThrowIfDisposed();
         switch (value.Type)
         {
             case LuauType.Nil: state.PushNil(); break;
@@ -387,21 +497,86 @@ public class Luau : IDisposable
         }
     }
 
+    /// <inheritdoc cref="PushValue(LuauValue, LuaState)"/>
+    public void PushValue(LuauValue value) => PushValue(value, State);
+
+    /// <summary>
+    /// Registers a C# function as a global in the Luau state, making it callable from Luau code.
+    /// </summary>
+    public LuauCallback RegisterCallback(string name, Func<Luau, LuaState, int> fn)
+    {
+        ThrowIfDisposed();
+
+        var callback = new LuauCallback(this, (vm, state) => fn(vm, state));
+        Callbacks.Add(callback);
+
+        NativeMethods.luau_pushcsharpfunc(State.Handle, callback.FunctionPointer);
+        State.SetGlobal(name);
+
+        return callback;
+    }
+
+    public LuauCallback RegisterCallback(string name, Func<Luau, int> fn) => RegisterCallback(name, (vm, _) => fn(vm));
+
+    /// <summary>
+    /// Sets an FFlag in the Luau VM. FFlags are used to enable or disable experimental features.
+    /// </summary>
+    /// <param name="name">The name of the FFlag to set.</param>
+    /// <param name="enabled">A value indicating whether the FFlag should be enabled.</param>
+    public void SetFFlag(string name, bool enabled)
+    {
+        ThrowIfDisposed();
+        NativeMethods.luau_setfflag(name, enabled ? 1 : 0);
+    }
+
+    internal object?[] CollectResults(int stackBase, LuaState state)
+    {
+        int count = state.GetTop() - stackBase;
+        var results = new object?[count];
+
+        try
+        {
+            for (int i = 0; i < count; i++)
+                results[i] = GetObject(stackBase + i + 1, state);
+        }
+        finally
+        {
+            state.SetTop(stackBase);
+        }
+
+        return results;
+    }
+
+    /// <inheritdoc cref="CollectResults(int, LuaState)"/>
+    public object?[] CollectResults(int stackBase) => CollectResults(stackBase, State);
+
     internal void ThrowIfDisposed()
     {
         if (IsDisposed || State.IsNull)
             throw new ObjectDisposedException(nameof(Luau));
     }
 
-    internal void ThrowLastError()
+    internal void ThrowLastError(LuaState state)
     {
-        throw new LuauException(GetErrorMessage());
+        throw new LuauException(GetErrorMessage(state));
     }
+
+    internal void ThrowLastError() => ThrowLastError(State);
 
     private object?[] CallAndCollect(int stackBase)
     {
         if ((LuauStatus)State.PCall(0, LuaConstants.LUA_MULTRET, 0) != LuauStatus.OK)
+        {
+            var pending = LuauCallback._pendingException;
+            LuauCallback._pendingException = null;
+
+            GetErrorMessage(); // Clear the error message from the stack
+
+            if (pending is not null)
+                throw pending;
+
             ThrowLastError();
+        }
 
         return CollectResults(stackBase);
     }

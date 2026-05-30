@@ -189,8 +189,11 @@ EXPORTS
     luaL_sandboxthread
 
     ; Memory
-    lua_free
+    luau_free
 
     ; Fflags
     luau_setfflag
     luau_getfflag
+
+    ; Callbacks 
+    luau_pushcsharpfunc

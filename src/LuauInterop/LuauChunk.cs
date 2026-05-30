@@ -40,7 +40,7 @@ public class LuauChunk(IntPtr pointer, UIntPtr size) : IDisposable
 
         if (Pointer != IntPtr.Zero)
         {
-            NativeMethods.lua_free(Pointer);
+            NativeMethods.luau_free(Pointer);
             Pointer = IntPtr.Zero;
         }
 

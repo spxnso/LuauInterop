@@ -1,4 +1,5 @@
 using System.Runtime.InteropServices;
+
 using LuauInterop.Native;
 
 namespace LuauInterop.Runtime;
@@ -10,8 +11,7 @@ public sealed class LuauThread(Luau owner, int reference) : LuauBase(owner, refe
         get
         {
             ThrowIfDisposed();
-            LuaState coroutine = GetCoroutine();
-            return (LuauCoStatus)Owner.State.CoStatus(coroutine);
+            return (LuauCoStatus)Owner.State.CoStatus(GetCoroutine());
         }
     }
 
@@ -25,38 +25,45 @@ public sealed class LuauThread(Luau owner, int reference) : LuauBase(owner, refe
     {
         ThrowIfDisposed();
 
-        LuaState coroutine = GetCoroutine();
-        PushArgs(coroutine, args);
+        LuaState co = GetCoroutine();
+        PushArgs(co, args);
 
-        int status = coroutine.Resume(Owner.State, args.Length);
+        int status = co.Resume(Owner.State, args.Length);
         bool ok = status == (int)LuauStatus.OK || status == (int)LuauStatus.Yield;
 
         if (!ok)
-        {
-            ThrowLastError(coroutine);
-        }
+            ThrowLastError(co);
 
-        int resultCount = coroutine.GetTop();
-        object?[] results = new object?[resultCount];
-
-        for (int i = 0; i < resultCount; i++)
-            results[i] = Owner.GetObject(i + 1, coroutine);
-
-        coroutine.SetTop(0);
-        return results;
+        return Owner.CollectResults(0, co);
     }
 
+    public object?[] Resume(LuauChunk chunk, params object?[] args)
+    {
+        ThrowIfDisposed();
+
+        LuaState co = GetCoroutine();
+
+        LuauStatus loadStatus = (LuauStatus)Owner.State.Load("chunk", chunk.Pointer, chunk.Size, 0);
+        if (loadStatus != LuauStatus.OK)
+            Owner.ThrowLastError();
+
+        Owner.State.XMove(co, 1);
+        PushArgs(co, args);
+
+        int status = co.Resume(Owner.State, args.Length);
+        bool ok = status == (int)LuauStatus.OK || status == (int)LuauStatus.Yield;
+
+        if (!ok)
+            ThrowLastError(co);
+
+        return Owner.CollectResults(0, co);
+    }
 
     private void PushArgs(LuaState co, object?[] args)
     {
-        if (args.Length == 0) return;
-
         foreach (var arg in args)
-            Owner.PushObject(arg);
-
-        Owner.State.XMove(co, args.Length);
+            Owner.PushObject(arg, co);
     }
-
 
     private LuaState GetCoroutine()
     {
@@ -71,16 +78,8 @@ public sealed class LuauThread(Luau owner, int reference) : LuauBase(owner, refe
         return coroutine;
     }
 
-    private static string GetErrorMessage(LuaState coroutine)
-    {
-        IntPtr ptr = coroutine.ToLString(-1, out _);
-        return ptr != IntPtr.Zero ? Marshal.PtrToStringUTF8(ptr) ?? "Unknown coroutine error" : "Unknown coroutine error";
-    }
-
     private void ThrowLastError(LuaState coroutine)
     {
-        string message = GetErrorMessage(coroutine);
-        coroutine.SetTop(0);
-        throw new LuauException(message);
+        throw new LuauException(Owner.GetErrorMessage(coroutine));
     }
 }

@@ -52,7 +52,7 @@ public abstract class LuauBase(Luau owner, int reference) : IDisposable
         );
     }
 
-    protected internal void PushReference()
+    public void PushReference()
     {
         ThrowIfDisposed();
         Owner.State.RawGetI(LuaConstants.LUA_REGISTRYINDEX, Reference);

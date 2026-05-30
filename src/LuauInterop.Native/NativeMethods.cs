@@ -615,7 +615,7 @@ public static partial class NativeMethods
 
     [LibraryImport(LuauLibraryName)]
     [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
-    public static partial void lua_free(IntPtr ptr);
+    public static partial void luau_free(IntPtr ptr);
     #region Library functions
 
     [LibraryImport(LuauLibraryName)]
@@ -686,4 +686,8 @@ public static partial class NativeMethods
     [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
     public static partial int luau_getfflag(string name);
     #endregion
+
+    [LibraryImport(LuauLibraryName, StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+    public static partial void luau_pushcsharpfunc(IntPtr state, IntPtr fnPtr);
 }

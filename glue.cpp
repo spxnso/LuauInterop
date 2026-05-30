@@ -1,11 +1,26 @@
 #include <string.h>
 #include <stdlib.h>
 #include "external/luau/Common/include/Luau/Common.h"
+#include "external/luau/VM/include/lua.h"
 
+static int csharp_trampoline(lua_State* L)
+{
+    void* ptr = lua_tolightuserdata(L, lua_upvalueindex(1));
+    
+    typedef int(*ManagedCallback)(lua_State*);
+    ManagedCallback fn = (ManagedCallback)ptr;
+    int result = fn(L);
+
+    // Catch the error.
+    if (result == -1)
+        lua_error(L);
+
+    return result;
+}
 
 extern "C"
 {
-    void lua_free(void* ptr)
+    void luau_free(void* ptr)
     {
         free(ptr);
     }
@@ -31,5 +46,11 @@ extern "C"
         }
 
         return -1;
+    }
+
+    void luau_pushcsharpfunc(lua_State* L, void* fnPtr)
+    {
+        lua_pushlightuserdata(L, fnPtr);
+        lua_pushcclosurek(L, csharp_trampoline, "luauinterop", 1, nullptr);
     }
 }
