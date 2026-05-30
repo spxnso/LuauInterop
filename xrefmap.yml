@@ -118,6 +118,28 @@ references:
   fullName.vb: LuauInterop.Luau.New
   nameWithType: Luau.Luau
   nameWithType.vb: Luau.New
+- uid: LuauInterop.Luau.Callbacks
+  name: Callbacks
+  href: api/LuauInterop.Luau.html#LuauInterop_Luau_Callbacks
+  commentId: F:LuauInterop.Luau.Callbacks
+  fullName: LuauInterop.Luau.Callbacks
+  nameWithType: Luau.Callbacks
+- uid: LuauInterop.Luau.CollectResults(System.Int32)
+  name: CollectResults(int)
+  href: api/LuauInterop.Luau.html#LuauInterop_Luau_CollectResults_System_Int32_
+  commentId: M:LuauInterop.Luau.CollectResults(System.Int32)
+  name.vb: CollectResults(Integer)
+  fullName: LuauInterop.Luau.CollectResults(int)
+  fullName.vb: LuauInterop.Luau.CollectResults(Integer)
+  nameWithType: Luau.CollectResults(int)
+  nameWithType.vb: Luau.CollectResults(Integer)
+- uid: LuauInterop.Luau.CollectResults*
+  name: CollectResults
+  href: api/LuauInterop.Luau.html#LuauInterop_Luau_CollectResults_
+  commentId: Overload:LuauInterop.Luau.CollectResults
+  isSpec: "True"
+  fullName: LuauInterop.Luau.CollectResults
+  nameWithType: Luau.CollectResults
 - uid: LuauInterop.Luau.Compile(System.String,LuauInterop.Compilation.LuauCompileOptions)
   name: Compile(string, LuauCompileOptions?)
   href: api/LuauInterop.Luau.html#LuauInterop_Luau_Compile_System_String_LuauInterop_Compilation_LuauCompileOptions_
@@ -217,6 +239,25 @@ references:
   isSpec: "True"
   fullName: LuauInterop.Luau.~Luau
   nameWithType: Luau.~Luau
+- uid: LuauInterop.Luau.GetErrorMessage
+  name: GetErrorMessage()
+  href: api/LuauInterop.Luau.html#LuauInterop_Luau_GetErrorMessage
+  commentId: M:LuauInterop.Luau.GetErrorMessage
+  fullName: LuauInterop.Luau.GetErrorMessage()
+  nameWithType: Luau.GetErrorMessage()
+- uid: LuauInterop.Luau.GetErrorMessage(LuauInterop.Native.LuaState)
+  name: GetErrorMessage(LuaState)
+  href: api/LuauInterop.Luau.html#LuauInterop_Luau_GetErrorMessage_LuauInterop_Native_LuaState_
+  commentId: M:LuauInterop.Luau.GetErrorMessage(LuauInterop.Native.LuaState)
+  fullName: LuauInterop.Luau.GetErrorMessage(LuauInterop.Native.LuaState)
+  nameWithType: Luau.GetErrorMessage(LuaState)
+- uid: LuauInterop.Luau.GetErrorMessage*
+  name: GetErrorMessage
+  href: api/LuauInterop.Luau.html#LuauInterop_Luau_GetErrorMessage_
+  commentId: Overload:LuauInterop.Luau.GetErrorMessage
+  isSpec: "True"
+  fullName: LuauInterop.Luau.GetErrorMessage
+  nameWithType: Luau.GetErrorMessage
 - uid: LuauInterop.Luau.GetFFlag(System.String)
   name: GetFFlag(string)
   href: api/LuauInterop.Luau.html#LuauInterop_Luau_GetFFlag_System_String_
@@ -233,6 +274,31 @@ references:
   isSpec: "True"
   fullName: LuauInterop.Luau.GetFFlag
   nameWithType: Luau.GetFFlag
+- uid: LuauInterop.Luau.GetObject(System.Int32)
+  name: GetObject(int)
+  href: api/LuauInterop.Luau.html#LuauInterop_Luau_GetObject_System_Int32_
+  commentId: M:LuauInterop.Luau.GetObject(System.Int32)
+  name.vb: GetObject(Integer)
+  fullName: LuauInterop.Luau.GetObject(int)
+  fullName.vb: LuauInterop.Luau.GetObject(Integer)
+  nameWithType: Luau.GetObject(int)
+  nameWithType.vb: Luau.GetObject(Integer)
+- uid: LuauInterop.Luau.GetObject(System.Int32,LuauInterop.Native.LuaState)
+  name: GetObject(int, LuaState)
+  href: api/LuauInterop.Luau.html#LuauInterop_Luau_GetObject_System_Int32_LuauInterop_Native_LuaState_
+  commentId: M:LuauInterop.Luau.GetObject(System.Int32,LuauInterop.Native.LuaState)
+  name.vb: GetObject(Integer, LuaState)
+  fullName: LuauInterop.Luau.GetObject(int, LuauInterop.Native.LuaState)
+  fullName.vb: LuauInterop.Luau.GetObject(Integer, LuauInterop.Native.LuaState)
+  nameWithType: Luau.GetObject(int, LuaState)
+  nameWithType.vb: Luau.GetObject(Integer, LuaState)
+- uid: LuauInterop.Luau.GetObject*
+  name: GetObject
+  href: api/LuauInterop.Luau.html#LuauInterop_Luau_GetObject_
+  commentId: Overload:LuauInterop.Luau.GetObject
+  isSpec: "True"
+  fullName: LuauInterop.Luau.GetObject
+  nameWithType: Luau.GetObject
 - uid: LuauInterop.Luau.GetValue(System.Int32)
   name: GetValue(int)
   href: api/LuauInterop.Luau.html#LuauInterop_Luau_GetValue_System_Int32_
@@ -242,6 +308,15 @@ references:
   fullName.vb: LuauInterop.Luau.GetValue(Integer)
   nameWithType: Luau.GetValue(int)
   nameWithType.vb: Luau.GetValue(Integer)
+- uid: LuauInterop.Luau.GetValue(System.Int32,LuauInterop.Native.LuaState)
+  name: GetValue(int, LuaState)
+  href: api/LuauInterop.Luau.html#LuauInterop_Luau_GetValue_System_Int32_LuauInterop_Native_LuaState_
+  commentId: M:LuauInterop.Luau.GetValue(System.Int32,LuauInterop.Native.LuaState)
+  name.vb: GetValue(Integer, LuaState)
+  fullName: LuauInterop.Luau.GetValue(int, LuauInterop.Native.LuaState)
+  fullName.vb: LuauInterop.Luau.GetValue(Integer, LuauInterop.Native.LuaState)
+  nameWithType: Luau.GetValue(int, LuaState)
+  nameWithType.vb: Luau.GetValue(Integer, LuaState)
 - uid: LuauInterop.Luau.GetValue*
   name: GetValue
   href: api/LuauInterop.Luau.html#LuauInterop_Luau_GetValue_
@@ -281,6 +356,15 @@ references:
   fullName.vb: LuauInterop.Luau.this[]
   nameWithType: Luau.this
   nameWithType.vb: Luau.this[]
+- uid: LuauInterop.Luau.LoadString(System.String,LuauInterop.Native.LuaState,System.String)
+  name: LoadString(string, LuaState, string)
+  href: api/LuauInterop.Luau.html#LuauInterop_Luau_LoadString_System_String_LuauInterop_Native_LuaState_System_String_
+  commentId: M:LuauInterop.Luau.LoadString(System.String,LuauInterop.Native.LuaState,System.String)
+  name.vb: LoadString(String, LuaState, String)
+  fullName: LuauInterop.Luau.LoadString(string, LuauInterop.Native.LuaState, string)
+  fullName.vb: LuauInterop.Luau.LoadString(String, LuauInterop.Native.LuaState, String)
+  nameWithType: Luau.LoadString(string, LuaState, string)
+  nameWithType.vb: Luau.LoadString(String, LuaState, String)
 - uid: LuauInterop.Luau.LoadString(System.String,System.String)
   name: LoadString(string, string)
   href: api/LuauInterop.Luau.html#LuauInterop_Luau_LoadString_System_String_System_String_
@@ -381,6 +465,15 @@ references:
   commentId: M:LuauInterop.Luau.OpenLibraries
   fullName: LuauInterop.Luau.OpenLibraries()
   nameWithType: Luau.OpenLibraries()
+- uid: LuauInterop.Luau.OpenLibraries(System.Collections.Generic.List{LuauInterop.Runtime.LuauLibrary})
+  name: OpenLibraries(List<LuauLibrary>)
+  href: api/LuauInterop.Luau.html#LuauInterop_Luau_OpenLibraries_System_Collections_Generic_List_LuauInterop_Runtime_LuauLibrary__
+  commentId: M:LuauInterop.Luau.OpenLibraries(System.Collections.Generic.List{LuauInterop.Runtime.LuauLibrary})
+  name.vb: OpenLibraries(List(Of LuauLibrary))
+  fullName: LuauInterop.Luau.OpenLibraries(System.Collections.Generic.List<LuauInterop.Runtime.LuauLibrary>)
+  fullName.vb: LuauInterop.Luau.OpenLibraries(System.Collections.Generic.List(Of LuauInterop.Runtime.LuauLibrary))
+  nameWithType: Luau.OpenLibraries(List<LuauLibrary>)
+  nameWithType.vb: Luau.OpenLibraries(List(Of LuauLibrary))
 - uid: LuauInterop.Luau.OpenLibraries*
   name: OpenLibraries
   href: api/LuauInterop.Luau.html#LuauInterop_Luau_OpenLibraries_
@@ -388,6 +481,19 @@ references:
   isSpec: "True"
   fullName: LuauInterop.Luau.OpenLibraries
   nameWithType: Luau.OpenLibraries
+- uid: LuauInterop.Luau.OpenLibrary(LuauInterop.Runtime.LuauLibrary)
+  name: OpenLibrary(LuauLibrary)
+  href: api/LuauInterop.Luau.html#LuauInterop_Luau_OpenLibrary_LuauInterop_Runtime_LuauLibrary_
+  commentId: M:LuauInterop.Luau.OpenLibrary(LuauInterop.Runtime.LuauLibrary)
+  fullName: LuauInterop.Luau.OpenLibrary(LuauInterop.Runtime.LuauLibrary)
+  nameWithType: Luau.OpenLibrary(LuauLibrary)
+- uid: LuauInterop.Luau.OpenLibrary*
+  name: OpenLibrary
+  href: api/LuauInterop.Luau.html#LuauInterop_Luau_OpenLibrary_
+  commentId: Overload:LuauInterop.Luau.OpenLibrary
+  isSpec: "True"
+  fullName: LuauInterop.Luau.OpenLibrary
+  nameWithType: Luau.OpenLibrary
 - uid: LuauInterop.Luau.OpenMath
   name: OpenMath()
   href: api/LuauInterop.Luau.html#LuauInterop_Luau_OpenMath
@@ -475,6 +581,15 @@ references:
   fullName.vb: LuauInterop.Luau.Pop(Integer)
   nameWithType: Luau.Pop(int)
   nameWithType.vb: Luau.Pop(Integer)
+- uid: LuauInterop.Luau.Pop(System.Int32,LuauInterop.Native.LuaState)
+  name: Pop(int, LuaState)
+  href: api/LuauInterop.Luau.html#LuauInterop_Luau_Pop_System_Int32_LuauInterop_Native_LuaState_
+  commentId: M:LuauInterop.Luau.Pop(System.Int32,LuauInterop.Native.LuaState)
+  name.vb: Pop(Integer, LuaState)
+  fullName: LuauInterop.Luau.Pop(int, LuauInterop.Native.LuaState)
+  fullName.vb: LuauInterop.Luau.Pop(Integer, LuauInterop.Native.LuaState)
+  nameWithType: Luau.Pop(int, LuaState)
+  nameWithType.vb: Luau.Pop(Integer, LuaState)
 - uid: LuauInterop.Luau.Pop*
   name: Pop
   href: api/LuauInterop.Luau.html#LuauInterop_Luau_Pop_
@@ -488,6 +603,12 @@ references:
   commentId: M:LuauInterop.Luau.Push(LuauInterop.LuauValue)
   fullName: LuauInterop.Luau.Push(LuauInterop.LuauValue)
   nameWithType: Luau.Push(LuauValue)
+- uid: LuauInterop.Luau.Push(LuauInterop.LuauValue,LuauInterop.Native.LuaState)
+  name: Push(LuauValue, LuaState)
+  href: api/LuauInterop.Luau.html#LuauInterop_Luau_Push_LuauInterop_LuauValue_LuauInterop_Native_LuaState_
+  commentId: M:LuauInterop.Luau.Push(LuauInterop.LuauValue,LuauInterop.Native.LuaState)
+  fullName: LuauInterop.Luau.Push(LuauInterop.LuauValue, LuauInterop.Native.LuaState)
+  nameWithType: Luau.Push(LuauValue, LuaState)
 - uid: LuauInterop.Luau.Push*
   name: Push
   href: api/LuauInterop.Luau.html#LuauInterop_Luau_Push_
@@ -495,6 +616,88 @@ references:
   isSpec: "True"
   fullName: LuauInterop.Luau.Push
   nameWithType: Luau.Push
+- uid: LuauInterop.Luau.PushCallback(LuauInterop.Runtime.LuauCallback)
+  name: PushCallback(LuauCallback)
+  href: api/LuauInterop.Luau.html#LuauInterop_Luau_PushCallback_LuauInterop_Runtime_LuauCallback_
+  commentId: M:LuauInterop.Luau.PushCallback(LuauInterop.Runtime.LuauCallback)
+  fullName: LuauInterop.Luau.PushCallback(LuauInterop.Runtime.LuauCallback)
+  nameWithType: Luau.PushCallback(LuauCallback)
+- uid: LuauInterop.Luau.PushCallback(LuauInterop.Runtime.LuauCallback,LuauInterop.Native.LuaState)
+  name: PushCallback(LuauCallback, LuaState)
+  href: api/LuauInterop.Luau.html#LuauInterop_Luau_PushCallback_LuauInterop_Runtime_LuauCallback_LuauInterop_Native_LuaState_
+  commentId: M:LuauInterop.Luau.PushCallback(LuauInterop.Runtime.LuauCallback,LuauInterop.Native.LuaState)
+  fullName: LuauInterop.Luau.PushCallback(LuauInterop.Runtime.LuauCallback, LuauInterop.Native.LuaState)
+  nameWithType: Luau.PushCallback(LuauCallback, LuaState)
+- uid: LuauInterop.Luau.PushCallback*
+  name: PushCallback
+  href: api/LuauInterop.Luau.html#LuauInterop_Luau_PushCallback_
+  commentId: Overload:LuauInterop.Luau.PushCallback
+  isSpec: "True"
+  fullName: LuauInterop.Luau.PushCallback
+  nameWithType: Luau.PushCallback
+- uid: LuauInterop.Luau.PushObject(System.Object)
+  name: PushObject(object?)
+  href: api/LuauInterop.Luau.html#LuauInterop_Luau_PushObject_System_Object_
+  commentId: M:LuauInterop.Luau.PushObject(System.Object)
+  name.vb: PushObject(Object)
+  fullName: LuauInterop.Luau.PushObject(object?)
+  fullName.vb: LuauInterop.Luau.PushObject(Object)
+  nameWithType: Luau.PushObject(object?)
+  nameWithType.vb: Luau.PushObject(Object)
+- uid: LuauInterop.Luau.PushObject(System.Object,LuauInterop.Native.LuaState)
+  name: PushObject(object?, LuaState)
+  href: api/LuauInterop.Luau.html#LuauInterop_Luau_PushObject_System_Object_LuauInterop_Native_LuaState_
+  commentId: M:LuauInterop.Luau.PushObject(System.Object,LuauInterop.Native.LuaState)
+  name.vb: PushObject(Object, LuaState)
+  fullName: LuauInterop.Luau.PushObject(object?, LuauInterop.Native.LuaState)
+  fullName.vb: LuauInterop.Luau.PushObject(Object, LuauInterop.Native.LuaState)
+  nameWithType: Luau.PushObject(object?, LuaState)
+  nameWithType.vb: Luau.PushObject(Object, LuaState)
+- uid: LuauInterop.Luau.PushObject*
+  name: PushObject
+  href: api/LuauInterop.Luau.html#LuauInterop_Luau_PushObject_
+  commentId: Overload:LuauInterop.Luau.PushObject
+  isSpec: "True"
+  fullName: LuauInterop.Luau.PushObject
+  nameWithType: Luau.PushObject
+- uid: LuauInterop.Luau.PushValue(LuauInterop.LuauValue)
+  name: PushValue(LuauValue)
+  href: api/LuauInterop.Luau.html#LuauInterop_Luau_PushValue_LuauInterop_LuauValue_
+  commentId: M:LuauInterop.Luau.PushValue(LuauInterop.LuauValue)
+  fullName: LuauInterop.Luau.PushValue(LuauInterop.LuauValue)
+  nameWithType: Luau.PushValue(LuauValue)
+- uid: LuauInterop.Luau.PushValue*
+  name: PushValue
+  href: api/LuauInterop.Luau.html#LuauInterop_Luau_PushValue_
+  commentId: Overload:LuauInterop.Luau.PushValue
+  isSpec: "True"
+  fullName: LuauInterop.Luau.PushValue
+  nameWithType: Luau.PushValue
+- uid: LuauInterop.Luau.RegisterCallback(System.String,System.Func{LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32})
+  name: RegisterCallback(string, Func<Luau, LuaState, int>)
+  href: api/LuauInterop.Luau.html#LuauInterop_Luau_RegisterCallback_System_String_System_Func_LuauInterop_Luau_LuauInterop_Native_LuaState_System_Int32__
+  commentId: M:LuauInterop.Luau.RegisterCallback(System.String,System.Func{LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32})
+  name.vb: RegisterCallback(String, Func(Of Luau, LuaState, Integer))
+  fullName: LuauInterop.Luau.RegisterCallback(string, System.Func<LuauInterop.Luau, LuauInterop.Native.LuaState, int>)
+  fullName.vb: LuauInterop.Luau.RegisterCallback(String, System.Func(Of LuauInterop.Luau, LuauInterop.Native.LuaState, Integer))
+  nameWithType: Luau.RegisterCallback(string, Func<Luau, LuaState, int>)
+  nameWithType.vb: Luau.RegisterCallback(String, Func(Of Luau, LuaState, Integer))
+- uid: LuauInterop.Luau.RegisterCallback(System.String,System.Func{LuauInterop.Luau,System.Int32})
+  name: RegisterCallback(string, Func<Luau, int>)
+  href: api/LuauInterop.Luau.html#LuauInterop_Luau_RegisterCallback_System_String_System_Func_LuauInterop_Luau_System_Int32__
+  commentId: M:LuauInterop.Luau.RegisterCallback(System.String,System.Func{LuauInterop.Luau,System.Int32})
+  name.vb: RegisterCallback(String, Func(Of Luau, Integer))
+  fullName: LuauInterop.Luau.RegisterCallback(string, System.Func<LuauInterop.Luau, int>)
+  fullName.vb: LuauInterop.Luau.RegisterCallback(String, System.Func(Of LuauInterop.Luau, Integer))
+  nameWithType: Luau.RegisterCallback(string, Func<Luau, int>)
+  nameWithType.vb: Luau.RegisterCallback(String, Func(Of Luau, Integer))
+- uid: LuauInterop.Luau.RegisterCallback*
+  name: RegisterCallback
+  href: api/LuauInterop.Luau.html#LuauInterop_Luau_RegisterCallback_
+  commentId: Overload:LuauInterop.Luau.RegisterCallback
+  isSpec: "True"
+  fullName: LuauInterop.Luau.RegisterCallback
+  nameWithType: Luau.RegisterCallback
 - uid: LuauInterop.Luau.SetFFlag(System.String,System.Boolean)
   name: SetFFlag(string, bool)
   href: api/LuauInterop.Luau.html#LuauInterop_Luau_SetFFlag_System_String_System_Boolean_
@@ -3811,21 +4014,6 @@ references:
   commentId: Overload:LuauInterop.Native.NativeMethods.lua_error
   fullName: LuauInterop.Native.NativeMethods.lua_error
   nameWithType: NativeMethods.lua_error
-- uid: LuauInterop.Native.NativeMethods.lua_free(System.IntPtr)
-  name: lua_free(nint)
-  href: api/LuauInterop.Native.NativeMethods.html#LuauInterop_Native_NativeMethods_lua_free_System_IntPtr_
-  commentId: M:LuauInterop.Native.NativeMethods.lua_free(System.IntPtr)
-  name.vb: lua_free(IntPtr)
-  fullName: LuauInterop.Native.NativeMethods.lua_free(nint)
-  fullName.vb: LuauInterop.Native.NativeMethods.lua_free(System.IntPtr)
-  nameWithType: NativeMethods.lua_free(nint)
-  nameWithType.vb: NativeMethods.lua_free(IntPtr)
-- uid: LuauInterop.Native.NativeMethods.lua_free*
-  name: lua_free
-  href: api/LuauInterop.Native.NativeMethods.html#LuauInterop_Native_NativeMethods_lua_free_
-  commentId: Overload:LuauInterop.Native.NativeMethods.lua_free
-  fullName: LuauInterop.Native.NativeMethods.lua_free
-  nameWithType: NativeMethods.lua_free
 - uid: LuauInterop.Native.NativeMethods.lua_gc(System.IntPtr,System.Int32,System.Int32)
   name: lua_gc(nint, int, int)
   href: api/LuauInterop.Native.NativeMethods.html#LuauInterop_Native_NativeMethods_lua_gc_System_IntPtr_System_Int32_System_Int32_
@@ -5858,6 +6046,21 @@ references:
   isSpec: "True"
   fullName: LuauInterop.Native.NativeMethods.luau_compile
   nameWithType: NativeMethods.luau_compile
+- uid: LuauInterop.Native.NativeMethods.luau_free(System.IntPtr)
+  name: luau_free(nint)
+  href: api/LuauInterop.Native.NativeMethods.html#LuauInterop_Native_NativeMethods_luau_free_System_IntPtr_
+  commentId: M:LuauInterop.Native.NativeMethods.luau_free(System.IntPtr)
+  name.vb: luau_free(IntPtr)
+  fullName: LuauInterop.Native.NativeMethods.luau_free(nint)
+  fullName.vb: LuauInterop.Native.NativeMethods.luau_free(System.IntPtr)
+  nameWithType: NativeMethods.luau_free(nint)
+  nameWithType.vb: NativeMethods.luau_free(IntPtr)
+- uid: LuauInterop.Native.NativeMethods.luau_free*
+  name: luau_free
+  href: api/LuauInterop.Native.NativeMethods.html#LuauInterop_Native_NativeMethods_luau_free_
+  commentId: Overload:LuauInterop.Native.NativeMethods.luau_free
+  fullName: LuauInterop.Native.NativeMethods.luau_free
+  nameWithType: NativeMethods.luau_free
 - uid: LuauInterop.Native.NativeMethods.luau_getfflag(System.String)
   name: luau_getfflag(string)
   href: api/LuauInterop.Native.NativeMethods.html#LuauInterop_Native_NativeMethods_luau_getfflag_System_String_
@@ -5890,6 +6093,21 @@ references:
   isSpec: "True"
   fullName: LuauInterop.Native.NativeMethods.luau_load
   nameWithType: NativeMethods.luau_load
+- uid: LuauInterop.Native.NativeMethods.luau_pushcsharpfunc(System.IntPtr,System.IntPtr)
+  name: luau_pushcsharpfunc(nint, nint)
+  href: api/LuauInterop.Native.NativeMethods.html#LuauInterop_Native_NativeMethods_luau_pushcsharpfunc_System_IntPtr_System_IntPtr_
+  commentId: M:LuauInterop.Native.NativeMethods.luau_pushcsharpfunc(System.IntPtr,System.IntPtr)
+  name.vb: luau_pushcsharpfunc(IntPtr, IntPtr)
+  fullName: LuauInterop.Native.NativeMethods.luau_pushcsharpfunc(nint, nint)
+  fullName.vb: LuauInterop.Native.NativeMethods.luau_pushcsharpfunc(System.IntPtr, System.IntPtr)
+  nameWithType: NativeMethods.luau_pushcsharpfunc(nint, nint)
+  nameWithType.vb: NativeMethods.luau_pushcsharpfunc(IntPtr, IntPtr)
+- uid: LuauInterop.Native.NativeMethods.luau_pushcsharpfunc*
+  name: luau_pushcsharpfunc
+  href: api/LuauInterop.Native.NativeMethods.html#LuauInterop_Native_NativeMethods_luau_pushcsharpfunc_
+  commentId: Overload:LuauInterop.Native.NativeMethods.luau_pushcsharpfunc
+  fullName: LuauInterop.Native.NativeMethods.luau_pushcsharpfunc
+  nameWithType: NativeMethods.luau_pushcsharpfunc
 - uid: LuauInterop.Native.NativeMethods.luau_setfflag(System.String,System.Int32)
   name: luau_setfflag(string, int)
   href: api/LuauInterop.Native.NativeMethods.html#LuauInterop_Native_NativeMethods_luau_setfflag_System_String_System_Int32_
@@ -6246,6 +6464,153 @@ references:
   commentId: N:LuauInterop.Runtime
   fullName: LuauInterop.Runtime
   nameWithType: LuauInterop.Runtime
+- uid: LuauInterop.Runtime.LuauCallback
+  name: LuauCallback
+  href: api/LuauInterop.Runtime.LuauCallback.html
+  commentId: T:LuauInterop.Runtime.LuauCallback
+  fullName: LuauInterop.Runtime.LuauCallback
+  nameWithType: LuauCallback
+- uid: LuauInterop.Runtime.LuauCallback.#ctor(LuauInterop.Luau,System.Func{LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32})
+  name: LuauCallback(Luau, Func<Luau, LuaState, int>)
+  href: api/LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback__ctor_LuauInterop_Luau_System_Func_LuauInterop_Luau_LuauInterop_Native_LuaState_System_Int32__
+  commentId: M:LuauInterop.Runtime.LuauCallback.#ctor(LuauInterop.Luau,System.Func{LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32})
+  name.vb: New(Luau, Func(Of Luau, LuaState, Integer))
+  fullName: LuauInterop.Runtime.LuauCallback.LuauCallback(LuauInterop.Luau, System.Func<LuauInterop.Luau, LuauInterop.Native.LuaState, int>)
+  fullName.vb: LuauInterop.Runtime.LuauCallback.New(LuauInterop.Luau, System.Func(Of LuauInterop.Luau, LuauInterop.Native.LuaState, Integer))
+  nameWithType: LuauCallback.LuauCallback(Luau, Func<Luau, LuaState, int>)
+  nameWithType.vb: LuauCallback.New(Luau, Func(Of Luau, LuaState, Integer))
+- uid: LuauInterop.Runtime.LuauCallback.#ctor*
+  name: LuauCallback
+  href: api/LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback__ctor_
+  commentId: Overload:LuauInterop.Runtime.LuauCallback.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: LuauInterop.Runtime.LuauCallback.LuauCallback
+  fullName.vb: LuauInterop.Runtime.LuauCallback.New
+  nameWithType: LuauCallback.LuauCallback
+  nameWithType.vb: LuauCallback.New
+- uid: LuauInterop.Runtime.LuauCallback.Dispose
+  name: Dispose()
+  href: api/LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback_Dispose
+  commentId: M:LuauInterop.Runtime.LuauCallback.Dispose
+  fullName: LuauInterop.Runtime.LuauCallback.Dispose()
+  nameWithType: LuauCallback.Dispose()
+- uid: LuauInterop.Runtime.LuauCallback.Dispose(System.Boolean)
+  name: Dispose(bool)
+  href: api/LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback_Dispose_System_Boolean_
+  commentId: M:LuauInterop.Runtime.LuauCallback.Dispose(System.Boolean)
+  name.vb: Dispose(Boolean)
+  fullName: LuauInterop.Runtime.LuauCallback.Dispose(bool)
+  fullName.vb: LuauInterop.Runtime.LuauCallback.Dispose(Boolean)
+  nameWithType: LuauCallback.Dispose(bool)
+  nameWithType.vb: LuauCallback.Dispose(Boolean)
+- uid: LuauInterop.Runtime.LuauCallback.Dispose*
+  name: Dispose
+  href: api/LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback_Dispose_
+  commentId: Overload:LuauInterop.Runtime.LuauCallback.Dispose
+  isSpec: "True"
+  fullName: LuauInterop.Runtime.LuauCallback.Dispose
+  nameWithType: LuauCallback.Dispose
+- uid: LuauInterop.Runtime.LuauCallback.Finalize
+  name: ~LuauCallback()
+  href: api/LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback_Finalize
+  commentId: M:LuauInterop.Runtime.LuauCallback.Finalize
+  name.vb: ''
+  fullName: LuauInterop.Runtime.LuauCallback.~LuauCallback()
+  fullName.vb: ''
+  nameWithType: LuauCallback.~LuauCallback()
+  nameWithType.vb: ''
+- uid: LuauInterop.Runtime.LuauCallback.Finalize*
+  name: ~LuauCallback
+  href: api/LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback_Finalize_
+  commentId: Overload:LuauInterop.Runtime.LuauCallback.Finalize
+  isSpec: "True"
+  fullName: LuauInterop.Runtime.LuauCallback.~LuauCallback
+  nameWithType: LuauCallback.~LuauCallback
+- uid: LuauInterop.Runtime.LuauCallback.FunctionPointer
+  name: FunctionPointer
+  href: api/LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback_FunctionPointer
+  commentId: P:LuauInterop.Runtime.LuauCallback.FunctionPointer
+  fullName: LuauInterop.Runtime.LuauCallback.FunctionPointer
+  nameWithType: LuauCallback.FunctionPointer
+- uid: LuauInterop.Runtime.LuauCallback.FunctionPointer*
+  name: FunctionPointer
+  href: api/LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback_FunctionPointer_
+  commentId: Overload:LuauInterop.Runtime.LuauCallback.FunctionPointer
+  isSpec: "True"
+  fullName: LuauInterop.Runtime.LuauCallback.FunctionPointer
+  nameWithType: LuauCallback.FunctionPointer
+- uid: LuauInterop.Runtime.LuauCallback.IsDisposed
+  name: IsDisposed
+  href: api/LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback_IsDisposed
+  commentId: P:LuauInterop.Runtime.LuauCallback.IsDisposed
+  fullName: LuauInterop.Runtime.LuauCallback.IsDisposed
+  nameWithType: LuauCallback.IsDisposed
+- uid: LuauInterop.Runtime.LuauCallback.IsDisposed*
+  name: IsDisposed
+  href: api/LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback_IsDisposed_
+  commentId: Overload:LuauInterop.Runtime.LuauCallback.IsDisposed
+  isSpec: "True"
+  fullName: LuauInterop.Runtime.LuauCallback.IsDisposed
+  nameWithType: LuauCallback.IsDisposed
+- uid: LuauInterop.Runtime.LuauCallback.Managed
+  name: Managed
+  href: api/LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback_Managed
+  commentId: P:LuauInterop.Runtime.LuauCallback.Managed
+  fullName: LuauInterop.Runtime.LuauCallback.Managed
+  nameWithType: LuauCallback.Managed
+- uid: LuauInterop.Runtime.LuauCallback.Managed*
+  name: Managed
+  href: api/LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback_Managed_
+  commentId: Overload:LuauInterop.Runtime.LuauCallback.Managed
+  isSpec: "True"
+  fullName: LuauInterop.Runtime.LuauCallback.Managed
+  nameWithType: LuauCallback.Managed
+- uid: LuauInterop.Runtime.LuauCallback.Native
+  name: Native
+  href: api/LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback_Native
+  commentId: P:LuauInterop.Runtime.LuauCallback.Native
+  fullName: LuauInterop.Runtime.LuauCallback.Native
+  nameWithType: LuauCallback.Native
+- uid: LuauInterop.Runtime.LuauCallback.Native*
+  name: Native
+  href: api/LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback_Native_
+  commentId: Overload:LuauInterop.Runtime.LuauCallback.Native
+  isSpec: "True"
+  fullName: LuauInterop.Runtime.LuauCallback.Native
+  nameWithType: LuauCallback.Native
+- uid: LuauInterop.Runtime.LuauCallback.NativeDelegate
+  name: LuauCallback.NativeDelegate
+  href: api/LuauInterop.Runtime.LuauCallback.NativeDelegate.html
+  commentId: T:LuauInterop.Runtime.LuauCallback.NativeDelegate
+  fullName: LuauInterop.Runtime.LuauCallback.NativeDelegate
+  nameWithType: LuauCallback.NativeDelegate
+- uid: LuauInterop.Runtime.LuauCallback.Owner
+  name: Owner
+  href: api/LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback_Owner
+  commentId: P:LuauInterop.Runtime.LuauCallback.Owner
+  fullName: LuauInterop.Runtime.LuauCallback.Owner
+  nameWithType: LuauCallback.Owner
+- uid: LuauInterop.Runtime.LuauCallback.Owner*
+  name: Owner
+  href: api/LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback_Owner_
+  commentId: Overload:LuauInterop.Runtime.LuauCallback.Owner
+  isSpec: "True"
+  fullName: LuauInterop.Runtime.LuauCallback.Owner
+  nameWithType: LuauCallback.Owner
+- uid: LuauInterop.Runtime.LuauCallback.Pin
+  name: Pin
+  href: api/LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback_Pin
+  commentId: P:LuauInterop.Runtime.LuauCallback.Pin
+  fullName: LuauInterop.Runtime.LuauCallback.Pin
+  nameWithType: LuauCallback.Pin
+- uid: LuauInterop.Runtime.LuauCallback.Pin*
+  name: Pin
+  href: api/LuauInterop.Runtime.LuauCallback.html#LuauInterop_Runtime_LuauCallback_Pin_
+  commentId: Overload:LuauInterop.Runtime.LuauCallback.Pin
+  isSpec: "True"
+  fullName: LuauInterop.Runtime.LuauCallback.Pin
+  nameWithType: LuauCallback.Pin
 - uid: LuauInterop.Runtime.LuauCoStatus
   name: LuauCoStatus
   href: api/LuauInterop.Runtime.LuauCoStatus.html
@@ -6282,6 +6647,109 @@ references:
   commentId: F:LuauInterop.Runtime.LuauCoStatus.Suspended
   fullName: LuauInterop.Runtime.LuauCoStatus.Suspended
   nameWithType: LuauCoStatus.Suspended
+- uid: LuauInterop.Runtime.LuauDelegate
+  name: LuauDelegate
+  href: api/LuauInterop.Runtime.LuauDelegate.html
+  commentId: T:LuauInterop.Runtime.LuauDelegate
+  fullName: LuauInterop.Runtime.LuauDelegate
+  nameWithType: LuauDelegate
+- uid: LuauInterop.Runtime.LuauDelegate.#ctor(LuauInterop.Luau,System.Delegate)
+  name: LuauDelegate(Luau, Delegate)
+  href: api/LuauInterop.Runtime.LuauDelegate.html#LuauInterop_Runtime_LuauDelegate__ctor_LuauInterop_Luau_System_Delegate_
+  commentId: M:LuauInterop.Runtime.LuauDelegate.#ctor(LuauInterop.Luau,System.Delegate)
+  name.vb: New(Luau, Delegate)
+  fullName: LuauInterop.Runtime.LuauDelegate.LuauDelegate(LuauInterop.Luau, System.Delegate)
+  fullName.vb: LuauInterop.Runtime.LuauDelegate.New(LuauInterop.Luau, System.Delegate)
+  nameWithType: LuauDelegate.LuauDelegate(Luau, Delegate)
+  nameWithType.vb: LuauDelegate.New(Luau, Delegate)
+- uid: LuauInterop.Runtime.LuauDelegate.#ctor*
+  name: LuauDelegate
+  href: api/LuauInterop.Runtime.LuauDelegate.html#LuauInterop_Runtime_LuauDelegate__ctor_
+  commentId: Overload:LuauInterop.Runtime.LuauDelegate.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: LuauInterop.Runtime.LuauDelegate.LuauDelegate
+  fullName.vb: LuauInterop.Runtime.LuauDelegate.New
+  nameWithType: LuauDelegate.LuauDelegate
+  nameWithType.vb: LuauDelegate.New
+- uid: LuauInterop.Runtime.LuauDelegate.Delegate
+  name: Delegate
+  href: api/LuauInterop.Runtime.LuauDelegate.html#LuauInterop_Runtime_LuauDelegate_Delegate
+  commentId: P:LuauInterop.Runtime.LuauDelegate.Delegate
+  fullName: LuauInterop.Runtime.LuauDelegate.Delegate
+  nameWithType: LuauDelegate.Delegate
+- uid: LuauInterop.Runtime.LuauDelegate.Delegate*
+  name: Delegate
+  href: api/LuauInterop.Runtime.LuauDelegate.html#LuauInterop_Runtime_LuauDelegate_Delegate_
+  commentId: Overload:LuauInterop.Runtime.LuauDelegate.Delegate
+  isSpec: "True"
+  fullName: LuauInterop.Runtime.LuauDelegate.Delegate
+  nameWithType: LuauDelegate.Delegate
+- uid: LuauInterop.Runtime.LuauDelegate.Invoke(LuauInterop.Native.LuaState)
+  name: Invoke(LuaState)
+  href: api/LuauInterop.Runtime.LuauDelegate.html#LuauInterop_Runtime_LuauDelegate_Invoke_LuauInterop_Native_LuaState_
+  commentId: M:LuauInterop.Runtime.LuauDelegate.Invoke(LuauInterop.Native.LuaState)
+  fullName: LuauInterop.Runtime.LuauDelegate.Invoke(LuauInterop.Native.LuaState)
+  nameWithType: LuauDelegate.Invoke(LuaState)
+- uid: LuauInterop.Runtime.LuauDelegate.Invoke*
+  name: Invoke
+  href: api/LuauInterop.Runtime.LuauDelegate.html#LuauInterop_Runtime_LuauDelegate_Invoke_
+  commentId: Overload:LuauInterop.Runtime.LuauDelegate.Invoke
+  isSpec: "True"
+  fullName: LuauInterop.Runtime.LuauDelegate.Invoke
+  nameWithType: LuauDelegate.Invoke
+- uid: LuauInterop.Runtime.LuauDelegate.IsVariadic
+  name: IsVariadic
+  href: api/LuauInterop.Runtime.LuauDelegate.html#LuauInterop_Runtime_LuauDelegate_IsVariadic
+  commentId: P:LuauInterop.Runtime.LuauDelegate.IsVariadic
+  fullName: LuauInterop.Runtime.LuauDelegate.IsVariadic
+  nameWithType: LuauDelegate.IsVariadic
+- uid: LuauInterop.Runtime.LuauDelegate.IsVariadic*
+  name: IsVariadic
+  href: api/LuauInterop.Runtime.LuauDelegate.html#LuauInterop_Runtime_LuauDelegate_IsVariadic_
+  commentId: Overload:LuauInterop.Runtime.LuauDelegate.IsVariadic
+  isSpec: "True"
+  fullName: LuauInterop.Runtime.LuauDelegate.IsVariadic
+  nameWithType: LuauDelegate.IsVariadic
+- uid: LuauInterop.Runtime.LuauDelegate.Owner
+  name: Owner
+  href: api/LuauInterop.Runtime.LuauDelegate.html#LuauInterop_Runtime_LuauDelegate_Owner
+  commentId: P:LuauInterop.Runtime.LuauDelegate.Owner
+  fullName: LuauInterop.Runtime.LuauDelegate.Owner
+  nameWithType: LuauDelegate.Owner
+- uid: LuauInterop.Runtime.LuauDelegate.Owner*
+  name: Owner
+  href: api/LuauInterop.Runtime.LuauDelegate.html#LuauInterop_Runtime_LuauDelegate_Owner_
+  commentId: Overload:LuauInterop.Runtime.LuauDelegate.Owner
+  isSpec: "True"
+  fullName: LuauInterop.Runtime.LuauDelegate.Owner
+  nameWithType: LuauDelegate.Owner
+- uid: LuauInterop.Runtime.LuauDelegate.Parameters
+  name: Parameters
+  href: api/LuauInterop.Runtime.LuauDelegate.html#LuauInterop_Runtime_LuauDelegate_Parameters
+  commentId: P:LuauInterop.Runtime.LuauDelegate.Parameters
+  fullName: LuauInterop.Runtime.LuauDelegate.Parameters
+  nameWithType: LuauDelegate.Parameters
+- uid: LuauInterop.Runtime.LuauDelegate.Parameters*
+  name: Parameters
+  href: api/LuauInterop.Runtime.LuauDelegate.html#LuauInterop_Runtime_LuauDelegate_Parameters_
+  commentId: Overload:LuauInterop.Runtime.LuauDelegate.Parameters
+  isSpec: "True"
+  fullName: LuauInterop.Runtime.LuauDelegate.Parameters
+  nameWithType: LuauDelegate.Parameters
+- uid: LuauInterop.Runtime.LuauDelegate.ReturnType
+  name: ReturnType
+  href: api/LuauInterop.Runtime.LuauDelegate.html#LuauInterop_Runtime_LuauDelegate_ReturnType
+  commentId: P:LuauInterop.Runtime.LuauDelegate.ReturnType
+  fullName: LuauInterop.Runtime.LuauDelegate.ReturnType
+  nameWithType: LuauDelegate.ReturnType
+- uid: LuauInterop.Runtime.LuauDelegate.ReturnType*
+  name: ReturnType
+  href: api/LuauInterop.Runtime.LuauDelegate.html#LuauInterop_Runtime_LuauDelegate_ReturnType_
+  commentId: Overload:LuauInterop.Runtime.LuauDelegate.ReturnType
+  isSpec: "True"
+  fullName: LuauInterop.Runtime.LuauDelegate.ReturnType
+  nameWithType: LuauDelegate.ReturnType
 - uid: LuauInterop.Runtime.LuauGCOperation
   name: LuauGCOperation
   href: api/LuauInterop.Runtime.LuauGCOperation.html
@@ -6348,6 +6816,84 @@ references:
   commentId: F:LuauInterop.Runtime.LuauGCOperation.Stop
   fullName: LuauInterop.Runtime.LuauGCOperation.Stop
   nameWithType: LuauGCOperation.Stop
+- uid: LuauInterop.Runtime.LuauLibrary
+  name: LuauLibrary
+  href: api/LuauInterop.Runtime.LuauLibrary.html
+  commentId: T:LuauInterop.Runtime.LuauLibrary
+  fullName: LuauInterop.Runtime.LuauLibrary
+  nameWithType: LuauLibrary
+- uid: LuauInterop.Runtime.LuauLibrary.Base
+  name: Base
+  href: api/LuauInterop.Runtime.LuauLibrary.html#LuauInterop_Runtime_LuauLibrary_Base
+  commentId: F:LuauInterop.Runtime.LuauLibrary.Base
+  fullName: LuauInterop.Runtime.LuauLibrary.Base
+  nameWithType: LuauLibrary.Base
+- uid: LuauInterop.Runtime.LuauLibrary.Bit32
+  name: Bit32
+  href: api/LuauInterop.Runtime.LuauLibrary.html#LuauInterop_Runtime_LuauLibrary_Bit32
+  commentId: F:LuauInterop.Runtime.LuauLibrary.Bit32
+  fullName: LuauInterop.Runtime.LuauLibrary.Bit32
+  nameWithType: LuauLibrary.Bit32
+- uid: LuauInterop.Runtime.LuauLibrary.Buffer
+  name: Buffer
+  href: api/LuauInterop.Runtime.LuauLibrary.html#LuauInterop_Runtime_LuauLibrary_Buffer
+  commentId: F:LuauInterop.Runtime.LuauLibrary.Buffer
+  fullName: LuauInterop.Runtime.LuauLibrary.Buffer
+  nameWithType: LuauLibrary.Buffer
+- uid: LuauInterop.Runtime.LuauLibrary.Coroutine
+  name: Coroutine
+  href: api/LuauInterop.Runtime.LuauLibrary.html#LuauInterop_Runtime_LuauLibrary_Coroutine
+  commentId: F:LuauInterop.Runtime.LuauLibrary.Coroutine
+  fullName: LuauInterop.Runtime.LuauLibrary.Coroutine
+  nameWithType: LuauLibrary.Coroutine
+- uid: LuauInterop.Runtime.LuauLibrary.Debug
+  name: Debug
+  href: api/LuauInterop.Runtime.LuauLibrary.html#LuauInterop_Runtime_LuauLibrary_Debug
+  commentId: F:LuauInterop.Runtime.LuauLibrary.Debug
+  fullName: LuauInterop.Runtime.LuauLibrary.Debug
+  nameWithType: LuauLibrary.Debug
+- uid: LuauInterop.Runtime.LuauLibrary.Integer
+  name: Integer
+  href: api/LuauInterop.Runtime.LuauLibrary.html#LuauInterop_Runtime_LuauLibrary_Integer
+  commentId: F:LuauInterop.Runtime.LuauLibrary.Integer
+  fullName: LuauInterop.Runtime.LuauLibrary.Integer
+  nameWithType: LuauLibrary.Integer
+- uid: LuauInterop.Runtime.LuauLibrary.Math
+  name: Math
+  href: api/LuauInterop.Runtime.LuauLibrary.html#LuauInterop_Runtime_LuauLibrary_Math
+  commentId: F:LuauInterop.Runtime.LuauLibrary.Math
+  fullName: LuauInterop.Runtime.LuauLibrary.Math
+  nameWithType: LuauLibrary.Math
+- uid: LuauInterop.Runtime.LuauLibrary.OS
+  name: OS
+  href: api/LuauInterop.Runtime.LuauLibrary.html#LuauInterop_Runtime_LuauLibrary_OS
+  commentId: F:LuauInterop.Runtime.LuauLibrary.OS
+  fullName: LuauInterop.Runtime.LuauLibrary.OS
+  nameWithType: LuauLibrary.OS
+- uid: LuauInterop.Runtime.LuauLibrary.String
+  name: String
+  href: api/LuauInterop.Runtime.LuauLibrary.html#LuauInterop_Runtime_LuauLibrary_String
+  commentId: F:LuauInterop.Runtime.LuauLibrary.String
+  fullName: LuauInterop.Runtime.LuauLibrary.String
+  nameWithType: LuauLibrary.String
+- uid: LuauInterop.Runtime.LuauLibrary.Table
+  name: Table
+  href: api/LuauInterop.Runtime.LuauLibrary.html#LuauInterop_Runtime_LuauLibrary_Table
+  commentId: F:LuauInterop.Runtime.LuauLibrary.Table
+  fullName: LuauInterop.Runtime.LuauLibrary.Table
+  nameWithType: LuauLibrary.Table
+- uid: LuauInterop.Runtime.LuauLibrary.Utf8
+  name: Utf8
+  href: api/LuauInterop.Runtime.LuauLibrary.html#LuauInterop_Runtime_LuauLibrary_Utf8
+  commentId: F:LuauInterop.Runtime.LuauLibrary.Utf8
+  fullName: LuauInterop.Runtime.LuauLibrary.Utf8
+  nameWithType: LuauLibrary.Utf8
+- uid: LuauInterop.Runtime.LuauLibrary.Vector
+  name: Vector
+  href: api/LuauInterop.Runtime.LuauLibrary.html#LuauInterop_Runtime_LuauLibrary_Vector
+  commentId: F:LuauInterop.Runtime.LuauLibrary.Vector
+  fullName: LuauInterop.Runtime.LuauLibrary.Vector
+  nameWithType: LuauLibrary.Vector
 - uid: LuauInterop.Runtime.LuauStatus
   name: LuauStatus
   href: api/LuauInterop.Runtime.LuauStatus.html
@@ -6434,6 +6980,15 @@ references:
   isSpec: "True"
   fullName: LuauInterop.Runtime.LuauThread.Close
   nameWithType: LuauThread.Close
+- uid: LuauInterop.Runtime.LuauThread.Resume(LuauInterop.LuauChunk,System.Object[])
+  name: Resume(LuauChunk, params object?[])
+  href: api/LuauInterop.Runtime.LuauThread.html#LuauInterop_Runtime_LuauThread_Resume_LuauInterop_LuauChunk_System_Object___
+  commentId: M:LuauInterop.Runtime.LuauThread.Resume(LuauInterop.LuauChunk,System.Object[])
+  name.vb: Resume(LuauChunk, ParamArray Object())
+  fullName: LuauInterop.Runtime.LuauThread.Resume(LuauInterop.LuauChunk, params object?[])
+  fullName.vb: LuauInterop.Runtime.LuauThread.Resume(LuauInterop.LuauChunk, ParamArray Object())
+  nameWithType: LuauThread.Resume(LuauChunk, params object?[])
+  nameWithType.vb: LuauThread.Resume(LuauChunk, ParamArray Object())
 - uid: LuauInterop.Runtime.LuauThread.Resume(System.Object[])
   name: Resume(params object?[])
   href: api/LuauInterop.Runtime.LuauThread.html#LuauInterop_Runtime_LuauThread_Resume_System_Object___
@@ -6463,3 +7018,330 @@ references:
   isSpec: "True"
   fullName: LuauInterop.Runtime.LuauThread.Status
   nameWithType: LuauThread.Status
+- uid: LuauInterop.Sandbox
+  name: LuauInterop.Sandbox
+  href: api/LuauInterop.Sandbox.html
+  commentId: N:LuauInterop.Sandbox
+  fullName: LuauInterop.Sandbox
+  nameWithType: LuauInterop.Sandbox
+- uid: LuauInterop.Sandbox.LuauSandbox
+  name: LuauSandbox
+  href: api/LuauInterop.Sandbox.LuauSandbox.html
+  commentId: T:LuauInterop.Sandbox.LuauSandbox
+  fullName: LuauInterop.Sandbox.LuauSandbox
+  nameWithType: LuauSandbox
+- uid: LuauInterop.Sandbox.LuauSandbox.#ctor(LuauInterop.Sandbox.LuauSandboxOptions)
+  name: LuauSandbox(LuauSandboxOptions?)
+  href: api/LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox__ctor_LuauInterop_Sandbox_LuauSandboxOptions_
+  commentId: M:LuauInterop.Sandbox.LuauSandbox.#ctor(LuauInterop.Sandbox.LuauSandboxOptions)
+  name.vb: New(LuauSandboxOptions)
+  fullName: LuauInterop.Sandbox.LuauSandbox.LuauSandbox(LuauInterop.Sandbox.LuauSandboxOptions?)
+  fullName.vb: LuauInterop.Sandbox.LuauSandbox.New(LuauInterop.Sandbox.LuauSandboxOptions)
+  nameWithType: LuauSandbox.LuauSandbox(LuauSandboxOptions?)
+  nameWithType.vb: LuauSandbox.New(LuauSandboxOptions)
+- uid: LuauInterop.Sandbox.LuauSandbox.#ctor*
+  name: LuauSandbox
+  href: api/LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox__ctor_
+  commentId: Overload:LuauInterop.Sandbox.LuauSandbox.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: LuauInterop.Sandbox.LuauSandbox.LuauSandbox
+  fullName.vb: LuauInterop.Sandbox.LuauSandbox.New
+  nameWithType: LuauSandbox.LuauSandbox
+  nameWithType.vb: LuauSandbox.New
+- uid: LuauInterop.Sandbox.LuauSandbox.Dispose
+  name: Dispose()
+  href: api/LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_Dispose
+  commentId: M:LuauInterop.Sandbox.LuauSandbox.Dispose
+  fullName: LuauInterop.Sandbox.LuauSandbox.Dispose()
+  nameWithType: LuauSandbox.Dispose()
+- uid: LuauInterop.Sandbox.LuauSandbox.Dispose(System.Boolean)
+  name: Dispose(bool)
+  href: api/LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_Dispose_System_Boolean_
+  commentId: M:LuauInterop.Sandbox.LuauSandbox.Dispose(System.Boolean)
+  name.vb: Dispose(Boolean)
+  fullName: LuauInterop.Sandbox.LuauSandbox.Dispose(bool)
+  fullName.vb: LuauInterop.Sandbox.LuauSandbox.Dispose(Boolean)
+  nameWithType: LuauSandbox.Dispose(bool)
+  nameWithType.vb: LuauSandbox.Dispose(Boolean)
+- uid: LuauInterop.Sandbox.LuauSandbox.Dispose*
+  name: Dispose
+  href: api/LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_Dispose_
+  commentId: Overload:LuauInterop.Sandbox.LuauSandbox.Dispose
+  isSpec: "True"
+  fullName: LuauInterop.Sandbox.LuauSandbox.Dispose
+  nameWithType: LuauSandbox.Dispose
+- uid: LuauInterop.Sandbox.LuauSandbox.Execute(System.String,System.String)
+  name: Execute(string, string)
+  href: api/LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_Execute_System_String_System_String_
+  commentId: M:LuauInterop.Sandbox.LuauSandbox.Execute(System.String,System.String)
+  name.vb: Execute(String, String)
+  fullName: LuauInterop.Sandbox.LuauSandbox.Execute(string, string)
+  fullName.vb: LuauInterop.Sandbox.LuauSandbox.Execute(String, String)
+  nameWithType: LuauSandbox.Execute(string, string)
+  nameWithType.vb: LuauSandbox.Execute(String, String)
+- uid: LuauInterop.Sandbox.LuauSandbox.Execute*
+  name: Execute
+  href: api/LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_Execute_
+  commentId: Overload:LuauInterop.Sandbox.LuauSandbox.Execute
+  isSpec: "True"
+  fullName: LuauInterop.Sandbox.LuauSandbox.Execute
+  nameWithType: LuauSandbox.Execute
+- uid: LuauInterop.Sandbox.LuauSandbox.Finalize
+  name: ~LuauSandbox()
+  href: api/LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_Finalize
+  commentId: M:LuauInterop.Sandbox.LuauSandbox.Finalize
+  name.vb: ''
+  fullName: LuauInterop.Sandbox.LuauSandbox.~LuauSandbox()
+  fullName.vb: ''
+  nameWithType: LuauSandbox.~LuauSandbox()
+  nameWithType.vb: ''
+- uid: LuauInterop.Sandbox.LuauSandbox.Finalize*
+  name: ~LuauSandbox
+  href: api/LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_Finalize_
+  commentId: Overload:LuauInterop.Sandbox.LuauSandbox.Finalize
+  isSpec: "True"
+  fullName: LuauInterop.Sandbox.LuauSandbox.~LuauSandbox
+  nameWithType: LuauSandbox.~LuauSandbox
+- uid: LuauInterop.Sandbox.LuauSandbox.IsDisposed
+  name: IsDisposed
+  href: api/LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_IsDisposed
+  commentId: P:LuauInterop.Sandbox.LuauSandbox.IsDisposed
+  fullName: LuauInterop.Sandbox.LuauSandbox.IsDisposed
+  nameWithType: LuauSandbox.IsDisposed
+- uid: LuauInterop.Sandbox.LuauSandbox.IsDisposed*
+  name: IsDisposed
+  href: api/LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_IsDisposed_
+  commentId: Overload:LuauInterop.Sandbox.LuauSandbox.IsDisposed
+  isSpec: "True"
+  fullName: LuauInterop.Sandbox.LuauSandbox.IsDisposed
+  nameWithType: LuauSandbox.IsDisposed
+- uid: LuauInterop.Sandbox.LuauSandbox.Luau
+  name: Luau
+  href: api/LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_Luau
+  commentId: P:LuauInterop.Sandbox.LuauSandbox.Luau
+  fullName: LuauInterop.Sandbox.LuauSandbox.Luau
+  nameWithType: LuauSandbox.Luau
+- uid: LuauInterop.Sandbox.LuauSandbox.Luau*
+  name: Luau
+  href: api/LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_Luau_
+  commentId: Overload:LuauInterop.Sandbox.LuauSandbox.Luau
+  isSpec: "True"
+  fullName: LuauInterop.Sandbox.LuauSandbox.Luau
+  nameWithType: LuauSandbox.Luau
+- uid: LuauInterop.Sandbox.LuauSandbox.Options
+  name: Options
+  href: api/LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_Options
+  commentId: P:LuauInterop.Sandbox.LuauSandbox.Options
+  fullName: LuauInterop.Sandbox.LuauSandbox.Options
+  nameWithType: LuauSandbox.Options
+- uid: LuauInterop.Sandbox.LuauSandbox.Options*
+  name: Options
+  href: api/LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_Options_
+  commentId: Overload:LuauInterop.Sandbox.LuauSandbox.Options
+  isSpec: "True"
+  fullName: LuauInterop.Sandbox.LuauSandbox.Options
+  nameWithType: LuauSandbox.Options
+- uid: LuauInterop.Sandbox.LuauSandboxOptions
+  name: LuauSandboxOptions
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html
+  commentId: T:LuauInterop.Sandbox.LuauSandboxOptions
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions
+  nameWithType: LuauSandboxOptions
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobal(System.String)
+  name: AllowGlobal(string)
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_AllowGlobal_System_String_
+  commentId: M:LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobal(System.String)
+  name.vb: AllowGlobal(String)
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobal(string)
+  fullName.vb: LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobal(String)
+  nameWithType: LuauSandboxOptions.AllowGlobal(string)
+  nameWithType.vb: LuauSandboxOptions.AllowGlobal(String)
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobal*
+  name: AllowGlobal
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_AllowGlobal_
+  commentId: Overload:LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobal
+  isSpec: "True"
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobal
+  nameWithType: LuauSandboxOptions.AllowGlobal
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobals(System.Collections.Generic.IReadOnlyList{System.String})
+  name: AllowGlobals(IReadOnlyList<string>)
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_AllowGlobals_System_Collections_Generic_IReadOnlyList_System_String__
+  commentId: M:LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobals(System.Collections.Generic.IReadOnlyList{System.String})
+  name.vb: AllowGlobals(IReadOnlyList(Of String))
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobals(System.Collections.Generic.IReadOnlyList<string>)
+  fullName.vb: LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobals(System.Collections.Generic.IReadOnlyList(Of String))
+  nameWithType: LuauSandboxOptions.AllowGlobals(IReadOnlyList<string>)
+  nameWithType.vb: LuauSandboxOptions.AllowGlobals(IReadOnlyList(Of String))
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobals*
+  name: AllowGlobals
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_AllowGlobals_
+  commentId: Overload:LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobals
+  isSpec: "True"
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobals
+  nameWithType: LuauSandboxOptions.AllowGlobals
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.AllowLibraries(System.Collections.Generic.IReadOnlyList{LuauInterop.Runtime.LuauLibrary})
+  name: AllowLibraries(IReadOnlyList<LuauLibrary>)
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_AllowLibraries_System_Collections_Generic_IReadOnlyList_LuauInterop_Runtime_LuauLibrary__
+  commentId: M:LuauInterop.Sandbox.LuauSandboxOptions.AllowLibraries(System.Collections.Generic.IReadOnlyList{LuauInterop.Runtime.LuauLibrary})
+  name.vb: AllowLibraries(IReadOnlyList(Of LuauLibrary))
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.AllowLibraries(System.Collections.Generic.IReadOnlyList<LuauInterop.Runtime.LuauLibrary>)
+  fullName.vb: LuauInterop.Sandbox.LuauSandboxOptions.AllowLibraries(System.Collections.Generic.IReadOnlyList(Of LuauInterop.Runtime.LuauLibrary))
+  nameWithType: LuauSandboxOptions.AllowLibraries(IReadOnlyList<LuauLibrary>)
+  nameWithType.vb: LuauSandboxOptions.AllowLibraries(IReadOnlyList(Of LuauLibrary))
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.AllowLibraries*
+  name: AllowLibraries
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_AllowLibraries_
+  commentId: Overload:LuauInterop.Sandbox.LuauSandboxOptions.AllowLibraries
+  isSpec: "True"
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.AllowLibraries
+  nameWithType: LuauSandboxOptions.AllowLibraries
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.AllowLibrary(LuauInterop.Runtime.LuauLibrary)
+  name: AllowLibrary(LuauLibrary)
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_AllowLibrary_LuauInterop_Runtime_LuauLibrary_
+  commentId: M:LuauInterop.Sandbox.LuauSandboxOptions.AllowLibrary(LuauInterop.Runtime.LuauLibrary)
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.AllowLibrary(LuauInterop.Runtime.LuauLibrary)
+  nameWithType: LuauSandboxOptions.AllowLibrary(LuauLibrary)
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.AllowLibrary*
+  name: AllowLibrary
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_AllowLibrary_
+  commentId: Overload:LuauInterop.Sandbox.LuauSandboxOptions.AllowLibrary
+  isSpec: "True"
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.AllowLibrary
+  nameWithType: LuauSandboxOptions.AllowLibrary
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.AllowedGlobals
+  name: AllowedGlobals
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_AllowedGlobals
+  commentId: P:LuauInterop.Sandbox.LuauSandboxOptions.AllowedGlobals
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.AllowedGlobals
+  nameWithType: LuauSandboxOptions.AllowedGlobals
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.AllowedGlobals*
+  name: AllowedGlobals
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_AllowedGlobals_
+  commentId: Overload:LuauInterop.Sandbox.LuauSandboxOptions.AllowedGlobals
+  isSpec: "True"
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.AllowedGlobals
+  nameWithType: LuauSandboxOptions.AllowedGlobals
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.AllowedLibraries
+  name: AllowedLibraries
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_AllowedLibraries
+  commentId: P:LuauInterop.Sandbox.LuauSandboxOptions.AllowedLibraries
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.AllowedLibraries
+  nameWithType: LuauSandboxOptions.AllowedLibraries
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.AllowedLibraries*
+  name: AllowedLibraries
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_AllowedLibraries_
+  commentId: Overload:LuauInterop.Sandbox.LuauSandboxOptions.AllowedLibraries
+  isSpec: "True"
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.AllowedLibraries
+  nameWithType: LuauSandboxOptions.AllowedLibraries
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.Default
+  name: Default
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_Default
+  commentId: P:LuauInterop.Sandbox.LuauSandboxOptions.Default
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.Default
+  nameWithType: LuauSandboxOptions.Default
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.Default*
+  name: Default
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_Default_
+  commentId: Overload:LuauInterop.Sandbox.LuauSandboxOptions.Default
+  isSpec: "True"
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.Default
+  nameWithType: LuauSandboxOptions.Default
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.DeniedGlobals
+  name: DeniedGlobals
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_DeniedGlobals
+  commentId: P:LuauInterop.Sandbox.LuauSandboxOptions.DeniedGlobals
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.DeniedGlobals
+  nameWithType: LuauSandboxOptions.DeniedGlobals
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.DeniedGlobals*
+  name: DeniedGlobals
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_DeniedGlobals_
+  commentId: Overload:LuauInterop.Sandbox.LuauSandboxOptions.DeniedGlobals
+  isSpec: "True"
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.DeniedGlobals
+  nameWithType: LuauSandboxOptions.DeniedGlobals
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.DenyGlobal(System.String)
+  name: DenyGlobal(string)
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_DenyGlobal_System_String_
+  commentId: M:LuauInterop.Sandbox.LuauSandboxOptions.DenyGlobal(System.String)
+  name.vb: DenyGlobal(String)
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.DenyGlobal(string)
+  fullName.vb: LuauInterop.Sandbox.LuauSandboxOptions.DenyGlobal(String)
+  nameWithType: LuauSandboxOptions.DenyGlobal(string)
+  nameWithType.vb: LuauSandboxOptions.DenyGlobal(String)
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.DenyGlobal*
+  name: DenyGlobal
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_DenyGlobal_
+  commentId: Overload:LuauInterop.Sandbox.LuauSandboxOptions.DenyGlobal
+  isSpec: "True"
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.DenyGlobal
+  nameWithType: LuauSandboxOptions.DenyGlobal
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.DenyGlobals(System.Collections.Generic.IReadOnlyList{System.String})
+  name: DenyGlobals(IReadOnlyList<string>)
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_DenyGlobals_System_Collections_Generic_IReadOnlyList_System_String__
+  commentId: M:LuauInterop.Sandbox.LuauSandboxOptions.DenyGlobals(System.Collections.Generic.IReadOnlyList{System.String})
+  name.vb: DenyGlobals(IReadOnlyList(Of String))
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.DenyGlobals(System.Collections.Generic.IReadOnlyList<string>)
+  fullName.vb: LuauInterop.Sandbox.LuauSandboxOptions.DenyGlobals(System.Collections.Generic.IReadOnlyList(Of String))
+  nameWithType: LuauSandboxOptions.DenyGlobals(IReadOnlyList<string>)
+  nameWithType.vb: LuauSandboxOptions.DenyGlobals(IReadOnlyList(Of String))
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.DenyGlobals*
+  name: DenyGlobals
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_DenyGlobals_
+  commentId: Overload:LuauInterop.Sandbox.LuauSandboxOptions.DenyGlobals
+  isSpec: "True"
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.DenyGlobals
+  nameWithType: LuauSandboxOptions.DenyGlobals
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.IsolateScripts
+  name: IsolateScripts
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_IsolateScripts
+  commentId: P:LuauInterop.Sandbox.LuauSandboxOptions.IsolateScripts
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.IsolateScripts
+  nameWithType: LuauSandboxOptions.IsolateScripts
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.IsolateScripts*
+  name: IsolateScripts
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_IsolateScripts_
+  commentId: Overload:LuauInterop.Sandbox.LuauSandboxOptions.IsolateScripts
+  isSpec: "True"
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.IsolateScripts
+  nameWithType: LuauSandboxOptions.IsolateScripts
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.LockGlobals
+  name: LockGlobals
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_LockGlobals
+  commentId: P:LuauInterop.Sandbox.LuauSandboxOptions.LockGlobals
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.LockGlobals
+  nameWithType: LuauSandboxOptions.LockGlobals
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.LockGlobals*
+  name: LockGlobals
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_LockGlobals_
+  commentId: Overload:LuauInterop.Sandbox.LuauSandboxOptions.LockGlobals
+  isSpec: "True"
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.LockGlobals
+  nameWithType: LuauSandboxOptions.LockGlobals
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.Strict
+  name: Strict
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_Strict
+  commentId: P:LuauInterop.Sandbox.LuauSandboxOptions.Strict
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.Strict
+  nameWithType: LuauSandboxOptions.Strict
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.Strict*
+  name: Strict
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_Strict_
+  commentId: Overload:LuauInterop.Sandbox.LuauSandboxOptions.Strict
+  isSpec: "True"
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.Strict
+  nameWithType: LuauSandboxOptions.Strict
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.StripDebugInfo
+  name: StripDebugInfo
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_StripDebugInfo
+  commentId: P:LuauInterop.Sandbox.LuauSandboxOptions.StripDebugInfo
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.StripDebugInfo
+  nameWithType: LuauSandboxOptions.StripDebugInfo
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.StripDebugInfo*
+  name: StripDebugInfo
+  href: api/LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_StripDebugInfo_
+  commentId: Overload:LuauInterop.Sandbox.LuauSandboxOptions.StripDebugInfo
+  isSpec: "True"
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.StripDebugInfo
+  nameWithType: LuauSandboxOptions.StripDebugInfo

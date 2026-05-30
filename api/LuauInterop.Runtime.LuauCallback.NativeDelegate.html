@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Installation | LuauInterop </title>
+      <title>Delegate LuauCallback.NativeDelegate | LuauInterop </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Installation | LuauInterop ">
+      <meta name="title" content="Delegate LuauCallback.NativeDelegate | LuauInterop ">
       
-      
+      <meta name="description" content="The native delegate that wraps the managed function.">
       <link rel="icon" href="../images/icon-32x32.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/spxnso/LuauInterop/blob/master/docs/docs/installation.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/spxnso/LuauInterop/new/master/apiSpec/new?filename=LuauInterop_Runtime_LuauCallback_NativeDelegate.md&amp;value=---%0Auid%3A%20LuauInterop.Runtime.LuauCallback.NativeDelegate%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -39,7 +39,7 @@
 
   </head>
 
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
@@ -84,70 +84,56 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="">
-<h1 id="installation">Installation</h1>
+        <article data-uid="LuauInterop.Runtime.LuauCallback.NativeDelegate">
 
-<p>LuauInterop is split into packages:</p>
-<table>
-<thead>
-<tr>
-<th>Package</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>LuauInterop</code></td>
-<td>The managed bindings</td>
-</tr>
-<tr>
-<td><code>LuauInterop.Native</code></td>
-<td>The native Luau runtime libraries</td>
-</tr>
-<tr>
-<td><code>LuauInterop.Sandbox</code></td>
-<td>Sandboxing utilities for untrusted code (optional)</td>
-</tr>
-</tbody>
-</table>
-<p>Install the core packages:</p>
-<pre><code class="lang-bash">dotnet add package LuauInterop
-dotnet add package LuauInterop.Native
-</code></pre>
-<p>Optionally, add the sandbox package:</p>
-<pre><code class="lang-bash">dotnet add package LuauInterop.Sandbox
-</code></pre>
-<h3 id="supported-platforms">Supported Platforms</h3>
-<table>
-<thead>
-<tr>
-<th>Platform</th>
-<th>Runtime ID</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Windows x64</td>
-<td><code>win-x64</code></td>
-</tr>
-<tr>
-<td>Linux x64</td>
-<td><code>linux-x64</code></td>
-</tr>
-<tr>
-<td>macOS x64</td>
-<td><code>osx-x64</code></td>
-</tr>
-</tbody>
-</table>
+
+
+  <h1 id="LuauInterop_Runtime_LuauCallback_NativeDelegate" data-uid="LuauInterop.Runtime.LuauCallback.NativeDelegate" class="text-break">
+Delegate LuauCallback.NativeDelegate  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/Runtime/LuauCallback.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="LuauInterop.html">LuauInterop</a>.<a class="xref" href="LuauInterop.Runtime.html">Runtime</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>LuauInterop.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The native delegate that wraps the managed function.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public delegate int LuauCallback.NativeDelegate(LuaState state)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>state</code> <a class="xref" href="LuauInterop.Native.LuaState.html">LuaState</a></dt>
+    <dd>The native delegate that wraps the managed function.</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd>The native delegate that wraps the managed function.</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/spxnso/LuauInterop/blob/master/docs/docs/installation.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/Runtime/LuauCallback.cs/#L34" class="edit-link">Edit this page</a>
         </div>
 
-        <div class="next-article d-print-none border-top" id="nextArticle"></div>
 
       </div>
 

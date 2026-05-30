@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Installation | LuauInterop </title>
+      <title> | LuauInterop </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Installation | LuauInterop ">
+      <meta name="title" content=" | LuauInterop ">
       
       
       <link rel="icon" href="../images/icon-32x32.png">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/spxnso/LuauInterop/blob/master/docs/docs/installation.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/spxnso/LuauInterop/blob/master/docs/docs/sandboxing.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,66 +85,70 @@
         </div>
 
         <article data-uid="">
-<h1 id="installation">Installation</h1>
 
-<p>LuauInterop is split into packages:</p>
-<table>
-<thead>
-<tr>
-<th>Package</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>LuauInterop</code></td>
-<td>The managed bindings</td>
-</tr>
-<tr>
-<td><code>LuauInterop.Native</code></td>
-<td>The native Luau runtime libraries</td>
-</tr>
-<tr>
-<td><code>LuauInterop.Sandbox</code></td>
-<td>Sandboxing utilities for untrusted code (optional)</td>
-</tr>
-</tbody>
-</table>
-<p>Install the core packages:</p>
-<pre><code class="lang-bash">dotnet add package LuauInterop
-dotnet add package LuauInterop.Native
-</code></pre>
-<p>Optionally, add the sandbox package:</p>
+<h2 id="sandboxing">Sandboxing</h2>
+<h2 id="installation">Installation</h2>
+<p>The sandbox is an optional package, make sure to install it:</p>
 <pre><code class="lang-bash">dotnet add package LuauInterop.Sandbox
 </code></pre>
-<h3 id="supported-platforms">Supported Platforms</h3>
-<table>
-<thead>
-<tr>
-<th>Platform</th>
-<th>Runtime ID</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Windows x64</td>
-<td><code>win-x64</code></td>
-</tr>
-<tr>
-<td>Linux x64</td>
-<td><code>linux-x64</code></td>
-</tr>
-<tr>
-<td>macOS x64</td>
-<td><code>osx-x64</code></td>
-</tr>
-</tbody>
-</table>
+<p><code>LuauSandbox</code> wraps a <code>Luau</code> instance.</p>
+<pre><code class="lang-csharp">using var sandbox = new LuauSandbox();
+var results = sandbox.Execute(&quot;return 1 + 1&quot;);
+Console.WriteLine(results[0]); // 2
+</code></pre>
+<h3 id="presets">Presets</h3>
+<p>Use <code>LuauSandboxOptions.Strict</code> for fully untrusted code, it removes dangerous globals like <code>setfenv</code>, <code>rawset</code>, and limits available libraries:</p>
+<pre><code class="lang-csharp">using var sandbox = new LuauSandbox(LuauSandboxOptions.Strict);
+var results = sandbox.Execute(&quot;return math.sqrt(16)&quot;);
+Console.WriteLine(results[0]); // 4
+</code></pre>
+<h3 id="customizing-options">Customizing Options</h3>
+<p>Options are immutable records, chain methods to build your configuration:</p>
+<pre><code class="lang-csharp">var options = LuauSandboxOptions.Strict
+    .AllowLibrary(LuauLibrary.Coroutine)
+    .DenyGlobal(&quot;collectgarbage&quot;)
+    .AllowGlobal(&quot;rawget&quot;);
+
+using var sandbox = new LuauSandbox(options);
+</code></pre>
+<h3 id="injecting-globals">Injecting Globals</h3>
+<p>Expose values to the sandboxed script via <code>AllowedGlobals</code>:</p>
+<pre><code class="lang-csharp">var options = new LuauSandboxOptions
+{
+    AllowedGlobals = new Dictionary&lt;string, object?&gt;
+    {
+        [&quot;VERSION&quot;] = &quot;1.0.0&quot;,
+        [&quot;MAX_SCORE&quot;] = 100.0,
+    }
+};
+
+using var sandbox = new LuauSandbox(options);
+var results = sandbox.Execute(&quot;return VERSION&quot;);
+Console.WriteLine(results[0]); // 1.0.0
+</code></pre>
+<h3 id="script-isolation">Script Isolation</h3>
+<p>By default each <code>Execute</code> call gets its own proxied <code>_G</code> via <code>luaL_sandboxthread</code>, so scripts cannot share state between calls. Disable this only if you explicitly want shared globals:</p>
+<pre><code class="lang-csharp">var options = new LuauSandboxOptions
+{
+    IsolateScripts = false
+};
+</code></pre>
+<h3 id="error-handling">Error Handling</h3>
+<p>Runtime errors surface as <code>LuauException</code>:</p>
+<pre><code class="lang-csharp">try
+{
+    sandbox.Execute(&quot;error('not allowed')&quot;);
+}
+catch (LuauException ex)
+{
+    Console.WriteLine(ex.Message);
+}
+</code></pre>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/spxnso/LuauInterop/blob/master/docs/docs/installation.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/spxnso/LuauInterop/blob/master/docs/docs/sandboxing.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

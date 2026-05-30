@@ -147,7 +147,7 @@ Console.WriteLine(version); // 1.0.0
 var co = luau[&quot;co&quot;] as LuauThread;
 using (co)
 {
-    var r1 = co.Resume((double)10); // Don't forget to cast to double!
+    var r1 = co.Resume(10); // Don't forget to cast to double!
     Console.WriteLine(r1[0]); // 11
 
     var r2 = co.Resume();
@@ -170,6 +170,18 @@ var results = luau.DoString(@&quot;
 &quot;);
 
 Console.WriteLine(results[0]);
+</code></pre>
+<h2 id="callbacks">Callbacks</h2>
+<pre><code class="lang-csharp">luau.RegisterCallback(&quot;add&quot;, (vm, state) =&gt;
+{
+    double a = (double)(vm.GetObject(1, state) ?? 0);
+    double b = (double)(vm.GetObject(2, state) ?? 0);
+    state.PushNumber(a + b);
+    return 1; // number of return values
+});
+
+var results = luau.DoString(&quot;return add(10, 20)&quot;);
+Console.WriteLine(results[0]); // 30
 </code></pre>
 <h2 id="error-handling">Error Handling</h2>
 <p>Runtime and compilation errors are surfaced as <code>LuauException</code>:</p>

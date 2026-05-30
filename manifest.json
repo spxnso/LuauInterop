@@ -278,6 +278,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Runtime.LuauCallback.NativeDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Runtime.LuauCallback.NativeDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Runtime.LuauCallback.NativeDelegate",
+      "Summary": "<p sourcefile=\"api/LuauInterop.Runtime.LuauCallback.NativeDelegate.yml\" sourcestartlinenumber=\"1\">The native delegate that wraps the managed function.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Runtime.LuauCallback.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Runtime.LuauCallback.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Runtime.LuauCallback",
+      "Summary": "<p sourcefile=\"api/LuauInterop.Runtime.LuauCallback.yml\" sourcestartlinenumber=\"1\">A C# function exposed to Luau.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/LuauInterop.Runtime.LuauCoStatus.yml",
       "output": {
         ".html": {
@@ -292,6 +320,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Runtime.LuauDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Runtime.LuauDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Runtime.LuauDelegate",
+      "Summary": "<p sourcefile=\"api/LuauInterop.Runtime.LuauDelegate.yml\" sourcestartlinenumber=\"1\">Wraps any C# delegate for use as a Luau function.\nHandles argument marshalling and return value pushing automatically.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/LuauInterop.Runtime.LuauGCOperation.yml",
       "output": {
         ".html": {
@@ -302,6 +344,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "LuauInterop.Runtime.LuauGCOperation",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Runtime.LuauLibrary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Runtime.LuauLibrary.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Runtime.LuauLibrary",
       "Summary": null
     },
     {
@@ -348,6 +404,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Sandbox.LuauSandbox.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Sandbox.LuauSandbox.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Sandbox.LuauSandbox",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Sandbox.LuauSandboxOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Sandbox.LuauSandboxOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Sandbox.LuauSandboxOptions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Sandbox.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Sandbox.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Sandbox",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/LuauInterop.yml",
       "output": {
         ".html": {
@@ -369,6 +467,16 @@
         },
         ".html": {
           "relative_path": "api/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/callbacks.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/callbacks.html"
         }
       },
       "version": ""
@@ -409,6 +517,16 @@
       "output": {
         ".html": {
           "relative_path": "docs/quickstart.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/sandboxing.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/sandboxing.html"
         }
       },
       "version": ""

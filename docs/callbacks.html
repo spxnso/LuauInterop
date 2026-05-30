@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Installation | LuauInterop </title>
+      <title> | LuauInterop </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Installation | LuauInterop ">
+      <meta name="title" content=" | LuauInterop ">
       
       
       <link rel="icon" href="../images/icon-32x32.png">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/spxnso/LuauInterop/blob/master/docs/docs/installation.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/spxnso/LuauInterop/blob/master/docs/docs/callbacks.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,66 +85,61 @@
         </div>
 
         <article data-uid="">
-<h1 id="installation">Installation</h1>
 
-<p>LuauInterop is split into packages:</p>
-<table>
-<thead>
-<tr>
-<th>Package</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>LuauInterop</code></td>
-<td>The managed bindings</td>
-</tr>
-<tr>
-<td><code>LuauInterop.Native</code></td>
-<td>The native Luau runtime libraries</td>
-</tr>
-<tr>
-<td><code>LuauInterop.Sandbox</code></td>
-<td>Sandboxing utilities for untrusted code (optional)</td>
-</tr>
-</tbody>
-</table>
-<p>Install the core packages:</p>
-<pre><code class="lang-bash">dotnet add package LuauInterop
-dotnet add package LuauInterop.Native
+<h2 id="callbacks">Callbacks</h2>
+<p>Register a C# function as a global callable from Luau:</p>
+<pre><code class="lang-csharp">luau.RegisterCallback(&quot;add&quot;, (vm, state) =&gt;
+{
+    double a = (double)(vm.GetObject(1, state) ?? 0);
+    double b = (double)(vm.GetObject(2, state) ?? 0);
+    state.PushNumber(a + b);
+    return 1; // number of return values
+});
+
+var results = luau.DoString(&quot;return add(10, 20)&quot;);
+Console.WriteLine(results[0]); // 30
 </code></pre>
-<p>Optionally, add the sandbox package:</p>
-<pre><code class="lang-bash">dotnet add package LuauInterop.Sandbox
+<p>The second parameter <code>state</code> is the calling state. Always use it to read arguments and push return values, so callbacks work correctly from both the main state and coroutines.</p>
+<h3 id="reading-arguments">Reading Arguments</h3>
+<p>Arguments are on the stack starting at index 1:</p>
+<pre><code class="lang-csharp">luau.RegisterCallback(&quot;greet&quot;, (vm, state) =&gt;
+{
+    string name = vm.GetObject(1, state) as string ?? &quot;world&quot;;
+    state.PushString($&quot;Hello, {name}!&quot;);
+    return 1;
+});
+
+var results = luau.DoString(&quot;return greet('Alice')&quot;);
+Console.WriteLine(results[0]); // Hello, Alice!
 </code></pre>
-<h3 id="supported-platforms">Supported Platforms</h3>
-<table>
-<thead>
-<tr>
-<th>Platform</th>
-<th>Runtime ID</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Windows x64</td>
-<td><code>win-x64</code></td>
-</tr>
-<tr>
-<td>Linux x64</td>
-<td><code>linux-x64</code></td>
-</tr>
-<tr>
-<td>macOS x64</td>
-<td><code>osx-x64</code></td>
-</tr>
-</tbody>
-</table>
+<h3 id="using-delegates">Using Delegates</h3>
+<p>For simpler callbacks, you can assign a delegate directly via the indexer and argument marshalling is handled automatically:</p>
+<pre><code class="lang-csharp">luau[&quot;multiply&quot;] = (Func&lt;double, double, double&gt;)((a, b) =&gt; a * b);
+
+var results = luau.DoString(&quot;return multiply(6, 7)&quot;);
+Console.WriteLine(results[0]); // 42
+</code></pre>
+<h3 id="exception-handling">Exception Handling</h3>
+<p>Exceptions thrown inside a callback are safely caught and re-thrown on the C# side after the VM unwinds:</p>
+<pre><code class="lang-csharp">luau.RegisterCallback(&quot;fail&quot;, (vm, state) =&gt;
+{
+    throw new Exception(&quot;something went wrong&quot;);
+});
+
+try
+{
+    luau.DoString(&quot;fail()&quot;);
+}
+catch (Exception ex)
+{
+    Console.WriteLine(ex.Message); // something went wrong
+}
+</code></pre>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/spxnso/LuauInterop/blob/master/docs/docs/installation.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/spxnso/LuauInterop/blob/master/docs/docs/callbacks.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

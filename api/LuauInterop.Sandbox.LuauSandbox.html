@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class LuauBase | LuauInterop </title>
+      <title>Class LuauSandbox | LuauInterop </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class LuauBase | LuauInterop ">
+      <meta name="title" content="Class LuauSandbox | LuauInterop ">
       
-      <meta name="description" content="Base class for all Luau objects that hold a reference to the Lua state.">
+      
       <link rel="icon" href="../images/icon-32x32.png">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/spxnso/LuauInterop/new/master/apiSpec/new?filename=LuauInterop_LuauBase.md&amp;value=---%0Auid%3A%20LuauInterop.LuauBase%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/spxnso/LuauInterop/new/master/apiSpec/new?filename=LuauInterop_Sandbox_LuauSandbox.md&amp;value=---%0Auid%3A%20LuauInterop.Sandbox.LuauSandbox%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,25 +84,24 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="LuauInterop.LuauBase">
+        <article data-uid="LuauInterop.Sandbox.LuauSandbox">
 
 
 
-  <h1 id="LuauInterop_LuauBase" data-uid="LuauInterop.LuauBase" class="text-break">
-Class LuauBase  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauBase.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  <h1 id="LuauInterop_Sandbox_LuauSandbox" data-uid="LuauInterop.Sandbox.LuauSandbox" class="text-break">
+Class LuauSandbox  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandbox.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="LuauInterop.html">LuauInterop</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>LuauInterop.dll</dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="LuauInterop.html">LuauInterop</a>.<a class="xref" href="LuauInterop.Sandbox.html">Sandbox</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>LuauInterop.Sandbox.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Base class for all Luau objects that hold a reference to the Lua state.</p>
-</div>
+  <div class="markdown summary"></div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class LuauBase : IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class LuauSandbox : IDisposable</code></pre>
   </div>
 
 
@@ -112,7 +111,7 @@ Class LuauBase  <a class="header-action link-secondary" title="View source" href
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">LuauBase</span></div>
+      <div><span class="xref">LuauSandbox</span></div>
     </dd>
   </dl>
 
@@ -123,15 +122,6 @@ Class LuauBase  <a class="header-action link-secondary" title="View source" href
     </dd>
   </dl>
 
-  <dl class="typelist derived">
-    <dt>Derived</dt>
-    <dd>
-      <div><a class="xref" href="LuauInterop.Objects.LuauFunction.html">LuauFunction</a></div>
-      <div><a class="xref" href="LuauInterop.Objects.LuauTable.html">LuauTable</a></div>
-      <div><a class="xref" href="LuauInterop.Objects.LuauUserData.html">LuauUserData</a></div>
-      <div><a class="xref" href="LuauInterop.Runtime.LuauThread.html">LuauThread</a></div>
-    </dd>
-  </dl>
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
@@ -168,26 +158,23 @@ Class LuauBase  <a class="header-action link-secondary" title="View source" href
 </h2>
 
 
-  <a id="LuauInterop_LuauBase__ctor_" data-uid="LuauInterop.LuauBase.#ctor*"></a>
+  <a id="LuauInterop_Sandbox_LuauSandbox__ctor_" data-uid="LuauInterop.Sandbox.LuauSandbox.#ctor*"></a>
 
-  <h3 id="LuauInterop_LuauBase__ctor_LuauInterop_Luau_System_Int32_" data-uid="LuauInterop.LuauBase.#ctor(LuauInterop.Luau,System.Int32)">
-  LuauBase(Luau, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauBase.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  <h3 id="LuauInterop_Sandbox_LuauSandbox__ctor_LuauInterop_Sandbox_LuauSandboxOptions_" data-uid="LuauInterop.Sandbox.LuauSandbox.#ctor(LuauInterop.Sandbox.LuauSandboxOptions)">
+  LuauSandbox(LuauSandboxOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandbox.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Base class for all Luau objects that hold a reference to the Lua state.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected LuauBase(Luau owner, int reference)</code></pre>
+    <pre><code class="lang-csharp hljs">public LuauSandbox(LuauSandboxOptions? options = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>owner</code> <a class="xref" href="LuauInterop.Luau.html">Luau</a></dt>
-    <dd></dd>
-    <dt><code>reference</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>options</code> <a class="xref" href="LuauInterop.Sandbox.LuauSandboxOptions.html">LuauSandboxOptions</a></dt>
     <dd></dd>
   </dl>
 
@@ -206,11 +193,11 @@ Class LuauBase  <a class="header-action link-secondary" title="View source" href
 </h2>
 
 
-  <a id="LuauInterop_LuauBase_IsDisposed_" data-uid="LuauInterop.LuauBase.IsDisposed*"></a>
+  <a id="LuauInterop_Sandbox_LuauSandbox_IsDisposed_" data-uid="LuauInterop.Sandbox.LuauSandbox.IsDisposed*"></a>
 
-  <h3 id="LuauInterop_LuauBase_IsDisposed" data-uid="LuauInterop.LuauBase.IsDisposed">
+  <h3 id="LuauInterop_Sandbox_LuauSandbox_IsDisposed" data-uid="LuauInterop.Sandbox.LuauSandbox.IsDisposed">
   IsDisposed
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauBase.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandbox.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Whether this object has been disposed.</p>
@@ -238,19 +225,19 @@ Class LuauBase  <a class="header-action link-secondary" title="View source" href
 
 
 
-  <a id="LuauInterop_LuauBase_Owner_" data-uid="LuauInterop.LuauBase.Owner*"></a>
+  <a id="LuauInterop_Sandbox_LuauSandbox_Luau_" data-uid="LuauInterop.Sandbox.LuauSandbox.Luau*"></a>
 
-  <h3 id="LuauInterop_LuauBase_Owner" data-uid="LuauInterop.LuauBase.Owner">
-  Owner
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauBase.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <h3 id="LuauInterop_Sandbox_LuauSandbox_Luau" data-uid="LuauInterop.Sandbox.LuauSandbox.Luau">
+  Luau
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandbox.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The <a class="xref" href="LuauInterop.Luau.html">Luau</a> instance that owns this object.</p>
+  <div class="markdown level1 summary"><p>The Luau state associated with this sandbox.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Luau Owner { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Luau Luau { get; }</code></pre>
   </div>
 
 
@@ -270,19 +257,19 @@ Class LuauBase  <a class="header-action link-secondary" title="View source" href
 
 
 
-  <a id="LuauInterop_LuauBase_Reference_" data-uid="LuauInterop.LuauBase.Reference*"></a>
+  <a id="LuauInterop_Sandbox_LuauSandbox_Options_" data-uid="LuauInterop.Sandbox.LuauSandbox.Options*"></a>
 
-  <h3 id="LuauInterop_LuauBase_Reference" data-uid="LuauInterop.LuauBase.Reference">
-  Reference
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauBase.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <h3 id="LuauInterop_Sandbox_LuauSandbox_Options" data-uid="LuauInterop.Sandbox.LuauSandbox.Options">
+  Options
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandbox.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The reference to the Lua object in the registry.</p>
+  <div class="markdown level1 summary"><p>The options used to create this sandbox.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Reference { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public LuauSandboxOptions Options { get; }</code></pre>
   </div>
 
 
@@ -291,7 +278,7 @@ Class LuauBase  <a class="header-action link-secondary" title="View source" href
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><a class="xref" href="LuauInterop.Sandbox.LuauSandboxOptions.html">LuauSandboxOptions</a></dt>
     <dd></dd>
   </dl>
 
@@ -306,11 +293,11 @@ Class LuauBase  <a class="header-action link-secondary" title="View source" href
 </h2>
 
 
-  <a id="LuauInterop_LuauBase_Dispose_" data-uid="LuauInterop.LuauBase.Dispose*"></a>
+  <a id="LuauInterop_Sandbox_LuauSandbox_Dispose_" data-uid="LuauInterop.Sandbox.LuauSandbox.Dispose*"></a>
 
-  <h3 id="LuauInterop_LuauBase_Dispose" data-uid="LuauInterop.LuauBase.Dispose">
+  <h3 id="LuauInterop_Sandbox_LuauSandbox_Dispose" data-uid="LuauInterop.Sandbox.LuauSandbox.Dispose">
   Dispose()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauBase.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandbox.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
@@ -333,11 +320,11 @@ Class LuauBase  <a class="header-action link-secondary" title="View source" href
 
 
 
-  <a id="LuauInterop_LuauBase_Dispose_" data-uid="LuauInterop.LuauBase.Dispose*"></a>
+  <a id="LuauInterop_Sandbox_LuauSandbox_Dispose_" data-uid="LuauInterop.Sandbox.LuauSandbox.Dispose*"></a>
 
-  <h3 id="LuauInterop_LuauBase_Dispose_System_Boolean_" data-uid="LuauInterop.LuauBase.Dispose(System.Boolean)">
+  <h3 id="LuauInterop_Sandbox_LuauSandbox_Dispose_System_Boolean_" data-uid="LuauInterop.Sandbox.LuauSandbox.Dispose(System.Boolean)">
   Dispose(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauBase.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandbox.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -364,20 +351,33 @@ Class LuauBase  <a class="header-action link-secondary" title="View source" href
 
 
 
-  <a id="LuauInterop_LuauBase_Finalize_" data-uid="LuauInterop.LuauBase.Finalize*"></a>
+  <a id="LuauInterop_Sandbox_LuauSandbox_Execute_" data-uid="LuauInterop.Sandbox.LuauSandbox.Execute*"></a>
 
-  <h3 id="LuauInterop_LuauBase_Finalize" data-uid="LuauInterop.LuauBase.Finalize">
-  ~LuauBase()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauBase.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  <h3 id="LuauInterop_Sandbox_LuauSandbox_Execute_System_String_System_String_" data-uid="LuauInterop.Sandbox.LuauSandbox.Execute(System.String,System.String)">
+  Execute(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandbox.cs/#L57"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected ~LuauBase()</code></pre>
+    <pre><code class="lang-csharp hljs">public object?[] Execute(string source, string name = &quot;script&quot;)</code></pre>
   </div>
 
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -389,45 +389,18 @@ Class LuauBase  <a class="header-action link-secondary" title="View source" href
 
 
 
+  <a id="LuauInterop_Sandbox_LuauSandbox_Finalize_" data-uid="LuauInterop.Sandbox.LuauSandbox.Finalize*"></a>
 
-  <a id="LuauInterop_LuauBase_PushReference_" data-uid="LuauInterop.LuauBase.PushReference*"></a>
-
-  <h3 id="LuauInterop_LuauBase_PushReference" data-uid="LuauInterop.LuauBase.PushReference">
-  PushReference()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauBase.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  <h3 id="LuauInterop_Sandbox_LuauSandbox_Finalize" data-uid="LuauInterop.Sandbox.LuauSandbox.Finalize">
+  ~LuauSandbox()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandbox.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void PushReference()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="LuauInterop_LuauBase_ThrowIfDisposed_" data-uid="LuauInterop.LuauBase.ThrowIfDisposed*"></a>
-
-  <h3 id="LuauInterop_LuauBase_ThrowIfDisposed" data-uid="LuauInterop.LuauBase.ThrowIfDisposed">
-  ThrowIfDisposed()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauBase.cs/#L47"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void ThrowIfDisposed()</code></pre>
+    <pre><code class="lang-csharp hljs">protected ~LuauSandbox()</code></pre>
   </div>
 
 
@@ -446,7 +419,7 @@ Class LuauBase  <a class="header-action link-secondary" title="View source" href
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauBase.cs/#L8" class="edit-link">Edit this page</a>
+          <a href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandbox.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -102,16 +102,16 @@ fn.Call();
 </code></pre>
 <h2 id="cross-vm-usage">Cross-VM Usage</h2>
 <p>Passing a reference-backed object to a different <code>Luau</code> instance throws <code>InvalidOperationException</code>:</p>
-<pre><code class="lang-csharp">using var luauA = new Luau.Luau();
-using var luauB = new Luau.Luau();
+<pre><code class="lang-csharp">using var luauA = new Luau();
+using var luauB = new Luau();
 
 luauA.DoString(&quot;function f() end&quot;);
 var fn = luauA[&quot;f&quot;] as LuauFunction;
 
-luauB[&quot;f&quot;] = fn; // throws — cross-VM usage is not allowed
+luauB[&quot;f&quot;] = fn; // cross-VM usage is not allowed
 </code></pre>
 <h2 id="vm-disposal">VM Disposal</h2>
-<p>Disposing the <code>Luau</code> instance closes the native state. Any wrappers still alive after that are inert — their <code>IsDisposed</code> flag reflects the owner's disposal state.</p>
+<p>Disposing the <code>Luau</code> instance closes the native state.</p>
 <pre><code class="lang-csharp">var fn = luau[&quot;myFunc&quot;] as LuauFunction;
 luau.Dispose();
 
