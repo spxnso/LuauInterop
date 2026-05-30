@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.1.0](https://github.com/spxnso/LuauInterop/compare/v1.0.2...v1.1.0) (2026-05-30)
+
+
+### Features
+
+* add example for using `GetFFlag` ([65ad4e4](https://github.com/spxnso/LuauInterop/commit/65ad4e4d3b647c390cb3ef1ab7f4915a7b11201e))
+* add GetFFlag method ([e40a921](https://github.com/spxnso/LuauInterop/commit/e40a9210f127031f95f2c590254619502690ca29))
+* add LuauSandbox ([923de79](https://github.com/spxnso/LuauInterop/commit/923de7956dfcbb4170609f14e76cd08d6df3f35a))
+* implement C# function callbacks ([99946de](https://github.com/spxnso/LuauInterop/commit/99946ded8caf2b6101986b0d09a9c25dde9408ea))
+
 ## [1.0.2](https://github.com/spxnso/LuauInterop/compare/v1.0.1...v1.0.2) (2026-05-29)
 
 
