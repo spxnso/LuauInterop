@@ -18,12 +18,16 @@ public sealed class LuauThread(Luau owner, int reference) : LuauBase(owner, refe
     public void Close()
     {
         ThrowIfDisposed();
-        GetCoroutine().Close();
+        GetCoroutine().ResetThread();
+        Dispose();
     }
 
     public object?[] Resume(params object?[] args)
     {
         ThrowIfDisposed();
+        
+        if (Status == LuauCoStatus.Run)
+            throw new LuauException("Cannot resume a running coroutine.");
 
         LuaState co = GetCoroutine();
         PushArgs(co, args);
@@ -40,6 +44,9 @@ public sealed class LuauThread(Luau owner, int reference) : LuauBase(owner, refe
     public object?[] Resume(LuauChunk chunk, params object?[] args)
     {
         ThrowIfDisposed();
+
+        if (Status == LuauCoStatus.Run)
+            throw new LuauException("Cannot resume a running coroutine.");
 
         LuaState co = GetCoroutine();
 
