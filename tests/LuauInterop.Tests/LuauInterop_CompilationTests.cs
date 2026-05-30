@@ -2,7 +2,7 @@ using LuauInterop.Compilation;
 
 namespace LuauInterop.Tests;
 
-public class Luau_CompilationTests
+public class LuauInterop_CompilationTests
 {
     [Fact]
     public void Compile_ValidChunk_ReturnsBytecode()
