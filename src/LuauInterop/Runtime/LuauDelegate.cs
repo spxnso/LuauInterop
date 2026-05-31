@@ -9,7 +9,7 @@ namespace LuauInterop.Runtime;
 /// Wraps any C# delegate for use as a Luau function.
 /// Handles argument marshalling and return value pushing automatically.
 /// </summary>
-public class LuauDelegate
+public sealed class LuauDelegate
 {
     /// <summary>
     /// The original delegate instance.
