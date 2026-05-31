@@ -3,6 +3,7 @@ namespace LuauInterop.Runtime;
 [Flags]
 public enum LuauLibrary
 {
+    None = 0,
     Base = 1,
     Coroutine = 1 << 1,
     Table = 1 << 2,
