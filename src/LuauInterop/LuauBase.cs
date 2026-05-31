@@ -43,8 +43,8 @@ public abstract class LuauBase(Luau owner, LuaState state, int reference) : IDis
         if (IsDisposed)
             return;
 
-        if (!Owner.IsDisposed && !Owner.State.IsNull)
-            Owner.State.Unref(Reference);
+        if (!Owner.IsDisposed && !State.IsNull)
+            State.Unref(Reference);
 
         IsDisposed = true;
     }
@@ -52,7 +52,7 @@ public abstract class LuauBase(Luau owner, LuaState state, int reference) : IDis
     protected void ThrowIfDisposed()
     {
         ObjectDisposedException.ThrowIf(
-            IsDisposed || Owner.IsDisposed || Owner.State.IsNull,
+            IsDisposed || Owner.IsDisposed || State.IsNull,
             GetType().Name
         );
     }
@@ -60,6 +60,6 @@ public abstract class LuauBase(Luau owner, LuaState state, int reference) : IDis
     public void PushReference()
     {
         ThrowIfDisposed();
-        Owner.State.RawGetI(LuaConstants.LUA_REGISTRYINDEX, Reference);
+        State.RawGetI(LuaConstants.LUA_REGISTRYINDEX, Reference);
     }
 }
