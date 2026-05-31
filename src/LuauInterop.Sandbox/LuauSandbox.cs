@@ -52,8 +52,7 @@ public class LuauSandbox : IDisposable
         IsDisposed = true;
     }
 
-
-    public object?[] Execute(string source, string name = "script")
+    public object?[] Execute(string source)
     {
         using LuauThread thread = Luau.CreateThread();
 
