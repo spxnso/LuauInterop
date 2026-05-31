@@ -59,7 +59,7 @@ public class LuauSandbox : IDisposable
         using LuauThread thread = Luau.CreateThread();
 
         if (Options.IsolateScripts)
-            NativeMethods.luaL_sandboxthread(Luau.State);
+            NativeMethods.luaL_sandboxthread(thread.ThreadState);
 
         using LuauChunk chunk = Luau.Compile(source);
         return thread.Resume(chunk);
