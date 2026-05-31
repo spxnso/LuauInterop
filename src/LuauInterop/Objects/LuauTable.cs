@@ -1,8 +1,9 @@
+using LuauInterop.Native;
 using LuauInterop.Objects;
 
 namespace LuauInterop.Objects;
 
-public sealed class LuauTable(Luau owner, int reference) : LuauBase(owner, reference)
+public sealed class LuauTable(Luau owner, LuaState state, int reference) : LuauBase(owner, state, reference)
 {
     public object? this[string key]
     {
@@ -14,7 +15,7 @@ public sealed class LuauTable(Luau owner, int reference) : LuauBase(owner, refer
             {
                 PushReference();
                 Owner.State.GetField(-1, key);
-                return Owner.GetObject(-1);
+                return Owner.GetObject(-1, State);
             }
             finally
             {
@@ -28,7 +29,7 @@ public sealed class LuauTable(Luau owner, int reference) : LuauBase(owner, refer
             try
             {
                 PushReference();
-                Owner.PushObject(value);
+                Owner.PushObject(value, State);
                 Owner.State.SetField(-2, key);
             }
             finally
@@ -48,7 +49,7 @@ public sealed class LuauTable(Luau owner, int reference) : LuauBase(owner, refer
             {
                 PushReference();
                 Owner.State.RawGetI(-1, key);
-                return Owner.GetObject(-1);
+                return Owner.GetObject(-1, State);
             }
             finally
             {
@@ -62,7 +63,7 @@ public sealed class LuauTable(Luau owner, int reference) : LuauBase(owner, refer
             try
             {
                 PushReference();
-                Owner.PushObject(value);
+                Owner.PushObject(value, State);
                 Owner.State.RawSetI(-2, key);
             }
             finally
@@ -104,13 +105,13 @@ public sealed class LuauTable(Luau owner, int reference) : LuauBase(owner, refer
 
             while (Owner.State.Next(-2) != 0)
             {
-                object? key = Owner.GetObject(-2);
-                object? value = Owner.GetObject(-1);
+                object? key = Owner.GetObject(-2, State);
+                object? value = Owner.GetObject(-1, State);
 
                 if (key is not null)
                     results.Add(new KeyValuePair<object, object?>(key, value));
 
-                Owner.Pop(1);
+                Owner.Pop(1, State);
             }
         }
         finally

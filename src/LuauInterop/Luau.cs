@@ -55,11 +55,11 @@ public class Luau : IDisposable
             try
             {
                 State.GetGlobal(name);
-                return GetObject(-1);
+                return GetObject(-1, State);
             }
             finally
             {
-                Pop(1);
+                Pop(1, State);
             }
         }
         set
@@ -76,7 +76,7 @@ public class Luau : IDisposable
                 return;
             }
 
-            PushObject(value);
+            PushObject(value, State);
             State.SetGlobal(name);
         }
     }
@@ -127,7 +127,7 @@ public class Luau : IDisposable
         int stackBase = State.GetTop();
 
         if ((LuauStatus)State.Load(chunkName, chunk.Pointer, chunk.Size, 0) != LuauStatus.OK)
-            ThrowLastError();
+            ThrowLastError(State);
 
         return CallAndCollect(stackBase);
     }
@@ -146,7 +146,7 @@ public class Luau : IDisposable
         int stackBase = State.GetTop();
 
         if (LoadString(chunk, chunkName) != LuauStatus.OK)
-            ThrowLastError();
+            ThrowLastError(State);
 
         return CallAndCollect(stackBase);
     }
@@ -159,7 +159,7 @@ public class Luau : IDisposable
     public string GetErrorMessage(LuaState state)
     {
         ThrowIfDisposed();
-        string message = "Unknown error";
+        string message = "Unknown Luau-side error.";
 
         try
         {
@@ -175,17 +175,13 @@ public class Luau : IDisposable
         return message;
     }
 
-    /// <inheritdoc cref="GetErrorMessage(LuaState)"/>
-    public string GetErrorMessage() => GetErrorMessage(State);
-
     /// <summary>
-    /// Gets the value of an FFlag in the Luau VM.
+    /// Gets the value of an FFlag.
     /// </summary>
     /// <param name="name">The name of the FFlag to get.</param>
     /// <returns><see langword="true"/> if the FFlag is enabled, or <see langword="false"/> if it is disabled.</returns>
     public bool GetFFlag(string name)
     {
-        ThrowIfDisposed();
         return NativeMethods.luau_getfflag(name) != 0;
     }
 
@@ -207,18 +203,15 @@ public class Luau : IDisposable
             LuauType.Number => state.ToNumber(index),
             LuauType.Integer => state.ToInteger64(index, out _),
             LuauType.String => Marshal.PtrToStringUTF8(state.ToLString(index, out _)),
-            LuauType.Function => new LuauFunction(this, state.Ref(index)),
-            LuauType.Table => new LuauTable(this, state.Ref(index)),
-            LuauType.UserData => new LuauUserData(this, state.Ref(index)),
+            LuauType.Function => new LuauFunction(this, state, state.Ref(index)),
+            LuauType.Table => new LuauTable(this, state, state.Ref(index)),
+            LuauType.UserData => new LuauUserData(this, state, state.Ref(index)),
             LuauType.Vector => ReadVector(index, state),
             LuauType.Buffer => ReadBuffer(index, state),
-            LuauType.Thread => new LuauThread(this, state.Ref(index)),
+            LuauType.Thread => new LuauThread(this, state, state.Ref(index)),
             _ => throw new NotSupportedException($"Unsupported Luau type: {type}")
         };
     }
-
-    /// <inheritdoc cref="GetObject(int, LuaState)"/>
-    public object? GetObject(int index) => GetObject(index, State);
 
     /// <summary>
     /// Gets the value at the specified index on the stack.
@@ -243,14 +236,11 @@ public class Luau : IDisposable
                 string? s = ptr == nint.Zero ? null : Marshal.PtrToStringUTF8(ptr, (int)len);
                 return new LuauValue(LuauType.String, number: 0, integer: 0, reference: s);
             case LuauType.Function:
-                return new LuauValue(LuauType.Function, number: state.Ref(index), integer: 0, reference: this);
+                return new LuauValue(LuauType.Function, number: state.Ref(index), state: state, integer: 0, reference: this);
             default:
                 throw new NotSupportedException($"Unsupported Lua type: {type}");
         }
     }
-
-    /// <inheritdoc cref="GetValue(int, LuaState)"/>
-    public LuauValue GetValue(int index) => GetValue(index, State);
 
     /// <summary>
     /// Compiles a Luau source string and loads it onto the stack as a callable function,
@@ -296,8 +286,8 @@ public class Luau : IDisposable
         ThrowIfDisposed();
         State.NewThread();
         int reference = State.Ref(-1);
-        Pop(1);
-        return new LuauThread(this, reference);
+        Pop(1, State);
+        return new LuauThread(this, State, reference); // we create the thread in the main state
     }
 
     /// <summary>
@@ -395,9 +385,6 @@ public class Luau : IDisposable
         state.SetTop(-n - 1);
     }
 
-    /// <inheritdoc cref="Pop(int, LuaState)"/>
-    public void Pop(int n) => Pop(n, State);
-
     /// <summary>
     /// Pushes a <see cref="LuauValue"/> onto the stack.
     /// </summary>
@@ -410,9 +397,6 @@ public class Luau : IDisposable
         PushValue(value, state);
     }
 
-    /// <inheritdoc cref="Push(LuauValue, LuaState)"/>
-    public void Push(LuauValue value) => Push(value, State);
-
     /// <summary>
     /// Pushes a C# function onto the stack.
     /// </summary>
@@ -421,9 +405,6 @@ public class Luau : IDisposable
         ThrowIfDisposed();
         NativeMethods.luau_pushcsharpfunc(state.Handle, callback.FunctionPointer);
     }
-
-    /// <inheritdoc cref="PushCallback(LuauCallback, LuaState)"/>
-    public void PushCallback(LuauCallback callback) => PushCallback(callback, State);
 
     /// <summary>
     /// Pushes a C# object onto the stack, converting it to an appropriate Luau type.
@@ -469,9 +450,6 @@ public class Luau : IDisposable
         }
     }
 
-    /// <inheritdoc cref="PushObject(object?, LuaState)"/>
-    public void PushObject(object? value) => PushObject(value, State);
-
     /// <summary>
     /// Pushes a Luau value onto the stack.
     /// </summary>
@@ -497,9 +475,6 @@ public class Luau : IDisposable
         }
     }
 
-    /// <inheritdoc cref="PushValue(LuauValue, LuaState)"/>
-    public void PushValue(LuauValue value) => PushValue(value, State);
-
     /// <summary>
     /// Registers a C# function as a global in the Luau state, making it callable from Luau code.
     /// </summary>
@@ -516,16 +491,13 @@ public class Luau : IDisposable
         return callback;
     }
 
-    public LuauCallback RegisterCallback(string name, Func<Luau, int> fn) => RegisterCallback(name, (vm, _) => fn(vm));
-
     /// <summary>
-    /// Sets an FFlag in the Luau VM. FFlags are used to enable or disable experimental features.
+    /// Sets an FFlag.
     /// </summary>
     /// <param name="name">The name of the FFlag to set.</param>
     /// <param name="enabled">A value indicating whether the FFlag should be enabled.</param>
-    public void SetFFlag(string name, bool enabled)
+    public static void SetFFlag(string name, bool enabled)
     {
-        ThrowIfDisposed();
         NativeMethods.luau_setfflag(name, enabled ? 1 : 0);
     }
 
@@ -547,9 +519,6 @@ public class Luau : IDisposable
         return results;
     }
 
-    /// <inheritdoc cref="CollectResults(int, LuaState)"/>
-    public object?[] CollectResults(int stackBase) => CollectResults(stackBase, State);
-
     internal void ThrowIfDisposed()
     {
         if (IsDisposed || State.IsNull)
@@ -561,24 +530,22 @@ public class Luau : IDisposable
         throw new LuauException(GetErrorMessage(state));
     }
 
-    internal void ThrowLastError() => ThrowLastError(State);
-
     private object?[] CallAndCollect(int stackBase)
     {
         if ((LuauStatus)State.PCall(0, LuaConstants.LUA_MULTRET, 0) != LuauStatus.OK)
         {
-            var pending = LuauCallback._pendingException;
-            LuauCallback._pendingException = null;
+            var pending = LuauCallback.PendingException;
+            LuauCallback.PendingException = null;
 
-            GetErrorMessage(); // Clear the error message from the stack
+            GetErrorMessage(State); // Clear the error message from the stack
 
             if (pending is not null)
                 throw pending;
 
-            ThrowLastError();
+            ThrowLastError(State);
         }
 
-        return CollectResults(stackBase);
+        return CollectResults(stackBase, State);
     }
 
     private static LuauValue FromObject(object? value)
@@ -609,8 +576,6 @@ public class Luau : IDisposable
         };
     }
 
-    private byte[] ReadBuffer(int index) => ReadBuffer(index, State);
-
     private byte[] ReadBuffer(int index, LuaState state)
     {
         nint ptr = state.ToBuffer(index, out nuint len);
@@ -626,8 +591,6 @@ public class Luau : IDisposable
         Marshal.Copy(ptr, data, 0, length);
         return data;
     }
-
-    private Vector3 ReadVector(int index) => ReadVector(index, State);
 
     private Vector3 ReadVector(int index, LuaState state)
     {

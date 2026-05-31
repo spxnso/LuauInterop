@@ -4,14 +4,14 @@ using LuauInterop.Native;
 
 namespace LuauInterop.Runtime;
 
-public sealed class LuauThread(Luau owner, int reference) : LuauBase(owner, reference)
+public sealed class LuauThread(Luau owner, LuaState state, int reference) : LuauBase(owner, state, reference)
 {
     public LuauCoStatus Status
     {
         get
         {
             ThrowIfDisposed();
-            return (LuauCoStatus)Owner.State.CoStatus(GetCoroutine());
+            return (LuauCoStatus)State.CoStatus(GetCoroutine());
         }
     }
 
@@ -32,7 +32,7 @@ public sealed class LuauThread(Luau owner, int reference) : LuauBase(owner, refe
         LuaState co = GetCoroutine();
         PushArgs(co, args);
 
-        int status = co.Resume(Owner.State, args.Length);
+        int status = co.Resume(State, args.Length);
         bool ok = status == (int)LuauStatus.OK || status == (int)LuauStatus.Yield;
 
         if (!ok)
@@ -50,15 +50,15 @@ public sealed class LuauThread(Luau owner, int reference) : LuauBase(owner, refe
 
         LuaState co = GetCoroutine();
 
-        LuauStatus loadStatus = (LuauStatus)Owner.State.Load("chunk", chunk.Pointer, chunk.Size, 0);
+        LuauStatus loadStatus = (LuauStatus)State.Load("chunk", chunk.Pointer, chunk.Size, 0);
         if (loadStatus != LuauStatus.OK)
-            Owner.ThrowLastError();
+            Owner.ThrowLastError(State);
 
-        Owner.State.XMove(co, 1);
+        State.XMove(co, 1);
         PushArgs(co, args);
 
-        int status = co.Resume(Owner.State, args.Length);
-        bool ok = status == (int)LuauStatus.OK || status == (int)LuauStatus.Yield;
+        LuauStatus status = (LuauStatus)co.Resume(State, args.Length);
+        bool ok = status == LuauStatus.OK || status == LuauStatus.Yield;
 
         if (!ok)
             ThrowLastError(co);
@@ -74,10 +74,10 @@ public sealed class LuauThread(Luau owner, int reference) : LuauBase(owner, refe
 
     private LuaState GetCoroutine()
     {
-        int top = Owner.State.GetTop();
+        int top = State.GetTop();
         PushReference();
-        LuaState coroutine = Owner.State.ToThread(-1);
-        Owner.State.SetTop(top);
+        LuaState coroutine = State.ToThread(-1);
+        State.SetTop(top);
 
         if (coroutine.IsNull)
             throw new InvalidOperationException("Reference is not a valid Lua thread.");

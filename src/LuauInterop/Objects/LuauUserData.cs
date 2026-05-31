@@ -1,23 +1,25 @@
 using System.Runtime.InteropServices;
 
+using LuauInterop.Native;
+
 namespace LuauInterop.Objects;
 
-public sealed class LuauUserData(Luau owner, int reference) : LuauBase(owner, reference)
+public sealed class LuauUserData(Luau owner, LuaState state, int reference) : LuauBase(owner, state, reference)
 {
     public nint Pointer
     {
         get
         {
             ThrowIfDisposed();
-            int stackBase = Owner.State.GetTop();
+            int stackBase = State.GetTop();
             try
             {
                 PushReference();
-                return Owner.State.ToUserdata(-1);
+                return State.ToUserdata(-1);
             }
             finally
             {
-                Owner.State.SetTop(stackBase);
+                State.SetTop(stackBase);
             }
         }
     }
@@ -27,15 +29,15 @@ public sealed class LuauUserData(Luau owner, int reference) : LuauBase(owner, re
         get
         {
             ThrowIfDisposed();
-            int stackBase = Owner.State.GetTop();
+            int stackBase = State.GetTop();
             try
             {
                 PushReference();
-                return Owner.State.UserdataTag(-1);
+                return State.UserdataTag(-1);
             }
             finally
             {
-                Owner.State.SetTop(stackBase);
+                State.SetTop(stackBase);
             }
         }
     }
