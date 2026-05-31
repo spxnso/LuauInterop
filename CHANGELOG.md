@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.1.2](https://github.com/spxnso/LuauInterop/compare/v1.1.1...v1.1.2) (2026-05-31)
+
+
+### Bug Fixes
+
+* clear pending exception before invoking managed function to ensure proper exception propagation ([c9be909](https://github.com/spxnso/LuauInterop/commit/c9be909829835bb340933e9b8f48845a250fe582))
+* forgot to remove debugging line ([a7ea90c](https://github.com/spxnso/LuauInterop/commit/a7ea90cfe5873db4b11546a35723bbc8db868b56))
+* invalid stack behavior and C# callback error handling ([f7c4621](https://github.com/spxnso/LuauInterop/commit/f7c4621e226cf59d4ade3ca803cc41e1e596175b))
+* make objects LuaState-aware to properly handle coroutines ([349d32d](https://github.com/spxnso/LuauInterop/commit/349d32d5d74bd8eb8afa0a33c9d3ea9cfcb25d10))
+* update callback tests for improved exception handling ([2fc5dbc](https://github.com/spxnso/LuauInterop/commit/2fc5dbcd7a9fd10618ccb9682466fbe59ce1c1c6))
+
 ## [1.1.1](https://github.com/spxnso/LuauInterop/compare/v1.1.0...v1.1.1) (2026-05-30)
 
 
