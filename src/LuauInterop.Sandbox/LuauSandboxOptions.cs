@@ -40,7 +40,6 @@ public record LuauSandboxOptions
     /// </summary>
     public IReadOnlyList<string> ForbiddenGlobals { get; init; } = [];
 
-
     /// <summary>
     /// Denies a global even if a preset allows it.
     /// </summary>
@@ -59,14 +58,13 @@ public record LuauSandboxOptions
 
     /// <summary>
     /// Whether each <see cref="LuauSandbox.Execute"/> call gets its own
-    /// proxied <c>_G</c> via <see cref="NativeMethods.luaL_sandboxthread"/>
-    /// Disabling allows scripts to share globals across calls (not recommended).
+    /// proxied <c>_G</c> via <see cref="NativeMethods.luaL_sandboxthread"/>.
+    /// Disabling allows scripts to share globals across calls.
     /// </summary>
     public bool IsolateScripts { get; init; } = true;
 
     /// <summary>
     /// Whether to call <see cref="NativeMethods.luaL_sandbox"/> to make all builtins read-only.
-    /// Disabling this is not recommended.
     /// </summary>
     public bool LockGlobals { get; init; } = true;
 
@@ -74,7 +72,10 @@ public record LuauSandboxOptions
     /// Default sandbox options.
     /// </summary>
     public static LuauSandboxOptions Default { get; } = new() {
-
+        AllowedLibraries = LuauLibrary.Base | LuauLibrary.Coroutine | LuauLibrary.Math | LuauLibrary.String | LuauLibrary.Table,
+        ForbiddenGlobals = [],
+        LockGlobals = false,
+        IsolateScripts = true,
     };
 
     /// <summary>
