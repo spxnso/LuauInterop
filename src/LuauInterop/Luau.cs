@@ -185,6 +185,13 @@ public class Luau : IDisposable
         return NativeMethods.luau_getfflag(name) != 0;
     }
 
+    private LuaState GetThreadLuaState(int index, LuaState state) {
+        nint ptr = state.ToThread(index);
+        return ptr == nint.Zero
+            ? throw new InvalidOperationException("Value at index is not a thread.")
+            : new LuaState(ptr);
+    }
+
     /// <summary>
     /// Gets the value at the specified index on the stack, converting it to an appropriate C# type.
     /// </summary>
@@ -208,7 +215,7 @@ public class Luau : IDisposable
             LuauType.UserData => new LuauUserData(this, state, state.Ref(index)),
             LuauType.Vector => ReadVector(index, state),
             LuauType.Buffer => ReadBuffer(index, state),
-            LuauType.Thread => new LuauThread(this, state, state.Ref(index)),
+            LuauType.Thread => new LuauThread(this, GetThreadLuaState(index, state), state, state.Ref(index)),
             _ => throw new NotSupportedException($"Unsupported Luau type: {type}")
         };
     }
@@ -284,10 +291,10 @@ public class Luau : IDisposable
     public LuauThread CreateThread()
     {
         ThrowIfDisposed();
-        State.NewThread();
+        var luaState = State.NewThread();
         int reference = State.Ref(-1);
         Pop(1, State);
-        return new LuauThread(this, State, reference); // we create the thread in the main state
+        return new LuauThread(this, luaState, State, reference); // we create the thread in the main state
     }
 
     /// <summary>
