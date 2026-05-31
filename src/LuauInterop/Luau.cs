@@ -163,9 +163,9 @@ public class Luau : IDisposable
 
         try
         {
-            nint ptr = state.ToLString(state.AbsIndex(-1), out _);
+            nint ptr = state.ToLString(state.AbsIndex(-1), out nuint len);
             if (ptr != nint.Zero)
-                message = Marshal.PtrToStringUTF8(ptr) ?? message;
+                message = Marshal.PtrToStringUTF8(ptr, (int)len) ?? message;
         }
         finally
         {
@@ -202,7 +202,7 @@ public class Luau : IDisposable
             LuauType.Boolean => state.ToBoolean(index),
             LuauType.Number => state.ToNumber(index),
             LuauType.Integer => state.ToInteger64(index, out _),
-            LuauType.String => Marshal.PtrToStringUTF8(state.ToLString(index, out _)),
+            LuauType.String => Marshal.PtrToStringUTF8(state.ToLString(index, out nuint len), (int)len),
             LuauType.Function => new LuauFunction(this, state, state.Ref(index)),
             LuauType.Table => new LuauTable(this, state, state.Ref(index)),
             LuauType.UserData => new LuauUserData(this, state, state.Ref(index)),
