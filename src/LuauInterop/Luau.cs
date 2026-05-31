@@ -1,4 +1,4 @@
-﻿using System.Runtime.ExceptionServices;
+using System.Runtime.ExceptionServices;
 using System.Runtime.InteropServices;
 using System.Numerics;
 using System.Text;
@@ -291,30 +291,6 @@ public class Luau : IDisposable
     }
 
     /// <summary>
-    /// Opens all standard Luau libraries into this state.
-    /// </summary>
-    /// <exception cref="ObjectDisposedException">Thrown if this instance has been disposed.</exception>
-    public void OpenLibraries()
-    {
-        ThrowIfDisposed();
-
-        State.OpenLibraries();
-    }
-
-    /// <summary>
-    /// Opens all the specified Luau libraries into this state.
-    /// </summary>
-    /// <exception cref="ObjectDisposedException">Thrown if this instance has been disposed.</exception>
-    public void OpenLibraries(List<LuauLibrary> libraries)
-    {
-        ThrowIfDisposed();
-
-        foreach (LuauLibrary library in libraries)
-            OpenLibrary(library);
-    }
-
-
-    /// <summary>
     /// Opens the specified standard Luau libraries into this state.
     /// </summary>
     /// <param name="library">The libraries to open.</param>
@@ -323,55 +299,19 @@ public class Luau : IDisposable
     {
         ThrowIfDisposed();
 
-        if (library.HasFlag(LuauLibrary.Base)) OpenBase();
-        if (library.HasFlag(LuauLibrary.Bit32)) OpenBit32();
-        if (library.HasFlag(LuauLibrary.Buffer)) OpenBuffer();
-        if (library.HasFlag(LuauLibrary.Coroutine)) OpenCoroutine();
-        if (library.HasFlag(LuauLibrary.Debug)) OpenDebug();
-        if (library.HasFlag(LuauLibrary.Integer)) OpenInteger();
-        if (library.HasFlag(LuauLibrary.Math)) OpenMath();
-        if (library.HasFlag(LuauLibrary.OS)) OpenOS();
-        if (library.HasFlag(LuauLibrary.String)) OpenString();
-        if (library.HasFlag(LuauLibrary.Table)) OpenTable();
-        if (library.HasFlag(LuauLibrary.Utf8)) OpenUtf8();
-        if (library.HasFlag(LuauLibrary.Vector)) OpenVector();
+        if (library.HasFlag(LuauLibrary.Base)) State.OpenBase();
+        if (library.HasFlag(LuauLibrary.Bit32)) State.OpenBit32();
+        if (library.HasFlag(LuauLibrary.Buffer)) State.OpenBuffer();
+        if (library.HasFlag(LuauLibrary.Coroutine)) State.OpenCoroutine();
+        if (library.HasFlag(LuauLibrary.Debug)) State.OpenDebug();
+        if (library.HasFlag(LuauLibrary.Integer)) State.OpenInteger();
+        if (library.HasFlag(LuauLibrary.Math)) State.OpenMath();
+        if (library.HasFlag(LuauLibrary.OS)) State.OpenOS();
+        if (library.HasFlag(LuauLibrary.String)) State.OpenString();
+        if (library.HasFlag(LuauLibrary.Table)) State.OpenTable();
+        if (library.HasFlag(LuauLibrary.Utf8)) State.OpenUtf8();
+        if (library.HasFlag(LuauLibrary.Vector)) State.OpenVector();
     }
-
-    /// <inheritdoc cref="OpenLibraries"/>
-    public int OpenBase() => State.OpenBase();
-
-    /// <inheritdoc cref="OpenLibraries"/>
-    public int OpenBit32() => State.OpenBit32();
-
-    /// <inheritdoc cref="OpenLibraries"/>
-    public int OpenBuffer() => State.OpenBuffer();
-
-    /// <inheritdoc cref="OpenLibraries"/>
-    public int OpenCoroutine() => State.OpenCoroutine();
-
-    /// <inheritdoc cref="OpenLibraries"/>
-    public int OpenDebug() => State.OpenDebug();
-
-    /// <inheritdoc cref="OpenLibraries"/>
-    public int OpenInteger() => State.OpenInteger();
-
-    /// <inheritdoc cref="OpenLibraries"/>
-    public int OpenMath() => State.OpenMath();
-
-    /// <inheritdoc cref="OpenLibraries"/>
-    public int OpenOS() => State.OpenOS();
-
-    /// <inheritdoc cref="OpenLibraries"/>
-    public int OpenString() => State.OpenString();
-
-    /// <inheritdoc cref="OpenLibraries"/>
-    public int OpenTable() => State.OpenTable();
-
-    /// <inheritdoc cref="OpenLibraries"/>
-    public int OpenUtf8() => State.OpenUtf8();
-
-    /// <inheritdoc cref="OpenLibraries"/>
-    public int OpenVector() => State.OpenVector();
 
     /// <summary>
     /// Pops <paramref name="n"/> values off the top of the stack.
