@@ -25,14 +25,13 @@ public class LuauInterop_StateTests
     public void Luau_OpenLibraries_DoesNotThrow()
     {
         using var luau = new Luau();
-        luau.OpenLibraries();
+        luau.OpenLibrary(LuauLibrary.All);
     }
 
     [Fact]
     public void DoString_ReturnsValue()
     {
         using var luau = new Luau();
-        luau.OpenLibraries();
 
         var results = luau.DoString("return 42");
 
@@ -44,7 +43,7 @@ public class LuauInterop_StateTests
     public void DoString_NonStringErrorMessage_HandledGracefully()
     {
         using var luau = new Luau();
-        luau.OpenLibraries();
+        luau.OpenLibrary(LuauLibrary.Base);
 
         var exception = Assert.Throws<LuauException>(() => luau.DoString("error()")); // error with no message
         Assert.Equal("Unknown Luau-side error.", exception.Message);
@@ -83,7 +82,7 @@ public class LuauInterop_StateTests
     public void DoString_RuntimeError_Throws()
     {
         using var luau = new Luau();
-        luau.OpenLibraries();
+        luau.OpenLibrary(LuauLibrary.Base);
 
         Assert.Throws<LuauException>(() => luau.DoString("error('boom')"));
     }

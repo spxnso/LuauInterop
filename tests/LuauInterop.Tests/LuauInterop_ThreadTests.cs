@@ -19,7 +19,6 @@ public class LuauInterop_ThreadTests
     public void Resume_SimpleChunk_Executes()
     {
         using var luau = new Luau();
-        luau.OpenLibraries();
 
         using var chunk = luau.Compile("return 1 + 1");
         var thread = luau.CreateThread();
@@ -61,7 +60,7 @@ public class LuauInterop_ThreadTests
     public void Resume_RuntimeError_Throws()
     {
         using var luau = new Luau();
-        luau.OpenLibraries();
+        luau.OpenLibrary(LuauLibrary.Base);
 
         using var chunk = luau.Compile("error('thread error')");
         var thread = luau.CreateThread();
@@ -73,7 +72,7 @@ public class LuauInterop_ThreadTests
     public void Resume_CoroutineYield_StatusIsYield()
     {
         using var luau = new Luau();
-        luau.OpenLibraries();
+        luau.OpenLibrary(LuauLibrary.Coroutine);
 
         using var chunk = luau.Compile("coroutine.yield(42)");
         var thread = luau.CreateThread();
@@ -89,7 +88,6 @@ public class LuauInterop_ThreadTests
     public void Resume_AfterFinished_Throws()
     {
         using var luau = new Luau();
-        luau.OpenLibraries();
 
         using var chunk = luau.Compile("return 1");
         var thread = luau.CreateThread();
@@ -103,7 +101,6 @@ public class LuauInterop_ThreadTests
     public void Resume_CanAccessGlobals()
     {
         using var luau = new Luau();
-        luau.OpenLibraries();
 
         luau["myGlobal"] = 55.0;
         using var chunk = luau.Compile("return myGlobal");
@@ -137,7 +134,6 @@ public class LuauInterop_ThreadTests
     public void Thread_Status_IsFinishedAfterCompletion()
     {
         using var luau = new Luau();
-        luau.OpenLibraries();
 
         using var chunk = luau.Compile("return 1");
         var thread = luau.CreateThread();
