@@ -57,7 +57,12 @@ public class LuauCallback : IDisposable
         {
             try
             {
-                return Managed(Owner, state);
+                // we set the pending exception to null before calling the managed function
+                // to ensure that any exception thrown by the managed function is properly propagated
+                // and not accidentally treated as a leftover exception from a previous callback.
+                var result = Managed(Owner, state);
+                PendingException = null;
+                return result;
             }
             catch (Exception ex)
             {
