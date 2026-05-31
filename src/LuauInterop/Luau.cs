@@ -277,10 +277,7 @@ public class Luau : IDisposable
     {
         ThrowIfDisposed();
         using var compiled = Compile(chunk);
-        LuauStatus status = (LuauStatus)State.Load(chunkName, compiled.Pointer, compiled.Size, 0);
-        if (status == LuauStatus.OK)
-            State.XMove(targetState, 1);
-        return status;
+        return (LuauStatus)targetState.Load(chunkName, compiled.Pointer, compiled.Size, 0);
     }
 
     /// <summary>
@@ -484,12 +481,12 @@ public class Luau : IDisposable
             var pending = LuauCallback.PendingException;
             LuauCallback.PendingException = null;
 
-            GetErrorMessage(State); // Clear the error message from the stack
+            string message = GetErrorMessage(State); // Clear the error message from the stack
 
             if (pending is not null)
                 throw pending;
 
-            ThrowLastError(State);
+            throw new LuauException(message);
         }
 
         return CollectResults(stackBase, State);

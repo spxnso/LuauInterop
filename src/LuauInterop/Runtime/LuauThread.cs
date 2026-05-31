@@ -52,11 +52,9 @@ public sealed class LuauThread(Luau owner, LuaState coroutineState, LuaState sta
         if (Status == LuauCoStatus.Run)
             throw new LuauException("Cannot resume a running coroutine.");
 
-        LuauStatus loadStatus = (LuauStatus)State.Load("chunk", chunk.Pointer, chunk.Size, 0);
+        LuauStatus loadStatus = (LuauStatus)CoroutineState.Load("chunk", chunk.Pointer, chunk.Size, 0);
         if (loadStatus != LuauStatus.OK)
-            Owner.ThrowLastError(State);
-
-        State.XMove(CoroutineState, 1);
+            Owner.ThrowLastError(CoroutineState);
         PushArgs(CoroutineState, args);
 
         LuauStatus status = (LuauStatus)CoroutineState.Resume(State, args.Length);
