@@ -54,7 +54,7 @@ public class Luau : IDisposable
             ThrowIfDisposed();
             try
             {
-                LuauType type = (LuauType)State.GetGlobal(name);
+                State.GetGlobal(name);
                 return GetObject(-1);
             }
             finally
@@ -188,7 +188,6 @@ public class Luau : IDisposable
         ThrowIfDisposed();
         return NativeMethods.luau_getfflag(name) != 0;
     }
-
 
     /// <summary>
     /// Gets the value at the specified index on the stack, converting it to an appropriate C# type.
@@ -383,7 +382,6 @@ public class Luau : IDisposable
 
     /// <inheritdoc cref="OpenLibraries"/>
     public int OpenVector() => State.OpenVector();
-
 
     /// <summary>
     /// Pops <paramref name="n"/> values off the top of the stack.
