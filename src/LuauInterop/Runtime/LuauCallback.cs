@@ -11,7 +11,7 @@ namespace LuauInterop.Runtime;
 public class LuauCallback : IDisposable
 {
     [ThreadStatic]
-    internal static Exception? _pendingException;
+    internal static Exception? PendingException;
 
     /// <summary> 
     /// The function pointer to pass to Luau.
@@ -61,7 +61,7 @@ public class LuauCallback : IDisposable
             }
             catch (Exception ex)
             {
-                _pendingException = ex;
+                PendingException = ex;
                 Owner.State.PushString(ex.Message);
                 return -1;
             }
