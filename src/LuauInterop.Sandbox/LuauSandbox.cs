@@ -16,7 +16,7 @@ public class LuauSandbox : IDisposable
     public LuauSandboxOptions Options { get; }
 
     /// <summary>
-    /// The Luau state associated with this sandbox.
+    /// The Luau object associated with this sandbox.
     /// </summary>
     public Luau Luau { get; }
 
@@ -25,9 +25,8 @@ public class LuauSandbox : IDisposable
         Options = options ?? LuauSandboxOptions.Default;
         Luau = new Luau();
 
-        Luau.OpenLibraries([.. Options.AllowedLibraries]);
+        Luau.OpenLibrary(Options.AllowedLibraries);
         RemoveDeniedGlobals();
-        InjectAllowedGlobals();
 
         if (Options.LockGlobals)
             NativeMethods.luaL_sandbox(Luau.State);
@@ -49,7 +48,7 @@ public class LuauSandbox : IDisposable
         if (IsDisposed)
             return;
 
-
+        Luau.Dispose();
         IsDisposed = true;
     }
 
@@ -59,21 +58,15 @@ public class LuauSandbox : IDisposable
         using LuauThread thread = Luau.CreateThread();
 
         if (Options.IsolateScripts)
-            NativeMethods.luaL_sandboxthread(thread.ThreadState);
+            NativeMethods.luaL_sandboxthread(thread.CoroutineState);
 
         using LuauChunk chunk = Luau.Compile(source);
         return thread.Resume(chunk);
     }
 
-    private void InjectAllowedGlobals()
-    {
-        foreach (var kvp in Options.AllowedGlobals)
-            Luau[kvp.Key] = kvp.Value;
-    }
-
     private void RemoveDeniedGlobals()
     {
-        foreach (string name in Options.DeniedGlobals)
+        foreach (string name in Options.ForbiddenGlobals)
             Luau[name] = null;
     }
 
