@@ -89,7 +89,7 @@
 
 
   <h1 id="LuauInterop_LuauValue" data-uid="LuauInterop.LuauValue" class="text-break">
-Struct LuauValue  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L8"><i class="bi bi-code-slash"></i></a>
+Struct LuauValue  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -142,9 +142,9 @@ Struct LuauValue  <a class="header-action link-secondary" title="View source" hr
 
   <a id="LuauInterop_LuauValue__ctor_" data-uid="LuauInterop.LuauValue.#ctor*"></a>
 
-  <h3 id="LuauInterop_LuauValue__ctor_LuauInterop_LuauType_System_Double_System_Int64_System_Object_" data-uid="LuauInterop.LuauValue.#ctor(LuauInterop.LuauType,System.Double,System.Int64,System.Object)">
-  LuauValue(LuauType, double, long, object?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  <h3 id="LuauInterop_LuauValue__ctor_LuauInterop_LuauType_System_Double_System_Int64_System_Object_System_Nullable_LuauInterop_Native_LuaState__" data-uid="LuauInterop.LuauValue.#ctor(LuauInterop.LuauType,System.Double,System.Int64,System.Object,System.Nullable{LuauInterop.Native.LuaState})">
+  LuauValue(LuauType, double, long, object?, LuaState?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Represents a raw Luau value.</p>
@@ -152,7 +152,7 @@ Struct LuauValue  <a class="header-action link-secondary" title="View source" hr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LuauValue(LuauType type, double number, long integer, object? reference)</code></pre>
+    <pre><code class="lang-csharp hljs">public LuauValue(LuauType type, double number, long integer, object? reference, LuaState? state = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -164,6 +164,8 @@ Struct LuauValue  <a class="header-action link-secondary" title="View source" hr
     <dt><code>integer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd></dd>
     <dt><code>reference</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>state</code> <a class="xref" href="LuauInterop.Native.LuaState.html">LuaState</a>?</dt>
     <dd></dd>
   </dl>
 
@@ -186,7 +188,7 @@ Struct LuauValue  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="LuauInterop_LuauValue_Integer" data-uid="LuauInterop.LuauValue.Integer">
   Integer
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the integer value.</p>
@@ -221,7 +223,7 @@ Struct LuauValue  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="LuauInterop_LuauValue_Nil" data-uid="LuauInterop.LuauValue.Nil">
   Nil
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L120"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a Luau nil value.</p>
@@ -253,7 +255,7 @@ Struct LuauValue  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="LuauInterop_LuauValue_Number" data-uid="LuauInterop.LuauValue.Number">
   Number
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the numeric value.</p>
@@ -289,7 +291,7 @@ or <a class="xref" href="LuauInterop.LuauType.html#LuauInterop_LuauType_Boolean"
 
   <h3 id="LuauInterop_LuauValue_Reference" data-uid="LuauInterop.LuauValue.Reference">
   Reference
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the reference-backed value.</p>
@@ -320,11 +322,46 @@ or <a class="xref" href="LuauInterop.LuauType.html#LuauInterop_LuauType_Boolean"
 
 
 
+  <a id="LuauInterop_LuauValue_State_" data-uid="LuauInterop.LuauValue.State*"></a>
+
+  <h3 id="LuauInterop_LuauValue_State" data-uid="LuauInterop.LuauValue.State">
+  State
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the Lua state associated with this value, if applicable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LuaState? State { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="LuauInterop.Native.LuaState.html">LuaState</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="LuauInterop_LuauValue_State_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Valid only when <a class="xref" href="LuauInterop.LuauValue.html#LuauInterop_LuauValue_Type">Type</a> is <a class="xref" href="LuauInterop.LuauType.html#LuauInterop_LuauType_Function">Function</a>.</p>
+</div>
+
+
+
+
   <a id="LuauInterop_LuauValue_Type_" data-uid="LuauInterop.LuauValue.Type*"></a>
 
   <h3 id="LuauInterop_LuauValue_Type" data-uid="LuauInterop.LuauValue.Type">
   Type
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the Luau type of this value.</p>
@@ -360,7 +397,7 @@ or <a class="xref" href="LuauInterop.LuauType.html#LuauInterop_LuauType_Boolean"
 
   <h3 id="LuauInterop_LuauValue_ToClr" data-uid="LuauInterop.LuauValue.ToClr">
   ToClr()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts this value into its managed CLR representation.</p>
@@ -403,7 +440,7 @@ or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keyword
 
   <h3 id="LuauInterop_LuauValue_ToString" data-uid="LuauInterop.LuauValue.ToString">
   ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L87"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the string representation of this value.</p>
@@ -441,7 +478,7 @@ or <code>&quot;nil&quot;</code> if the value is nil.</p>
 
   <h3 id="LuauInterop_LuauValue_op_Implicit_System_Boolean__LuauInterop_LuauValue" data-uid="LuauInterop.LuauValue.op_Implicit(System.Boolean)~LuauInterop.LuauValue">
   implicit operator LuauValue(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L105"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a boolean into a Luau boolean value.</p>
@@ -478,7 +515,7 @@ or <code>&quot;nil&quot;</code> if the value is nil.</p>
 
   <h3 id="LuauInterop_LuauValue_op_Implicit_System_Double__LuauInterop_LuauValue" data-uid="LuauInterop.LuauValue.op_Implicit(System.Double)~LuauInterop.LuauValue">
   implicit operator LuauValue(double)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L95"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a double into a Luau number value.</p>
@@ -515,7 +552,7 @@ or <code>&quot;nil&quot;</code> if the value is nil.</p>
 
   <h3 id="LuauInterop_LuauValue_op_Implicit_System_Int32__LuauInterop_LuauValue" data-uid="LuauInterop.LuauValue.op_Implicit(System.Int32)~LuauInterop.LuauValue">
   implicit operator LuauValue(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L115"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a 32-bit integer into a Luau number value.</p>
@@ -552,7 +589,7 @@ or <code>&quot;nil&quot;</code> if the value is nil.</p>
 
   <h3 id="LuauInterop_LuauValue_op_Implicit_System_Int64__LuauInterop_LuauValue" data-uid="LuauInterop.LuauValue.op_Implicit(System.Int64)~LuauInterop.LuauValue">
   implicit operator LuauValue(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L110"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a 64-bit integer into a Luau integer value.</p>
@@ -589,7 +626,7 @@ or <code>&quot;nil&quot;</code> if the value is nil.</p>
 
   <h3 id="LuauInterop_LuauValue_op_Implicit_System_String__LuauInterop_LuauValue" data-uid="LuauInterop.LuauValue.op_Implicit(System.String)~LuauInterop.LuauValue">
   implicit operator LuauValue(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L100"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a string into a Luau string value.</p>
@@ -626,7 +663,7 @@ or <code>&quot;nil&quot;</code> if the value is nil.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L8" class="edit-link">Edit this page</a>
+          <a href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/LuauValue.cs/#L9" class="edit-link">Edit this page</a>
         </div>
 
 

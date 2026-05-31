@@ -124,22 +124,6 @@ references:
   commentId: F:LuauInterop.Luau.Callbacks
   fullName: LuauInterop.Luau.Callbacks
   nameWithType: Luau.Callbacks
-- uid: LuauInterop.Luau.CollectResults(System.Int32)
-  name: CollectResults(int)
-  href: api/LuauInterop.Luau.html#LuauInterop_Luau_CollectResults_System_Int32_
-  commentId: M:LuauInterop.Luau.CollectResults(System.Int32)
-  name.vb: CollectResults(Integer)
-  fullName: LuauInterop.Luau.CollectResults(int)
-  fullName.vb: LuauInterop.Luau.CollectResults(Integer)
-  nameWithType: Luau.CollectResults(int)
-  nameWithType.vb: Luau.CollectResults(Integer)
-- uid: LuauInterop.Luau.CollectResults*
-  name: CollectResults
-  href: api/LuauInterop.Luau.html#LuauInterop_Luau_CollectResults_
-  commentId: Overload:LuauInterop.Luau.CollectResults
-  isSpec: "True"
-  fullName: LuauInterop.Luau.CollectResults
-  nameWithType: Luau.CollectResults
 - uid: LuauInterop.Luau.Compile(System.String,LuauInterop.Compilation.LuauCompileOptions)
   name: Compile(string, LuauCompileOptions?)
   href: api/LuauInterop.Luau.html#LuauInterop_Luau_Compile_System_String_LuauInterop_Compilation_LuauCompileOptions_
@@ -239,12 +223,6 @@ references:
   isSpec: "True"
   fullName: LuauInterop.Luau.~Luau
   nameWithType: Luau.~Luau
-- uid: LuauInterop.Luau.GetErrorMessage
-  name: GetErrorMessage()
-  href: api/LuauInterop.Luau.html#LuauInterop_Luau_GetErrorMessage
-  commentId: M:LuauInterop.Luau.GetErrorMessage
-  fullName: LuauInterop.Luau.GetErrorMessage()
-  nameWithType: Luau.GetErrorMessage()
 - uid: LuauInterop.Luau.GetErrorMessage(LuauInterop.Native.LuaState)
   name: GetErrorMessage(LuaState)
   href: api/LuauInterop.Luau.html#LuauInterop_Luau_GetErrorMessage_LuauInterop_Native_LuaState_
@@ -274,15 +252,6 @@ references:
   isSpec: "True"
   fullName: LuauInterop.Luau.GetFFlag
   nameWithType: Luau.GetFFlag
-- uid: LuauInterop.Luau.GetObject(System.Int32)
-  name: GetObject(int)
-  href: api/LuauInterop.Luau.html#LuauInterop_Luau_GetObject_System_Int32_
-  commentId: M:LuauInterop.Luau.GetObject(System.Int32)
-  name.vb: GetObject(Integer)
-  fullName: LuauInterop.Luau.GetObject(int)
-  fullName.vb: LuauInterop.Luau.GetObject(Integer)
-  nameWithType: Luau.GetObject(int)
-  nameWithType.vb: Luau.GetObject(Integer)
 - uid: LuauInterop.Luau.GetObject(System.Int32,LuauInterop.Native.LuaState)
   name: GetObject(int, LuaState)
   href: api/LuauInterop.Luau.html#LuauInterop_Luau_GetObject_System_Int32_LuauInterop_Native_LuaState_
@@ -299,15 +268,6 @@ references:
   isSpec: "True"
   fullName: LuauInterop.Luau.GetObject
   nameWithType: Luau.GetObject
-- uid: LuauInterop.Luau.GetValue(System.Int32)
-  name: GetValue(int)
-  href: api/LuauInterop.Luau.html#LuauInterop_Luau_GetValue_System_Int32_
-  commentId: M:LuauInterop.Luau.GetValue(System.Int32)
-  name.vb: GetValue(Integer)
-  fullName: LuauInterop.Luau.GetValue(int)
-  fullName.vb: LuauInterop.Luau.GetValue(Integer)
-  nameWithType: Luau.GetValue(int)
-  nameWithType.vb: Luau.GetValue(Integer)
 - uid: LuauInterop.Luau.GetValue(System.Int32,LuauInterop.Native.LuaState)
   name: GetValue(int, LuaState)
   href: api/LuauInterop.Luau.html#LuauInterop_Luau_GetValue_System_Int32_LuauInterop_Native_LuaState_
@@ -572,15 +532,6 @@ references:
   isSpec: "True"
   fullName: LuauInterop.Luau.OpenVector
   nameWithType: Luau.OpenVector
-- uid: LuauInterop.Luau.Pop(System.Int32)
-  name: Pop(int)
-  href: api/LuauInterop.Luau.html#LuauInterop_Luau_Pop_System_Int32_
-  commentId: M:LuauInterop.Luau.Pop(System.Int32)
-  name.vb: Pop(Integer)
-  fullName: LuauInterop.Luau.Pop(int)
-  fullName.vb: LuauInterop.Luau.Pop(Integer)
-  nameWithType: Luau.Pop(int)
-  nameWithType.vb: Luau.Pop(Integer)
 - uid: LuauInterop.Luau.Pop(System.Int32,LuauInterop.Native.LuaState)
   name: Pop(int, LuaState)
   href: api/LuauInterop.Luau.html#LuauInterop_Luau_Pop_System_Int32_LuauInterop_Native_LuaState_
@@ -597,12 +548,6 @@ references:
   isSpec: "True"
   fullName: LuauInterop.Luau.Pop
   nameWithType: Luau.Pop
-- uid: LuauInterop.Luau.Push(LuauInterop.LuauValue)
-  name: Push(LuauValue)
-  href: api/LuauInterop.Luau.html#LuauInterop_Luau_Push_LuauInterop_LuauValue_
-  commentId: M:LuauInterop.Luau.Push(LuauInterop.LuauValue)
-  fullName: LuauInterop.Luau.Push(LuauInterop.LuauValue)
-  nameWithType: Luau.Push(LuauValue)
 - uid: LuauInterop.Luau.Push(LuauInterop.LuauValue,LuauInterop.Native.LuaState)
   name: Push(LuauValue, LuaState)
   href: api/LuauInterop.Luau.html#LuauInterop_Luau_Push_LuauInterop_LuauValue_LuauInterop_Native_LuaState_
@@ -616,12 +561,6 @@ references:
   isSpec: "True"
   fullName: LuauInterop.Luau.Push
   nameWithType: Luau.Push
-- uid: LuauInterop.Luau.PushCallback(LuauInterop.Runtime.LuauCallback)
-  name: PushCallback(LuauCallback)
-  href: api/LuauInterop.Luau.html#LuauInterop_Luau_PushCallback_LuauInterop_Runtime_LuauCallback_
-  commentId: M:LuauInterop.Luau.PushCallback(LuauInterop.Runtime.LuauCallback)
-  fullName: LuauInterop.Luau.PushCallback(LuauInterop.Runtime.LuauCallback)
-  nameWithType: Luau.PushCallback(LuauCallback)
 - uid: LuauInterop.Luau.PushCallback(LuauInterop.Runtime.LuauCallback,LuauInterop.Native.LuaState)
   name: PushCallback(LuauCallback, LuaState)
   href: api/LuauInterop.Luau.html#LuauInterop_Luau_PushCallback_LuauInterop_Runtime_LuauCallback_LuauInterop_Native_LuaState_
@@ -635,15 +574,6 @@ references:
   isSpec: "True"
   fullName: LuauInterop.Luau.PushCallback
   nameWithType: Luau.PushCallback
-- uid: LuauInterop.Luau.PushObject(System.Object)
-  name: PushObject(object?)
-  href: api/LuauInterop.Luau.html#LuauInterop_Luau_PushObject_System_Object_
-  commentId: M:LuauInterop.Luau.PushObject(System.Object)
-  name.vb: PushObject(Object)
-  fullName: LuauInterop.Luau.PushObject(object?)
-  fullName.vb: LuauInterop.Luau.PushObject(Object)
-  nameWithType: Luau.PushObject(object?)
-  nameWithType.vb: Luau.PushObject(Object)
 - uid: LuauInterop.Luau.PushObject(System.Object,LuauInterop.Native.LuaState)
   name: PushObject(object?, LuaState)
   href: api/LuauInterop.Luau.html#LuauInterop_Luau_PushObject_System_Object_LuauInterop_Native_LuaState_
@@ -660,19 +590,6 @@ references:
   isSpec: "True"
   fullName: LuauInterop.Luau.PushObject
   nameWithType: Luau.PushObject
-- uid: LuauInterop.Luau.PushValue(LuauInterop.LuauValue)
-  name: PushValue(LuauValue)
-  href: api/LuauInterop.Luau.html#LuauInterop_Luau_PushValue_LuauInterop_LuauValue_
-  commentId: M:LuauInterop.Luau.PushValue(LuauInterop.LuauValue)
-  fullName: LuauInterop.Luau.PushValue(LuauInterop.LuauValue)
-  nameWithType: Luau.PushValue(LuauValue)
-- uid: LuauInterop.Luau.PushValue*
-  name: PushValue
-  href: api/LuauInterop.Luau.html#LuauInterop_Luau_PushValue_
-  commentId: Overload:LuauInterop.Luau.PushValue
-  isSpec: "True"
-  fullName: LuauInterop.Luau.PushValue
-  nameWithType: Luau.PushValue
 - uid: LuauInterop.Luau.RegisterCallback(System.String,System.Func{LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32})
   name: RegisterCallback(string, Func<Luau, LuaState, int>)
   href: api/LuauInterop.Luau.html#LuauInterop_Luau_RegisterCallback_System_String_System_Func_LuauInterop_Luau_LuauInterop_Native_LuaState_System_Int32__
@@ -682,15 +599,6 @@ references:
   fullName.vb: LuauInterop.Luau.RegisterCallback(String, System.Func(Of LuauInterop.Luau, LuauInterop.Native.LuaState, Integer))
   nameWithType: Luau.RegisterCallback(string, Func<Luau, LuaState, int>)
   nameWithType.vb: Luau.RegisterCallback(String, Func(Of Luau, LuaState, Integer))
-- uid: LuauInterop.Luau.RegisterCallback(System.String,System.Func{LuauInterop.Luau,System.Int32})
-  name: RegisterCallback(string, Func<Luau, int>)
-  href: api/LuauInterop.Luau.html#LuauInterop_Luau_RegisterCallback_System_String_System_Func_LuauInterop_Luau_System_Int32__
-  commentId: M:LuauInterop.Luau.RegisterCallback(System.String,System.Func{LuauInterop.Luau,System.Int32})
-  name.vb: RegisterCallback(String, Func(Of Luau, Integer))
-  fullName: LuauInterop.Luau.RegisterCallback(string, System.Func<LuauInterop.Luau, int>)
-  fullName.vb: LuauInterop.Luau.RegisterCallback(String, System.Func(Of LuauInterop.Luau, Integer))
-  nameWithType: Luau.RegisterCallback(string, Func<Luau, int>)
-  nameWithType.vb: Luau.RegisterCallback(String, Func(Of Luau, Integer))
 - uid: LuauInterop.Luau.RegisterCallback*
   name: RegisterCallback
   href: api/LuauInterop.Luau.html#LuauInterop_Luau_RegisterCallback_
@@ -733,15 +641,15 @@ references:
   commentId: T:LuauInterop.LuauBase
   fullName: LuauInterop.LuauBase
   nameWithType: LuauBase
-- uid: LuauInterop.LuauBase.#ctor(LuauInterop.Luau,System.Int32)
-  name: LuauBase(Luau, int)
-  href: api/LuauInterop.LuauBase.html#LuauInterop_LuauBase__ctor_LuauInterop_Luau_System_Int32_
-  commentId: M:LuauInterop.LuauBase.#ctor(LuauInterop.Luau,System.Int32)
-  name.vb: New(Luau, Integer)
-  fullName: LuauInterop.LuauBase.LuauBase(LuauInterop.Luau, int)
-  fullName.vb: LuauInterop.LuauBase.New(LuauInterop.Luau, Integer)
-  nameWithType: LuauBase.LuauBase(Luau, int)
-  nameWithType.vb: LuauBase.New(Luau, Integer)
+- uid: LuauInterop.LuauBase.#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32)
+  name: LuauBase(Luau, LuaState, int)
+  href: api/LuauInterop.LuauBase.html#LuauInterop_LuauBase__ctor_LuauInterop_Luau_LuauInterop_Native_LuaState_System_Int32_
+  commentId: M:LuauInterop.LuauBase.#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32)
+  name.vb: New(Luau, LuaState, Integer)
+  fullName: LuauInterop.LuauBase.LuauBase(LuauInterop.Luau, LuauInterop.Native.LuaState, int)
+  fullName.vb: LuauInterop.LuauBase.New(LuauInterop.Luau, LuauInterop.Native.LuaState, Integer)
+  nameWithType: LuauBase.LuauBase(Luau, LuaState, int)
+  nameWithType.vb: LuauBase.New(Luau, LuaState, Integer)
 - uid: LuauInterop.LuauBase.#ctor*
   name: LuauBase
   href: api/LuauInterop.LuauBase.html#LuauInterop_LuauBase__ctor_
@@ -842,6 +750,19 @@ references:
   isSpec: "True"
   fullName: LuauInterop.LuauBase.Reference
   nameWithType: LuauBase.Reference
+- uid: LuauInterop.LuauBase.State
+  name: State
+  href: api/LuauInterop.LuauBase.html#LuauInterop_LuauBase_State
+  commentId: P:LuauInterop.LuauBase.State
+  fullName: LuauInterop.LuauBase.State
+  nameWithType: LuauBase.State
+- uid: LuauInterop.LuauBase.State*
+  name: State
+  href: api/LuauInterop.LuauBase.html#LuauInterop_LuauBase_State_
+  commentId: Overload:LuauInterop.LuauBase.State
+  isSpec: "True"
+  fullName: LuauInterop.LuauBase.State
+  nameWithType: LuauBase.State
 - uid: LuauInterop.LuauBase.ThrowIfDisposed
   name: ThrowIfDisposed()
   href: api/LuauInterop.LuauBase.html#LuauInterop_LuauBase_ThrowIfDisposed
@@ -1101,15 +1022,15 @@ references:
   commentId: T:LuauInterop.LuauValue
   fullName: LuauInterop.LuauValue
   nameWithType: LuauValue
-- uid: LuauInterop.LuauValue.#ctor(LuauInterop.LuauType,System.Double,System.Int64,System.Object)
-  name: LuauValue(LuauType, double, long, object?)
-  href: api/LuauInterop.LuauValue.html#LuauInterop_LuauValue__ctor_LuauInterop_LuauType_System_Double_System_Int64_System_Object_
-  commentId: M:LuauInterop.LuauValue.#ctor(LuauInterop.LuauType,System.Double,System.Int64,System.Object)
-  name.vb: New(LuauType, Double, Long, Object)
-  fullName: LuauInterop.LuauValue.LuauValue(LuauInterop.LuauType, double, long, object?)
-  fullName.vb: LuauInterop.LuauValue.New(LuauInterop.LuauType, Double, Long, Object)
-  nameWithType: LuauValue.LuauValue(LuauType, double, long, object?)
-  nameWithType.vb: LuauValue.New(LuauType, Double, Long, Object)
+- uid: LuauInterop.LuauValue.#ctor(LuauInterop.LuauType,System.Double,System.Int64,System.Object,System.Nullable{LuauInterop.Native.LuaState})
+  name: LuauValue(LuauType, double, long, object?, LuaState?)
+  href: api/LuauInterop.LuauValue.html#LuauInterop_LuauValue__ctor_LuauInterop_LuauType_System_Double_System_Int64_System_Object_System_Nullable_LuauInterop_Native_LuaState__
+  commentId: M:LuauInterop.LuauValue.#ctor(LuauInterop.LuauType,System.Double,System.Int64,System.Object,System.Nullable{LuauInterop.Native.LuaState})
+  name.vb: New(LuauType, Double, Long, Object, LuaState?)
+  fullName: LuauInterop.LuauValue.LuauValue(LuauInterop.LuauType, double, long, object?, LuauInterop.Native.LuaState?)
+  fullName.vb: LuauInterop.LuauValue.New(LuauInterop.LuauType, Double, Long, Object, LuauInterop.Native.LuaState?)
+  nameWithType: LuauValue.LuauValue(LuauType, double, long, object?, LuaState?)
+  nameWithType.vb: LuauValue.New(LuauType, Double, Long, Object, LuaState?)
 - uid: LuauInterop.LuauValue.#ctor*
   name: LuauValue
   href: api/LuauInterop.LuauValue.html#LuauInterop_LuauValue__ctor_
@@ -1172,6 +1093,19 @@ references:
   isSpec: "True"
   fullName: LuauInterop.LuauValue.Reference
   nameWithType: LuauValue.Reference
+- uid: LuauInterop.LuauValue.State
+  name: State
+  href: api/LuauInterop.LuauValue.html#LuauInterop_LuauValue_State
+  commentId: P:LuauInterop.LuauValue.State
+  fullName: LuauInterop.LuauValue.State
+  nameWithType: LuauValue.State
+- uid: LuauInterop.LuauValue.State*
+  name: State
+  href: api/LuauInterop.LuauValue.html#LuauInterop_LuauValue_State_
+  commentId: Overload:LuauInterop.LuauValue.State
+  isSpec: "True"
+  fullName: LuauInterop.LuauValue.State
+  nameWithType: LuauValue.State
 - uid: LuauInterop.LuauValue.ToClr
   name: ToClr()
   href: api/LuauInterop.LuauValue.html#LuauInterop_LuauValue_ToClr
@@ -6200,15 +6134,15 @@ references:
   commentId: T:LuauInterop.Objects.LuauFunction
   fullName: LuauInterop.Objects.LuauFunction
   nameWithType: LuauFunction
-- uid: LuauInterop.Objects.LuauFunction.#ctor(LuauInterop.Luau,System.Int32)
-  name: LuauFunction(Luau, int)
-  href: api/LuauInterop.Objects.LuauFunction.html#LuauInterop_Objects_LuauFunction__ctor_LuauInterop_Luau_System_Int32_
-  commentId: M:LuauInterop.Objects.LuauFunction.#ctor(LuauInterop.Luau,System.Int32)
-  name.vb: New(Luau, Integer)
-  fullName: LuauInterop.Objects.LuauFunction.LuauFunction(LuauInterop.Luau, int)
-  fullName.vb: LuauInterop.Objects.LuauFunction.New(LuauInterop.Luau, Integer)
-  nameWithType: LuauFunction.LuauFunction(Luau, int)
-  nameWithType.vb: LuauFunction.New(Luau, Integer)
+- uid: LuauInterop.Objects.LuauFunction.#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32)
+  name: LuauFunction(Luau, LuaState, int)
+  href: api/LuauInterop.Objects.LuauFunction.html#LuauInterop_Objects_LuauFunction__ctor_LuauInterop_Luau_LuauInterop_Native_LuaState_System_Int32_
+  commentId: M:LuauInterop.Objects.LuauFunction.#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32)
+  name.vb: New(Luau, LuaState, Integer)
+  fullName: LuauInterop.Objects.LuauFunction.LuauFunction(LuauInterop.Luau, LuauInterop.Native.LuaState, int)
+  fullName.vb: LuauInterop.Objects.LuauFunction.New(LuauInterop.Luau, LuauInterop.Native.LuaState, Integer)
+  nameWithType: LuauFunction.LuauFunction(Luau, LuaState, int)
+  nameWithType.vb: LuauFunction.New(Luau, LuaState, Integer)
 - uid: LuauInterop.Objects.LuauFunction.#ctor*
   name: LuauFunction
   href: api/LuauInterop.Objects.LuauFunction.html#LuauInterop_Objects_LuauFunction__ctor_
@@ -6241,15 +6175,15 @@ references:
   commentId: T:LuauInterop.Objects.LuauTable
   fullName: LuauInterop.Objects.LuauTable
   nameWithType: LuauTable
-- uid: LuauInterop.Objects.LuauTable.#ctor(LuauInterop.Luau,System.Int32)
-  name: LuauTable(Luau, int)
-  href: api/LuauInterop.Objects.LuauTable.html#LuauInterop_Objects_LuauTable__ctor_LuauInterop_Luau_System_Int32_
-  commentId: M:LuauInterop.Objects.LuauTable.#ctor(LuauInterop.Luau,System.Int32)
-  name.vb: New(Luau, Integer)
-  fullName: LuauInterop.Objects.LuauTable.LuauTable(LuauInterop.Luau, int)
-  fullName.vb: LuauInterop.Objects.LuauTable.New(LuauInterop.Luau, Integer)
-  nameWithType: LuauTable.LuauTable(Luau, int)
-  nameWithType.vb: LuauTable.New(Luau, Integer)
+- uid: LuauInterop.Objects.LuauTable.#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32)
+  name: LuauTable(Luau, LuaState, int)
+  href: api/LuauInterop.Objects.LuauTable.html#LuauInterop_Objects_LuauTable__ctor_LuauInterop_Luau_LuauInterop_Native_LuaState_System_Int32_
+  commentId: M:LuauInterop.Objects.LuauTable.#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32)
+  name.vb: New(Luau, LuaState, Integer)
+  fullName: LuauInterop.Objects.LuauTable.LuauTable(LuauInterop.Luau, LuauInterop.Native.LuaState, int)
+  fullName.vb: LuauInterop.Objects.LuauTable.New(LuauInterop.Luau, LuauInterop.Native.LuaState, Integer)
+  nameWithType: LuauTable.LuauTable(Luau, LuaState, int)
+  nameWithType.vb: LuauTable.New(Luau, LuaState, Integer)
 - uid: LuauInterop.Objects.LuauTable.#ctor*
   name: LuauTable
   href: api/LuauInterop.Objects.LuauTable.html#LuauInterop_Objects_LuauTable__ctor_
@@ -6320,15 +6254,15 @@ references:
   commentId: T:LuauInterop.Objects.LuauUserData
   fullName: LuauInterop.Objects.LuauUserData
   nameWithType: LuauUserData
-- uid: LuauInterop.Objects.LuauUserData.#ctor(LuauInterop.Luau,System.Int32)
-  name: LuauUserData(Luau, int)
-  href: api/LuauInterop.Objects.LuauUserData.html#LuauInterop_Objects_LuauUserData__ctor_LuauInterop_Luau_System_Int32_
-  commentId: M:LuauInterop.Objects.LuauUserData.#ctor(LuauInterop.Luau,System.Int32)
-  name.vb: New(Luau, Integer)
-  fullName: LuauInterop.Objects.LuauUserData.LuauUserData(LuauInterop.Luau, int)
-  fullName.vb: LuauInterop.Objects.LuauUserData.New(LuauInterop.Luau, Integer)
-  nameWithType: LuauUserData.LuauUserData(Luau, int)
-  nameWithType.vb: LuauUserData.New(Luau, Integer)
+- uid: LuauInterop.Objects.LuauUserData.#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32)
+  name: LuauUserData(Luau, LuaState, int)
+  href: api/LuauInterop.Objects.LuauUserData.html#LuauInterop_Objects_LuauUserData__ctor_LuauInterop_Luau_LuauInterop_Native_LuaState_System_Int32_
+  commentId: M:LuauInterop.Objects.LuauUserData.#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32)
+  name.vb: New(Luau, LuaState, Integer)
+  fullName: LuauInterop.Objects.LuauUserData.LuauUserData(LuauInterop.Luau, LuauInterop.Native.LuaState, int)
+  fullName.vb: LuauInterop.Objects.LuauUserData.New(LuauInterop.Luau, LuauInterop.Native.LuaState, Integer)
+  nameWithType: LuauUserData.LuauUserData(Luau, LuaState, int)
+  nameWithType.vb: LuauUserData.New(Luau, LuaState, Integer)
 - uid: LuauInterop.Objects.LuauUserData.#ctor*
   name: LuauUserData
   href: api/LuauInterop.Objects.LuauUserData.html#LuauInterop_Objects_LuauUserData__ctor_
@@ -6948,15 +6882,15 @@ references:
   commentId: T:LuauInterop.Runtime.LuauThread
   fullName: LuauInterop.Runtime.LuauThread
   nameWithType: LuauThread
-- uid: LuauInterop.Runtime.LuauThread.#ctor(LuauInterop.Luau,System.Int32)
-  name: LuauThread(Luau, int)
-  href: api/LuauInterop.Runtime.LuauThread.html#LuauInterop_Runtime_LuauThread__ctor_LuauInterop_Luau_System_Int32_
-  commentId: M:LuauInterop.Runtime.LuauThread.#ctor(LuauInterop.Luau,System.Int32)
-  name.vb: New(Luau, Integer)
-  fullName: LuauInterop.Runtime.LuauThread.LuauThread(LuauInterop.Luau, int)
-  fullName.vb: LuauInterop.Runtime.LuauThread.New(LuauInterop.Luau, Integer)
-  nameWithType: LuauThread.LuauThread(Luau, int)
-  nameWithType.vb: LuauThread.New(Luau, Integer)
+- uid: LuauInterop.Runtime.LuauThread.#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32)
+  name: LuauThread(Luau, LuaState, int)
+  href: api/LuauInterop.Runtime.LuauThread.html#LuauInterop_Runtime_LuauThread__ctor_LuauInterop_Luau_LuauInterop_Native_LuaState_System_Int32_
+  commentId: M:LuauInterop.Runtime.LuauThread.#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32)
+  name.vb: New(Luau, LuaState, Integer)
+  fullName: LuauInterop.Runtime.LuauThread.LuauThread(LuauInterop.Luau, LuauInterop.Native.LuaState, int)
+  fullName.vb: LuauInterop.Runtime.LuauThread.New(LuauInterop.Luau, LuauInterop.Native.LuaState, Integer)
+  nameWithType: LuauThread.LuauThread(Luau, LuaState, int)
+  nameWithType.vb: LuauThread.New(Luau, LuaState, Integer)
 - uid: LuauInterop.Runtime.LuauThread.#ctor*
   name: LuauThread
   href: api/LuauInterop.Runtime.LuauThread.html#LuauInterop_Runtime_LuauThread__ctor_

@@ -89,7 +89,7 @@
 
 
   <h1 id="LuauInterop_Objects_LuauFunction" data-uid="LuauInterop.Objects.LuauFunction" class="text-break">
-Class LuauFunction  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/Objects/LuauFunction.cs/#L5"><i class="bi bi-code-slash"></i></a>
+Class LuauFunction  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/Objects/LuauFunction.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -129,6 +129,9 @@ Class LuauFunction  <a class="header-action link-secondary" title="View source" 
     <dd>
     <div>
       <a class="xref" href="LuauInterop.LuauBase.html#LuauInterop_LuauBase_Owner">LuauBase.Owner</a>
+    </div>
+    <div>
+      <a class="xref" href="LuauInterop.LuauBase.html#LuauInterop_LuauBase_State">LuauBase.State</a>
     </div>
     <div>
       <a class="xref" href="LuauInterop.LuauBase.html#LuauInterop_LuauBase_Reference">LuauBase.Reference</a>
@@ -173,21 +176,23 @@ Class LuauFunction  <a class="header-action link-secondary" title="View source" 
 
   <a id="LuauInterop_Objects_LuauFunction__ctor_" data-uid="LuauInterop.Objects.LuauFunction.#ctor*"></a>
 
-  <h3 id="LuauInterop_Objects_LuauFunction__ctor_LuauInterop_Luau_System_Int32_" data-uid="LuauInterop.Objects.LuauFunction.#ctor(LuauInterop.Luau,System.Int32)">
-  LuauFunction(Luau, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/Objects/LuauFunction.cs/#L5"><i class="bi bi-code-slash"></i></a>
+  <h3 id="LuauInterop_Objects_LuauFunction__ctor_LuauInterop_Luau_LuauInterop_Native_LuaState_System_Int32_" data-uid="LuauInterop.Objects.LuauFunction.#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32)">
+  LuauFunction(Luau, LuaState, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/Objects/LuauFunction.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LuauFunction(Luau owner, int reference)</code></pre>
+    <pre><code class="lang-csharp hljs">public LuauFunction(Luau owner, LuaState state, int reference)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>owner</code> <a class="xref" href="LuauInterop.Luau.html">Luau</a></dt>
+    <dd></dd>
+    <dt><code>state</code> <a class="xref" href="LuauInterop.Native.LuaState.html">LuaState</a></dt>
     <dd></dd>
     <dt><code>reference</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd></dd>
@@ -212,10 +217,11 @@ Class LuauFunction  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="LuauInterop_Objects_LuauFunction_Call_System_Object___" data-uid="LuauInterop.Objects.LuauFunction.Call(System.Object[])">
   Call(params object?[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/Objects/LuauFunction.cs/#L7"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/Objects/LuauFunction.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Calls the Lua function with the specified arguments and returns the results.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -225,13 +231,15 @@ Class LuauFunction  <a class="header-action link-secondary" title="View source" 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>arguments</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
-    <dd></dd>
+    <dd><p>The arguments to pass to the Lua function.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
-    <dd></dd>
+    <dd><p>An array of results returned by the Lua function.</p>
+</dd>
   </dl>
 
 
@@ -241,6 +249,15 @@ Class LuauFunction  <a class="header-action link-secondary" title="View source" 
 
 
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="LuauInterop.LuauException.html">LuauException</a></dt>
+    <dd><p>Thrown if the Lua function call results in an error.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>Thrown if this function or its owner has been disposed.</p>
+</dd>
+  </dl>
 
 
 
@@ -248,7 +265,7 @@ Class LuauFunction  <a class="header-action link-secondary" title="View source" 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/Objects/LuauFunction.cs/#L5" class="edit-link">Edit this page</a>
+          <a href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/Objects/LuauFunction.cs/#L6" class="edit-link">Edit this page</a>
         </div>
 
 
