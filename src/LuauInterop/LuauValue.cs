@@ -1,3 +1,4 @@
+using LuauInterop.Native;
 using LuauInterop.Objects;
 
 namespace LuauInterop;
@@ -5,7 +6,7 @@ namespace LuauInterop;
 /// <summary>
 /// Represents a raw Luau value.
 /// </summary>
-public readonly struct LuauValue(LuauType type, double number, long integer, object? reference)
+public readonly struct LuauValue(LuauType type, double number, long integer, object? reference, LuaState? state = null)
 {
     /// <summary>
     /// Gets the Luau type of this value.
@@ -28,6 +29,14 @@ public readonly struct LuauValue(LuauType type, double number, long integer, obj
     /// Valid only when <see cref="Type"/> is <see cref="LuauType.Integer"/>.
     /// </remarks>
     public long Integer { get; } = integer;
+
+    /// <summary>
+    /// Gets the Lua state associated with this value, if applicable.
+    /// </summary>
+    /// <remarks>
+    /// Valid only when <see cref="Type"/> is <see cref="LuauType.Function"/>.
+    /// </remarks>
+    public LuaState? State { get; } = state;
 
     /// <summary>
     /// Gets the reference-backed value.
@@ -62,8 +71,9 @@ public readonly struct LuauValue(LuauType type, double number, long integer, obj
             LuauType.Function => new LuauFunction(
                 Reference as Luau
                     ?? throw new InvalidOperationException("Luau function value has no owning Luau instance."),
+                State ?? throw new InvalidOperationException("Luau function value has no associated LuaState."),
                 (int)Number),
-            _ => throw new NotSupportedException($"Unsupported Luau type: {Type}")
+            _ => throw new NotSupportedException($"Unsupported Luau type '{Type}'")
         };
     }
 
@@ -82,30 +92,30 @@ public readonly struct LuauValue(LuauType type, double number, long integer, obj
     /// <summary>
     /// Converts a double into a Luau number value.
     /// </summary>
-    public static implicit operator LuauValue(double value) => new(LuauType.Number, value, 0, null);
+    public static implicit operator LuauValue(double value) => new(LuauType.Number, value, 0, null, null);
 
     /// <summary>
     /// Converts a string into a Luau string value.
     /// </summary>
-    public static implicit operator LuauValue(string value) => new(LuauType.String, 0, 0, value);
+    public static implicit operator LuauValue(string value) => new(LuauType.String, 0, 0, value, null);
 
     /// <summary>
     /// Converts a boolean into a Luau boolean value.
     /// </summary>
-    public static implicit operator LuauValue(bool value) => new(LuauType.Boolean, value ? 1 : 0, 0, null);
+    public static implicit operator LuauValue(bool value) => new(LuauType.Boolean, value ? 1 : 0, 0, null, null);
 
     /// <summary>
     /// Converts a 64-bit integer into a Luau integer value.
     /// </summary>
-    public static implicit operator LuauValue(long value) => new(LuauType.Integer, 0, value, null);
+    public static implicit operator LuauValue(long value) => new(LuauType.Integer, 0, value, null, null);
 
     /// <summary>
     /// Converts a 32-bit integer into a Luau number value.
     /// </summary>
-    public static implicit operator LuauValue(int value) => new(LuauType.Number, value, 0, null);
+    public static implicit operator LuauValue(int value) => new(LuauType.Number, value, 0, null, null);
 
     /// <summary>
     /// Gets a Luau nil value.
     /// </summary>
-    public static LuauValue Nil => new(LuauType.Nil, 0, 0, null);
+    public static LuauValue Nil => new(LuauType.Nil, 0, 0, null, null);
 }

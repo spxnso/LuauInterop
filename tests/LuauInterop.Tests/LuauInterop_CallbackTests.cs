@@ -1,3 +1,4 @@
+using LuauInterop.Objects;
 using LuauInterop.Runtime;
 using Xunit;
 
@@ -6,35 +7,32 @@ namespace LuauInterop.Tests;
 public class LuauInterop_CallbackTests
 {
     [Fact]
-    public void RegisterCallback_And_Invoke_SimpleFunction()
+    public void RegisterCallback_AndInvokeSimpleFunction_Works()
     {
         using var luau = new Luau();
-        luau.OpenLibraries();
 
-        luau.RegisterCallback("add", vm =>
+        luau.RegisterCallback("add", (vm, state) =>
         {
-            double a = vm.State.ToNumber(1);
-            double b = vm.State.ToNumber(2);
+            double a = state.ToNumber(1);
+            double b = state.ToNumber(2);
 
-            vm.State.PushNumber(a + b);
+            state.PushNumber(a + b);
             return 1;
         });
 
         var result = luau.DoString("return add(2, 3)");
 
         Assert.Single(result);
-        Assert.Equal(5.0, result[0]);
+        Assert.Equal(5d, result[0]);
     }
 
     [Fact]
     public void RegisterCallback_NoReturn_Works()
     {
         using var luau = new Luau();
-        luau.OpenLibraries();
+        var called = false;
 
-        bool called = false;
-
-        luau.RegisterCallback("test", vm =>
+        luau.RegisterCallback("test", (vm, state) =>
         {
             called = true;
             return 0;
@@ -46,25 +44,50 @@ public class LuauInterop_CallbackTests
     }
 
     [Fact]
-    public void Delegate_Action_WithArguments_Works()
+    public void Callback_CallFromCSharp_Works()
+    {
+        using var luau = new Luau();
+        luau.OpenLibraries();
+
+        luau.RegisterCallback("concat", (vm, state) =>
+        {
+            var a = vm.GetValue(1, state).ToClr() is string s1
+                ? s1 : throw new InvalidOperationException("Expected string for argument 1");
+            var b = vm.GetValue(2, state).ToClr() is string s2
+                ? s2 : throw new InvalidOperationException("Expected string for argument 2");
+
+            vm.PushObject(a + b, state);
+            return 1;
+        });
+
+        using var thread = luau.CreateThread();
+        var func = luau.DoString("return concat")[0] as LuauFunction
+            ?? throw new InvalidOperationException("Expected concat to be a function");
+
+        var results = func.Call("foo", "bar");
+        Assert.Equal("foobar", results[0]);
+
+        // We expect exactly InvalidOperationException instead of LuauException (luau code)
+        // since we should properly propagate the exception
+        Assert.Throws<InvalidOperationException>(() => func.Call(1, 2));
+    }
+
+    [Fact]
+    public void Delegate_ActionWithArguments_Works()
     {
         using var luau = new Luau();
         luau.OpenLibraries();
 
         string? captured = null;
 
-        luau["print2"] = new Action<string, string>((a, b) =>
-        {
-            captured = a + b;
-        });
-
+        luau["print2"] = new Action<string, string>((a, b) => captured = a + b);
         luau.DoString("print2('hello', 'world')");
 
         Assert.Equal("helloworld", captured);
     }
 
     [Fact]
-    public void Delegate_Func_ReturnsValue_ToLuau()
+    public void Delegate_FuncReturnsValue_ToLuau()
     {
         using var luau = new Luau();
         luau.OpenLibraries();
@@ -73,11 +96,11 @@ public class LuauInterop_CallbackTests
 
         var result = luau.DoString("return add(10, 5)");
 
-        Assert.Equal(15.0, result[0]);
+        Assert.Equal(15d, result[0]);
     }
 
     [Fact]
-    public void Delegate_MixedTypes_Coercion_Works()
+    public void Delegate_MixedTypesCoercion_Works()
     {
         using var luau = new Luau();
         luau.OpenLibraries();
@@ -98,24 +121,24 @@ public class LuauInterop_CallbackTests
         using var luau = new Luau();
         luau.OpenLibraries();
 
-        luau.RegisterCallback("multi", vm =>
+        luau.RegisterCallback("multi", (vm, state) =>
         {
-            vm.State.PushNumber(1);
-            vm.State.PushNumber(2);
-            vm.State.PushNumber(3);
+            state.PushNumber(1);
+            state.PushNumber(2);
+            state.PushNumber(3);
             return 3;
         });
 
         var result = luau.DoString("return multi()");
 
         Assert.Equal(3, result.Length);
-        Assert.Equal(1.0, result[0]);
-        Assert.Equal(2.0, result[1]);
-        Assert.Equal(3.0, result[2]);
+        Assert.Equal(1d, result[0]);
+        Assert.Equal(2d, result[1]);
+        Assert.Equal(3d, result[2]);
     }
 
     [Fact]
-    public void Delegate_Global_Assignment_Executes()
+    public void Delegate_GlobalAssignment_Executes()
     {
         using var luau = new Luau();
         luau.OpenLibraries();
@@ -124,23 +147,31 @@ public class LuauInterop_CallbackTests
 
         var result = luau.DoString("return x()");
 
-        Assert.Equal(42.0, result[0]);
+        Assert.Equal(42d, result[0]);
     }
 
     [Fact]
-    public void Callback_Exception_DoesNotCrash_VM()
+    public void Callback_Exception_DoesNotCrash()
     {
         using var luau = new Luau();
         luau.OpenLibraries();
 
-        luau.RegisterCallback("fail", vm =>
-        {
-            throw new Exception("boom");
-        });
+        luau.RegisterCallback("fail", (vm, state) => throw new Exception("boom"));
 
-        Assert.Throws<Exception>(() =>
-        {
-            luau.DoString("fail()");
-        });
+        var exception = Assert.Throws<Exception>(() => luau.DoString("fail()"));
+        Assert.Equal("boom", exception.Message);
+    }
+
+    [Fact]
+    public void Callback_HandledException_DoesNotHaltExecution()
+    {
+        using var luau = new Luau();
+        luau.OpenLibraries();
+
+        luau.RegisterCallback("fail", (vm, state) => throw new Exception("boom"));
+
+        // We expect this to not throw, since the exception
+        // should be caught and converted to a Lua error, which we then pcall
+        luau.DoString("pcall(fail)");
     }
 }

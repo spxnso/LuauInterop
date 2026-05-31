@@ -1,14 +1,22 @@
+using LuauInterop.Native;
 using LuauInterop.Runtime;
 
 namespace LuauInterop.Objects;
 
-public sealed class LuauFunction(Luau owner, int reference) : LuauBase(owner, reference)
+public sealed class LuauFunction(Luau owner, LuaState state, int reference) : LuauBase(owner, state, reference)
 {
+    /// <summary>
+    /// Calls the Lua function with the specified arguments and returns the results.
+    /// </summary>
+    /// <param name="arguments">The arguments to pass to the Lua function.</param>
+    /// <returns>An array of results returned by the Lua function.</returns>
+    /// <exception cref="LuauException">Thrown if the Lua function call results in an error.</exception>
+    /// <exception cref="ObjectDisposedException">Thrown if this function or its owner has been disposed.</exception>
     public object?[] Call(params object?[] arguments)
     {
         ThrowIfDisposed();
 
-        int stackBase = Owner.State.GetTop();
+        int stackBase = State.GetTop();
         try
         {
             PushReference();
@@ -17,24 +25,35 @@ public sealed class LuauFunction(Luau owner, int reference) : LuauBase(owner, re
             if (arguments is not null)
             {
                 foreach (var arg in arguments)
-                    Owner.PushObject(arg);
+                    Owner.PushObject(arg, State);
                 argCount = arguments.Length;
             }
 
-            LuauStatus callStatus = (LuauStatus)Owner.State.PCall(argCount, -1, 0);
-            if (callStatus != LuauStatus.OK)
+            LuauStatus callStatus = (LuauStatus)State.PCall(argCount, -1, 0);
+
+            if (callStatus != LuauStatus.OK && LuauCallback.PendingException is Exception ex)
             {
-                string error = Owner.GetErrorMessage();
+                // clear error message
+                Owner.GetErrorMessage(State);
+
+                // throw the pending exception instead of the Lua error
+                // This allows C# exceptions to propagate properly through Lua callbacks
+                LuauCallback.PendingException = null;
+                throw ex;
+            }
+            else if (callStatus != LuauStatus.OK)
+            {
+                string error = Owner.GetErrorMessage(State);
                 throw new LuauException(error);
             }
 
-            int resultCount = Owner.State.GetTop() - stackBase;
+            int resultCount = State.GetTop() - stackBase;
             var results = new List<object?>(resultCount);
 
             try
             {
                 for (int i = 0; i < resultCount; i++)
-                    results.Add(Owner.GetObject(stackBase + i + 1));
+                    results.Add(Owner.GetObject(stackBase + i + 1, State));
             }
             catch
             {
@@ -47,7 +66,7 @@ public sealed class LuauFunction(Luau owner, int reference) : LuauBase(owner, re
         }
         finally
         {
-            Owner.State.SetTop(stackBase);
+            State.SetTop(stackBase);
         }
     }
 }

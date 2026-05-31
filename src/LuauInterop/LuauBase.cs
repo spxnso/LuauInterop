@@ -5,13 +5,18 @@ namespace LuauInterop;
 /// <summary>
 /// Base class for all Luau objects that hold a reference to the Lua state.
 /// </summary>
-public abstract class LuauBase(Luau owner, int reference) : IDisposable
+public abstract class LuauBase(Luau owner, LuaState state, int reference) : IDisposable
 {
     /// <summary>
     /// The <see cref="Luau"/> instance that owns this object.
     /// </summary>
     public Luau Owner { get; } = owner;
-    
+
+    /// <summary>
+    /// The <see cref="LuaState"/> that this object is associated with.
+    /// </summary>
+    public LuaState State { get; } = state;
+
     /// <summary>
     /// The reference to the Lua object in the registry.
     /// </summary>
