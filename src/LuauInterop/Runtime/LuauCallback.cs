@@ -67,7 +67,7 @@ public class LuauCallback : IDisposable
             catch (Exception ex)
             {
                 PendingException = ex;
-                Owner.State.PushString(ex.Message);
+                state.PushString(ex.Message);
                 return -1;
             }
         };
