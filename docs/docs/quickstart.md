@@ -4,7 +4,7 @@
 
 ```csharp
 using var luau = new Luau();
-luau.OpenLibraries();
+luau.OpenLibraries(); // optional
 ```
 
 Always wrap the `Luau` instance in a `using` block, it owns the native state and must be disposed.
@@ -24,7 +24,13 @@ Pre-compiling is useful when you want to run the same script multiple times with
 
 ```csharp
 using var chunk = luau.Compile("return function(x) return x * x end");
-var results = luau.DoChunk(chunk);
+
+// Avoid running code twice on the same LuaState
+var thread1 = luau.CreateThread();
+var thread2 = luau.CreateThread();
+
+var results1 = thread1.Resume(chunk);
+var results2 = thread2.Resume(chunk);
 ```
 
 ## Calling a Luau Function
@@ -36,7 +42,7 @@ luau.DoString(@"
     end
 ");
 
-var greet = luau["greet"] as LuauFunction ?? throw new InvalidOperationException("greet is not a function");;
+var greet = luau["greet"] as LuauFunction ?? throw new InvalidOperationException("'greet' is not a function");;
 using (greet)
 {
     var result = greet.Call("World");
@@ -83,7 +89,7 @@ luau.DoString(@"
 var co = luau["co"] as LuauThread;
 using (co)
 {
-    var r1 = co.Resume(10); // Don't forget to cast to double!
+    var r1 = co.Resume(10);
     Console.WriteLine(r1[0]); // 11
 
     var r2 = co.Resume();
@@ -97,7 +103,7 @@ Here's an example using fflags to use the newest Integer type and library.
 
 ```csharp
 using var luau = new Luau();
-        
+
 luau.SetFFlag("LuauIntegerType", true);
 luau.SetFFlag("LuauIntegerLibrary", true);
 
@@ -119,7 +125,7 @@ luau.RegisterCallback("add", (vm, state) =>
 {
     double a = (double)(vm.GetObject(1, state) ?? 0);
     double b = (double)(vm.GetObject(2, state) ?? 0);
-    state.PushNumber(a + b);
+    vm.PushObject(a + b, state);
     return 1; // number of return values
 });
 
