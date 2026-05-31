@@ -26,7 +26,7 @@ public class LuauInterop_ThreadTests
         var results = thread.Resume(chunk);
 
         Assert.Single(results);
-        Assert.Equal(2.0, results[0]);
+        Assert.Equal(2d, results[0]);
     }
 
     [Fact]
@@ -37,10 +37,10 @@ public class LuauInterop_ThreadTests
         using var chunk = luau.Compile("local a, b = ...; return a + b");
         var thread = luau.CreateThread();
 
-        var results = thread.Resume(chunk, 10.0, 20.0);
+        var results = thread.Resume(chunk, 10d, 20d);
 
         Assert.Single(results);
-        Assert.Equal(30.0, results[0]);
+        Assert.Equal(30d, results[0]);
     }
 
     [Fact]
@@ -65,7 +65,8 @@ public class LuauInterop_ThreadTests
         using var chunk = luau.Compile("error('thread error')");
         var thread = luau.CreateThread();
 
-        Assert.Throws<LuauException>(() => thread.Resume(chunk));
+        var exception = Assert.Throws<LuauException>(() => thread.Resume(chunk));
+        Assert.Contains("thread error", exception.Message);
     }
 
     [Fact]
@@ -80,7 +81,7 @@ public class LuauInterop_ThreadTests
         var results = thread.Resume(chunk);
 
         Assert.Single(results);
-        Assert.Equal(42.0, results[0]);
+        Assert.Equal(42d, results[0]);
         Assert.Equal(LuauCoStatus.Suspended, thread.Status);
     }
 
@@ -102,14 +103,14 @@ public class LuauInterop_ThreadTests
     {
         using var luau = new Luau();
 
-        luau["myGlobal"] = 55.0;
+        luau["myGlobal"] = 55d;
         using var chunk = luau.Compile("return myGlobal");
         var thread = luau.CreateThread();
 
         var results = thread.Resume(chunk);
 
         Assert.Single(results);
-        Assert.Equal(55.0, results[0]);
+        Assert.Equal(55d, results[0]);
     }
 
     [Fact]
@@ -126,8 +127,8 @@ public class LuauInterop_ThreadTests
         var r1 = t1.Resume(chunk1);
         var r2 = t2.Resume(chunk2);
 
-        Assert.Equal(1.0, r1[0]);
-        Assert.Equal(2.0, r2[0]);
+        Assert.Equal(1d, r1[0]);
+        Assert.Equal(2d, r2[0]);
     }
 
     [Fact]

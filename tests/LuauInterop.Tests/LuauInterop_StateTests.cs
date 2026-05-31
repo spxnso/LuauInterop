@@ -29,6 +29,14 @@ public class LuauInterop_StateTests
     }
 
     [Fact]
+    public void LuauLibrary_NoneIsZero_BaseIsNonZero()
+    {
+        Assert.Equal(0, (int)LuauLibrary.None);
+        Assert.NotEqual(LuauLibrary.None, LuauLibrary.Base);
+        Assert.True(LuauLibrary.All.HasFlag(LuauLibrary.Base));
+    }
+
+    [Fact]
     public void DoString_ReturnsValue()
     {
         using var luau = new Luau();
@@ -36,7 +44,7 @@ public class LuauInterop_StateTests
         var results = luau.DoString("return 42");
 
         Assert.Single(results);
-        Assert.Equal(42.0, results[0]);
+        Assert.Equal(42d, results[0]);
     }
 
     [Fact]
@@ -50,15 +58,35 @@ public class LuauInterop_StateTests
     }
 
     [Fact]
+    public void DoString_StringErrorMessage_HandledGracefully()
+    {
+        using var luau = new Luau();
+        luau.OpenLibrary(LuauLibrary.Base);
+
+        var exception = Assert.Throws<LuauException>(() => luau.DoString("error('my error message')"));
+        Assert.EndsWith("my error message", exception.Message);
+    }
+
+    [Fact]
+    public void DoString_ErrorMessage_PreservesNullBytes()
+    {
+        using var luau = new Luau();
+        luau.OpenLibrary(LuauLibrary.Base);
+
+        var exception = Assert.Throws<LuauException>(() => luau.DoString("error('aaa\\0b')"));
+        Assert.EndsWith("aaa\0b", exception.Message);
+    }
+
+    [Fact]
     public void DoString_MultipleReturnValues()
     {
         using var luau = new Luau();
         var results = luau.DoString("return 1, 2, 3");
 
         Assert.Equal(3, results.Length);
-        Assert.Equal(1.0, results[0]);
-        Assert.Equal(2.0, results[1]);
-        Assert.Equal(3.0, results[2]);
+        Assert.Equal(1d, results[0]);
+        Assert.Equal(2d, results[1]);
+        Assert.Equal(3d, results[2]);
     }
 
     [Fact]
@@ -101,10 +129,10 @@ public class LuauInterop_StateTests
     {
         using var luau = new Luau();
 
-        luau["myVar"] = 123.0;
+        luau["myVar"] = 123d;
         var result = luau["myVar"];
 
-        Assert.Equal(123.0, result);
+        Assert.Equal(123d, result);
     }
 
     [Fact]
@@ -135,7 +163,7 @@ public class LuauInterop_StateTests
         var results = luau.DoChunk(chunk);
 
         Assert.Single(results);
-        Assert.Equal(99.0, results[0]);
+        Assert.Equal(99d, results[0]);
     }
 
     [Fact]
