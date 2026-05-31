@@ -7,7 +7,7 @@ luau.RegisterCallback("add", (vm, state) =>
 {
     double a = (double)(vm.GetObject(1, state) ?? 0);
     double b = (double)(vm.GetObject(2, state) ?? 0);
-    state.PushNumber(a + b);
+    vm.PushObject(a + b, state);
     return 1; // number of return values
 });
 
@@ -25,7 +25,7 @@ Arguments are on the stack starting at index 1:
 luau.RegisterCallback("greet", (vm, state) =>
 {
     string name = vm.GetObject(1, state) as string ?? "world";
-    state.PushString($"Hello, {name}!");
+    vm.PushObject($"Hello, {name}!", state);
     return 1;
 });
 
@@ -51,15 +51,15 @@ Exceptions thrown inside a callback are safely caught and re-thrown on the C# si
 ```csharp
 luau.RegisterCallback("fail", (vm, state) =>
 {
-    throw new Exception("something went wrong");
+    throw new InvalidOperationException("Something went wrong!");
 });
 
 try
 {
     luau.DoString("fail()");
 }
-catch (Exception ex)
+catch (InvalidOperationException ex) // exceptions are properly propagated from C#
 {
-    Console.WriteLine(ex.Message); // something went wrong
+    Console.WriteLine(ex.Message); // "Something went wrong!"
 }
 ```
