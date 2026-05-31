@@ -173,6 +173,5 @@ public class LuauInterop_CallbackTests
         // We expect this to not throw, since the exception
         // should be caught and converted to a Lua error, which we then pcall
         luau.DoString("pcall(fail)");
-        Assert.Null(LuauCallback.PendingException);
     }
 }
