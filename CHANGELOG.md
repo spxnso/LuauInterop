@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/spxnso/LuauInterop/compare/v1.1.0...v1.1.1) (2026-05-30)
+
+
+### Bug Fixes
+
+* reset thread instead of closing state ([48ab89f](https://github.com/spxnso/LuauInterop/commit/48ab89fe263bdf18c1417663eec9dea8147e6541))
+
 ## [1.1.0](https://github.com/spxnso/LuauInterop/compare/v1.0.2...v1.1.0) (2026-05-30)
 
 
