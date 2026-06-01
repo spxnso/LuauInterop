@@ -176,8 +176,8 @@ Class LuauThread  <a class="header-action link-secondary" title="View source" hr
 
   <a id="LuauInterop_Runtime_LuauThread__ctor_" data-uid="LuauInterop.Runtime.LuauThread.#ctor*"></a>
 
-  <h3 id="LuauInterop_Runtime_LuauThread__ctor_LuauInterop_Luau_LuauInterop_Native_LuaState_System_Int32_" data-uid="LuauInterop.Runtime.LuauThread.#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32)">
-  LuauThread(Luau, LuaState, int)
+  <h3 id="LuauInterop_Runtime_LuauThread__ctor_LuauInterop_Luau_LuauInterop_Native_LuaState_LuauInterop_Native_LuaState_System_Int32_" data-uid="LuauInterop.Runtime.LuauThread.#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,LuauInterop.Native.LuaState,System.Int32)">
+  LuauThread(Luau, LuaState, LuaState, int)
   <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/Runtime/LuauThread.cs/#L7"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -185,12 +185,14 @@ Class LuauThread  <a class="header-action link-secondary" title="View source" hr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LuauThread(Luau owner, LuaState state, int reference)</code></pre>
+    <pre><code class="lang-csharp hljs">public LuauThread(Luau owner, LuaState coroutineState, LuaState state, int reference)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>owner</code> <a class="xref" href="LuauInterop.Luau.html">Luau</a></dt>
+    <dd></dd>
+    <dt><code>coroutineState</code> <a class="xref" href="LuauInterop.Native.LuaState.html">LuaState</a></dt>
     <dd></dd>
     <dt><code>state</code> <a class="xref" href="LuauInterop.Native.LuaState.html">LuaState</a></dt>
     <dd></dd>
@@ -209,6 +211,41 @@ Class LuauThread  <a class="header-action link-secondary" title="View source" hr
 
 
 
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="LuauInterop_Runtime_LuauThread_CoroutineState" data-uid="LuauInterop.Runtime.LuauThread.CoroutineState">
+  CoroutineState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/Runtime/LuauThread.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="LuauInterop.Native.LuaState.html">LuaState</a> of this thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LuaState CoroutineState</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="LuauInterop.Native.LuaState.html">LuaState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -217,7 +254,7 @@ Class LuauThread  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="LuauInterop_Runtime_LuauThread_Status" data-uid="LuauInterop.Runtime.LuauThread.Status">
   Status
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/Runtime/LuauThread.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/Runtime/LuauThread.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -252,7 +289,7 @@ Class LuauThread  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="LuauInterop_Runtime_LuauThread_Close" data-uid="LuauInterop.Runtime.LuauThread.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/Runtime/LuauThread.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/Runtime/LuauThread.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -278,7 +315,7 @@ Class LuauThread  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="LuauInterop_Runtime_LuauThread_Resume_LuauInterop_LuauChunk_System_Object___" data-uid="LuauInterop.Runtime.LuauThread.Resume(LuauInterop.LuauChunk,System.Object[])">
   Resume(LuauChunk, params object?[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/Runtime/LuauThread.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/Runtime/LuauThread.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -316,7 +353,7 @@ Class LuauThread  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="LuauInterop_Runtime_LuauThread_Resume_System_Object___" data-uid="LuauInterop.Runtime.LuauThread.Resume(System.Object[])">
   Resume(params object?[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/Runtime/LuauThread.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/Runtime/LuauThread.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

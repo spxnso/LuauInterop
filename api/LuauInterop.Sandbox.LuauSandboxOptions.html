@@ -158,39 +158,6 @@ Class LuauSandboxOptions  <a class="header-action link-secondary" title="View so
 </h2>
 
 
-  <a id="LuauInterop_Sandbox_LuauSandboxOptions_AllowedGlobals_" data-uid="LuauInterop.Sandbox.LuauSandboxOptions.AllowedGlobals*"></a>
-
-  <h3 id="LuauInterop_Sandbox_LuauSandboxOptions_AllowedGlobals" data-uid="LuauInterop.Sandbox.LuauSandboxOptions.AllowedGlobals">
-  AllowedGlobals
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandboxOptions.cs/#L49"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Additional globals to inject before locking.
-Values must be serializable to Luau.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyDictionary&lt;string, object?&gt; AllowedGlobals { get; init; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
   <a id="LuauInterop_Sandbox_LuauSandboxOptions_AllowedLibraries_" data-uid="LuauInterop.Sandbox.LuauSandboxOptions.AllowedLibraries*"></a>
 
   <h3 id="LuauInterop_Sandbox_LuauSandboxOptions_AllowedLibraries" data-uid="LuauInterop.Sandbox.LuauSandboxOptions.AllowedLibraries">
@@ -204,7 +171,7 @@ will be completely absent from the script's environment.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;LuauLibrary&gt; AllowedLibraries { get; init; }</code></pre>
+    <pre><code class="lang-csharp hljs">public LuauLibrary AllowedLibraries { get; init; }</code></pre>
   </div>
 
 
@@ -213,7 +180,7 @@ will be completely absent from the script's environment.</p>
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="LuauInterop.Runtime.LuauLibrary.html">LuauLibrary</a>&gt;</dt>
+    <dt><a class="xref" href="LuauInterop.Runtime.LuauLibrary.html">LuauLibrary</a></dt>
     <dd></dd>
   </dl>
 
@@ -228,7 +195,7 @@ will be completely absent from the script's environment.</p>
 
   <h3 id="LuauInterop_Sandbox_LuauSandboxOptions_Default" data-uid="LuauInterop.Sandbox.LuauSandboxOptions.Default">
   Default
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandboxOptions.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandboxOptions.cs/#L74"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Default sandbox options.</p>
@@ -256,11 +223,11 @@ will be completely absent from the script's environment.</p>
 
 
 
-  <a id="LuauInterop_Sandbox_LuauSandboxOptions_DeniedGlobals_" data-uid="LuauInterop.Sandbox.LuauSandboxOptions.DeniedGlobals*"></a>
+  <a id="LuauInterop_Sandbox_LuauSandboxOptions_ForbiddenGlobals_" data-uid="LuauInterop.Sandbox.LuauSandboxOptions.ForbiddenGlobals*"></a>
 
-  <h3 id="LuauInterop_Sandbox_LuauSandboxOptions_DeniedGlobals" data-uid="LuauInterop.Sandbox.LuauSandboxOptions.DeniedGlobals">
-  DeniedGlobals
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandboxOptions.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  <h3 id="LuauInterop_Sandbox_LuauSandboxOptions_ForbiddenGlobals" data-uid="LuauInterop.Sandbox.LuauSandboxOptions.ForbiddenGlobals">
+  ForbiddenGlobals
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandboxOptions.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Globals to remove from the environment even if their library is open.
@@ -269,7 +236,7 @@ Useful for stripping individual functions like <code>rawset</code>, <code>setfen
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;string&gt; DeniedGlobals { get; init; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;string&gt; ForbiddenGlobals { get; init; }</code></pre>
   </div>
 
 
@@ -293,12 +260,12 @@ Useful for stripping individual functions like <code>rawset</code>, <code>setfen
 
   <h3 id="LuauInterop_Sandbox_LuauSandboxOptions_IsolateScripts" data-uid="LuauInterop.Sandbox.LuauSandboxOptions.IsolateScripts">
   IsolateScripts
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandboxOptions.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandboxOptions.cs/#L64"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Whether each <a class="xref" href="LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_Execute_System_String_System_String_">Execute(string, string)</a> call gets its own
-proxied <code>_G</code> via <code>luaL_sandboxthread</code>.
-Disabling allows scripts to share globals across calls (not recommended).</p>
+  <div class="markdown level1 summary"><p>Whether each <a class="xref" href="LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_Execute_System_String_">Execute(string)</a> call gets its own
+proxied <code>_G</code> via NativeMethods.luaL_sandboxthread.
+Disabling allows scripts to share globals across calls.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -327,11 +294,10 @@ Disabling allows scripts to share globals across calls (not recommended).</p>
 
   <h3 id="LuauInterop_Sandbox_LuauSandboxOptions_LockGlobals" data-uid="LuauInterop.Sandbox.LuauSandboxOptions.LockGlobals">
   LockGlobals
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandboxOptions.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandboxOptions.cs/#L69"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Whether to call <code>luaL_sandbox</code> to make all builtins read-only.
-Disabling this is not recommended.</p>
+  <div class="markdown level1 summary"><p>Whether to call NativeMethods.luaL_sandbox to make all builtins read-only.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -360,7 +326,7 @@ Disabling this is not recommended.</p>
 
   <h3 id="LuauInterop_Sandbox_LuauSandboxOptions_Strict" data-uid="LuauInterop.Sandbox.LuauSandboxOptions.Strict">
   Strict
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandboxOptions.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandboxOptions.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Strict preset for fully untrusted code.</p>
@@ -388,38 +354,6 @@ Disabling this is not recommended.</p>
 
 
 
-  <a id="LuauInterop_Sandbox_LuauSandboxOptions_StripDebugInfo_" data-uid="LuauInterop.Sandbox.LuauSandboxOptions.StripDebugInfo*"></a>
-
-  <h3 id="LuauInterop_Sandbox_LuauSandboxOptions_StripDebugInfo" data-uid="LuauInterop.Sandbox.LuauSandboxOptions.StripDebugInfo">
-  StripDebugInfo
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandboxOptions.cs/#L90"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Whether to remove debug info using compile options. Disabling this is not recommended.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool StripDebugInfo { get; init; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -428,7 +362,7 @@ Disabling this is not recommended.</p>
 
   <h3 id="LuauInterop_Sandbox_LuauSandboxOptions_AllowGlobal_System_String_" data-uid="LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobal(System.String)">
   AllowGlobal(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandboxOptions.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandboxOptions.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Allows a global even if a preset denies it.</p>
@@ -465,7 +399,7 @@ Disabling this is not recommended.</p>
 
   <h3 id="LuauInterop_Sandbox_LuauSandboxOptions_AllowGlobals_System_Collections_Generic_IReadOnlyList_System_String__" data-uid="LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobals(System.Collections.Generic.IReadOnlyList{System.String})">
   AllowGlobals(IReadOnlyList&lt;string&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandboxOptions.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandboxOptions.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Allows globals even if a preset denies them.</p>
@@ -498,43 +432,6 @@ Disabling this is not recommended.</p>
 
 
 
-  <a id="LuauInterop_Sandbox_LuauSandboxOptions_AllowLibraries_" data-uid="LuauInterop.Sandbox.LuauSandboxOptions.AllowLibraries*"></a>
-
-  <h3 id="LuauInterop_Sandbox_LuauSandboxOptions_AllowLibraries_System_Collections_Generic_IReadOnlyList_LuauInterop_Runtime_LuauLibrary__" data-uid="LuauInterop.Sandbox.LuauSandboxOptions.AllowLibraries(System.Collections.Generic.IReadOnlyList{LuauInterop.Runtime.LuauLibrary})">
-  AllowLibraries(IReadOnlyList&lt;LuauLibrary&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandboxOptions.cs/#L24"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Allows libraries even if a preset denies them.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LuauSandboxOptions AllowLibraries(IReadOnlyList&lt;LuauLibrary&gt; libraries)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>libraries</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="LuauInterop.Runtime.LuauLibrary.html">LuauLibrary</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="LuauInterop.Sandbox.LuauSandboxOptions.html">LuauSandboxOptions</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
   <a id="LuauInterop_Sandbox_LuauSandboxOptions_AllowLibrary_" data-uid="LuauInterop.Sandbox.LuauSandboxOptions.AllowLibrary*"></a>
 
   <h3 id="LuauInterop_Sandbox_LuauSandboxOptions_AllowLibrary_LuauInterop_Runtime_LuauLibrary_" data-uid="LuauInterop.Sandbox.LuauSandboxOptions.AllowLibrary(LuauInterop.Runtime.LuauLibrary)">
@@ -542,7 +439,7 @@ Disabling this is not recommended.</p>
   <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandboxOptions.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Allows a library even if a preset denies it.</p>
+  <div class="markdown level1 summary"><p>Allows libraries even if a preset denies them.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -576,7 +473,7 @@ Disabling this is not recommended.</p>
 
   <h3 id="LuauInterop_Sandbox_LuauSandboxOptions_DenyGlobal_System_String_" data-uid="LuauInterop.Sandbox.LuauSandboxOptions.DenyGlobal(System.String)">
   DenyGlobal(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandboxOptions.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandboxOptions.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Denies a global even if a preset allows it.</p>
@@ -613,7 +510,7 @@ Disabling this is not recommended.</p>
 
   <h3 id="LuauInterop_Sandbox_LuauSandboxOptions_DenyGlobals_System_Collections_Generic_IReadOnlyList_System_String__" data-uid="LuauInterop.Sandbox.LuauSandboxOptions.DenyGlobals(System.Collections.Generic.IReadOnlyList{System.String})">
   DenyGlobals(IReadOnlyList&lt;string&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandboxOptions.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Sandbox/LuauSandboxOptions.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Denies globals even if a preset allows them.</p>

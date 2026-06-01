@@ -102,7 +102,8 @@ Enum LuauLibrary  <a class="header-action link-secondary" title="View source" hr
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public enum LuauLibrary</code></pre>
+    <pre><code class="lang-csharp hljs">[Flags]
+public enum LuauLibrary</code></pre>
   </div>
 
 
@@ -116,40 +117,46 @@ Enum LuauLibrary  <a class="header-action link-secondary" title="View source" hr
   <h2 id="fields">Fields
 </h2>
   <dl class="parameters">
-    <dt id="LuauInterop_Runtime_LuauLibrary_Base"><code>Base = 0</code></dt>
+    <dt id="LuauInterop_Runtime_LuauLibrary_All"><code>All = Base | Coroutine | Table | OS | String | Bit32 | Buffer | Utf8 | Math | Debug | Vector | Integer</code></dt>
   
   <dd></dd>
-    <dt id="LuauInterop_Runtime_LuauLibrary_Bit32"><code>Bit32 = 5</code></dt>
+    <dt id="LuauInterop_Runtime_LuauLibrary_Base"><code>Base = 1</code></dt>
   
   <dd></dd>
-    <dt id="LuauInterop_Runtime_LuauLibrary_Buffer"><code>Buffer = 6</code></dt>
+    <dt id="LuauInterop_Runtime_LuauLibrary_Bit32"><code>Bit32 = 32</code></dt>
   
   <dd></dd>
-    <dt id="LuauInterop_Runtime_LuauLibrary_Coroutine"><code>Coroutine = 1</code></dt>
+    <dt id="LuauInterop_Runtime_LuauLibrary_Buffer"><code>Buffer = 64</code></dt>
   
   <dd></dd>
-    <dt id="LuauInterop_Runtime_LuauLibrary_Debug"><code>Debug = 9</code></dt>
+    <dt id="LuauInterop_Runtime_LuauLibrary_Coroutine"><code>Coroutine = 2</code></dt>
   
   <dd></dd>
-    <dt id="LuauInterop_Runtime_LuauLibrary_Integer"><code>Integer = 11</code></dt>
+    <dt id="LuauInterop_Runtime_LuauLibrary_Debug"><code>Debug = 512</code></dt>
   
   <dd></dd>
-    <dt id="LuauInterop_Runtime_LuauLibrary_Math"><code>Math = 8</code></dt>
+    <dt id="LuauInterop_Runtime_LuauLibrary_Integer"><code>Integer = 2048</code></dt>
   
   <dd></dd>
-    <dt id="LuauInterop_Runtime_LuauLibrary_OS"><code>OS = 3</code></dt>
+    <dt id="LuauInterop_Runtime_LuauLibrary_Math"><code>Math = 256</code></dt>
   
   <dd></dd>
-    <dt id="LuauInterop_Runtime_LuauLibrary_String"><code>String = 4</code></dt>
+    <dt id="LuauInterop_Runtime_LuauLibrary_None"><code>None = 0</code></dt>
   
   <dd></dd>
-    <dt id="LuauInterop_Runtime_LuauLibrary_Table"><code>Table = 2</code></dt>
+    <dt id="LuauInterop_Runtime_LuauLibrary_OS"><code>OS = 8</code></dt>
   
   <dd></dd>
-    <dt id="LuauInterop_Runtime_LuauLibrary_Utf8"><code>Utf8 = 7</code></dt>
+    <dt id="LuauInterop_Runtime_LuauLibrary_String"><code>String = 16</code></dt>
   
   <dd></dd>
-    <dt id="LuauInterop_Runtime_LuauLibrary_Vector"><code>Vector = 10</code></dt>
+    <dt id="LuauInterop_Runtime_LuauLibrary_Table"><code>Table = 4</code></dt>
+  
+  <dd></dd>
+    <dt id="LuauInterop_Runtime_LuauLibrary_Utf8"><code>Utf8 = 128</code></dt>
+  
+  <dd></dd>
+    <dt id="LuauInterop_Runtime_LuauLibrary_Vector"><code>Vector = 1024</code></dt>
   
   <dd></dd>
   </dl>
