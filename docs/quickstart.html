@@ -89,7 +89,7 @@
 
 <h2 id="creating-a-vm">Creating a VM</h2>
 <pre><code class="lang-csharp">using var luau = new Luau();
-luau.OpenLibraries();
+luau.OpenLibraries(); // optional
 </code></pre>
 <p>Always wrap the <code>Luau</code> instance in a <code>using</code> block, it owns the native state and must be disposed.</p>
 <h2 id="running-a-script">Running a Script</h2>
@@ -100,7 +100,13 @@ Console.WriteLine(results[0]); // 2
 <h2 id="compiling-bytecode">Compiling Bytecode</h2>
 <p>Pre-compiling is useful when you want to run the same script multiple times without recompiling:</p>
 <pre><code class="lang-csharp">using var chunk = luau.Compile(&quot;return function(x) return x * x end&quot;);
-var results = luau.DoChunk(chunk);
+
+// Avoid running code twice on the same LuaState
+var thread1 = luau.CreateThread();
+var thread2 = luau.CreateThread();
+
+var results1 = thread1.Resume(chunk);
+var results2 = thread2.Resume(chunk);
 </code></pre>
 <h2 id="calling-a-luau-function">Calling a Luau Function</h2>
 <pre><code class="lang-csharp">luau.DoString(@&quot;
@@ -109,7 +115,7 @@ var results = luau.DoChunk(chunk);
     end
 &quot;);
 
-var greet = luau[&quot;greet&quot;] as LuauFunction ?? throw new InvalidOperationException(&quot;greet is not a function&quot;);;
+var greet = luau[&quot;greet&quot;] as LuauFunction ?? throw new InvalidOperationException(&quot;'greet' is not a function&quot;);;
 using (greet)
 {
     var result = greet.Call(&quot;World&quot;);
@@ -147,7 +153,7 @@ Console.WriteLine(version); // 1.0.0
 var co = luau[&quot;co&quot;] as LuauThread;
 using (co)
 {
-    var r1 = co.Resume(10); // Don't forget to cast to double!
+    var r1 = co.Resume(10);
     Console.WriteLine(r1[0]); // 11
 
     var r2 = co.Resume();
@@ -157,7 +163,7 @@ using (co)
 <h2 id="using-fflags">Using FFlags</h2>
 <p>Here's an example using fflags to use the newest Integer type and library.</p>
 <pre><code class="lang-csharp">using var luau = new Luau();
-        
+
 luau.SetFFlag(&quot;LuauIntegerType&quot;, true);
 luau.SetFFlag(&quot;LuauIntegerLibrary&quot;, true);
 
@@ -176,7 +182,7 @@ Console.WriteLine(results[0]);
 {
     double a = (double)(vm.GetObject(1, state) ?? 0);
     double b = (double)(vm.GetObject(2, state) ?? 0);
-    state.PushNumber(a + b);
+    vm.PushObject(a + b, state);
     return 1; // number of return values
 });
 

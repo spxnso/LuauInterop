@@ -92,7 +92,7 @@
 {
     double a = (double)(vm.GetObject(1, state) ?? 0);
     double b = (double)(vm.GetObject(2, state) ?? 0);
-    state.PushNumber(a + b);
+    vm.PushObject(a + b, state);
     return 1; // number of return values
 });
 
@@ -105,7 +105,7 @@ Console.WriteLine(results[0]); // 30
 <pre><code class="lang-csharp">luau.RegisterCallback(&quot;greet&quot;, (vm, state) =&gt;
 {
     string name = vm.GetObject(1, state) as string ?? &quot;world&quot;;
-    state.PushString($&quot;Hello, {name}!&quot;);
+    vm.PushObject($&quot;Hello, {name}!&quot;, state);
     return 1;
 });
 
@@ -123,16 +123,16 @@ Console.WriteLine(results[0]); // 42
 <p>Exceptions thrown inside a callback are safely caught and re-thrown on the C# side after the VM unwinds:</p>
 <pre><code class="lang-csharp">luau.RegisterCallback(&quot;fail&quot;, (vm, state) =&gt;
 {
-    throw new Exception(&quot;something went wrong&quot;);
+    throw new InvalidOperationException(&quot;Something went wrong!&quot;);
 });
 
 try
 {
     luau.DoString(&quot;fail()&quot;);
 }
-catch (Exception ex)
+catch (InvalidOperationException ex) // exceptions are properly propagated from C#
 {
-    Console.WriteLine(ex.Message); // something went wrong
+    Console.WriteLine(ex.Message); // &quot;Something went wrong!&quot;
 }
 </code></pre>
 
