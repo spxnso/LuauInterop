@@ -42,10 +42,9 @@ public static class LuauCompiler
             if (bytecode == nint.Zero)
                 throw new LuauException("Compilation failed: luau_compile returned null.");
 
-            
             if (Marshal.ReadByte(bytecode) == 0)
             {
-                string error = Marshal.PtrToStringUTF8(bytecode + 1) ?? "Unknown compilation error.";
+                string error = Marshal.PtrToStringUTF8(bytecode + 1, (int)outSize - 1) ?? "Unknown compilation error.";
                 NativeMethods.luau_free(bytecode);
                 throw new LuauException(error);
             }

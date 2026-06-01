@@ -12,7 +12,6 @@ public readonly struct LuaState(nint handle)
 
     public bool IsNull => Handle == nint.Zero;
 
-    #region State manipulation
     public void Close()
     {
         if (!IsNull)
@@ -40,9 +39,7 @@ public readonly struct LuaState(nint handle)
     {
         return NativeMethods.lua_isthreadreset(Handle) != 0;
     }
-    #endregion 
 
-    #region Basic stack manipulation
     public int AbsIndex(int idx)
     {
         return NativeMethods.lua_absindex(Handle, idx);
@@ -96,16 +93,14 @@ public readonly struct LuaState(nint handle)
     {
         NativeMethods.lua_xpush(Handle, to.Handle, idx);
     }
-    #endregion
 
-    #region Access functions (stack -> C)
     public bool IsNumber(int idx) => NativeMethods.lua_isnumber(Handle, idx) != 0;
     public bool IsString(int idx) => NativeMethods.lua_isstring(Handle, idx) != 0;
 
     // TODO: Investigate this
     // This seem to be exposed in lua.h, but missing in shared library, so we can't use it for now.
     // public bool IsInteger64(int idx) => NativeMethods.lua_isinteger64(Handle, idx) != 0;
-    
+
     public bool IsCFunction(int idx) => NativeMethods.lua_iscfunction(Handle, idx) != 0;
     public bool IsLFunction(int idx) => NativeMethods.lua_isLfunction(Handle, idx) != 0;
     public bool IsUserdata(int idx) => NativeMethods.lua_isuserdata(Handle, idx) != 0;
@@ -165,9 +160,7 @@ public readonly struct LuaState(nint handle)
     public LuaState ToThread(int idx) => new LuaState(NativeMethods.lua_tothread(Handle, idx));
     public nint ToBuffer(int idx, out nuint len) => NativeMethods.lua_tobuffer(Handle, idx, out len);
     public nint ToPointer(int idx) => NativeMethods.lua_topointer(Handle, idx);
-    #endregion
 
-    #region Push functions
     public void PushNil() => NativeMethods.lua_pushnil(Handle);
     public void PushNumber(double n) => NativeMethods.lua_pushnumber(Handle, n);
     public void PushInteger(int n) => NativeMethods.lua_pushinteger(Handle, n);
@@ -185,9 +178,7 @@ public readonly struct LuaState(nint handle)
     public nint NewUserdataTaggedWithMetatable(nuint sz, int tag) => NativeMethods.lua_newuserdatataggedwithmetatable(Handle, sz, tag);
     public nint NewUserdataDtor(nuint sz, nint dtor) => NativeMethods.lua_newuserdatadtor(Handle, sz, dtor);
     public nint NewBuffer(nuint sz) => NativeMethods.lua_newbuffer(Handle, sz);
-    #endregion
 
-    #region Get functions
     public int GetTable(int idx) => NativeMethods.lua_gettable(Handle, idx);
     public int GetField(int idx, string k) => NativeMethods.lua_getfield(Handle, idx, k);
 
@@ -207,9 +198,7 @@ public readonly struct LuaState(nint handle)
     public void SetSafeEnv(int idx, bool enabled) => NativeMethods.lua_setsafeenv(Handle, idx, enabled ? 1 : 0);
     public int GetMetatable(int objindex) => NativeMethods.lua_getmetatable(Handle, objindex);
     public void GetFenv(int idx) => NativeMethods.lua_getfenv(Handle, idx);
-    #endregion
 
-    #region Set functions
     public void SetTable(int idx) => NativeMethods.lua_settable(Handle, idx);
     public void SetField(int idx, string k) => NativeMethods.lua_setfield(Handle, idx, k);
 
@@ -225,16 +214,12 @@ public readonly struct LuaState(nint handle)
     public void RawSetPTagged(int idx, nint p, int tag) => NativeMethods.lua_rawsetptagged(Handle, idx, p, tag);
     public int SetMetatable(int objindex) => NativeMethods.lua_setmetatable(Handle, objindex);
     public int SetFenv(int idx) => NativeMethods.lua_setfenv(Handle, idx);
-    #endregion
 
-    #region Load and call
     public int Load(string chunkname, nint data, nuint size, int env) => NativeMethods.luau_load(Handle, chunkname, data, size, env);
     public void Call(int nargs, int nresults) => NativeMethods.lua_call(Handle, nargs, nresults);
     public int PCall(int nargs, int nresults, int errfunc) => NativeMethods.lua_pcall(Handle, nargs, nresults, errfunc);
     public int CPCall(nint func, nint ud) => NativeMethods.lua_cpcall(Handle, func, ud);
-    #endregion
 
-    #region Coroutines
     public int Yield(int nresults) => NativeMethods.lua_yield(Handle, nresults);
     public int Break() => NativeMethods.lua_break(Handle);
     public int Resume(LuaState from, int narg) => NativeMethods.lua_resume(Handle, from.Handle, narg);
@@ -244,15 +229,11 @@ public readonly struct LuaState(nint handle)
     public nint GetThreadData() => NativeMethods.lua_getthreaddata(Handle);
     public void SetThreadData(nint data) => NativeMethods.lua_setthreaddata(Handle, data);
     public int CoStatus(LuaState co) => NativeMethods.lua_costatus(Handle, co.Handle);
-    #endregion
 
-    #region GC and Memory
     public int GC(int what, int data) => NativeMethods.lua_gc(Handle, what, data);
     public void SetMemCat(int category) => NativeMethods.lua_setmemcat(Handle, category);
     public nuint TotalBytes(int category) => NativeMethods.lua_totalbytes(Handle, category);
-    #endregion
 
-    #region Miscellaneous
     public void Error() => NativeMethods.lua_error(Handle);
     public int Next(int idx) => NativeMethods.lua_next(Handle, idx);
     public int RawIter(int idx, int iter) => NativeMethods.lua_rawiter(Handle, idx, iter);
@@ -273,9 +254,7 @@ public readonly struct LuaState(nint handle)
     public nint GetAllocF(out nint ud) => NativeMethods.lua_getallocf(Handle, out ud);
     public int Ref(int idx) => NativeMethods.lua_ref(Handle, idx);
     public void Unref(int refid) => NativeMethods.lua_unref(Handle, refid);
-    #endregion
 
-    #region Library functions
     public void OpenLibraries()
     {
         NativeMethods.luaL_openlibs(Handle);
@@ -293,9 +272,7 @@ public readonly struct LuaState(nint handle)
     public int OpenDebug() => NativeMethods.luaopen_debug(Handle);
     public int OpenVector() => NativeMethods.luaopen_vector(Handle);
     public int OpenInteger() => NativeMethods.luaopen_integer(Handle);
-    #endregion
 
-    #region Debug API
     public int StackDepth() => NativeMethods.lua_stackdepth(Handle);
     public int GetInfo(int level, string what, nint ar) => NativeMethods.lua_getinfo(Handle, level, what, ar);
     public int GetArgument(int level, int n) => NativeMethods.lua_getargument(Handle, level, n);
@@ -308,12 +285,7 @@ public readonly struct LuaState(nint handle)
     public void GetCoverage(int funcindex, nint context, nint callback) => NativeMethods.lua_getcoverage(Handle, funcindex, context, callback);
     public void GetCounters(int funcindex, nint context, nint functionvisit, nint countervisit) => NativeMethods.lua_getcounters(Handle, funcindex, context, functionvisit, countervisit);
     public nint DebugTrace() => NativeMethods.lua_debugtrace(Handle);
-    #endregion
 
-    #region Sandboxing functions
     public void Sandbox() => NativeMethods.luaL_sandbox(Handle);
-
     public void SandboxThread() => NativeMethods.luaL_sandboxthread(Handle);
-
-    #endregion
 }

@@ -47,7 +47,6 @@ public class LuauInterop_CallbackTests
     public void Callback_CallFromCSharp_Works()
     {
         using var luau = new Luau();
-        luau.OpenLibraries();
 
         luau.RegisterCallback("concat", (vm, state) =>
         {
@@ -76,8 +75,6 @@ public class LuauInterop_CallbackTests
     public void Delegate_ActionWithArguments_Works()
     {
         using var luau = new Luau();
-        luau.OpenLibraries();
-
         string? captured = null;
 
         luau["print2"] = new Action<string, string>((a, b) => captured = a + b);
@@ -90,7 +87,6 @@ public class LuauInterop_CallbackTests
     public void Delegate_FuncReturnsValue_ToLuau()
     {
         using var luau = new Luau();
-        luau.OpenLibraries();
 
         luau["add"] = new Func<int, int, int>((a, b) => a + b);
 
@@ -103,7 +99,6 @@ public class LuauInterop_CallbackTests
     public void Delegate_MixedTypesCoercion_Works()
     {
         using var luau = new Luau();
-        luau.OpenLibraries();
 
         luau["mix"] = new Action<int, string, double>((a, b, c) =>
         {
@@ -119,7 +114,6 @@ public class LuauInterop_CallbackTests
     public void Callback_ReturnMultipleValues_Works()
     {
         using var luau = new Luau();
-        luau.OpenLibraries();
 
         luau.RegisterCallback("multi", (vm, state) =>
         {
@@ -141,7 +135,6 @@ public class LuauInterop_CallbackTests
     public void Delegate_GlobalAssignment_Executes()
     {
         using var luau = new Luau();
-        luau.OpenLibraries();
 
         luau["x"] = new Func<int>(() => 42);
 
@@ -154,7 +147,6 @@ public class LuauInterop_CallbackTests
     public void Callback_Exception_DoesNotCrash()
     {
         using var luau = new Luau();
-        luau.OpenLibraries();
 
         luau.RegisterCallback("fail", (vm, state) => throw new Exception("boom"));
 
@@ -163,10 +155,24 @@ public class LuauInterop_CallbackTests
     }
 
     [Fact]
+    public void Callback_Exception_PcallReturnsMessage()
+    {
+        using var luau = new Luau();
+        luau.OpenLibrary(LuauLibrary.Base);
+
+        luau.RegisterCallback("fail", (vm, state) => throw new Exception("boom"));
+
+        var result = luau.DoString("local ok, err = pcall(fail); return ok, err");
+
+        Assert.Equal(false, result[0]);
+        Assert.Equal("boom", result[1]);
+    }
+
+    [Fact]
     public void Callback_HandledException_DoesNotHaltExecution()
     {
         using var luau = new Luau();
-        luau.OpenLibraries();
+        luau.OpenLibrary(LuauLibrary.Base);
 
         luau.RegisterCallback("fail", (vm, state) => throw new Exception("boom"));
 

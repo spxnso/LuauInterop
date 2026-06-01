@@ -21,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\LuauInterop\LuauInterop.csproj" />
     <ProjectReference Include="..\..\src\LuauInterop.Native\LuauInterop.Native.csproj" />
+    <ProjectReference Include="..\..\src\LuauInterop.Sandbox\LuauInterop.Sandbox.csproj" />
   </ItemGroup>
 
 </Project>
