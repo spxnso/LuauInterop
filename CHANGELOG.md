@@ -1,5 +1,33 @@
 # Changelog
 
+## [1.1.2](https://github.com/spxnso/LuauInterop/compare/v1.1.1...v1.1.2) (2026-06-01)
+
+
+### Bug Fixes
+
+* add None flag to LuauLibrary enum ([c266f69](https://github.com/spxnso/LuauInterop/commit/c266f6943a1eb8e05e7c24a8cad154e08c38f1f7))
+* add sandbox tests and improve state tests for error handling ([ceb2d20](https://github.com/spxnso/LuauInterop/commit/ceb2d206f1b6919f7ba4720f00d0fc376ec440cd))
+* change LuauDelegate class to sealed ([4cac929](https://github.com/spxnso/LuauInterop/commit/4cac9295444ef23888b0b95605c8139ad9401cd6))
+* change LuauLibrary enum to use bitwise flags ([d9c4dfd](https://github.com/spxnso/LuauInterop/commit/d9c4dfd677fdecfcbdb1ec9e64c8083ccf46de11))
+* clear pending exception before invoking managed function to ensure proper exception propagation ([c9be909](https://github.com/spxnso/LuauInterop/commit/c9be909829835bb340933e9b8f48845a250fe582))
+* correct state reference usage in LuauBase class methods ([ce426d1](https://github.com/spxnso/LuauInterop/commit/ce426d12b1908b074370d756216037c383ba4724))
+* correct thread state reference in sandbox thread isolation and remove useless `StripDebugInfo` ([ba69913](https://github.com/spxnso/LuauInterop/commit/ba6991363c8aae29cc694483e6aea9252d418132))
+* forgot to remove debugging line ([a7ea90c](https://github.com/spxnso/LuauInterop/commit/a7ea90cfe5873db4b11546a35723bbc8db868b56))
+* improve error handling by correctly reading byte length for error messages ([c2e9d4e](https://github.com/spxnso/LuauInterop/commit/c2e9d4e0c5fcbbe1098de62d5a54c28786c41e12))
+* invalid stack behavior and C# callback error handling ([f7c4621](https://github.com/spxnso/LuauInterop/commit/f7c4621e226cf59d4ade3ca803cc41e1e596175b))
+* make objects LuaState-aware to properly handle coroutines ([349d32d](https://github.com/spxnso/LuauInterop/commit/349d32d5d74bd8eb8afa0a33c9d3ea9cfcb25d10))
+* properly implement default sandbox profile ([5372e4d](https://github.com/spxnso/LuauInterop/commit/5372e4d6c7f1f421e6ca2d2bf263bb5ca85f1120))
+* Properly report errors to thread and other unintended side effects ([0b014ce](https://github.com/spxnso/LuauInterop/commit/0b014cea6c209fa70ddebb2c46ff8de767743fd2))
+* refactor LuauSandboxOptions to use bitwise flag operations and rename DeniedGlobals to ForbiddenGlobals ([0b5e61a](https://github.com/spxnso/LuauInterop/commit/0b5e61a61337ccd378394f9eb57621af5c1eb821))
+* refactor LuauThread to use CoroutineState directly and remove unnecessary GetCoroutine method ([e696c7a](https://github.com/spxnso/LuauInterop/commit/e696c7a603909e3c5cf33d7db8b03eedb40dda73))
+* remove unnecessary region directives in LuaState class for cleaner code ([c586fc3](https://github.com/spxnso/LuauInterop/commit/c586fc3acb428d16ab83ff6d96e7f18307e0f506))
+* remove unused parameter from Execute method in LuauSandbox class ([d64b660](https://github.com/spxnso/LuauInterop/commit/d64b660a276f9ca3b1915221f77b983285588bf5))
+* replace OpenLibraries with OpenLibrary for specific library access in state and thread tests ([657c26e](https://github.com/spxnso/LuauInterop/commit/657c26e21f731ec22ece2bc6beae41e0261608ed))
+* update callback tests for improved exception handling ([2fc5dbc](https://github.com/spxnso/LuauInterop/commit/2fc5dbcd7a9fd10618ccb9682466fbe59ce1c1c6))
+* update coroutine state handling in LuauThread and Luau classes ([71511b4](https://github.com/spxnso/LuauInterop/commit/71511b490611466da3afd37ee1da635fca509f91))
+* update exception handling to push error message to correct Lua state ([a2c5c44](https://github.com/spxnso/LuauInterop/commit/a2c5c446587047fc7a24068f8d6fbf0161ea9801))
+* update LuauSandbox to correct state references ([1404dd3](https://github.com/spxnso/LuauInterop/commit/1404dd334df05c8bdc438b750811794fc7241571))
+
 ## [1.1.1](https://github.com/spxnso/LuauInterop/compare/v1.1.0...v1.1.1) (2026-05-30)
 
 
