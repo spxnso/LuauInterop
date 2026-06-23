@@ -197,3 +197,6 @@ EXPORTS
 
     ; Callbacks 
     luau_pushcsharpfunc
+
+    ; Ast
+    luau_parse

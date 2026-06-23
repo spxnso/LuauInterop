@@ -1,5 +1,6 @@
 using System.Runtime.InteropServices;
 using System.Text;
+
 using LuauInterop.Native;
 
 namespace LuauInterop.Compilation;
@@ -45,7 +46,7 @@ public static class LuauCompiler
             if (Marshal.ReadByte(bytecode) == 0)
             {
                 string error = Marshal.PtrToStringUTF8(bytecode + 1, (int)outSize - 1) ?? "Unknown compilation error.";
-                NativeMethods.luau_free(bytecode);
+                NativeMethods.free(bytecode);
                 throw new LuauException(error);
             }
 

@@ -593,10 +593,6 @@ public static partial class NativeMethods
 
     [LibraryImport(LuauLibraryName)]
     [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
-    public static partial void luau_free(nint ptr);
-
-    [LibraryImport(LuauLibraryName)]
-    [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
     public static partial int luaopen_base(lua_State L);
 
     [LibraryImport(LuauLibraryName)]
@@ -662,4 +658,16 @@ public static partial class NativeMethods
     [LibraryImport(LuauLibraryName, StringMarshalling = StringMarshalling.Utf8)]
     [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
     public static partial void luau_pushcsharpfunc(nint state, nint fnPtr);
+
+    [LibraryImport(LuauLibraryName, StringMarshalling = StringMarshalling.Utf8)]
+    [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+    public static partial nint luau_parse(string source, nuint sourceLength);
+
+    [LibraryImport(LuauLibraryName)]
+    [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+    public static partial void free(nint ptr);
+
+    [LibraryImport(LuauLibraryName)]
+    [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+    public static partial void cpp_delete(nint ptr);
 }

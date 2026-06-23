@@ -1,6 +1,6 @@
+using System.Numerics;
 using System.Runtime.ExceptionServices;
 using System.Runtime.InteropServices;
-using System.Numerics;
 using System.Text;
 
 using LuauInterop.Compilation;
@@ -185,7 +185,8 @@ public class Luau : IDisposable
         return NativeMethods.luau_getfflag(name) != 0;
     }
 
-    private LuaState GetThreadLuaState(int index, LuaState state) {
+    private LuaState GetThreadLuaState(int index, LuaState state)
+    {
         nint ptr = state.ToThread(index);
         return ptr == nint.Zero
             ? throw new InvalidOperationException("Value at index is not a thread.")
@@ -440,7 +441,7 @@ public class Luau : IDisposable
     /// </summary>
     /// <param name="name">The name of the FFlag to set.</param>
     /// <param name="enabled">A value indicating whether the FFlag should be enabled.</param>
-    public static void SetFFlag(string name, bool enabled)
+    public void SetFFlag(string name, bool enabled)
     {
         NativeMethods.luau_setfflag(name, enabled ? 1 : 0);
     }
