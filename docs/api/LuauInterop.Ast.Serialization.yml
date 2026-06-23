@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: LuauInterop.Ast.Serialization
+  commentId: N:LuauInterop.Ast.Serialization
+  id: LuauInterop.Ast.Serialization
+  children:
+  - LuauInterop.Ast.Serialization.LuauSerializer
+  langs:
+  - csharp
+  - vb
+  name: LuauInterop.Ast.Serialization
+  nameWithType: LuauInterop.Ast.Serialization
+  fullName: LuauInterop.Ast.Serialization
+  type: Namespace
+  assemblies:
+  - LuauInterop.Ast
+references:
+- uid: LuauInterop.Ast.Serialization.LuauSerializer
+  commentId: T:LuauInterop.Ast.Serialization.LuauSerializer
+  href: LuauInterop.Ast.Serialization.LuauSerializer.html
+  name: LuauSerializer
+  nameWithType: LuauSerializer
+  fullName: LuauInterop.Ast.Serialization.LuauSerializer

@@ -5,7 +5,7 @@ items:
   id: LuauFunction
   parent: LuauInterop.Objects
   children:
-  - LuauInterop.Objects.LuauFunction.#ctor(LuauInterop.Luau,System.Int32)
+  - LuauInterop.Objects.LuauFunction.#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32)
   - LuauInterop.Objects.LuauFunction.Call(System.Object[])
   langs:
   - csharp
@@ -17,11 +17,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/Objects/LuauFunction.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: LuauFunction
     path: ../src/LuauInterop/Objects/LuauFunction.cs
-    startLine: 4
+    startLine: 5
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Objects
@@ -35,6 +35,7 @@ items:
   - System.IDisposable
   inheritedMembers:
   - LuauInterop.LuauBase.Owner
+  - LuauInterop.LuauBase.State
   - LuauInterop.LuauBase.Reference
   - LuauInterop.LuauBase.IsDisposed
   - LuauInterop.LuauBase.Dispose
@@ -45,40 +46,42 @@ items:
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: LuauInterop.Objects.LuauFunction.#ctor(LuauInterop.Luau,System.Int32)
-  commentId: M:LuauInterop.Objects.LuauFunction.#ctor(LuauInterop.Luau,System.Int32)
-  id: '#ctor(LuauInterop.Luau,System.Int32)'
+- uid: LuauInterop.Objects.LuauFunction.#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32)
+  commentId: M:LuauInterop.Objects.LuauFunction.#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32)
+  id: '#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32)'
   parent: LuauInterop.Objects.LuauFunction
   langs:
   - csharp
   - vb
-  name: LuauFunction(Luau, int)
-  nameWithType: LuauFunction.LuauFunction(Luau, int)
-  fullName: LuauInterop.Objects.LuauFunction.LuauFunction(LuauInterop.Luau, int)
+  name: LuauFunction(Luau, LuaState, int)
+  nameWithType: LuauFunction.LuauFunction(Luau, LuaState, int)
+  fullName: LuauInterop.Objects.LuauFunction.LuauFunction(LuauInterop.Luau, LuauInterop.Native.LuaState, int)
   type: Constructor
   source:
     remote:
       path: src/LuauInterop/Objects/LuauFunction.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: .ctor
     path: ../src/LuauInterop/Objects/LuauFunction.cs
-    startLine: 4
+    startLine: 5
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Objects
   syntax:
-    content: public LuauFunction(Luau owner, int reference)
+    content: public LuauFunction(Luau owner, LuaState state, int reference)
     parameters:
     - id: owner
       type: LuauInterop.Luau
+    - id: state
+      type: LuauInterop.Native.LuaState
     - id: reference
       type: System.Int32
-    content.vb: Public Sub New(owner As Luau, reference As Integer)
+    content.vb: Public Sub New(owner As Luau, state As LuaState, reference As Integer)
   overload: LuauInterop.Objects.LuauFunction.#ctor*
-  nameWithType.vb: LuauFunction.New(Luau, Integer)
-  fullName.vb: LuauInterop.Objects.LuauFunction.New(LuauInterop.Luau, Integer)
-  name.vb: New(Luau, Integer)
+  nameWithType.vb: LuauFunction.New(Luau, LuaState, Integer)
+  fullName.vb: LuauInterop.Objects.LuauFunction.New(LuauInterop.Luau, LuauInterop.Native.LuaState, Integer)
+  name.vb: New(Luau, LuaState, Integer)
 - uid: LuauInterop.Objects.LuauFunction.Call(System.Object[])
   commentId: M:LuauInterop.Objects.LuauFunction.Call(System.Object[])
   id: Call(System.Object[])
@@ -93,23 +96,34 @@ items:
   source:
     remote:
       path: src/LuauInterop/Objects/LuauFunction.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Call
     path: ../src/LuauInterop/Objects/LuauFunction.cs
-    startLine: 6
+    startLine: 14
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Objects
+  summary: Calls the Lua function with the specified arguments and returns the results.
+  example: []
   syntax:
     content: public object?[] Call(params object?[] arguments)
     parameters:
     - id: arguments
       type: System.Object[]
+      description: The arguments to pass to the Lua function.
     return:
       type: System.Object[]
+      description: An array of results returned by the Lua function.
     content.vb: Public Function [Call](ParamArray arguments As Object()) As Object()
   overload: LuauInterop.Objects.LuauFunction.Call*
+  exceptions:
+  - type: LuauInterop.LuauException
+    commentId: T:LuauInterop.LuauException
+    description: Thrown if the Lua function call results in an error.
+  - type: System.ObjectDisposedException
+    commentId: T:System.ObjectDisposedException
+    description: Thrown if this function or its owner has been disposed.
   nameWithType.vb: LuauFunction.Call(ParamArray Object())
   fullName.vb: LuauInterop.Objects.LuauFunction.Call(ParamArray Object())
   name.vb: Call(ParamArray Object())
@@ -169,6 +183,13 @@ references:
   name: Owner
   nameWithType: LuauBase.Owner
   fullName: LuauInterop.LuauBase.Owner
+- uid: LuauInterop.LuauBase.State
+  commentId: P:LuauInterop.LuauBase.State
+  parent: LuauInterop.LuauBase
+  href: LuauInterop.LuauBase.html#LuauInterop_LuauBase_State
+  name: State
+  nameWithType: LuauBase.State
+  fullName: LuauInterop.LuauBase.State
 - uid: LuauInterop.LuauBase.Reference
   commentId: P:LuauInterop.LuauBase.Reference
   parent: LuauInterop.LuauBase
@@ -431,7 +452,7 @@ references:
   fullName: LuauInterop
 - uid: LuauInterop.Objects.LuauFunction.#ctor*
   commentId: Overload:LuauInterop.Objects.LuauFunction.#ctor
-  href: LuauInterop.Objects.LuauFunction.html#LuauInterop_Objects_LuauFunction__ctor_LuauInterop_Luau_System_Int32_
+  href: LuauInterop.Objects.LuauFunction.html#LuauInterop_Objects_LuauFunction__ctor_LuauInterop_Luau_LuauInterop_Native_LuaState_System_Int32_
   name: LuauFunction
   nameWithType: LuauFunction.LuauFunction
   fullName: LuauInterop.Objects.LuauFunction.LuauFunction
@@ -445,6 +466,13 @@ references:
   name: Luau
   nameWithType: Luau
   fullName: LuauInterop.Luau
+- uid: LuauInterop.Native.LuaState
+  commentId: T:LuauInterop.Native.LuaState
+  parent: LuauInterop.Native
+  href: LuauInterop.Native.LuaState.html
+  name: LuaState
+  nameWithType: LuaState
+  fullName: LuauInterop.Native.LuaState
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -456,6 +484,41 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
+- uid: LuauInterop.Native
+  commentId: N:LuauInterop.Native
+  href: LuauInterop.html
+  name: LuauInterop.Native
+  nameWithType: LuauInterop.Native
+  fullName: LuauInterop.Native
+  spec.csharp:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Native
+    name: Native
+    href: LuauInterop.Native.html
+  spec.vb:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Native
+    name: Native
+    href: LuauInterop.Native.html
+- uid: LuauInterop.LuauException
+  commentId: T:LuauInterop.LuauException
+  href: LuauInterop.LuauException.html
+  name: LuauException
+  nameWithType: LuauException
+  fullName: LuauInterop.LuauException
+- uid: System.ObjectDisposedException
+  commentId: T:System.ObjectDisposedException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.objectdisposedexception
+  name: ObjectDisposedException
+  nameWithType: ObjectDisposedException
+  fullName: System.ObjectDisposedException
 - uid: LuauInterop.Objects.LuauFunction.Call*
   commentId: Overload:LuauInterop.Objects.LuauFunction.Call
   href: LuauInterop.Objects.LuauFunction.html#LuauInterop_Objects_LuauFunction_Call_System_Object___

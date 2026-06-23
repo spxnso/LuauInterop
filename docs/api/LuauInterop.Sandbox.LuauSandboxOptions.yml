@@ -7,18 +7,15 @@ items:
   children:
   - LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobal(System.String)
   - LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobals(System.Collections.Generic.IReadOnlyList{System.String})
-  - LuauInterop.Sandbox.LuauSandboxOptions.AllowLibraries(System.Collections.Generic.IReadOnlyList{LuauInterop.Runtime.LuauLibrary})
   - LuauInterop.Sandbox.LuauSandboxOptions.AllowLibrary(LuauInterop.Runtime.LuauLibrary)
-  - LuauInterop.Sandbox.LuauSandboxOptions.AllowedGlobals
   - LuauInterop.Sandbox.LuauSandboxOptions.AllowedLibraries
   - LuauInterop.Sandbox.LuauSandboxOptions.Default
-  - LuauInterop.Sandbox.LuauSandboxOptions.DeniedGlobals
   - LuauInterop.Sandbox.LuauSandboxOptions.DenyGlobal(System.String)
   - LuauInterop.Sandbox.LuauSandboxOptions.DenyGlobals(System.Collections.Generic.IReadOnlyList{System.String})
+  - LuauInterop.Sandbox.LuauSandboxOptions.ForbiddenGlobals
   - LuauInterop.Sandbox.LuauSandboxOptions.IsolateScripts
   - LuauInterop.Sandbox.LuauSandboxOptions.LockGlobals
   - LuauInterop.Sandbox.LuauSandboxOptions.Strict
-  - LuauInterop.Sandbox.LuauSandboxOptions.StripDebugInfo
   langs:
   - csharp
   - vb
@@ -29,7 +26,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Sandbox/LuauSandboxOptions.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: LuauSandboxOptions
     path: ../src/LuauInterop.Sandbox/LuauSandboxOptions.cs
@@ -66,7 +63,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Sandbox/LuauSandboxOptions.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: AllowedLibraries
     path: ../src/LuauInterop.Sandbox/LuauSandboxOptions.cs
@@ -80,11 +77,11 @@ items:
     will be completely absent from the script's environment.
   example: []
   syntax:
-    content: public IReadOnlyList<LuauLibrary> AllowedLibraries { get; init; }
+    content: public LuauLibrary AllowedLibraries { get; init; }
     parameters: []
     return:
-      type: System.Collections.Generic.IReadOnlyList{LuauInterop.Runtime.LuauLibrary}
-    content.vb: Public Property AllowedLibraries As IReadOnlyList(Of LuauLibrary)
+      type: LuauInterop.Runtime.LuauLibrary
+    content.vb: Public Property AllowedLibraries As LuauLibrary
   overload: LuauInterop.Sandbox.LuauSandboxOptions.AllowedLibraries*
 - uid: LuauInterop.Sandbox.LuauSandboxOptions.AllowLibrary(LuauInterop.Runtime.LuauLibrary)
   commentId: M:LuauInterop.Sandbox.LuauSandboxOptions.AllowLibrary(LuauInterop.Runtime.LuauLibrary)
@@ -100,7 +97,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Sandbox/LuauSandboxOptions.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: AllowLibrary
     path: ../src/LuauInterop.Sandbox/LuauSandboxOptions.cs
@@ -108,7 +105,7 @@ items:
   assemblies:
   - LuauInterop.Sandbox
   namespace: LuauInterop.Sandbox
-  summary: Allows a library even if a preset denies it.
+  summary: Allows libraries even if a preset denies them.
   example: []
   syntax:
     content: public LuauSandboxOptions AllowLibrary(LuauLibrary library)
@@ -119,42 +116,6 @@ items:
       type: LuauInterop.Sandbox.LuauSandboxOptions
     content.vb: Public Function AllowLibrary(library As LuauLibrary) As LuauSandboxOptions
   overload: LuauInterop.Sandbox.LuauSandboxOptions.AllowLibrary*
-- uid: LuauInterop.Sandbox.LuauSandboxOptions.AllowLibraries(System.Collections.Generic.IReadOnlyList{LuauInterop.Runtime.LuauLibrary})
-  commentId: M:LuauInterop.Sandbox.LuauSandboxOptions.AllowLibraries(System.Collections.Generic.IReadOnlyList{LuauInterop.Runtime.LuauLibrary})
-  id: AllowLibraries(System.Collections.Generic.IReadOnlyList{LuauInterop.Runtime.LuauLibrary})
-  parent: LuauInterop.Sandbox.LuauSandboxOptions
-  langs:
-  - csharp
-  - vb
-  name: AllowLibraries(IReadOnlyList<LuauLibrary>)
-  nameWithType: LuauSandboxOptions.AllowLibraries(IReadOnlyList<LuauLibrary>)
-  fullName: LuauInterop.Sandbox.LuauSandboxOptions.AllowLibraries(System.Collections.Generic.IReadOnlyList<LuauInterop.Runtime.LuauLibrary>)
-  type: Method
-  source:
-    remote:
-      path: src/LuauInterop.Sandbox/LuauSandboxOptions.cs
-      branch: master
-      repo: https://github.com/spxnso/LuauInterop
-    id: AllowLibraries
-    path: ../src/LuauInterop.Sandbox/LuauSandboxOptions.cs
-    startLine: 23
-  assemblies:
-  - LuauInterop.Sandbox
-  namespace: LuauInterop.Sandbox
-  summary: Allows libraries even if a preset denies them.
-  example: []
-  syntax:
-    content: public LuauSandboxOptions AllowLibraries(IReadOnlyList<LuauLibrary> libraries)
-    parameters:
-    - id: libraries
-      type: System.Collections.Generic.IReadOnlyList{LuauInterop.Runtime.LuauLibrary}
-    return:
-      type: LuauInterop.Sandbox.LuauSandboxOptions
-    content.vb: Public Function AllowLibraries(libraries As IReadOnlyList(Of LuauLibrary)) As LuauSandboxOptions
-  overload: LuauInterop.Sandbox.LuauSandboxOptions.AllowLibraries*
-  nameWithType.vb: LuauSandboxOptions.AllowLibraries(IReadOnlyList(Of LuauLibrary))
-  fullName.vb: LuauInterop.Sandbox.LuauSandboxOptions.AllowLibraries(System.Collections.Generic.IReadOnlyList(Of LuauInterop.Runtime.LuauLibrary))
-  name.vb: AllowLibraries(IReadOnlyList(Of LuauLibrary))
 - uid: LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobal(System.String)
   commentId: M:LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobal(System.String)
   id: AllowGlobal(System.String)
@@ -169,11 +130,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Sandbox/LuauSandboxOptions.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: AllowGlobal
     path: ../src/LuauInterop.Sandbox/LuauSandboxOptions.cs
-    startLine: 31
+    startLine: 23
   assemblies:
   - LuauInterop.Sandbox
   namespace: LuauInterop.Sandbox
@@ -205,11 +166,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Sandbox/LuauSandboxOptions.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: AllowGlobals
     path: ../src/LuauInterop.Sandbox/LuauSandboxOptions.cs
-    startLine: 39
+    startLine: 31
   assemblies:
   - LuauInterop.Sandbox
   namespace: LuauInterop.Sandbox
@@ -227,59 +188,25 @@ items:
   nameWithType.vb: LuauSandboxOptions.AllowGlobals(IReadOnlyList(Of String))
   fullName.vb: LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobals(System.Collections.Generic.IReadOnlyList(Of String))
   name.vb: AllowGlobals(IReadOnlyList(Of String))
-- uid: LuauInterop.Sandbox.LuauSandboxOptions.AllowedGlobals
-  commentId: P:LuauInterop.Sandbox.LuauSandboxOptions.AllowedGlobals
-  id: AllowedGlobals
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.ForbiddenGlobals
+  commentId: P:LuauInterop.Sandbox.LuauSandboxOptions.ForbiddenGlobals
+  id: ForbiddenGlobals
   parent: LuauInterop.Sandbox.LuauSandboxOptions
   langs:
   - csharp
   - vb
-  name: AllowedGlobals
-  nameWithType: LuauSandboxOptions.AllowedGlobals
-  fullName: LuauInterop.Sandbox.LuauSandboxOptions.AllowedGlobals
+  name: ForbiddenGlobals
+  nameWithType: LuauSandboxOptions.ForbiddenGlobals
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.ForbiddenGlobals
   type: Property
   source:
     remote:
       path: src/LuauInterop.Sandbox/LuauSandboxOptions.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
-    id: AllowedGlobals
+    id: ForbiddenGlobals
     path: ../src/LuauInterop.Sandbox/LuauSandboxOptions.cs
-    startLine: 48
-  assemblies:
-  - LuauInterop.Sandbox
-  namespace: LuauInterop.Sandbox
-  summary: >-
-    Additional globals to inject before locking.
-
-    Values must be serializable to Luau.
-  example: []
-  syntax:
-    content: public IReadOnlyDictionary<string, object?> AllowedGlobals { get; init; }
-    parameters: []
-    return:
-      type: System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object}
-    content.vb: Public Property AllowedGlobals As IReadOnlyDictionary(Of String, Object)
-  overload: LuauInterop.Sandbox.LuauSandboxOptions.AllowedGlobals*
-- uid: LuauInterop.Sandbox.LuauSandboxOptions.DeniedGlobals
-  commentId: P:LuauInterop.Sandbox.LuauSandboxOptions.DeniedGlobals
-  id: DeniedGlobals
-  parent: LuauInterop.Sandbox.LuauSandboxOptions
-  langs:
-  - csharp
-  - vb
-  name: DeniedGlobals
-  nameWithType: LuauSandboxOptions.DeniedGlobals
-  fullName: LuauInterop.Sandbox.LuauSandboxOptions.DeniedGlobals
-  type: Property
-  source:
-    remote:
-      path: src/LuauInterop.Sandbox/LuauSandboxOptions.cs
-      branch: master
-      repo: https://github.com/spxnso/LuauInterop
-    id: DeniedGlobals
-    path: ../src/LuauInterop.Sandbox/LuauSandboxOptions.cs
-    startLine: 54
+    startLine: 40
   assemblies:
   - LuauInterop.Sandbox
   namespace: LuauInterop.Sandbox
@@ -289,12 +216,12 @@ items:
     Useful for stripping individual functions like <code>rawset</code>, <code>setfenv</code>.
   example: []
   syntax:
-    content: public IReadOnlyList<string> DeniedGlobals { get; init; }
+    content: public IReadOnlyList<string> ForbiddenGlobals { get; init; }
     parameters: []
     return:
       type: System.Collections.Generic.IReadOnlyList{System.String}
-    content.vb: Public Property DeniedGlobals As IReadOnlyList(Of String)
-  overload: LuauInterop.Sandbox.LuauSandboxOptions.DeniedGlobals*
+    content.vb: Public Property ForbiddenGlobals As IReadOnlyList(Of String)
+  overload: LuauInterop.Sandbox.LuauSandboxOptions.ForbiddenGlobals*
 - uid: LuauInterop.Sandbox.LuauSandboxOptions.DenyGlobal(System.String)
   commentId: M:LuauInterop.Sandbox.LuauSandboxOptions.DenyGlobal(System.String)
   id: DenyGlobal(System.String)
@@ -309,11 +236,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Sandbox/LuauSandboxOptions.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: DenyGlobal
     path: ../src/LuauInterop.Sandbox/LuauSandboxOptions.cs
-    startLine: 60
+    startLine: 45
   assemblies:
   - LuauInterop.Sandbox
   namespace: LuauInterop.Sandbox
@@ -345,11 +272,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Sandbox/LuauSandboxOptions.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: DenyGlobals
     path: ../src/LuauInterop.Sandbox/LuauSandboxOptions.cs
-    startLine: 68
+    startLine: 53
   assemblies:
   - LuauInterop.Sandbox
   namespace: LuauInterop.Sandbox
@@ -381,20 +308,20 @@ items:
   source:
     remote:
       path: src/LuauInterop.Sandbox/LuauSandboxOptions.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: IsolateScripts
     path: ../src/LuauInterop.Sandbox/LuauSandboxOptions.cs
-    startLine: 78
+    startLine: 63
   assemblies:
   - LuauInterop.Sandbox
   namespace: LuauInterop.Sandbox
   summary: >-
-    Whether each <xref href="LuauInterop.Sandbox.LuauSandbox.Execute(System.String%2cSystem.String)" data-throw-if-not-resolved="false"></xref> call gets its own
+    Whether each <xref href="LuauInterop.Sandbox.LuauSandbox.Execute(System.String)" data-throw-if-not-resolved="false"></xref> call gets its own
 
-    proxied <code>_G</code> via <code>luaL_sandboxthread</code>.
+    proxied <code>_G</code> via NativeMethods.luaL_sandboxthread.
 
-    Disabling allows scripts to share globals across calls (not recommended).
+    Disabling allows scripts to share globals across calls.
   example: []
   syntax:
     content: public bool IsolateScripts { get; init; }
@@ -417,18 +344,15 @@ items:
   source:
     remote:
       path: src/LuauInterop.Sandbox/LuauSandboxOptions.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: LockGlobals
     path: ../src/LuauInterop.Sandbox/LuauSandboxOptions.cs
-    startLine: 84
+    startLine: 68
   assemblies:
   - LuauInterop.Sandbox
   namespace: LuauInterop.Sandbox
-  summary: >-
-    Whether to call <code>luaL_sandbox</code> to make all builtins read-only.
-
-    Disabling this is not recommended.
+  summary: Whether to call NativeMethods.luaL_sandbox to make all builtins read-only.
   example: []
   syntax:
     content: public bool LockGlobals { get; init; }
@@ -437,37 +361,6 @@ items:
       type: System.Boolean
     content.vb: Public Property LockGlobals As Boolean
   overload: LuauInterop.Sandbox.LuauSandboxOptions.LockGlobals*
-- uid: LuauInterop.Sandbox.LuauSandboxOptions.StripDebugInfo
-  commentId: P:LuauInterop.Sandbox.LuauSandboxOptions.StripDebugInfo
-  id: StripDebugInfo
-  parent: LuauInterop.Sandbox.LuauSandboxOptions
-  langs:
-  - csharp
-  - vb
-  name: StripDebugInfo
-  nameWithType: LuauSandboxOptions.StripDebugInfo
-  fullName: LuauInterop.Sandbox.LuauSandboxOptions.StripDebugInfo
-  type: Property
-  source:
-    remote:
-      path: src/LuauInterop.Sandbox/LuauSandboxOptions.cs
-      branch: master
-      repo: https://github.com/spxnso/LuauInterop
-    id: StripDebugInfo
-    path: ../src/LuauInterop.Sandbox/LuauSandboxOptions.cs
-    startLine: 89
-  assemblies:
-  - LuauInterop.Sandbox
-  namespace: LuauInterop.Sandbox
-  summary: Whether to remove debug info using compile options. Disabling this is not recommended.
-  example: []
-  syntax:
-    content: public bool StripDebugInfo { get; init; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public Property StripDebugInfo As Boolean
-  overload: LuauInterop.Sandbox.LuauSandboxOptions.StripDebugInfo*
 - uid: LuauInterop.Sandbox.LuauSandboxOptions.Default
   commentId: P:LuauInterop.Sandbox.LuauSandboxOptions.Default
   id: Default
@@ -482,11 +375,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Sandbox/LuauSandboxOptions.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Default
     path: ../src/LuauInterop.Sandbox/LuauSandboxOptions.cs
-    startLine: 94
+    startLine: 73
   assemblies:
   - LuauInterop.Sandbox
   namespace: LuauInterop.Sandbox
@@ -513,11 +406,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Sandbox/LuauSandboxOptions.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Strict
     path: ../src/LuauInterop.Sandbox/LuauSandboxOptions.cs
-    startLine: 99
+    startLine: 83
   assemblies:
   - LuauInterop.Sandbox
   namespace: LuauInterop.Sandbox
@@ -857,26 +750,92 @@ references:
   name: AllowedLibraries
   nameWithType: LuauSandboxOptions.AllowedLibraries
   fullName: LuauInterop.Sandbox.LuauSandboxOptions.AllowedLibraries
-- uid: System.Collections.Generic.IReadOnlyList{LuauInterop.Runtime.LuauLibrary}
-  commentId: T:System.Collections.Generic.IReadOnlyList{LuauInterop.Runtime.LuauLibrary}
+- uid: LuauInterop.Runtime.LuauLibrary
+  commentId: T:LuauInterop.Runtime.LuauLibrary
+  parent: LuauInterop.Runtime
+  href: LuauInterop.Runtime.LuauLibrary.html
+  name: LuauLibrary
+  nameWithType: LuauLibrary
+  fullName: LuauInterop.Runtime.LuauLibrary
+- uid: LuauInterop.Runtime
+  commentId: N:LuauInterop.Runtime
+  href: LuauInterop.html
+  name: LuauInterop.Runtime
+  nameWithType: LuauInterop.Runtime
+  fullName: LuauInterop.Runtime
+  spec.csharp:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Runtime
+    name: Runtime
+    href: LuauInterop.Runtime.html
+  spec.vb:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Runtime
+    name: Runtime
+    href: LuauInterop.Runtime.html
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.AllowLibrary*
+  commentId: Overload:LuauInterop.Sandbox.LuauSandboxOptions.AllowLibrary
+  href: LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_AllowLibrary_LuauInterop_Runtime_LuauLibrary_
+  name: AllowLibrary
+  nameWithType: LuauSandboxOptions.AllowLibrary
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.AllowLibrary
+- uid: LuauInterop.Sandbox.LuauSandboxOptions
+  commentId: T:LuauInterop.Sandbox.LuauSandboxOptions
+  parent: LuauInterop.Sandbox
+  href: LuauInterop.Sandbox.LuauSandboxOptions.html
+  name: LuauSandboxOptions
+  nameWithType: LuauSandboxOptions
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobal*
+  commentId: Overload:LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobal
+  href: LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_AllowGlobal_System_String_
+  name: AllowGlobal
+  nameWithType: LuauSandboxOptions.AllowGlobal
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobal
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobals*
+  commentId: Overload:LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobals
+  href: LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_AllowGlobals_System_Collections_Generic_IReadOnlyList_System_String__
+  name: AllowGlobals
+  nameWithType: LuauSandboxOptions.AllowGlobals
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobals
+- uid: System.Collections.Generic.IReadOnlyList{System.String}
+  commentId: T:System.Collections.Generic.IReadOnlyList{System.String}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IReadOnlyList`1
   href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
-  name: IReadOnlyList<LuauLibrary>
-  nameWithType: IReadOnlyList<LuauLibrary>
-  fullName: System.Collections.Generic.IReadOnlyList<LuauInterop.Runtime.LuauLibrary>
-  nameWithType.vb: IReadOnlyList(Of LuauLibrary)
-  fullName.vb: System.Collections.Generic.IReadOnlyList(Of LuauInterop.Runtime.LuauLibrary)
-  name.vb: IReadOnlyList(Of LuauLibrary)
+  name: IReadOnlyList<string>
+  nameWithType: IReadOnlyList<string>
+  fullName: System.Collections.Generic.IReadOnlyList<string>
+  nameWithType.vb: IReadOnlyList(Of String)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of String)
+  name.vb: IReadOnlyList(Of String)
   spec.csharp:
   - uid: System.Collections.Generic.IReadOnlyList`1
     name: IReadOnlyList
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
   - name: <
-  - uid: LuauInterop.Runtime.LuauLibrary
-    name: LuauLibrary
-    href: LuauInterop.Runtime.LuauLibrary.html
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: '>'
   spec.vb:
   - uid: System.Collections.Generic.IReadOnlyList`1
@@ -886,9 +845,10 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: LuauInterop.Runtime.LuauLibrary
-    name: LuauLibrary
-    href: LuauInterop.Runtime.LuauLibrary.html
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
 - uid: System.Collections.Generic.IReadOnlyList`1
   commentId: T:System.Collections.Generic.IReadOnlyList`1
@@ -955,205 +915,12 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-- uid: LuauInterop.Sandbox.LuauSandboxOptions.AllowLibrary*
-  commentId: Overload:LuauInterop.Sandbox.LuauSandboxOptions.AllowLibrary
-  href: LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_AllowLibrary_LuauInterop_Runtime_LuauLibrary_
-  name: AllowLibrary
-  nameWithType: LuauSandboxOptions.AllowLibrary
-  fullName: LuauInterop.Sandbox.LuauSandboxOptions.AllowLibrary
-- uid: LuauInterop.Runtime.LuauLibrary
-  commentId: T:LuauInterop.Runtime.LuauLibrary
-  parent: LuauInterop.Runtime
-  href: LuauInterop.Runtime.LuauLibrary.html
-  name: LuauLibrary
-  nameWithType: LuauLibrary
-  fullName: LuauInterop.Runtime.LuauLibrary
-- uid: LuauInterop.Sandbox.LuauSandboxOptions
-  commentId: T:LuauInterop.Sandbox.LuauSandboxOptions
-  parent: LuauInterop.Sandbox
-  href: LuauInterop.Sandbox.LuauSandboxOptions.html
-  name: LuauSandboxOptions
-  nameWithType: LuauSandboxOptions
-  fullName: LuauInterop.Sandbox.LuauSandboxOptions
-- uid: LuauInterop.Runtime
-  commentId: N:LuauInterop.Runtime
-  href: LuauInterop.html
-  name: LuauInterop.Runtime
-  nameWithType: LuauInterop.Runtime
-  fullName: LuauInterop.Runtime
-  spec.csharp:
-  - uid: LuauInterop
-    name: LuauInterop
-    href: LuauInterop.html
-  - name: .
-  - uid: LuauInterop.Runtime
-    name: Runtime
-    href: LuauInterop.Runtime.html
-  spec.vb:
-  - uid: LuauInterop
-    name: LuauInterop
-    href: LuauInterop.html
-  - name: .
-  - uid: LuauInterop.Runtime
-    name: Runtime
-    href: LuauInterop.Runtime.html
-- uid: LuauInterop.Sandbox.LuauSandboxOptions.AllowLibraries*
-  commentId: Overload:LuauInterop.Sandbox.LuauSandboxOptions.AllowLibraries
-  href: LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_AllowLibraries_System_Collections_Generic_IReadOnlyList_LuauInterop_Runtime_LuauLibrary__
-  name: AllowLibraries
-  nameWithType: LuauSandboxOptions.AllowLibraries
-  fullName: LuauInterop.Sandbox.LuauSandboxOptions.AllowLibraries
-- uid: LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobal*
-  commentId: Overload:LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobal
-  href: LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_AllowGlobal_System_String_
-  name: AllowGlobal
-  nameWithType: LuauSandboxOptions.AllowGlobal
-  fullName: LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobal
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
-- uid: LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobals*
-  commentId: Overload:LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobals
-  href: LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_AllowGlobals_System_Collections_Generic_IReadOnlyList_System_String__
-  name: AllowGlobals
-  nameWithType: LuauSandboxOptions.AllowGlobals
-  fullName: LuauInterop.Sandbox.LuauSandboxOptions.AllowGlobals
-- uid: System.Collections.Generic.IReadOnlyList{System.String}
-  commentId: T:System.Collections.Generic.IReadOnlyList{System.String}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IReadOnlyList`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
-  name: IReadOnlyList<string>
-  nameWithType: IReadOnlyList<string>
-  fullName: System.Collections.Generic.IReadOnlyList<string>
-  nameWithType.vb: IReadOnlyList(Of String)
-  fullName.vb: System.Collections.Generic.IReadOnlyList(Of String)
-  name.vb: IReadOnlyList(Of String)
-  spec.csharp:
-  - uid: System.Collections.Generic.IReadOnlyList`1
-    name: IReadOnlyList
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
-  - name: <
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.IReadOnlyList`1
-    name: IReadOnlyList
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: )
-- uid: LuauInterop.Sandbox.LuauSandboxOptions.AllowedGlobals*
-  commentId: Overload:LuauInterop.Sandbox.LuauSandboxOptions.AllowedGlobals
-  href: LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_AllowedGlobals
-  name: AllowedGlobals
-  nameWithType: LuauSandboxOptions.AllowedGlobals
-  fullName: LuauInterop.Sandbox.LuauSandboxOptions.AllowedGlobals
-- uid: System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object}
-  commentId: T:System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IReadOnlyDictionary`2
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
-  name: IReadOnlyDictionary<string, object>
-  nameWithType: IReadOnlyDictionary<string, object>
-  fullName: System.Collections.Generic.IReadOnlyDictionary<string, object>
-  nameWithType.vb: IReadOnlyDictionary(Of String, Object)
-  fullName.vb: System.Collections.Generic.IReadOnlyDictionary(Of String, Object)
-  name.vb: IReadOnlyDictionary(Of String, Object)
-  spec.csharp:
-  - uid: System.Collections.Generic.IReadOnlyDictionary`2
-    name: IReadOnlyDictionary
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
-  - name: <
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.IReadOnlyDictionary`2
-    name: IReadOnlyDictionary
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Collections.Generic.IReadOnlyDictionary`2
-  commentId: T:System.Collections.Generic.IReadOnlyDictionary`2
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
-  name: IReadOnlyDictionary<TKey, TValue>
-  nameWithType: IReadOnlyDictionary<TKey, TValue>
-  fullName: System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>
-  nameWithType.vb: IReadOnlyDictionary(Of TKey, TValue)
-  fullName.vb: System.Collections.Generic.IReadOnlyDictionary(Of TKey, TValue)
-  name.vb: IReadOnlyDictionary(Of TKey, TValue)
-  spec.csharp:
-  - uid: System.Collections.Generic.IReadOnlyDictionary`2
-    name: IReadOnlyDictionary
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
-  - name: <
-  - name: TKey
-  - name: ','
-  - name: " "
-  - name: TValue
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.IReadOnlyDictionary`2
-    name: IReadOnlyDictionary
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
-  - name: (
-  - name: Of
-  - name: " "
-  - name: TKey
-  - name: ','
-  - name: " "
-  - name: TValue
-  - name: )
-- uid: LuauInterop.Sandbox.LuauSandboxOptions.DeniedGlobals*
-  commentId: Overload:LuauInterop.Sandbox.LuauSandboxOptions.DeniedGlobals
-  href: LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_DeniedGlobals
-  name: DeniedGlobals
-  nameWithType: LuauSandboxOptions.DeniedGlobals
-  fullName: LuauInterop.Sandbox.LuauSandboxOptions.DeniedGlobals
+- uid: LuauInterop.Sandbox.LuauSandboxOptions.ForbiddenGlobals*
+  commentId: Overload:LuauInterop.Sandbox.LuauSandboxOptions.ForbiddenGlobals
+  href: LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_ForbiddenGlobals
+  name: ForbiddenGlobals
+  nameWithType: LuauSandboxOptions.ForbiddenGlobals
+  fullName: LuauInterop.Sandbox.LuauSandboxOptions.ForbiddenGlobals
 - uid: LuauInterop.Sandbox.LuauSandboxOptions.DenyGlobal*
   commentId: Overload:LuauInterop.Sandbox.LuauSandboxOptions.DenyGlobal
   href: LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_DenyGlobal_System_String_
@@ -1166,43 +933,31 @@ references:
   name: DenyGlobals
   nameWithType: LuauSandboxOptions.DenyGlobals
   fullName: LuauInterop.Sandbox.LuauSandboxOptions.DenyGlobals
-- uid: LuauInterop.Sandbox.LuauSandbox.Execute(System.String,System.String)
-  commentId: M:LuauInterop.Sandbox.LuauSandbox.Execute(System.String,System.String)
+- uid: LuauInterop.Sandbox.LuauSandbox.Execute(System.String)
+  commentId: M:LuauInterop.Sandbox.LuauSandbox.Execute(System.String)
   isExternal: true
-  href: LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_Execute_System_String_System_String_
-  name: Execute(string, string)
-  nameWithType: LuauSandbox.Execute(string, string)
-  fullName: LuauInterop.Sandbox.LuauSandbox.Execute(string, string)
-  nameWithType.vb: LuauSandbox.Execute(String, String)
-  fullName.vb: LuauInterop.Sandbox.LuauSandbox.Execute(String, String)
-  name.vb: Execute(String, String)
+  href: LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_Execute_System_String_
+  name: Execute(string)
+  nameWithType: LuauSandbox.Execute(string)
+  fullName: LuauInterop.Sandbox.LuauSandbox.Execute(string)
+  nameWithType.vb: LuauSandbox.Execute(String)
+  fullName.vb: LuauInterop.Sandbox.LuauSandbox.Execute(String)
+  name.vb: Execute(String)
   spec.csharp:
-  - uid: LuauInterop.Sandbox.LuauSandbox.Execute(System.String,System.String)
+  - uid: LuauInterop.Sandbox.LuauSandbox.Execute(System.String)
     name: Execute
-    href: LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_Execute_System_String_System_String_
+    href: LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_Execute_System_String_
   - name: (
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
   - uid: System.String
     name: string
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
   spec.vb:
-  - uid: LuauInterop.Sandbox.LuauSandbox.Execute(System.String,System.String)
+  - uid: LuauInterop.Sandbox.LuauSandbox.Execute(System.String)
     name: Execute
-    href: LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_Execute_System_String_System_String_
+    href: LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_Execute_System_String_
   - name: (
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
   - uid: System.String
     name: String
     isExternal: true
@@ -1231,12 +986,6 @@ references:
   name: LockGlobals
   nameWithType: LuauSandboxOptions.LockGlobals
   fullName: LuauInterop.Sandbox.LuauSandboxOptions.LockGlobals
-- uid: LuauInterop.Sandbox.LuauSandboxOptions.StripDebugInfo*
-  commentId: Overload:LuauInterop.Sandbox.LuauSandboxOptions.StripDebugInfo
-  href: LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_StripDebugInfo
-  name: StripDebugInfo
-  nameWithType: LuauSandboxOptions.StripDebugInfo
-  fullName: LuauInterop.Sandbox.LuauSandboxOptions.StripDebugInfo
 - uid: LuauInterop.Sandbox.LuauSandboxOptions.Default*
   commentId: Overload:LuauInterop.Sandbox.LuauSandboxOptions.Default
   href: LuauInterop.Sandbox.LuauSandboxOptions.html#LuauInterop_Sandbox_LuauSandboxOptions_Default

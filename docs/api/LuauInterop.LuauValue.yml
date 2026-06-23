@@ -5,11 +5,12 @@ items:
   id: LuauValue
   parent: LuauInterop
   children:
-  - LuauInterop.LuauValue.#ctor(LuauInterop.LuauType,System.Double,System.Int64,System.Object)
+  - LuauInterop.LuauValue.#ctor(LuauInterop.LuauType,System.Double,System.Int64,System.Object,System.Nullable{LuauInterop.Native.LuaState})
   - LuauInterop.LuauValue.Integer
   - LuauInterop.LuauValue.Nil
   - LuauInterop.LuauValue.Number
   - LuauInterop.LuauValue.Reference
+  - LuauInterop.LuauValue.State
   - LuauInterop.LuauValue.ToClr
   - LuauInterop.LuauValue.ToString
   - LuauInterop.LuauValue.Type
@@ -28,11 +29,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauValue.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: LuauValue
     path: ../src/LuauInterop/LuauValue.cs
-    startLine: 7
+    startLine: 8
   assemblies:
   - LuauInterop
   namespace: LuauInterop
@@ -47,32 +48,32 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: LuauInterop.LuauValue.#ctor(LuauInterop.LuauType,System.Double,System.Int64,System.Object)
-  commentId: M:LuauInterop.LuauValue.#ctor(LuauInterop.LuauType,System.Double,System.Int64,System.Object)
-  id: '#ctor(LuauInterop.LuauType,System.Double,System.Int64,System.Object)'
+- uid: LuauInterop.LuauValue.#ctor(LuauInterop.LuauType,System.Double,System.Int64,System.Object,System.Nullable{LuauInterop.Native.LuaState})
+  commentId: M:LuauInterop.LuauValue.#ctor(LuauInterop.LuauType,System.Double,System.Int64,System.Object,System.Nullable{LuauInterop.Native.LuaState})
+  id: '#ctor(LuauInterop.LuauType,System.Double,System.Int64,System.Object,System.Nullable{LuauInterop.Native.LuaState})'
   parent: LuauInterop.LuauValue
   langs:
   - csharp
   - vb
-  name: LuauValue(LuauType, double, long, object?)
-  nameWithType: LuauValue.LuauValue(LuauType, double, long, object?)
-  fullName: LuauInterop.LuauValue.LuauValue(LuauInterop.LuauType, double, long, object?)
+  name: LuauValue(LuauType, double, long, object?, LuaState?)
+  nameWithType: LuauValue.LuauValue(LuauType, double, long, object?, LuaState?)
+  fullName: LuauInterop.LuauValue.LuauValue(LuauInterop.LuauType, double, long, object?, LuauInterop.Native.LuaState?)
   type: Constructor
   source:
     remote:
       path: src/LuauInterop/LuauValue.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: .ctor
     path: ../src/LuauInterop/LuauValue.cs
-    startLine: 7
+    startLine: 8
   assemblies:
   - LuauInterop
   namespace: LuauInterop
   summary: Represents a raw Luau value.
   example: []
   syntax:
-    content: public LuauValue(LuauType type, double number, long integer, object? reference)
+    content: public LuauValue(LuauType type, double number, long integer, object? reference, LuaState? state = null)
     parameters:
     - id: type
       type: LuauInterop.LuauType
@@ -82,11 +83,13 @@ items:
       type: System.Int64
     - id: reference
       type: System.Object
-    content.vb: Public Sub New(type As LuauType, number As Double, [integer] As Long, reference As Object)
+    - id: state
+      type: System.Nullable{LuauInterop.Native.LuaState}
+    content.vb: Public Sub New(type As LuauType, number As Double, [integer] As Long, reference As Object, state As LuaState? = Nothing)
   overload: LuauInterop.LuauValue.#ctor*
-  nameWithType.vb: LuauValue.New(LuauType, Double, Long, Object)
-  fullName.vb: LuauInterop.LuauValue.New(LuauInterop.LuauType, Double, Long, Object)
-  name.vb: New(LuauType, Double, Long, Object)
+  nameWithType.vb: LuauValue.New(LuauType, Double, Long, Object, LuaState?)
+  fullName.vb: LuauInterop.LuauValue.New(LuauInterop.LuauType, Double, Long, Object, LuauInterop.Native.LuaState?)
+  name.vb: New(LuauType, Double, Long, Object, LuaState?)
 - uid: LuauInterop.LuauValue.Type
   commentId: P:LuauInterop.LuauValue.Type
   id: Type
@@ -101,11 +104,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauValue.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Type
     path: ../src/LuauInterop/LuauValue.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - LuauInterop
   namespace: LuauInterop
@@ -132,11 +135,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauValue.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Number
     path: ../src/LuauInterop/LuauValue.cs
-    startLine: 21
+    startLine: 22
   assemblies:
   - LuauInterop
   namespace: LuauInterop
@@ -167,11 +170,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauValue.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Integer
     path: ../src/LuauInterop/LuauValue.cs
-    startLine: 29
+    startLine: 30
   assemblies:
   - LuauInterop
   namespace: LuauInterop
@@ -185,6 +188,38 @@ items:
       type: System.Int64
     content.vb: Public ReadOnly Property [Integer] As Long
   overload: LuauInterop.LuauValue.Integer*
+- uid: LuauInterop.LuauValue.State
+  commentId: P:LuauInterop.LuauValue.State
+  id: State
+  parent: LuauInterop.LuauValue
+  langs:
+  - csharp
+  - vb
+  name: State
+  nameWithType: LuauValue.State
+  fullName: LuauInterop.LuauValue.State
+  type: Property
+  source:
+    remote:
+      path: src/LuauInterop/LuauValue.cs
+      branch: feature/ast
+      repo: https://github.com/spxnso/LuauInterop
+    id: State
+    path: ../src/LuauInterop/LuauValue.cs
+    startLine: 38
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop
+  summary: Gets the Lua state associated with this value, if applicable.
+  remarks: Valid only when <xref href="LuauInterop.LuauValue.Type" data-throw-if-not-resolved="false"></xref> is <xref href="LuauInterop.LuauType.Function" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public LuaState? State { get; }
+    parameters: []
+    return:
+      type: System.Nullable{LuauInterop.Native.LuaState}
+    content.vb: Public ReadOnly Property State As LuaState?
+  overload: LuauInterop.LuauValue.State*
 - uid: LuauInterop.LuauValue.Reference
   commentId: P:LuauInterop.LuauValue.Reference
   id: Reference
@@ -199,11 +234,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauValue.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Reference
     path: ../src/LuauInterop/LuauValue.cs
-    startLine: 37
+    startLine: 46
   assemblies:
   - LuauInterop
   namespace: LuauInterop
@@ -231,11 +266,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauValue.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: ToClr
     path: ../src/LuauInterop/LuauValue.cs
-    startLine: 52
+    startLine: 61
   assemblies:
   - LuauInterop
   namespace: LuauInterop
@@ -272,11 +307,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauValue.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: ToString
     path: ../src/LuauInterop/LuauValue.cs
-    startLine: 76
+    startLine: 86
   assemblies:
   - LuauInterop
   namespace: LuauInterop
@@ -307,11 +342,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauValue.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: op_Implicit
     path: ../src/LuauInterop/LuauValue.cs
-    startLine: 84
+    startLine: 94
   assemblies:
   - LuauInterop
   namespace: LuauInterop
@@ -343,11 +378,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauValue.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: op_Implicit
     path: ../src/LuauInterop/LuauValue.cs
-    startLine: 89
+    startLine: 99
   assemblies:
   - LuauInterop
   namespace: LuauInterop
@@ -379,11 +414,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauValue.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: op_Implicit
     path: ../src/LuauInterop/LuauValue.cs
-    startLine: 94
+    startLine: 104
   assemblies:
   - LuauInterop
   namespace: LuauInterop
@@ -415,11 +450,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauValue.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: op_Implicit
     path: ../src/LuauInterop/LuauValue.cs
-    startLine: 99
+    startLine: 109
   assemblies:
   - LuauInterop
   namespace: LuauInterop
@@ -451,11 +486,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauValue.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: op_Implicit
     path: ../src/LuauInterop/LuauValue.cs
-    startLine: 104
+    startLine: 114
   assemblies:
   - LuauInterop
   namespace: LuauInterop
@@ -487,11 +522,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauValue.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Nil
     path: ../src/LuauInterop/LuauValue.cs
-    startLine: 109
+    startLine: 119
   assemblies:
   - LuauInterop
   namespace: LuauInterop
@@ -708,7 +743,7 @@ references:
   fullName: System
 - uid: LuauInterop.LuauValue.#ctor*
   commentId: Overload:LuauInterop.LuauValue.#ctor
-  href: LuauInterop.LuauValue.html#LuauInterop_LuauValue__ctor_LuauInterop_LuauType_System_Double_System_Int64_System_Object_
+  href: LuauInterop.LuauValue.html#LuauInterop_LuauValue__ctor_LuauInterop_LuauType_System_Double_System_Int64_System_Object_System_Nullable_LuauInterop_Native_LuaState__
   name: LuauValue
   nameWithType: LuauValue.LuauValue
   fullName: LuauInterop.LuauValue.LuauValue
@@ -744,6 +779,52 @@ references:
   nameWithType.vb: Long
   fullName.vb: Long
   name.vb: Long
+- uid: System.Nullable{LuauInterop.Native.LuaState}
+  commentId: T:System.Nullable{LuauInterop.Native.LuaState}
+  parent: System
+  definition: System.Nullable`1
+  href: LuauInterop.Native.LuaState.html
+  name: LuaState?
+  nameWithType: LuaState?
+  fullName: LuauInterop.Native.LuaState?
+  spec.csharp:
+  - uid: LuauInterop.Native.LuaState
+    name: LuaState
+    href: LuauInterop.Native.LuaState.html
+  - name: '?'
+  spec.vb:
+  - uid: LuauInterop.Native.LuaState
+    name: LuaState
+    href: LuauInterop.Native.LuaState.html
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
 - uid: LuauInterop.LuauValue.Type*
   commentId: Overload:LuauInterop.LuauValue.Type
   href: LuauInterop.LuauValue.html#LuauInterop_LuauValue_Type
@@ -786,6 +867,18 @@ references:
   name: Integer
   nameWithType: LuauValue.Integer
   fullName: LuauInterop.LuauValue.Integer
+- uid: LuauInterop.LuauType.Function
+  commentId: F:LuauInterop.LuauType.Function
+  href: LuauInterop.LuauType.html#LuauInterop_LuauType_Function
+  name: Function
+  nameWithType: LuauType.Function
+  fullName: LuauInterop.LuauType.Function
+- uid: LuauInterop.LuauValue.State*
+  commentId: Overload:LuauInterop.LuauValue.State
+  href: LuauInterop.LuauValue.html#LuauInterop_LuauValue_State
+  name: State
+  nameWithType: LuauValue.State
+  fullName: LuauInterop.LuauValue.State
 - uid: LuauInterop.LuauValue.Reference*
   commentId: Overload:LuauInterop.LuauValue.Reference
   href: LuauInterop.LuauValue.html#LuauInterop_LuauValue_Reference

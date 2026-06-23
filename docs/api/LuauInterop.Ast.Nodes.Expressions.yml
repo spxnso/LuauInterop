@@ -1,0 +1,210 @@
+### YamlMime:ManagedReference
+items:
+- uid: LuauInterop.Ast.Nodes.Expressions
+  commentId: N:LuauInterop.Ast.Nodes.Expressions
+  id: LuauInterop.Ast.Nodes.Expressions
+  children:
+  - LuauInterop.Ast.Nodes.Expressions.AstExpr
+  - LuauInterop.Ast.Nodes.Expressions.AstExprBinary
+  - LuauInterop.Ast.Nodes.Expressions.AstExprCall
+  - LuauInterop.Ast.Nodes.Expressions.AstExprConstantBool
+  - LuauInterop.Ast.Nodes.Expressions.AstExprConstantInteger
+  - LuauInterop.Ast.Nodes.Expressions.AstExprConstantNil
+  - LuauInterop.Ast.Nodes.Expressions.AstExprConstantNumber
+  - LuauInterop.Ast.Nodes.Expressions.AstExprConstantString
+  - LuauInterop.Ast.Nodes.Expressions.AstExprError
+  - LuauInterop.Ast.Nodes.Expressions.AstExprFunction
+  - LuauInterop.Ast.Nodes.Expressions.AstExprGlobal
+  - LuauInterop.Ast.Nodes.Expressions.AstExprGroup
+  - LuauInterop.Ast.Nodes.Expressions.AstExprIfElse
+  - LuauInterop.Ast.Nodes.Expressions.AstExprIndexExpr
+  - LuauInterop.Ast.Nodes.Expressions.AstExprIndexName
+  - LuauInterop.Ast.Nodes.Expressions.AstExprInterpString
+  - LuauInterop.Ast.Nodes.Expressions.AstExprLocal
+  - LuauInterop.Ast.Nodes.Expressions.AstExprTable
+  - LuauInterop.Ast.Nodes.Expressions.AstExprTableItem
+  - LuauInterop.Ast.Nodes.Expressions.AstExprTypeAssertion
+  - LuauInterop.Ast.Nodes.Expressions.AstExprUnary
+  - LuauInterop.Ast.Nodes.Expressions.AstExprVarargs
+  langs:
+  - csharp
+  - vb
+  name: LuauInterop.Ast.Nodes.Expressions
+  nameWithType: LuauInterop.Ast.Nodes.Expressions
+  fullName: LuauInterop.Ast.Nodes.Expressions
+  type: Namespace
+  assemblies:
+  - LuauInterop.Ast
+references:
+- uid: LuauInterop.Ast.Nodes.Expressions.AstExpr
+  commentId: T:LuauInterop.Ast.Nodes.Expressions.AstExpr
+  parent: LuauInterop.Ast.Nodes.Expressions
+  href: LuauInterop.Ast.Nodes.Expressions.AstExpr.html
+  name: AstExpr
+  nameWithType: AstExpr
+  fullName: LuauInterop.Ast.Nodes.Expressions.AstExpr
+- uid: LuauInterop.Ast.Nodes.Expressions.AstExprBinary
+  commentId: T:LuauInterop.Ast.Nodes.Expressions.AstExprBinary
+  href: LuauInterop.Ast.Nodes.Expressions.AstExprBinary.html
+  name: AstExprBinary
+  nameWithType: AstExprBinary
+  fullName: LuauInterop.Ast.Nodes.Expressions.AstExprBinary
+- uid: LuauInterop.Ast.Nodes.Expressions.AstExprCall
+  commentId: T:LuauInterop.Ast.Nodes.Expressions.AstExprCall
+  href: LuauInterop.Ast.Nodes.Expressions.AstExprCall.html
+  name: AstExprCall
+  nameWithType: AstExprCall
+  fullName: LuauInterop.Ast.Nodes.Expressions.AstExprCall
+- uid: LuauInterop.Ast.Nodes.Expressions.AstExprConstantBool
+  commentId: T:LuauInterop.Ast.Nodes.Expressions.AstExprConstantBool
+  href: LuauInterop.Ast.Nodes.Expressions.AstExprConstantBool.html
+  name: AstExprConstantBool
+  nameWithType: AstExprConstantBool
+  fullName: LuauInterop.Ast.Nodes.Expressions.AstExprConstantBool
+- uid: LuauInterop.Ast.Nodes.Expressions.AstExprConstantInteger
+  commentId: T:LuauInterop.Ast.Nodes.Expressions.AstExprConstantInteger
+  href: LuauInterop.Ast.Nodes.Expressions.AstExprConstantInteger.html
+  name: AstExprConstantInteger
+  nameWithType: AstExprConstantInteger
+  fullName: LuauInterop.Ast.Nodes.Expressions.AstExprConstantInteger
+- uid: LuauInterop.Ast.Nodes.Expressions.AstExprConstantNil
+  commentId: T:LuauInterop.Ast.Nodes.Expressions.AstExprConstantNil
+  href: LuauInterop.Ast.Nodes.Expressions.AstExprConstantNil.html
+  name: AstExprConstantNil
+  nameWithType: AstExprConstantNil
+  fullName: LuauInterop.Ast.Nodes.Expressions.AstExprConstantNil
+- uid: LuauInterop.Ast.Nodes.Expressions.AstExprConstantNumber
+  commentId: T:LuauInterop.Ast.Nodes.Expressions.AstExprConstantNumber
+  href: LuauInterop.Ast.Nodes.Expressions.AstExprConstantNumber.html
+  name: AstExprConstantNumber
+  nameWithType: AstExprConstantNumber
+  fullName: LuauInterop.Ast.Nodes.Expressions.AstExprConstantNumber
+- uid: LuauInterop.Ast.Nodes.Expressions.AstExprConstantString
+  commentId: T:LuauInterop.Ast.Nodes.Expressions.AstExprConstantString
+  href: LuauInterop.Ast.Nodes.Expressions.AstExprConstantString.html
+  name: AstExprConstantString
+  nameWithType: AstExprConstantString
+  fullName: LuauInterop.Ast.Nodes.Expressions.AstExprConstantString
+- uid: LuauInterop.Ast.Nodes.Expressions.AstExprError
+  commentId: T:LuauInterop.Ast.Nodes.Expressions.AstExprError
+  href: LuauInterop.Ast.Nodes.Expressions.AstExprError.html
+  name: AstExprError
+  nameWithType: AstExprError
+  fullName: LuauInterop.Ast.Nodes.Expressions.AstExprError
+- uid: LuauInterop.Ast.Nodes.Expressions.AstExprFunction
+  commentId: T:LuauInterop.Ast.Nodes.Expressions.AstExprFunction
+  parent: LuauInterop.Ast.Nodes.Expressions
+  href: LuauInterop.Ast.Nodes.Expressions.AstExprFunction.html
+  name: AstExprFunction
+  nameWithType: AstExprFunction
+  fullName: LuauInterop.Ast.Nodes.Expressions.AstExprFunction
+- uid: LuauInterop.Ast.Nodes.Expressions.AstExprGlobal
+  commentId: T:LuauInterop.Ast.Nodes.Expressions.AstExprGlobal
+  href: LuauInterop.Ast.Nodes.Expressions.AstExprGlobal.html
+  name: AstExprGlobal
+  nameWithType: AstExprGlobal
+  fullName: LuauInterop.Ast.Nodes.Expressions.AstExprGlobal
+- uid: LuauInterop.Ast.Nodes.Expressions.AstExprGroup
+  commentId: T:LuauInterop.Ast.Nodes.Expressions.AstExprGroup
+  href: LuauInterop.Ast.Nodes.Expressions.AstExprGroup.html
+  name: AstExprGroup
+  nameWithType: AstExprGroup
+  fullName: LuauInterop.Ast.Nodes.Expressions.AstExprGroup
+- uid: LuauInterop.Ast.Nodes.Expressions.AstExprIfElse
+  commentId: T:LuauInterop.Ast.Nodes.Expressions.AstExprIfElse
+  href: LuauInterop.Ast.Nodes.Expressions.AstExprIfElse.html
+  name: AstExprIfElse
+  nameWithType: AstExprIfElse
+  fullName: LuauInterop.Ast.Nodes.Expressions.AstExprIfElse
+- uid: LuauInterop.Ast.Nodes.Expressions.AstExprIndexExpr
+  commentId: T:LuauInterop.Ast.Nodes.Expressions.AstExprIndexExpr
+  href: LuauInterop.Ast.Nodes.Expressions.AstExprIndexExpr.html
+  name: AstExprIndexExpr
+  nameWithType: AstExprIndexExpr
+  fullName: LuauInterop.Ast.Nodes.Expressions.AstExprIndexExpr
+- uid: LuauInterop.Ast.Nodes.Expressions.AstExprIndexName
+  commentId: T:LuauInterop.Ast.Nodes.Expressions.AstExprIndexName
+  href: LuauInterop.Ast.Nodes.Expressions.AstExprIndexName.html
+  name: AstExprIndexName
+  nameWithType: AstExprIndexName
+  fullName: LuauInterop.Ast.Nodes.Expressions.AstExprIndexName
+- uid: LuauInterop.Ast.Nodes.Expressions.AstExprInterpString
+  commentId: T:LuauInterop.Ast.Nodes.Expressions.AstExprInterpString
+  href: LuauInterop.Ast.Nodes.Expressions.AstExprInterpString.html
+  name: AstExprInterpString
+  nameWithType: AstExprInterpString
+  fullName: LuauInterop.Ast.Nodes.Expressions.AstExprInterpString
+- uid: LuauInterop.Ast.Nodes.Expressions.AstExprLocal
+  commentId: T:LuauInterop.Ast.Nodes.Expressions.AstExprLocal
+  href: LuauInterop.Ast.Nodes.Expressions.AstExprLocal.html
+  name: AstExprLocal
+  nameWithType: AstExprLocal
+  fullName: LuauInterop.Ast.Nodes.Expressions.AstExprLocal
+- uid: LuauInterop.Ast.Nodes.Expressions.AstExprTable
+  commentId: T:LuauInterop.Ast.Nodes.Expressions.AstExprTable
+  href: LuauInterop.Ast.Nodes.Expressions.AstExprTable.html
+  name: AstExprTable
+  nameWithType: AstExprTable
+  fullName: LuauInterop.Ast.Nodes.Expressions.AstExprTable
+- uid: LuauInterop.Ast.Nodes.Expressions.AstExprTableItem
+  commentId: T:LuauInterop.Ast.Nodes.Expressions.AstExprTableItem
+  href: LuauInterop.Ast.Nodes.Expressions.AstExprTableItem.html
+  name: AstExprTableItem
+  nameWithType: AstExprTableItem
+  fullName: LuauInterop.Ast.Nodes.Expressions.AstExprTableItem
+- uid: LuauInterop.Ast.Nodes.Expressions.AstExprTypeAssertion
+  commentId: T:LuauInterop.Ast.Nodes.Expressions.AstExprTypeAssertion
+  href: LuauInterop.Ast.Nodes.Expressions.AstExprTypeAssertion.html
+  name: AstExprTypeAssertion
+  nameWithType: AstExprTypeAssertion
+  fullName: LuauInterop.Ast.Nodes.Expressions.AstExprTypeAssertion
+- uid: LuauInterop.Ast.Nodes.Expressions.AstExprUnary
+  commentId: T:LuauInterop.Ast.Nodes.Expressions.AstExprUnary
+  href: LuauInterop.Ast.Nodes.Expressions.AstExprUnary.html
+  name: AstExprUnary
+  nameWithType: AstExprUnary
+  fullName: LuauInterop.Ast.Nodes.Expressions.AstExprUnary
+- uid: LuauInterop.Ast.Nodes.Expressions.AstExprVarargs
+  commentId: T:LuauInterop.Ast.Nodes.Expressions.AstExprVarargs
+  href: LuauInterop.Ast.Nodes.Expressions.AstExprVarargs.html
+  name: AstExprVarargs
+  nameWithType: AstExprVarargs
+  fullName: LuauInterop.Ast.Nodes.Expressions.AstExprVarargs
+- uid: LuauInterop.Ast.Nodes.Expressions
+  commentId: N:LuauInterop.Ast.Nodes.Expressions
+  href: LuauInterop.html
+  name: LuauInterop.Ast.Nodes.Expressions
+  nameWithType: LuauInterop.Ast.Nodes.Expressions
+  fullName: LuauInterop.Ast.Nodes.Expressions
+  spec.csharp:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Ast
+    name: Ast
+    href: LuauInterop.Ast.html
+  - name: .
+  - uid: LuauInterop.Ast.Nodes
+    name: Nodes
+    href: LuauInterop.Ast.Nodes.html
+  - name: .
+  - uid: LuauInterop.Ast.Nodes.Expressions
+    name: Expressions
+    href: LuauInterop.Ast.Nodes.Expressions.html
+  spec.vb:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Ast
+    name: Ast
+    href: LuauInterop.Ast.html
+  - name: .
+  - uid: LuauInterop.Ast.Nodes
+    name: Nodes
+    href: LuauInterop.Ast.Nodes.html
+  - name: .
+  - uid: LuauInterop.Ast.Nodes.Expressions
+    name: Expressions
+    href: LuauInterop.Ast.Nodes.Expressions.html

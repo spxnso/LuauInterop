@@ -1,0 +1,212 @@
+### YamlMime:ManagedReference
+items:
+- uid: LuauInterop.Ast.Nodes.Types
+  commentId: N:LuauInterop.Ast.Nodes.Types
+  id: LuauInterop.Ast.Nodes.Types
+  children:
+  - LuauInterop.Ast.Nodes.Types.AstGenericType
+  - LuauInterop.Ast.Nodes.Types.AstGenericTypePack
+  - LuauInterop.Ast.Nodes.Types.AstTableIndexer
+  - LuauInterop.Ast.Nodes.Types.AstTableProp
+  - LuauInterop.Ast.Nodes.Types.AstType
+  - LuauInterop.Ast.Nodes.Types.AstTypeError
+  - LuauInterop.Ast.Nodes.Types.AstTypeFunction
+  - LuauInterop.Ast.Nodes.Types.AstTypeGroup
+  - LuauInterop.Ast.Nodes.Types.AstTypeIntersection
+  - LuauInterop.Ast.Nodes.Types.AstTypeList
+  - LuauInterop.Ast.Nodes.Types.AstTypeOptional
+  - LuauInterop.Ast.Nodes.Types.AstTypeOrPack
+  - LuauInterop.Ast.Nodes.Types.AstTypePack
+  - LuauInterop.Ast.Nodes.Types.AstTypePackExplicit
+  - LuauInterop.Ast.Nodes.Types.AstTypePackGeneric
+  - LuauInterop.Ast.Nodes.Types.AstTypePackVariadic
+  - LuauInterop.Ast.Nodes.Types.AstTypeReference
+  - LuauInterop.Ast.Nodes.Types.AstTypeSingletonBool
+  - LuauInterop.Ast.Nodes.Types.AstTypeSingletonString
+  - LuauInterop.Ast.Nodes.Types.AstTypeTable
+  - LuauInterop.Ast.Nodes.Types.AstTypeTypeof
+  - LuauInterop.Ast.Nodes.Types.AstTypeUnion
+  langs:
+  - csharp
+  - vb
+  name: LuauInterop.Ast.Nodes.Types
+  nameWithType: LuauInterop.Ast.Nodes.Types
+  fullName: LuauInterop.Ast.Nodes.Types
+  type: Namespace
+  assemblies:
+  - LuauInterop.Ast
+references:
+- uid: LuauInterop.Ast.Nodes.Types.AstGenericType
+  commentId: T:LuauInterop.Ast.Nodes.Types.AstGenericType
+  href: LuauInterop.Ast.Nodes.Types.AstGenericType.html
+  name: AstGenericType
+  nameWithType: AstGenericType
+  fullName: LuauInterop.Ast.Nodes.Types.AstGenericType
+- uid: LuauInterop.Ast.Nodes.Types.AstGenericTypePack
+  commentId: T:LuauInterop.Ast.Nodes.Types.AstGenericTypePack
+  href: LuauInterop.Ast.Nodes.Types.AstGenericTypePack.html
+  name: AstGenericTypePack
+  nameWithType: AstGenericTypePack
+  fullName: LuauInterop.Ast.Nodes.Types.AstGenericTypePack
+- uid: LuauInterop.Ast.Nodes.Types.AstTableIndexer
+  commentId: T:LuauInterop.Ast.Nodes.Types.AstTableIndexer
+  parent: LuauInterop.Ast.Nodes.Types
+  href: LuauInterop.Ast.Nodes.Types.AstTableIndexer.html
+  name: AstTableIndexer
+  nameWithType: AstTableIndexer
+  fullName: LuauInterop.Ast.Nodes.Types.AstTableIndexer
+- uid: LuauInterop.Ast.Nodes.Types.AstTableProp
+  commentId: T:LuauInterop.Ast.Nodes.Types.AstTableProp
+  href: LuauInterop.Ast.Nodes.Types.AstTableProp.html
+  name: AstTableProp
+  nameWithType: AstTableProp
+  fullName: LuauInterop.Ast.Nodes.Types.AstTableProp
+- uid: LuauInterop.Ast.Nodes.Types.AstType
+  commentId: T:LuauInterop.Ast.Nodes.Types.AstType
+  parent: LuauInterop.Ast.Nodes.Types
+  href: LuauInterop.Ast.Nodes.Types.AstType.html
+  name: AstType
+  nameWithType: AstType
+  fullName: LuauInterop.Ast.Nodes.Types.AstType
+- uid: LuauInterop.Ast.Nodes.Types.AstTypeError
+  commentId: T:LuauInterop.Ast.Nodes.Types.AstTypeError
+  href: LuauInterop.Ast.Nodes.Types.AstTypeError.html
+  name: AstTypeError
+  nameWithType: AstTypeError
+  fullName: LuauInterop.Ast.Nodes.Types.AstTypeError
+- uid: LuauInterop.Ast.Nodes.Types.AstTypeFunction
+  commentId: T:LuauInterop.Ast.Nodes.Types.AstTypeFunction
+  href: LuauInterop.Ast.Nodes.Types.AstTypeFunction.html
+  name: AstTypeFunction
+  nameWithType: AstTypeFunction
+  fullName: LuauInterop.Ast.Nodes.Types.AstTypeFunction
+- uid: LuauInterop.Ast.Nodes.Types.AstTypeGroup
+  commentId: T:LuauInterop.Ast.Nodes.Types.AstTypeGroup
+  href: LuauInterop.Ast.Nodes.Types.AstTypeGroup.html
+  name: AstTypeGroup
+  nameWithType: AstTypeGroup
+  fullName: LuauInterop.Ast.Nodes.Types.AstTypeGroup
+- uid: LuauInterop.Ast.Nodes.Types.AstTypeIntersection
+  commentId: T:LuauInterop.Ast.Nodes.Types.AstTypeIntersection
+  href: LuauInterop.Ast.Nodes.Types.AstTypeIntersection.html
+  name: AstTypeIntersection
+  nameWithType: AstTypeIntersection
+  fullName: LuauInterop.Ast.Nodes.Types.AstTypeIntersection
+- uid: LuauInterop.Ast.Nodes.Types.AstTypeList
+  commentId: T:LuauInterop.Ast.Nodes.Types.AstTypeList
+  parent: LuauInterop.Ast.Nodes.Types
+  href: LuauInterop.Ast.Nodes.Types.AstTypeList.html
+  name: AstTypeList
+  nameWithType: AstTypeList
+  fullName: LuauInterop.Ast.Nodes.Types.AstTypeList
+- uid: LuauInterop.Ast.Nodes.Types.AstTypeOptional
+  commentId: T:LuauInterop.Ast.Nodes.Types.AstTypeOptional
+  href: LuauInterop.Ast.Nodes.Types.AstTypeOptional.html
+  name: AstTypeOptional
+  nameWithType: AstTypeOptional
+  fullName: LuauInterop.Ast.Nodes.Types.AstTypeOptional
+- uid: LuauInterop.Ast.Nodes.Types.AstTypeOrPack
+  commentId: T:LuauInterop.Ast.Nodes.Types.AstTypeOrPack
+  href: LuauInterop.Ast.Nodes.Types.AstTypeOrPack.html
+  name: AstTypeOrPack
+  nameWithType: AstTypeOrPack
+  fullName: LuauInterop.Ast.Nodes.Types.AstTypeOrPack
+- uid: LuauInterop.Ast.Nodes.Types.AstTypePack
+  commentId: T:LuauInterop.Ast.Nodes.Types.AstTypePack
+  parent: LuauInterop.Ast.Nodes.Types
+  href: LuauInterop.Ast.Nodes.Types.AstTypePack.html
+  name: AstTypePack
+  nameWithType: AstTypePack
+  fullName: LuauInterop.Ast.Nodes.Types.AstTypePack
+- uid: LuauInterop.Ast.Nodes.Types.AstTypePackExplicit
+  commentId: T:LuauInterop.Ast.Nodes.Types.AstTypePackExplicit
+  href: LuauInterop.Ast.Nodes.Types.AstTypePackExplicit.html
+  name: AstTypePackExplicit
+  nameWithType: AstTypePackExplicit
+  fullName: LuauInterop.Ast.Nodes.Types.AstTypePackExplicit
+- uid: LuauInterop.Ast.Nodes.Types.AstTypePackGeneric
+  commentId: T:LuauInterop.Ast.Nodes.Types.AstTypePackGeneric
+  href: LuauInterop.Ast.Nodes.Types.AstTypePackGeneric.html
+  name: AstTypePackGeneric
+  nameWithType: AstTypePackGeneric
+  fullName: LuauInterop.Ast.Nodes.Types.AstTypePackGeneric
+- uid: LuauInterop.Ast.Nodes.Types.AstTypePackVariadic
+  commentId: T:LuauInterop.Ast.Nodes.Types.AstTypePackVariadic
+  href: LuauInterop.Ast.Nodes.Types.AstTypePackVariadic.html
+  name: AstTypePackVariadic
+  nameWithType: AstTypePackVariadic
+  fullName: LuauInterop.Ast.Nodes.Types.AstTypePackVariadic
+- uid: LuauInterop.Ast.Nodes.Types.AstTypeReference
+  commentId: T:LuauInterop.Ast.Nodes.Types.AstTypeReference
+  href: LuauInterop.Ast.Nodes.Types.AstTypeReference.html
+  name: AstTypeReference
+  nameWithType: AstTypeReference
+  fullName: LuauInterop.Ast.Nodes.Types.AstTypeReference
+- uid: LuauInterop.Ast.Nodes.Types.AstTypeSingletonBool
+  commentId: T:LuauInterop.Ast.Nodes.Types.AstTypeSingletonBool
+  href: LuauInterop.Ast.Nodes.Types.AstTypeSingletonBool.html
+  name: AstTypeSingletonBool
+  nameWithType: AstTypeSingletonBool
+  fullName: LuauInterop.Ast.Nodes.Types.AstTypeSingletonBool
+- uid: LuauInterop.Ast.Nodes.Types.AstTypeSingletonString
+  commentId: T:LuauInterop.Ast.Nodes.Types.AstTypeSingletonString
+  href: LuauInterop.Ast.Nodes.Types.AstTypeSingletonString.html
+  name: AstTypeSingletonString
+  nameWithType: AstTypeSingletonString
+  fullName: LuauInterop.Ast.Nodes.Types.AstTypeSingletonString
+- uid: LuauInterop.Ast.Nodes.Types.AstTypeTable
+  commentId: T:LuauInterop.Ast.Nodes.Types.AstTypeTable
+  href: LuauInterop.Ast.Nodes.Types.AstTypeTable.html
+  name: AstTypeTable
+  nameWithType: AstTypeTable
+  fullName: LuauInterop.Ast.Nodes.Types.AstTypeTable
+- uid: LuauInterop.Ast.Nodes.Types.AstTypeTypeof
+  commentId: T:LuauInterop.Ast.Nodes.Types.AstTypeTypeof
+  href: LuauInterop.Ast.Nodes.Types.AstTypeTypeof.html
+  name: AstTypeTypeof
+  nameWithType: AstTypeTypeof
+  fullName: LuauInterop.Ast.Nodes.Types.AstTypeTypeof
+- uid: LuauInterop.Ast.Nodes.Types.AstTypeUnion
+  commentId: T:LuauInterop.Ast.Nodes.Types.AstTypeUnion
+  href: LuauInterop.Ast.Nodes.Types.AstTypeUnion.html
+  name: AstTypeUnion
+  nameWithType: AstTypeUnion
+  fullName: LuauInterop.Ast.Nodes.Types.AstTypeUnion
+- uid: LuauInterop.Ast.Nodes.Types
+  commentId: N:LuauInterop.Ast.Nodes.Types
+  href: LuauInterop.html
+  name: LuauInterop.Ast.Nodes.Types
+  nameWithType: LuauInterop.Ast.Nodes.Types
+  fullName: LuauInterop.Ast.Nodes.Types
+  spec.csharp:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Ast
+    name: Ast
+    href: LuauInterop.Ast.html
+  - name: .
+  - uid: LuauInterop.Ast.Nodes
+    name: Nodes
+    href: LuauInterop.Ast.Nodes.html
+  - name: .
+  - uid: LuauInterop.Ast.Nodes.Types
+    name: Types
+    href: LuauInterop.Ast.Nodes.Types.html
+  spec.vb:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Ast
+    name: Ast
+    href: LuauInterop.Ast.html
+  - name: .
+  - uid: LuauInterop.Ast.Nodes
+    name: Nodes
+    href: LuauInterop.Ast.Nodes.html
+  - name: .
+  - uid: LuauInterop.Ast.Nodes.Types
+    name: Types
+    href: LuauInterop.Ast.Nodes.Types.html

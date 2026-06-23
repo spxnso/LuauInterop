@@ -5,7 +5,7 @@ items:
   id: LuauTable
   parent: LuauInterop.Objects
   children:
-  - LuauInterop.Objects.LuauTable.#ctor(LuauInterop.Luau,System.Int32)
+  - LuauInterop.Objects.LuauTable.#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32)
   - LuauInterop.Objects.LuauTable.Item(System.Int32)
   - LuauInterop.Objects.LuauTable.Item(System.String)
   - LuauInterop.Objects.LuauTable.Length
@@ -20,11 +20,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/Objects/LuauTable.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: LuauTable
     path: ../src/LuauInterop/Objects/LuauTable.cs
-    startLine: 4
+    startLine: 5
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Objects
@@ -38,6 +38,7 @@ items:
   - System.IDisposable
   inheritedMembers:
   - LuauInterop.LuauBase.Owner
+  - LuauInterop.LuauBase.State
   - LuauInterop.LuauBase.Reference
   - LuauInterop.LuauBase.IsDisposed
   - LuauInterop.LuauBase.Dispose
@@ -48,40 +49,42 @@ items:
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: LuauInterop.Objects.LuauTable.#ctor(LuauInterop.Luau,System.Int32)
-  commentId: M:LuauInterop.Objects.LuauTable.#ctor(LuauInterop.Luau,System.Int32)
-  id: '#ctor(LuauInterop.Luau,System.Int32)'
+- uid: LuauInterop.Objects.LuauTable.#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32)
+  commentId: M:LuauInterop.Objects.LuauTable.#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32)
+  id: '#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32)'
   parent: LuauInterop.Objects.LuauTable
   langs:
   - csharp
   - vb
-  name: LuauTable(Luau, int)
-  nameWithType: LuauTable.LuauTable(Luau, int)
-  fullName: LuauInterop.Objects.LuauTable.LuauTable(LuauInterop.Luau, int)
+  name: LuauTable(Luau, LuaState, int)
+  nameWithType: LuauTable.LuauTable(Luau, LuaState, int)
+  fullName: LuauInterop.Objects.LuauTable.LuauTable(LuauInterop.Luau, LuauInterop.Native.LuaState, int)
   type: Constructor
   source:
     remote:
       path: src/LuauInterop/Objects/LuauTable.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: .ctor
     path: ../src/LuauInterop/Objects/LuauTable.cs
-    startLine: 4
+    startLine: 5
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Objects
   syntax:
-    content: public LuauTable(Luau owner, int reference)
+    content: public LuauTable(Luau owner, LuaState state, int reference)
     parameters:
     - id: owner
       type: LuauInterop.Luau
+    - id: state
+      type: LuauInterop.Native.LuaState
     - id: reference
       type: System.Int32
-    content.vb: Public Sub New(owner As Luau, reference As Integer)
+    content.vb: Public Sub New(owner As Luau, state As LuaState, reference As Integer)
   overload: LuauInterop.Objects.LuauTable.#ctor*
-  nameWithType.vb: LuauTable.New(Luau, Integer)
-  fullName.vb: LuauInterop.Objects.LuauTable.New(LuauInterop.Luau, Integer)
-  name.vb: New(Luau, Integer)
+  nameWithType.vb: LuauTable.New(Luau, LuaState, Integer)
+  fullName.vb: LuauInterop.Objects.LuauTable.New(LuauInterop.Luau, LuauInterop.Native.LuaState, Integer)
+  name.vb: New(Luau, LuaState, Integer)
 - uid: LuauInterop.Objects.LuauTable.Item(System.String)
   commentId: P:LuauInterop.Objects.LuauTable.Item(System.String)
   id: Item(System.String)
@@ -96,11 +99,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/Objects/LuauTable.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: this[]
     path: ../src/LuauInterop/Objects/LuauTable.cs
-    startLine: 6
+    startLine: 7
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Objects
@@ -130,11 +133,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/Objects/LuauTable.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: this[]
     path: ../src/LuauInterop/Objects/LuauTable.cs
-    startLine: 40
+    startLine: 41
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Objects
@@ -164,11 +167,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/Objects/LuauTable.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Length
     path: ../src/LuauInterop/Objects/LuauTable.cs
-    startLine: 74
+    startLine: 75
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Objects
@@ -193,11 +196,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/Objects/LuauTable.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Pairs
     path: ../src/LuauInterop/Objects/LuauTable.cs
-    startLine: 92
+    startLine: 93
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Objects
@@ -263,6 +266,13 @@ references:
   name: Owner
   nameWithType: LuauBase.Owner
   fullName: LuauInterop.LuauBase.Owner
+- uid: LuauInterop.LuauBase.State
+  commentId: P:LuauInterop.LuauBase.State
+  parent: LuauInterop.LuauBase
+  href: LuauInterop.LuauBase.html#LuauInterop_LuauBase_State
+  name: State
+  nameWithType: LuauBase.State
+  fullName: LuauInterop.LuauBase.State
 - uid: LuauInterop.LuauBase.Reference
   commentId: P:LuauInterop.LuauBase.Reference
   parent: LuauInterop.LuauBase
@@ -525,7 +535,7 @@ references:
   fullName: LuauInterop
 - uid: LuauInterop.Objects.LuauTable.#ctor*
   commentId: Overload:LuauInterop.Objects.LuauTable.#ctor
-  href: LuauInterop.Objects.LuauTable.html#LuauInterop_Objects_LuauTable__ctor_LuauInterop_Luau_System_Int32_
+  href: LuauInterop.Objects.LuauTable.html#LuauInterop_Objects_LuauTable__ctor_LuauInterop_Luau_LuauInterop_Native_LuaState_System_Int32_
   name: LuauTable
   nameWithType: LuauTable.LuauTable
   fullName: LuauInterop.Objects.LuauTable.LuauTable
@@ -539,6 +549,13 @@ references:
   name: Luau
   nameWithType: Luau
   fullName: LuauInterop.Luau
+- uid: LuauInterop.Native.LuaState
+  commentId: T:LuauInterop.Native.LuaState
+  parent: LuauInterop.Native
+  href: LuauInterop.Native.LuaState.html
+  name: LuaState
+  nameWithType: LuaState
+  fullName: LuauInterop.Native.LuaState
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -550,6 +567,28 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
+- uid: LuauInterop.Native
+  commentId: N:LuauInterop.Native
+  href: LuauInterop.html
+  name: LuauInterop.Native
+  nameWithType: LuauInterop.Native
+  fullName: LuauInterop.Native
+  spec.csharp:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Native
+    name: Native
+    href: LuauInterop.Native.html
+  spec.vb:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Native
+    name: Native
+    href: LuauInterop.Native.html
 - uid: LuauInterop.Objects.LuauTable.Item*
   commentId: Overload:LuauInterop.Objects.LuauTable.Item
   href: LuauInterop.Objects.LuauTable.html#LuauInterop_Objects_LuauTable_Item_System_String_

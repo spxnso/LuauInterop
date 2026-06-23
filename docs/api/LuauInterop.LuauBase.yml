@@ -5,7 +5,7 @@ items:
   id: LuauBase
   parent: LuauInterop
   children:
-  - LuauInterop.LuauBase.#ctor(LuauInterop.Luau,System.Int32)
+  - LuauInterop.LuauBase.#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32)
   - LuauInterop.LuauBase.Dispose
   - LuauInterop.LuauBase.Dispose(System.Boolean)
   - LuauInterop.LuauBase.Finalize
@@ -13,6 +13,7 @@ items:
   - LuauInterop.LuauBase.Owner
   - LuauInterop.LuauBase.PushReference
   - LuauInterop.LuauBase.Reference
+  - LuauInterop.LuauBase.State
   - LuauInterop.LuauBase.ThrowIfDisposed
   langs:
   - csharp
@@ -24,7 +25,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauBase.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: LuauBase
     path: ../src/LuauInterop/LuauBase.cs
@@ -54,21 +55,21 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: LuauInterop.LuauBase.#ctor(LuauInterop.Luau,System.Int32)
-  commentId: M:LuauInterop.LuauBase.#ctor(LuauInterop.Luau,System.Int32)
-  id: '#ctor(LuauInterop.Luau,System.Int32)'
+- uid: LuauInterop.LuauBase.#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32)
+  commentId: M:LuauInterop.LuauBase.#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32)
+  id: '#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32)'
   parent: LuauInterop.LuauBase
   langs:
   - csharp
   - vb
-  name: LuauBase(Luau, int)
-  nameWithType: LuauBase.LuauBase(Luau, int)
-  fullName: LuauInterop.LuauBase.LuauBase(LuauInterop.Luau, int)
+  name: LuauBase(Luau, LuaState, int)
+  nameWithType: LuauBase.LuauBase(Luau, LuaState, int)
+  fullName: LuauInterop.LuauBase.LuauBase(LuauInterop.Luau, LuauInterop.Native.LuaState, int)
   type: Constructor
   source:
     remote:
       path: src/LuauInterop/LuauBase.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: .ctor
     path: ../src/LuauInterop/LuauBase.cs
@@ -79,17 +80,19 @@ items:
   summary: Base class for all Luau objects that hold a reference to the Lua state.
   example: []
   syntax:
-    content: protected LuauBase(Luau owner, int reference)
+    content: protected LuauBase(Luau owner, LuaState state, int reference)
     parameters:
     - id: owner
       type: LuauInterop.Luau
+    - id: state
+      type: LuauInterop.Native.LuaState
     - id: reference
       type: System.Int32
-    content.vb: Protected Sub New(owner As Luau, reference As Integer)
+    content.vb: Protected Sub New(owner As Luau, state As LuaState, reference As Integer)
   overload: LuauInterop.LuauBase.#ctor*
-  nameWithType.vb: LuauBase.New(Luau, Integer)
-  fullName.vb: LuauInterop.LuauBase.New(LuauInterop.Luau, Integer)
-  name.vb: New(Luau, Integer)
+  nameWithType.vb: LuauBase.New(Luau, LuaState, Integer)
+  fullName.vb: LuauInterop.LuauBase.New(LuauInterop.Luau, LuauInterop.Native.LuaState, Integer)
+  name.vb: New(Luau, LuaState, Integer)
 - uid: LuauInterop.LuauBase.Owner
   commentId: P:LuauInterop.LuauBase.Owner
   id: Owner
@@ -104,7 +107,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauBase.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Owner
     path: ../src/LuauInterop/LuauBase.cs
@@ -121,6 +124,37 @@ items:
       type: LuauInterop.Luau
     content.vb: Public ReadOnly Property Owner As Luau
   overload: LuauInterop.LuauBase.Owner*
+- uid: LuauInterop.LuauBase.State
+  commentId: P:LuauInterop.LuauBase.State
+  id: State
+  parent: LuauInterop.LuauBase
+  langs:
+  - csharp
+  - vb
+  name: State
+  nameWithType: LuauBase.State
+  fullName: LuauInterop.LuauBase.State
+  type: Property
+  source:
+    remote:
+      path: src/LuauInterop/LuauBase.cs
+      branch: feature/ast
+      repo: https://github.com/spxnso/LuauInterop
+    id: State
+    path: ../src/LuauInterop/LuauBase.cs
+    startLine: 17
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop
+  summary: The <xref href="LuauInterop.Native.LuaState" data-throw-if-not-resolved="false"></xref> that this object is associated with.
+  example: []
+  syntax:
+    content: public LuaState State { get; }
+    parameters: []
+    return:
+      type: LuauInterop.Native.LuaState
+    content.vb: Public ReadOnly Property State As LuaState
+  overload: LuauInterop.LuauBase.State*
 - uid: LuauInterop.LuauBase.Reference
   commentId: P:LuauInterop.LuauBase.Reference
   id: Reference
@@ -135,11 +169,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauBase.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Reference
     path: ../src/LuauInterop/LuauBase.cs
-    startLine: 17
+    startLine: 22
   assemblies:
   - LuauInterop
   namespace: LuauInterop
@@ -166,11 +200,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauBase.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: IsDisposed
     path: ../src/LuauInterop/LuauBase.cs
-    startLine: 22
+    startLine: 27
   assemblies:
   - LuauInterop
   namespace: LuauInterop
@@ -197,11 +231,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauBase.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Finalize
     path: ../src/LuauInterop/LuauBase.cs
-    startLine: 24
+    startLine: 29
   assemblies:
   - LuauInterop
   namespace: LuauInterop
@@ -226,11 +260,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauBase.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Dispose
     path: ../src/LuauInterop/LuauBase.cs
-    startLine: 29
+    startLine: 34
   assemblies:
   - LuauInterop
   namespace: LuauInterop
@@ -256,11 +290,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauBase.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Dispose
     path: ../src/LuauInterop/LuauBase.cs
-    startLine: 35
+    startLine: 40
   assemblies:
   - LuauInterop
   namespace: LuauInterop
@@ -288,11 +322,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauBase.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: ThrowIfDisposed
     path: ../src/LuauInterop/LuauBase.cs
-    startLine: 46
+    startLine: 51
   assemblies:
   - LuauInterop
   namespace: LuauInterop
@@ -314,11 +348,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauBase.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: PushReference
     path: ../src/LuauInterop/LuauBase.cs
-    startLine: 54
+    startLine: 59
   assemblies:
   - LuauInterop
   namespace: LuauInterop
@@ -580,7 +614,7 @@ references:
   fullName: System
 - uid: LuauInterop.LuauBase.#ctor*
   commentId: Overload:LuauInterop.LuauBase.#ctor
-  href: LuauInterop.LuauBase.html#LuauInterop_LuauBase__ctor_LuauInterop_Luau_System_Int32_
+  href: LuauInterop.LuauBase.html#LuauInterop_LuauBase__ctor_LuauInterop_Luau_LuauInterop_Native_LuaState_System_Int32_
   name: LuauBase
   nameWithType: LuauBase.LuauBase
   fullName: LuauInterop.LuauBase.LuauBase
@@ -594,6 +628,13 @@ references:
   name: Luau
   nameWithType: Luau
   fullName: LuauInterop.Luau
+- uid: LuauInterop.Native.LuaState
+  commentId: T:LuauInterop.Native.LuaState
+  parent: LuauInterop.Native
+  href: LuauInterop.Native.LuaState.html
+  name: LuaState
+  nameWithType: LuaState
+  fullName: LuauInterop.Native.LuaState
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -605,12 +646,40 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
+- uid: LuauInterop.Native
+  commentId: N:LuauInterop.Native
+  href: LuauInterop.html
+  name: LuauInterop.Native
+  nameWithType: LuauInterop.Native
+  fullName: LuauInterop.Native
+  spec.csharp:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Native
+    name: Native
+    href: LuauInterop.Native.html
+  spec.vb:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Native
+    name: Native
+    href: LuauInterop.Native.html
 - uid: LuauInterop.LuauBase.Owner*
   commentId: Overload:LuauInterop.LuauBase.Owner
   href: LuauInterop.LuauBase.html#LuauInterop_LuauBase_Owner
   name: Owner
   nameWithType: LuauBase.Owner
   fullName: LuauInterop.LuauBase.Owner
+- uid: LuauInterop.LuauBase.State*
+  commentId: Overload:LuauInterop.LuauBase.State
+  href: LuauInterop.LuauBase.html#LuauInterop_LuauBase_State
+  name: State
+  nameWithType: LuauBase.State
+  fullName: LuauInterop.LuauBase.State
 - uid: LuauInterop.LuauBase.Reference*
   commentId: Overload:LuauInterop.LuauBase.Reference
   href: LuauInterop.LuauBase.html#LuauInterop_LuauBase_Reference

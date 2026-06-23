@@ -1,0 +1,417 @@
+### YamlMime:ManagedReference
+items:
+- uid: LuauInterop.Ast.Nodes.Expressions.AstExprVarargs
+  commentId: T:LuauInterop.Ast.Nodes.Expressions.AstExprVarargs
+  id: AstExprVarargs
+  parent: LuauInterop.Ast.Nodes.Expressions
+  children:
+  - LuauInterop.Ast.Nodes.Expressions.AstExprVarargs.#ctor(LuauInterop.Ast.Nodes.Location)
+  langs:
+  - csharp
+  - vb
+  name: AstExprVarargs
+  nameWithType: AstExprVarargs
+  fullName: LuauInterop.Ast.Nodes.Expressions.AstExprVarargs
+  type: Class
+  source:
+    remote:
+      path: src/LuauInterop.Ast/Nodes/Expressions/AstExprVarargs.cs
+      branch: feature/ast
+      repo: https://github.com/spxnso/LuauInterop
+    id: AstExprVarargs
+    path: ../src/LuauInterop.Ast/Nodes/Expressions/AstExprVarargs.cs
+    startLine: 2
+  assemblies:
+  - LuauInterop.Ast
+  namespace: LuauInterop.Ast.Nodes.Expressions
+  syntax:
+    content: 'public class AstExprVarargs : AstExpr'
+    content.vb: Public Class AstExprVarargs Inherits AstExpr
+  inheritance:
+  - System.Object
+  - LuauInterop.Ast.Nodes.AstNode
+  - LuauInterop.Ast.Nodes.Expressions.AstExpr
+  inheritedMembers:
+  - LuauInterop.Ast.Nodes.AstNode.Location
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: LuauInterop.Ast.Nodes.Expressions.AstExprVarargs.#ctor(LuauInterop.Ast.Nodes.Location)
+  commentId: M:LuauInterop.Ast.Nodes.Expressions.AstExprVarargs.#ctor(LuauInterop.Ast.Nodes.Location)
+  id: '#ctor(LuauInterop.Ast.Nodes.Location)'
+  parent: LuauInterop.Ast.Nodes.Expressions.AstExprVarargs
+  langs:
+  - csharp
+  - vb
+  name: AstExprVarargs(Location)
+  nameWithType: AstExprVarargs.AstExprVarargs(Location)
+  fullName: LuauInterop.Ast.Nodes.Expressions.AstExprVarargs.AstExprVarargs(LuauInterop.Ast.Nodes.Location)
+  type: Constructor
+  source:
+    remote:
+      path: src/LuauInterop.Ast/Nodes/Expressions/AstExprVarargs.cs
+      branch: feature/ast
+      repo: https://github.com/spxnso/LuauInterop
+    id: .ctor
+    path: ../src/LuauInterop.Ast/Nodes/Expressions/AstExprVarargs.cs
+    startLine: 2
+  assemblies:
+  - LuauInterop.Ast
+  namespace: LuauInterop.Ast.Nodes.Expressions
+  syntax:
+    content: public AstExprVarargs(Location location)
+    parameters:
+    - id: location
+      type: LuauInterop.Ast.Nodes.Location
+    content.vb: Public Sub New(location As Location)
+  overload: LuauInterop.Ast.Nodes.Expressions.AstExprVarargs.#ctor*
+  nameWithType.vb: AstExprVarargs.New(Location)
+  fullName.vb: LuauInterop.Ast.Nodes.Expressions.AstExprVarargs.New(LuauInterop.Ast.Nodes.Location)
+  name.vb: New(Location)
+references:
+- uid: LuauInterop.Ast.Nodes.Expressions
+  commentId: N:LuauInterop.Ast.Nodes.Expressions
+  href: LuauInterop.html
+  name: LuauInterop.Ast.Nodes.Expressions
+  nameWithType: LuauInterop.Ast.Nodes.Expressions
+  fullName: LuauInterop.Ast.Nodes.Expressions
+  spec.csharp:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Ast
+    name: Ast
+    href: LuauInterop.Ast.html
+  - name: .
+  - uid: LuauInterop.Ast.Nodes
+    name: Nodes
+    href: LuauInterop.Ast.Nodes.html
+  - name: .
+  - uid: LuauInterop.Ast.Nodes.Expressions
+    name: Expressions
+    href: LuauInterop.Ast.Nodes.Expressions.html
+  spec.vb:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Ast
+    name: Ast
+    href: LuauInterop.Ast.html
+  - name: .
+  - uid: LuauInterop.Ast.Nodes
+    name: Nodes
+    href: LuauInterop.Ast.Nodes.html
+  - name: .
+  - uid: LuauInterop.Ast.Nodes.Expressions
+    name: Expressions
+    href: LuauInterop.Ast.Nodes.Expressions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: LuauInterop.Ast.Nodes.AstNode
+  commentId: T:LuauInterop.Ast.Nodes.AstNode
+  parent: LuauInterop.Ast.Nodes
+  href: LuauInterop.Ast.Nodes.AstNode.html
+  name: AstNode
+  nameWithType: AstNode
+  fullName: LuauInterop.Ast.Nodes.AstNode
+- uid: LuauInterop.Ast.Nodes.Expressions.AstExpr
+  commentId: T:LuauInterop.Ast.Nodes.Expressions.AstExpr
+  parent: LuauInterop.Ast.Nodes.Expressions
+  href: LuauInterop.Ast.Nodes.Expressions.AstExpr.html
+  name: AstExpr
+  nameWithType: AstExpr
+  fullName: LuauInterop.Ast.Nodes.Expressions.AstExpr
+- uid: LuauInterop.Ast.Nodes.AstNode.Location
+  commentId: P:LuauInterop.Ast.Nodes.AstNode.Location
+  parent: LuauInterop.Ast.Nodes.AstNode
+  href: LuauInterop.Ast.Nodes.AstNode.html#LuauInterop_Ast_Nodes_AstNode_Location
+  name: Location
+  nameWithType: AstNode.Location
+  fullName: LuauInterop.Ast.Nodes.AstNode.Location
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: LuauInterop.Ast.Nodes
+  commentId: N:LuauInterop.Ast.Nodes
+  href: LuauInterop.html
+  name: LuauInterop.Ast.Nodes
+  nameWithType: LuauInterop.Ast.Nodes
+  fullName: LuauInterop.Ast.Nodes
+  spec.csharp:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Ast
+    name: Ast
+    href: LuauInterop.Ast.html
+  - name: .
+  - uid: LuauInterop.Ast.Nodes
+    name: Nodes
+    href: LuauInterop.Ast.Nodes.html
+  spec.vb:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Ast
+    name: Ast
+    href: LuauInterop.Ast.html
+  - name: .
+  - uid: LuauInterop.Ast.Nodes
+    name: Nodes
+    href: LuauInterop.Ast.Nodes.html
+- uid: LuauInterop.Ast.Nodes.Expressions.AstExprVarargs.#ctor*
+  commentId: Overload:LuauInterop.Ast.Nodes.Expressions.AstExprVarargs.#ctor
+  href: LuauInterop.Ast.Nodes.Expressions.AstExprVarargs.html#LuauInterop_Ast_Nodes_Expressions_AstExprVarargs__ctor_LuauInterop_Ast_Nodes_Location_
+  name: AstExprVarargs
+  nameWithType: AstExprVarargs.AstExprVarargs
+  fullName: LuauInterop.Ast.Nodes.Expressions.AstExprVarargs.AstExprVarargs
+  nameWithType.vb: AstExprVarargs.New
+  fullName.vb: LuauInterop.Ast.Nodes.Expressions.AstExprVarargs.New
+  name.vb: New
+- uid: LuauInterop.Ast.Nodes.Location
+  commentId: T:LuauInterop.Ast.Nodes.Location
+  parent: LuauInterop.Ast.Nodes
+  href: LuauInterop.Ast.Nodes.Location.html
+  name: Location
+  nameWithType: Location
+  fullName: LuauInterop.Ast.Nodes.Location

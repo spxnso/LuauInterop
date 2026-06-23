@@ -22,6 +22,261 @@ items:
   - uid: LuauInterop.LuauValue
     name: LuauValue
     type: Struct
+- uid: LuauInterop.Ast
+  name: LuauInterop.Ast
+  type: Namespace
+  items:
+  - uid: LuauInterop.Ast.LuauComment
+    name: LuauComment
+    type: Class
+  - uid: LuauInterop.Ast.LuauParseError
+    name: LuauParseError
+    type: Class
+  - uid: LuauInterop.Ast.LuauParser
+    name: LuauParser
+    type: Class
+  - uid: LuauInterop.Ast.SyntaxTree
+    name: SyntaxTree
+    type: Class
+- uid: LuauInterop.Ast.Nodes
+  name: LuauInterop.Ast.Nodes
+  type: Namespace
+  items:
+  - uid: LuauInterop.Ast.Nodes.AstArgumentName
+    name: AstArgumentName
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.AstAttr
+    name: AstAttr
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.AstLocal
+    name: AstLocal
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.AstNode
+    name: AstNode
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Location
+    name: Location
+    type: Struct
+  - uid: LuauInterop.Ast.Nodes.Position
+    name: Position
+    type: Struct
+- uid: LuauInterop.Ast.Nodes.Expressions
+  name: LuauInterop.Ast.Nodes.Expressions
+  type: Namespace
+  items:
+  - uid: LuauInterop.Ast.Nodes.Expressions.AstExpr
+    name: AstExpr
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Expressions.AstExprBinary
+    name: AstExprBinary
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Expressions.AstExprCall
+    name: AstExprCall
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Expressions.AstExprConstantBool
+    name: AstExprConstantBool
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Expressions.AstExprConstantInteger
+    name: AstExprConstantInteger
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Expressions.AstExprConstantNil
+    name: AstExprConstantNil
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Expressions.AstExprConstantNumber
+    name: AstExprConstantNumber
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Expressions.AstExprConstantString
+    name: AstExprConstantString
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Expressions.AstExprError
+    name: AstExprError
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Expressions.AstExprFunction
+    name: AstExprFunction
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Expressions.AstExprGlobal
+    name: AstExprGlobal
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Expressions.AstExprGroup
+    name: AstExprGroup
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Expressions.AstExprIfElse
+    name: AstExprIfElse
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Expressions.AstExprIndexExpr
+    name: AstExprIndexExpr
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Expressions.AstExprIndexName
+    name: AstExprIndexName
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Expressions.AstExprInterpString
+    name: AstExprInterpString
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Expressions.AstExprLocal
+    name: AstExprLocal
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Expressions.AstExprTable
+    name: AstExprTable
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Expressions.AstExprTableItem
+    name: AstExprTableItem
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Expressions.AstExprTypeAssertion
+    name: AstExprTypeAssertion
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Expressions.AstExprUnary
+    name: AstExprUnary
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Expressions.AstExprVarargs
+    name: AstExprVarargs
+    type: Class
+- uid: LuauInterop.Ast.Nodes.Statements
+  name: LuauInterop.Ast.Nodes.Statements
+  type: Namespace
+  items:
+  - uid: LuauInterop.Ast.Nodes.Statements.AstDeclaredClassProp
+    name: AstDeclaredClassProp
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Statements.AstStat
+    name: AstStat
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Statements.AstStatAssign
+    name: AstStatAssign
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Statements.AstStatBlock
+    name: AstStatBlock
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Statements.AstStatBreak
+    name: AstStatBreak
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Statements.AstStatCompoundAssign
+    name: AstStatCompoundAssign
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Statements.AstStatContinue
+    name: AstStatContinue
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Statements.AstStatDeclareClass
+    name: AstStatDeclareClass
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Statements.AstStatDeclareFunction
+    name: AstStatDeclareFunction
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Statements.AstStatDeclareGlobal
+    name: AstStatDeclareGlobal
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Statements.AstStatError
+    name: AstStatError
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Statements.AstStatExpr
+    name: AstStatExpr
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Statements.AstStatFor
+    name: AstStatFor
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Statements.AstStatForIn
+    name: AstStatForIn
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Statements.AstStatFunction
+    name: AstStatFunction
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Statements.AstStatIf
+    name: AstStatIf
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Statements.AstStatLocal
+    name: AstStatLocal
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Statements.AstStatLocalFunction
+    name: AstStatLocalFunction
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Statements.AstStatRepeat
+    name: AstStatRepeat
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Statements.AstStatReturn
+    name: AstStatReturn
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Statements.AstStatTypeAlias
+    name: AstStatTypeAlias
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Statements.AstStatWhile
+    name: AstStatWhile
+    type: Class
+- uid: LuauInterop.Ast.Nodes.Types
+  name: LuauInterop.Ast.Nodes.Types
+  type: Namespace
+  items:
+  - uid: LuauInterop.Ast.Nodes.Types.AstGenericType
+    name: AstGenericType
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Types.AstGenericTypePack
+    name: AstGenericTypePack
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Types.AstTableIndexer
+    name: AstTableIndexer
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Types.AstTableProp
+    name: AstTableProp
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Types.AstType
+    name: AstType
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Types.AstTypeError
+    name: AstTypeError
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Types.AstTypeFunction
+    name: AstTypeFunction
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Types.AstTypeGroup
+    name: AstTypeGroup
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Types.AstTypeIntersection
+    name: AstTypeIntersection
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Types.AstTypeList
+    name: AstTypeList
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Types.AstTypeOptional
+    name: AstTypeOptional
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Types.AstTypeOrPack
+    name: AstTypeOrPack
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Types.AstTypePack
+    name: AstTypePack
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Types.AstTypePackExplicit
+    name: AstTypePackExplicit
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Types.AstTypePackGeneric
+    name: AstTypePackGeneric
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Types.AstTypePackVariadic
+    name: AstTypePackVariadic
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Types.AstTypeReference
+    name: AstTypeReference
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Types.AstTypeSingletonBool
+    name: AstTypeSingletonBool
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Types.AstTypeSingletonString
+    name: AstTypeSingletonString
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Types.AstTypeTable
+    name: AstTypeTable
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Types.AstTypeTypeof
+    name: AstTypeTypeof
+    type: Class
+  - uid: LuauInterop.Ast.Nodes.Types.AstTypeUnion
+    name: AstTypeUnion
+    type: Class
+- uid: LuauInterop.Ast.Serialization
+  name: LuauInterop.Ast.Serialization
+  type: Namespace
+  items:
+  - uid: LuauInterop.Ast.Serialization.LuauSerializer
+    name: LuauSerializer
+    type: Class
 - uid: LuauInterop.Compilation
   name: LuauInterop.Compilation
   type: Namespace
@@ -49,9 +304,6 @@ items:
   name: LuauInterop.Objects
   type: Namespace
   items:
-  - uid: LuauInterop.Objects.LuauBuffer
-    name: LuauBuffer
-    type: Class
   - uid: LuauInterop.Objects.LuauFunction
     name: LuauFunction
     type: Class
@@ -61,9 +313,6 @@ items:
   - uid: LuauInterop.Objects.LuauUserData
     name: LuauUserData
     type: Class
-  - uid: LuauInterop.Objects.LuauVector
-    name: LuauVector
-    type: Struct
 - uid: LuauInterop.Runtime
   name: LuauInterop.Runtime
   type: Namespace

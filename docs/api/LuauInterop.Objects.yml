@@ -4,11 +4,9 @@ items:
   commentId: N:LuauInterop.Objects
   id: LuauInterop.Objects
   children:
-  - LuauInterop.Objects.LuauBuffer
   - LuauInterop.Objects.LuauFunction
   - LuauInterop.Objects.LuauTable
   - LuauInterop.Objects.LuauUserData
-  - LuauInterop.Objects.LuauVector
   langs:
   - csharp
   - vb
@@ -19,12 +17,6 @@ items:
   assemblies:
   - LuauInterop
 references:
-- uid: LuauInterop.Objects.LuauBuffer
-  commentId: T:LuauInterop.Objects.LuauBuffer
-  href: LuauInterop.Objects.LuauBuffer.html
-  name: LuauBuffer
-  nameWithType: LuauBuffer
-  fullName: LuauInterop.Objects.LuauBuffer
 - uid: LuauInterop.Objects.LuauFunction
   commentId: T:LuauInterop.Objects.LuauFunction
   href: LuauInterop.Objects.LuauFunction.html
@@ -43,9 +35,3 @@ references:
   name: LuauUserData
   nameWithType: LuauUserData
   fullName: LuauInterop.Objects.LuauUserData
-- uid: LuauInterop.Objects.LuauVector
-  commentId: T:LuauInterop.Objects.LuauVector
-  href: LuauInterop.Objects.LuauVector.html
-  name: LuauVector
-  nameWithType: LuauVector
-  fullName: LuauInterop.Objects.LuauVector

@@ -170,7 +170,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: LuaState
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -204,7 +204,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: .ctor
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -238,7 +238,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Handle
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -265,7 +265,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: op_Implicit
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -299,7 +299,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: op_Implicit
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -333,7 +333,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: IsNull
     path: ../src/LuauInterop.Native/LuaState.cs
@@ -362,11 +362,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Close
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 15
+    startLine: 14
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -388,11 +388,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: NewThread
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 23
+    startLine: 22
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -416,11 +416,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: MainThread
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 28
+    startLine: 27
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -444,11 +444,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: ResetThread
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 33
+    startLine: 32
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -470,11 +470,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: IsThreadReset
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 38
+    startLine: 37
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -498,11 +498,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: AbsIndex
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 45
+    startLine: 42
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -532,11 +532,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: GetTop
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 50
+    startLine: 47
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -560,11 +560,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: SetTop
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 55
+    startLine: 52
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -592,11 +592,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: PushValue
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 60
+    startLine: 57
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -624,11 +624,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Remove
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 65
+    startLine: 62
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -656,11 +656,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Insert
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 70
+    startLine: 67
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -688,11 +688,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Replace
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 75
+    startLine: 72
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -720,11 +720,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: CheckStack
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 79
+    startLine: 76
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -754,11 +754,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: RawCheckStack
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 84
+    startLine: 81
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -788,11 +788,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: XMove
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 89
+    startLine: 86
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -822,11 +822,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: XPush
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 94
+    startLine: 91
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -856,11 +856,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: IsNumber
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 101
+    startLine: 96
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -890,11 +890,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: IsString
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 102
+    startLine: 97
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -924,11 +924,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: IsCFunction
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 108
+    startLine: 103
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -958,11 +958,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: IsLFunction
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 109
+    startLine: 104
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -992,11 +992,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: IsUserdata
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 110
+    startLine: 105
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1026,11 +1026,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Type
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 111
+    startLine: 106
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1060,11 +1060,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: TypeName
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 112
+    startLine: 107
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1094,11 +1094,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Equal
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 113
+    startLine: 108
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1130,11 +1130,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: RawEqual
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 114
+    startLine: 109
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1166,11 +1166,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: LessThan
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 115
+    startLine: 110
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1202,11 +1202,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: ToNumberX
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 117
+    startLine: 112
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1238,11 +1238,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: ToIntegerX
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 124
+    startLine: 119
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1274,11 +1274,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: ToUnsignedX
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 131
+    startLine: 126
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1310,11 +1310,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: ToVector
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 138
+    startLine: 133
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1344,11 +1344,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: ToBoolean
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 139
+    startLine: 134
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1378,11 +1378,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: ToNumber
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 141
+    startLine: 136
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1412,11 +1412,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: ToInteger64
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 143
+    startLine: 138
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1448,11 +1448,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: ToLString
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 150
+    startLine: 145
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1484,11 +1484,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: ToStringAtom
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 151
+    startLine: 146
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1520,11 +1520,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: ToLStringAtom
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 152
+    startLine: 147
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1558,11 +1558,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: NameCallAtom
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 153
+    startLine: 148
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1592,11 +1592,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: ObjLen
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 155
+    startLine: 150
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1626,11 +1626,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: ToCFunction
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 156
+    startLine: 151
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1660,11 +1660,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: ToLightUserdata
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 157
+    startLine: 152
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1694,11 +1694,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: ToLightUserdataTagged
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 158
+    startLine: 153
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1730,11 +1730,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: ToUserdata
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 159
+    startLine: 154
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1764,11 +1764,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: ToUserdataTagged
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 160
+    startLine: 155
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1800,11 +1800,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: UserdataTag
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 162
+    startLine: 157
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1834,11 +1834,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: LightUserdataTag
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 163
+    startLine: 158
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1868,11 +1868,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: ToThread
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 164
+    startLine: 159
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1902,11 +1902,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: ToBuffer
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 165
+    startLine: 160
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1938,11 +1938,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: ToPointer
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 166
+    startLine: 161
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1972,11 +1972,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: PushNil
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 170
+    startLine: 163
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -1998,11 +1998,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: PushNumber
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 171
+    startLine: 164
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2030,11 +2030,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: PushInteger
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 172
+    startLine: 165
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2062,11 +2062,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: PushInteger64
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 173
+    startLine: 166
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2094,11 +2094,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: PushUnsigned
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 174
+    startLine: 167
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2126,11 +2126,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: PushVector
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 175
+    startLine: 168
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2162,11 +2162,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: PushLString
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 176
+    startLine: 169
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2196,11 +2196,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: PushString
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 177
+    startLine: 170
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2228,11 +2228,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: PushVFString
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 178
+    startLine: 171
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2264,11 +2264,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: PushCClosureK
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 179
+    startLine: 172
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2302,11 +2302,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: PushBoolean
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 180
+    startLine: 173
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2334,11 +2334,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: PushThread
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 181
+    startLine: 174
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2362,11 +2362,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: PushLightUserdataTagged
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 182
+    startLine: 175
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2396,11 +2396,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: NewUserdataTagged
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 183
+    startLine: 176
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2432,11 +2432,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: NewUserdataTaggedWithMetatable
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 184
+    startLine: 177
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2468,11 +2468,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: NewUserdataDtor
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 185
+    startLine: 178
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2504,11 +2504,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: NewBuffer
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 186
+    startLine: 179
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2538,11 +2538,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: GetTable
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 190
+    startLine: 181
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2572,11 +2572,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: GetField
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 191
+    startLine: 182
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2608,11 +2608,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: GetGlobal
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 194
+    startLine: 185
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2642,11 +2642,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: RawGetField
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 199
+    startLine: 190
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2678,11 +2678,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: RawGet
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 200
+    startLine: 191
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2712,11 +2712,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: RawGetI
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 201
+    startLine: 192
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2748,11 +2748,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: RawGetPTagged
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 202
+    startLine: 193
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2786,11 +2786,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: CreateTable
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 203
+    startLine: 194
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2820,11 +2820,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: SetReadonly
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 204
+    startLine: 195
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2854,11 +2854,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: GetReadonly
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 205
+    startLine: 196
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2888,11 +2888,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: SetSafeEnv
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 206
+    startLine: 197
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2922,11 +2922,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: GetMetatable
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 207
+    startLine: 198
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2956,11 +2956,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: GetFenv
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 208
+    startLine: 199
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -2988,11 +2988,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: SetTable
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 212
+    startLine: 201
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3020,11 +3020,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: SetField
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 213
+    startLine: 202
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3054,11 +3054,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: SetGlobal
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 216
+    startLine: 205
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3086,11 +3086,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: RawSetField
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 221
+    startLine: 210
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3120,11 +3120,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: RawSet
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 222
+    startLine: 211
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3152,11 +3152,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: RawSetI
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 223
+    startLine: 212
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3186,11 +3186,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: RawSetPTagged
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 224
+    startLine: 213
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3222,11 +3222,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: SetMetatable
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 225
+    startLine: 214
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3256,11 +3256,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: SetFenv
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 226
+    startLine: 215
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3290,11 +3290,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Load
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 230
+    startLine: 217
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3330,11 +3330,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Call
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 231
+    startLine: 218
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3364,11 +3364,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: PCall
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 232
+    startLine: 219
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3402,11 +3402,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: CPCall
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 233
+    startLine: 220
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3438,11 +3438,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Yield
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 237
+    startLine: 222
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3472,11 +3472,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Break
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 238
+    startLine: 223
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3500,11 +3500,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Resume
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 239
+    startLine: 224
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3536,11 +3536,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: ResumeError
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 240
+    startLine: 225
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3567,11 +3567,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Status
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 241
+    startLine: 226
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3595,11 +3595,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: IsYieldable
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 242
+    startLine: 227
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3623,11 +3623,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: GetThreadData
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 243
+    startLine: 228
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3651,11 +3651,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: SetThreadData
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 244
+    startLine: 229
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3683,11 +3683,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: CoStatus
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 245
+    startLine: 230
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3714,11 +3714,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: GC
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 249
+    startLine: 232
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3750,11 +3750,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: SetMemCat
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 250
+    startLine: 233
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3782,11 +3782,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: TotalBytes
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 251
+    startLine: 234
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3816,11 +3816,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Error
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 255
+    startLine: 236
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3842,11 +3842,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Next
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 256
+    startLine: 237
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3876,11 +3876,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: RawIter
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 257
+    startLine: 238
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3912,11 +3912,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Concat
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 258
+    startLine: 239
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3944,11 +3944,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: EncodePointer
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 259
+    startLine: 240
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -3978,11 +3978,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: SetUserdataTag
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 260
+    startLine: 241
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4012,11 +4012,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: SetUserdataDtor
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 261
+    startLine: 242
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4046,11 +4046,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: GetUserdataDtor
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 262
+    startLine: 243
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4080,11 +4080,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: SetUserdataMetatable
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 263
+    startLine: 244
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4112,11 +4112,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: GetUserdataMetatable
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 264
+    startLine: 245
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4144,11 +4144,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: RegisterUserdataDirectAccess
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 265
+    startLine: 246
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4184,11 +4184,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: RegisterUserdataDirectFieldGet
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 266
+    startLine: 247
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4220,11 +4220,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: SetLightUserdataName
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 267
+    startLine: 248
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4254,11 +4254,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: GetLightUserdataName
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 268
+    startLine: 249
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4288,11 +4288,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: CloneFunction
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 269
+    startLine: 250
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4320,11 +4320,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: ClearTable
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 270
+    startLine: 251
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4352,11 +4352,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: CloneTable
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 271
+    startLine: 252
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4384,11 +4384,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: GetAllocF
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 272
+    startLine: 253
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4418,11 +4418,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Ref
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 273
+    startLine: 254
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4452,11 +4452,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Unref
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 274
+    startLine: 255
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4484,11 +4484,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: OpenLibraries
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 278
+    startLine: 257
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4510,11 +4510,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: OpenBase
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 283
+    startLine: 262
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4538,11 +4538,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: OpenCoroutine
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 284
+    startLine: 263
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4566,11 +4566,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: OpenTable
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 285
+    startLine: 264
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4594,11 +4594,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: OpenOS
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 286
+    startLine: 265
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4622,11 +4622,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: OpenString
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 287
+    startLine: 266
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4650,11 +4650,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: OpenBit32
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 288
+    startLine: 267
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4678,11 +4678,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: OpenBuffer
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 289
+    startLine: 268
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4706,11 +4706,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: OpenUtf8
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 290
+    startLine: 269
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4734,11 +4734,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: OpenMath
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 291
+    startLine: 270
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4762,11 +4762,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: OpenDebug
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 292
+    startLine: 271
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4790,11 +4790,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: OpenVector
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 293
+    startLine: 272
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4818,11 +4818,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: OpenInteger
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 294
+    startLine: 273
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4846,11 +4846,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: StackDepth
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 298
+    startLine: 275
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4874,11 +4874,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: GetInfo
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 299
+    startLine: 276
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4912,11 +4912,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: GetArgument
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 300
+    startLine: 277
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4948,11 +4948,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: GetLocal
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 301
+    startLine: 278
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -4984,11 +4984,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: SetLocal
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 302
+    startLine: 279
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -5020,11 +5020,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: GetUpvalue
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 303
+    startLine: 280
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -5056,11 +5056,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: SetUpvalue
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 304
+    startLine: 281
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -5092,11 +5092,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: SingleStep
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 305
+    startLine: 282
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -5124,11 +5124,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Breakpoint
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 306
+    startLine: 283
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -5162,11 +5162,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: GetCoverage
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 307
+    startLine: 284
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -5198,11 +5198,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: GetCounters
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 308
+    startLine: 285
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -5236,11 +5236,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: DebugTrace
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 309
+    startLine: 286
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -5264,11 +5264,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Sandbox
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 313
+    startLine: 288
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native
@@ -5290,11 +5290,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Native/LuaState.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: SandboxThread
     path: ../src/LuauInterop.Native/LuaState.cs
-    startLine: 315
+    startLine: 289
   assemblies:
   - LuauInterop.Native
   namespace: LuauInterop.Native

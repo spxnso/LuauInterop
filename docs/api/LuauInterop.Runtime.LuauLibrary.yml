@@ -5,6 +5,7 @@ items:
   id: LuauLibrary
   parent: LuauInterop.Runtime
   children:
+  - LuauInterop.Runtime.LuauLibrary.All
   - LuauInterop.Runtime.LuauLibrary.Base
   - LuauInterop.Runtime.LuauLibrary.Bit32
   - LuauInterop.Runtime.LuauLibrary.Buffer
@@ -12,6 +13,7 @@ items:
   - LuauInterop.Runtime.LuauLibrary.Debug
   - LuauInterop.Runtime.LuauLibrary.Integer
   - LuauInterop.Runtime.LuauLibrary.Math
+  - LuauInterop.Runtime.LuauLibrary.None
   - LuauInterop.Runtime.LuauLibrary.OS
   - LuauInterop.Runtime.LuauLibrary.String
   - LuauInterop.Runtime.LuauLibrary.Table
@@ -27,7 +29,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauLibrary.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: LuauLibrary
     path: ../src/LuauInterop/Runtime/LuauLibrary.cs
@@ -36,8 +38,44 @@ items:
   - LuauInterop
   namespace: LuauInterop.Runtime
   syntax:
-    content: public enum LuauLibrary
-    content.vb: Public Enum LuauLibrary
+    content: >-
+      [Flags]
+
+      public enum LuauLibrary
+    content.vb: >-
+      <Flags>
+
+      Public Enum LuauLibrary
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+- uid: LuauInterop.Runtime.LuauLibrary.None
+  commentId: F:LuauInterop.Runtime.LuauLibrary.None
+  id: None
+  parent: LuauInterop.Runtime.LuauLibrary
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: LuauLibrary.None
+  fullName: LuauInterop.Runtime.LuauLibrary.None
+  type: Field
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauLibrary.cs
+      branch: feature/ast
+      repo: https://github.com/spxnso/LuauInterop
+    id: None
+    path: ../src/LuauInterop/Runtime/LuauLibrary.cs
+    startLine: 5
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  syntax:
+    content: None = 0
+    return:
+      type: LuauInterop.Runtime.LuauLibrary
 - uid: LuauInterop.Runtime.LuauLibrary.Base
   commentId: F:LuauInterop.Runtime.LuauLibrary.Base
   id: Base
@@ -52,16 +90,16 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauLibrary.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Base
     path: ../src/LuauInterop/Runtime/LuauLibrary.cs
-    startLine: 4
+    startLine: 6
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Runtime
   syntax:
-    content: Base = 0
+    content: Base = 1
     return:
       type: LuauInterop.Runtime.LuauLibrary
 - uid: LuauInterop.Runtime.LuauLibrary.Coroutine
@@ -78,16 +116,16 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauLibrary.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Coroutine
     path: ../src/LuauInterop/Runtime/LuauLibrary.cs
-    startLine: 5
+    startLine: 7
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Runtime
   syntax:
-    content: Coroutine = 1
+    content: Coroutine = 2
     return:
       type: LuauInterop.Runtime.LuauLibrary
 - uid: LuauInterop.Runtime.LuauLibrary.Table
@@ -104,16 +142,16 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauLibrary.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Table
     path: ../src/LuauInterop/Runtime/LuauLibrary.cs
-    startLine: 6
+    startLine: 8
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Runtime
   syntax:
-    content: Table = 2
+    content: Table = 4
     return:
       type: LuauInterop.Runtime.LuauLibrary
 - uid: LuauInterop.Runtime.LuauLibrary.OS
@@ -130,16 +168,16 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauLibrary.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: OS
     path: ../src/LuauInterop/Runtime/LuauLibrary.cs
-    startLine: 7
+    startLine: 9
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Runtime
   syntax:
-    content: OS = 3
+    content: OS = 8
     return:
       type: LuauInterop.Runtime.LuauLibrary
 - uid: LuauInterop.Runtime.LuauLibrary.String
@@ -156,16 +194,16 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauLibrary.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: String
     path: ../src/LuauInterop/Runtime/LuauLibrary.cs
-    startLine: 8
+    startLine: 10
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Runtime
   syntax:
-    content: String = 4
+    content: String = 16
     return:
       type: LuauInterop.Runtime.LuauLibrary
 - uid: LuauInterop.Runtime.LuauLibrary.Bit32
@@ -182,16 +220,16 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauLibrary.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Bit32
     path: ../src/LuauInterop/Runtime/LuauLibrary.cs
-    startLine: 9
+    startLine: 11
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Runtime
   syntax:
-    content: Bit32 = 5
+    content: Bit32 = 32
     return:
       type: LuauInterop.Runtime.LuauLibrary
 - uid: LuauInterop.Runtime.LuauLibrary.Buffer
@@ -208,16 +246,16 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauLibrary.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Buffer
     path: ../src/LuauInterop/Runtime/LuauLibrary.cs
-    startLine: 10
+    startLine: 12
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Runtime
   syntax:
-    content: Buffer = 6
+    content: Buffer = 64
     return:
       type: LuauInterop.Runtime.LuauLibrary
 - uid: LuauInterop.Runtime.LuauLibrary.Utf8
@@ -234,16 +272,16 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauLibrary.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Utf8
     path: ../src/LuauInterop/Runtime/LuauLibrary.cs
-    startLine: 11
+    startLine: 13
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Runtime
   syntax:
-    content: Utf8 = 7
+    content: Utf8 = 128
     return:
       type: LuauInterop.Runtime.LuauLibrary
 - uid: LuauInterop.Runtime.LuauLibrary.Math
@@ -260,16 +298,16 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauLibrary.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Math
     path: ../src/LuauInterop/Runtime/LuauLibrary.cs
-    startLine: 12
+    startLine: 14
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Runtime
   syntax:
-    content: Math = 8
+    content: Math = 256
     return:
       type: LuauInterop.Runtime.LuauLibrary
 - uid: LuauInterop.Runtime.LuauLibrary.Debug
@@ -286,16 +324,16 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauLibrary.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Debug
     path: ../src/LuauInterop/Runtime/LuauLibrary.cs
-    startLine: 13
+    startLine: 15
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Runtime
   syntax:
-    content: Debug = 9
+    content: Debug = 512
     return:
       type: LuauInterop.Runtime.LuauLibrary
 - uid: LuauInterop.Runtime.LuauLibrary.Vector
@@ -312,16 +350,16 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauLibrary.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Vector
     path: ../src/LuauInterop/Runtime/LuauLibrary.cs
-    startLine: 14
+    startLine: 16
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Runtime
   syntax:
-    content: Vector = 10
+    content: Vector = 1024
     return:
       type: LuauInterop.Runtime.LuauLibrary
 - uid: LuauInterop.Runtime.LuauLibrary.Integer
@@ -338,18 +376,45 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauLibrary.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Integer
     path: ../src/LuauInterop/Runtime/LuauLibrary.cs
-    startLine: 15
+    startLine: 17
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Runtime
   syntax:
-    content: Integer = 11
+    content: Integer = 2048
     return:
       type: LuauInterop.Runtime.LuauLibrary
+- uid: LuauInterop.Runtime.LuauLibrary.All
+  commentId: F:LuauInterop.Runtime.LuauLibrary.All
+  id: All
+  parent: LuauInterop.Runtime.LuauLibrary
+  langs:
+  - csharp
+  - vb
+  name: All
+  nameWithType: LuauLibrary.All
+  fullName: LuauInterop.Runtime.LuauLibrary.All
+  type: Field
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauLibrary.cs
+      branch: feature/ast
+      repo: https://github.com/spxnso/LuauInterop
+    id: All
+    path: ../src/LuauInterop/Runtime/LuauLibrary.cs
+    startLine: 18
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  syntax:
+    content: All = Base | Coroutine | Table | OS | String | Bit32 | Buffer | Utf8 | Math | Debug | Vector | Integer
+    return:
+      type: LuauInterop.Runtime.LuauLibrary
+    content.vb: All = Base Or Coroutine Or Table Or OS Or String Or Bit32 Or Buffer Or Utf8 Or Math Or Debug Or Vector Or Integer
 references:
 - uid: LuauInterop.Runtime
   commentId: N:LuauInterop.Runtime

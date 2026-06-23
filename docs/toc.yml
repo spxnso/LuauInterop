@@ -16,5 +16,7 @@
       href: docs/disposables.md
     - name: Sandboxing
       href: docs/sandboxing.md
+    - name: Parsing
+      href: docs/parsing.md
 - name: API Reference
   href: api/

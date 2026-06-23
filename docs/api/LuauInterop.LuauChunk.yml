@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauChunk.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: LuauChunk
     path: ../src/LuauInterop/LuauChunk.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauChunk.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: .ctor
     path: ../src/LuauInterop/LuauChunk.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauChunk.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Pointer
     path: ../src/LuauInterop/LuauChunk.cs
@@ -130,7 +130,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauChunk.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Size
     path: ../src/LuauInterop/LuauChunk.cs
@@ -161,7 +161,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauChunk.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: IsDisposed
     path: ../src/LuauInterop/LuauChunk.cs
@@ -190,7 +190,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauChunk.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Dispose
     path: ../src/LuauInterop/LuauChunk.cs
@@ -220,7 +220,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauChunk.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Finalize
     path: ../src/LuauInterop/LuauChunk.cs
@@ -249,7 +249,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauChunk.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Dispose
     path: ../src/LuauInterop/LuauChunk.cs
@@ -281,7 +281,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauChunk.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: AsSpan
     path: ../src/LuauInterop/LuauChunk.cs
@@ -311,7 +311,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/LuauChunk.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: ToByteArray
     path: ../src/LuauInterop/LuauChunk.cs

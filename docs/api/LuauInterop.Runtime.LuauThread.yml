@@ -5,8 +5,9 @@ items:
   id: LuauThread
   parent: LuauInterop.Runtime
   children:
-  - LuauInterop.Runtime.LuauThread.#ctor(LuauInterop.Luau,System.Int32)
+  - LuauInterop.Runtime.LuauThread.#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,LuauInterop.Native.LuaState,System.Int32)
   - LuauInterop.Runtime.LuauThread.Close
+  - LuauInterop.Runtime.LuauThread.CoroutineState
   - LuauInterop.Runtime.LuauThread.Resume(LuauInterop.LuauChunk,System.Object[])
   - LuauInterop.Runtime.LuauThread.Resume(System.Object[])
   - LuauInterop.Runtime.LuauThread.Status
@@ -20,7 +21,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauThread.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: LuauThread
     path: ../src/LuauInterop/Runtime/LuauThread.cs
@@ -38,6 +39,7 @@ items:
   - System.IDisposable
   inheritedMembers:
   - LuauInterop.LuauBase.Owner
+  - LuauInterop.LuauBase.State
   - LuauInterop.LuauBase.Reference
   - LuauInterop.LuauBase.IsDisposed
   - LuauInterop.LuauBase.Dispose
@@ -48,21 +50,21 @@ items:
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: LuauInterop.Runtime.LuauThread.#ctor(LuauInterop.Luau,System.Int32)
-  commentId: M:LuauInterop.Runtime.LuauThread.#ctor(LuauInterop.Luau,System.Int32)
-  id: '#ctor(LuauInterop.Luau,System.Int32)'
+- uid: LuauInterop.Runtime.LuauThread.#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,LuauInterop.Native.LuaState,System.Int32)
+  commentId: M:LuauInterop.Runtime.LuauThread.#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,LuauInterop.Native.LuaState,System.Int32)
+  id: '#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,LuauInterop.Native.LuaState,System.Int32)'
   parent: LuauInterop.Runtime.LuauThread
   langs:
   - csharp
   - vb
-  name: LuauThread(Luau, int)
-  nameWithType: LuauThread.LuauThread(Luau, int)
-  fullName: LuauInterop.Runtime.LuauThread.LuauThread(LuauInterop.Luau, int)
+  name: LuauThread(Luau, LuaState, LuaState, int)
+  nameWithType: LuauThread.LuauThread(Luau, LuaState, LuaState, int)
+  fullName: LuauInterop.Runtime.LuauThread.LuauThread(LuauInterop.Luau, LuauInterop.Native.LuaState, LuauInterop.Native.LuaState, int)
   type: Constructor
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauThread.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: .ctor
     path: ../src/LuauInterop/Runtime/LuauThread.cs
@@ -71,17 +73,50 @@ items:
   - LuauInterop
   namespace: LuauInterop.Runtime
   syntax:
-    content: public LuauThread(Luau owner, int reference)
+    content: public LuauThread(Luau owner, LuaState coroutineState, LuaState state, int reference)
     parameters:
     - id: owner
       type: LuauInterop.Luau
+    - id: coroutineState
+      type: LuauInterop.Native.LuaState
+    - id: state
+      type: LuauInterop.Native.LuaState
     - id: reference
       type: System.Int32
-    content.vb: Public Sub New(owner As Luau, reference As Integer)
+    content.vb: Public Sub New(owner As Luau, coroutineState As LuaState, state As LuaState, reference As Integer)
   overload: LuauInterop.Runtime.LuauThread.#ctor*
-  nameWithType.vb: LuauThread.New(Luau, Integer)
-  fullName.vb: LuauInterop.Runtime.LuauThread.New(LuauInterop.Luau, Integer)
-  name.vb: New(Luau, Integer)
+  nameWithType.vb: LuauThread.New(Luau, LuaState, LuaState, Integer)
+  fullName.vb: LuauInterop.Runtime.LuauThread.New(LuauInterop.Luau, LuauInterop.Native.LuaState, LuauInterop.Native.LuaState, Integer)
+  name.vb: New(Luau, LuaState, LuaState, Integer)
+- uid: LuauInterop.Runtime.LuauThread.CoroutineState
+  commentId: F:LuauInterop.Runtime.LuauThread.CoroutineState
+  id: CoroutineState
+  parent: LuauInterop.Runtime.LuauThread
+  langs:
+  - csharp
+  - vb
+  name: CoroutineState
+  nameWithType: LuauThread.CoroutineState
+  fullName: LuauInterop.Runtime.LuauThread.CoroutineState
+  type: Field
+  source:
+    remote:
+      path: src/LuauInterop/Runtime/LuauThread.cs
+      branch: feature/ast
+      repo: https://github.com/spxnso/LuauInterop
+    id: CoroutineState
+    path: ../src/LuauInterop/Runtime/LuauThread.cs
+    startLine: 11
+  assemblies:
+  - LuauInterop
+  namespace: LuauInterop.Runtime
+  summary: The <xref href="LuauInterop.Native.LuaState" data-throw-if-not-resolved="false"></xref> of this thread.
+  example: []
+  syntax:
+    content: public LuaState CoroutineState
+    return:
+      type: LuauInterop.Native.LuaState
+    content.vb: Public CoroutineState As LuaState
 - uid: LuauInterop.Runtime.LuauThread.Status
   commentId: P:LuauInterop.Runtime.LuauThread.Status
   id: Status
@@ -96,11 +131,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauThread.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Status
     path: ../src/LuauInterop/Runtime/LuauThread.cs
-    startLine: 8
+    startLine: 13
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Runtime
@@ -125,11 +160,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauThread.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Close
     path: ../src/LuauInterop/Runtime/LuauThread.cs
-    startLine: 17
+    startLine: 22
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Runtime
@@ -151,11 +186,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauThread.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Resume
     path: ../src/LuauInterop/Runtime/LuauThread.cs
-    startLine: 23
+    startLine: 29
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Runtime
@@ -185,11 +220,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauThread.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Resume
     path: ../src/LuauInterop/Runtime/LuauThread.cs
-    startLine: 39
+    startLine: 47
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Runtime
@@ -263,6 +298,13 @@ references:
   name: Owner
   nameWithType: LuauBase.Owner
   fullName: LuauInterop.LuauBase.Owner
+- uid: LuauInterop.LuauBase.State
+  commentId: P:LuauInterop.LuauBase.State
+  parent: LuauInterop.LuauBase
+  href: LuauInterop.LuauBase.html#LuauInterop_LuauBase_State
+  name: State
+  nameWithType: LuauBase.State
+  fullName: LuauInterop.LuauBase.State
 - uid: LuauInterop.LuauBase.Reference
   commentId: P:LuauInterop.LuauBase.Reference
   parent: LuauInterop.LuauBase
@@ -525,7 +567,7 @@ references:
   fullName: LuauInterop
 - uid: LuauInterop.Runtime.LuauThread.#ctor*
   commentId: Overload:LuauInterop.Runtime.LuauThread.#ctor
-  href: LuauInterop.Runtime.LuauThread.html#LuauInterop_Runtime_LuauThread__ctor_LuauInterop_Luau_System_Int32_
+  href: LuauInterop.Runtime.LuauThread.html#LuauInterop_Runtime_LuauThread__ctor_LuauInterop_Luau_LuauInterop_Native_LuaState_LuauInterop_Native_LuaState_System_Int32_
   name: LuauThread
   nameWithType: LuauThread.LuauThread
   fullName: LuauInterop.Runtime.LuauThread.LuauThread
@@ -539,6 +581,13 @@ references:
   name: Luau
   nameWithType: Luau
   fullName: LuauInterop.Luau
+- uid: LuauInterop.Native.LuaState
+  commentId: T:LuauInterop.Native.LuaState
+  parent: LuauInterop.Native
+  href: LuauInterop.Native.LuaState.html
+  name: LuaState
+  nameWithType: LuaState
+  fullName: LuauInterop.Native.LuaState
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -550,6 +599,28 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
+- uid: LuauInterop.Native
+  commentId: N:LuauInterop.Native
+  href: LuauInterop.html
+  name: LuauInterop.Native
+  nameWithType: LuauInterop.Native
+  fullName: LuauInterop.Native
+  spec.csharp:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Native
+    name: Native
+    href: LuauInterop.Native.html
+  spec.vb:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Native
+    name: Native
+    href: LuauInterop.Native.html
 - uid: LuauInterop.Runtime.LuauThread.Status*
   commentId: Overload:LuauInterop.Runtime.LuauThread.Status
   href: LuauInterop.Runtime.LuauThread.html#LuauInterop_Runtime_LuauThread_Status

@@ -1,0 +1,93 @@
+### YamlMime:ManagedReference
+items:
+- uid: LuauInterop.Ast.Nodes
+  commentId: N:LuauInterop.Ast.Nodes
+  id: LuauInterop.Ast.Nodes
+  children:
+  - LuauInterop.Ast.Nodes.AstArgumentName
+  - LuauInterop.Ast.Nodes.AstAttr
+  - LuauInterop.Ast.Nodes.AstLocal
+  - LuauInterop.Ast.Nodes.AstNode
+  - LuauInterop.Ast.Nodes.Location
+  - LuauInterop.Ast.Nodes.Position
+  langs:
+  - csharp
+  - vb
+  name: LuauInterop.Ast.Nodes
+  nameWithType: LuauInterop.Ast.Nodes
+  fullName: LuauInterop.Ast.Nodes
+  type: Namespace
+  assemblies:
+  - LuauInterop.Ast
+references:
+- uid: LuauInterop.Ast.Nodes.AstArgumentName
+  commentId: T:LuauInterop.Ast.Nodes.AstArgumentName
+  parent: LuauInterop.Ast.Nodes
+  href: LuauInterop.Ast.Nodes.AstArgumentName.html
+  name: AstArgumentName
+  nameWithType: AstArgumentName
+  fullName: LuauInterop.Ast.Nodes.AstArgumentName
+- uid: LuauInterop.Ast.Nodes.AstAttr
+  commentId: T:LuauInterop.Ast.Nodes.AstAttr
+  href: LuauInterop.Ast.Nodes.AstAttr.html
+  name: AstAttr
+  nameWithType: AstAttr
+  fullName: LuauInterop.Ast.Nodes.AstAttr
+- uid: LuauInterop.Ast.Nodes.AstLocal
+  commentId: T:LuauInterop.Ast.Nodes.AstLocal
+  parent: LuauInterop.Ast.Nodes
+  href: LuauInterop.Ast.Nodes.AstLocal.html
+  name: AstLocal
+  nameWithType: AstLocal
+  fullName: LuauInterop.Ast.Nodes.AstLocal
+- uid: LuauInterop.Ast.Nodes.AstNode
+  commentId: T:LuauInterop.Ast.Nodes.AstNode
+  parent: LuauInterop.Ast.Nodes
+  href: LuauInterop.Ast.Nodes.AstNode.html
+  name: AstNode
+  nameWithType: AstNode
+  fullName: LuauInterop.Ast.Nodes.AstNode
+- uid: LuauInterop.Ast.Nodes.Location
+  commentId: T:LuauInterop.Ast.Nodes.Location
+  parent: LuauInterop.Ast.Nodes
+  href: LuauInterop.Ast.Nodes.Location.html
+  name: Location
+  nameWithType: Location
+  fullName: LuauInterop.Ast.Nodes.Location
+- uid: LuauInterop.Ast.Nodes.Position
+  commentId: T:LuauInterop.Ast.Nodes.Position
+  parent: LuauInterop.Ast.Nodes
+  href: LuauInterop.Ast.Nodes.Position.html
+  name: Position
+  nameWithType: Position
+  fullName: LuauInterop.Ast.Nodes.Position
+- uid: LuauInterop.Ast.Nodes
+  commentId: N:LuauInterop.Ast.Nodes
+  href: LuauInterop.html
+  name: LuauInterop.Ast.Nodes
+  nameWithType: LuauInterop.Ast.Nodes
+  fullName: LuauInterop.Ast.Nodes
+  spec.csharp:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Ast
+    name: Ast
+    href: LuauInterop.Ast.html
+  - name: .
+  - uid: LuauInterop.Ast.Nodes
+    name: Nodes
+    href: LuauInterop.Ast.Nodes.html
+  spec.vb:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Ast
+    name: Ast
+    href: LuauInterop.Ast.html
+  - name: .
+  - uid: LuauInterop.Ast.Nodes
+    name: Nodes
+    href: LuauInterop.Ast.Nodes.html

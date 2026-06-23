@@ -6,8 +6,8 @@ LuauInterop is split into packages:
 |----------|-------------|
 | `LuauInterop` | The managed bindings |
 | `LuauInterop.Native` | The native Luau runtime libraries |
-| `LuauInterop.Sandbox` | Sandboxing utilities for untrusted code (optional) |
-| `LuauInterop.Ast` | Luau AST parser and syntax tree APIs for parsing, analyzing, and inspecting Luau source code |
+| `LuauInterop.Sandbox` | Sandboxing utilities for untrusted code |
+| `LuauInterop.Ast` | Parsing and syntax tree utilities for LuauInterop |
 
 Install the core packages:
 
