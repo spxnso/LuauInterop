@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauDelegate.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: LuauDelegate
     path: ../src/LuauInterop/Runtime/LuauDelegate.cs
@@ -36,8 +36,8 @@ items:
     Handles argument marshalling and return value pushing automatically.
   example: []
   syntax:
-    content: public class LuauDelegate
-    content.vb: Public Class LuauDelegate
+    content: public sealed class LuauDelegate
+    content.vb: Public NotInheritable Class LuauDelegate
   inheritance:
   - System.Object
   inheritedMembers:
@@ -45,7 +45,6 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
-  - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
 - uid: LuauInterop.Runtime.LuauDelegate.Delegate
@@ -62,7 +61,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauDelegate.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Delegate
     path: ../src/LuauInterop/Runtime/LuauDelegate.cs
@@ -93,7 +92,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauDelegate.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: IsVariadic
     path: ../src/LuauInterop/Runtime/LuauDelegate.cs
@@ -124,7 +123,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauDelegate.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Owner
     path: ../src/LuauInterop/Runtime/LuauDelegate.cs
@@ -155,7 +154,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauDelegate.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Parameters
     path: ../src/LuauInterop/Runtime/LuauDelegate.cs
@@ -186,7 +185,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauDelegate.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: ReturnType
     path: ../src/LuauInterop/Runtime/LuauDelegate.cs
@@ -217,7 +216,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauDelegate.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: .ctor
     path: ../src/LuauInterop/Runtime/LuauDelegate.cs
@@ -251,7 +250,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauDelegate.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Invoke
     path: ../src/LuauInterop/Runtime/LuauDelegate.cs
@@ -426,30 +425,6 @@ references:
     name: GetType
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
   - name: (
   - name: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)

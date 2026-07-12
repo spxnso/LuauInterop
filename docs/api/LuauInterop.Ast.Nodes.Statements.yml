@@ -1,0 +1,210 @@
+### YamlMime:ManagedReference
+items:
+- uid: LuauInterop.Ast.Nodes.Statements
+  commentId: N:LuauInterop.Ast.Nodes.Statements
+  id: LuauInterop.Ast.Nodes.Statements
+  children:
+  - LuauInterop.Ast.Nodes.Statements.AstDeclaredClassProp
+  - LuauInterop.Ast.Nodes.Statements.AstStat
+  - LuauInterop.Ast.Nodes.Statements.AstStatAssign
+  - LuauInterop.Ast.Nodes.Statements.AstStatBlock
+  - LuauInterop.Ast.Nodes.Statements.AstStatBreak
+  - LuauInterop.Ast.Nodes.Statements.AstStatCompoundAssign
+  - LuauInterop.Ast.Nodes.Statements.AstStatContinue
+  - LuauInterop.Ast.Nodes.Statements.AstStatDeclareClass
+  - LuauInterop.Ast.Nodes.Statements.AstStatDeclareFunction
+  - LuauInterop.Ast.Nodes.Statements.AstStatDeclareGlobal
+  - LuauInterop.Ast.Nodes.Statements.AstStatError
+  - LuauInterop.Ast.Nodes.Statements.AstStatExpr
+  - LuauInterop.Ast.Nodes.Statements.AstStatFor
+  - LuauInterop.Ast.Nodes.Statements.AstStatForIn
+  - LuauInterop.Ast.Nodes.Statements.AstStatFunction
+  - LuauInterop.Ast.Nodes.Statements.AstStatIf
+  - LuauInterop.Ast.Nodes.Statements.AstStatLocal
+  - LuauInterop.Ast.Nodes.Statements.AstStatLocalFunction
+  - LuauInterop.Ast.Nodes.Statements.AstStatRepeat
+  - LuauInterop.Ast.Nodes.Statements.AstStatReturn
+  - LuauInterop.Ast.Nodes.Statements.AstStatTypeAlias
+  - LuauInterop.Ast.Nodes.Statements.AstStatWhile
+  langs:
+  - csharp
+  - vb
+  name: LuauInterop.Ast.Nodes.Statements
+  nameWithType: LuauInterop.Ast.Nodes.Statements
+  fullName: LuauInterop.Ast.Nodes.Statements
+  type: Namespace
+  assemblies:
+  - LuauInterop.Ast
+references:
+- uid: LuauInterop.Ast.Nodes.Statements.AstDeclaredClassProp
+  commentId: T:LuauInterop.Ast.Nodes.Statements.AstDeclaredClassProp
+  href: LuauInterop.Ast.Nodes.Statements.AstDeclaredClassProp.html
+  name: AstDeclaredClassProp
+  nameWithType: AstDeclaredClassProp
+  fullName: LuauInterop.Ast.Nodes.Statements.AstDeclaredClassProp
+- uid: LuauInterop.Ast.Nodes.Statements.AstStat
+  commentId: T:LuauInterop.Ast.Nodes.Statements.AstStat
+  parent: LuauInterop.Ast.Nodes.Statements
+  href: LuauInterop.Ast.Nodes.Statements.AstStat.html
+  name: AstStat
+  nameWithType: AstStat
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStat
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatAssign
+  commentId: T:LuauInterop.Ast.Nodes.Statements.AstStatAssign
+  href: LuauInterop.Ast.Nodes.Statements.AstStatAssign.html
+  name: AstStatAssign
+  nameWithType: AstStatAssign
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatAssign
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatBlock
+  commentId: T:LuauInterop.Ast.Nodes.Statements.AstStatBlock
+  parent: LuauInterop.Ast.Nodes.Statements
+  href: LuauInterop.Ast.Nodes.Statements.AstStatBlock.html
+  name: AstStatBlock
+  nameWithType: AstStatBlock
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatBlock
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatBreak
+  commentId: T:LuauInterop.Ast.Nodes.Statements.AstStatBreak
+  href: LuauInterop.Ast.Nodes.Statements.AstStatBreak.html
+  name: AstStatBreak
+  nameWithType: AstStatBreak
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatBreak
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatCompoundAssign
+  commentId: T:LuauInterop.Ast.Nodes.Statements.AstStatCompoundAssign
+  href: LuauInterop.Ast.Nodes.Statements.AstStatCompoundAssign.html
+  name: AstStatCompoundAssign
+  nameWithType: AstStatCompoundAssign
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatCompoundAssign
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatContinue
+  commentId: T:LuauInterop.Ast.Nodes.Statements.AstStatContinue
+  href: LuauInterop.Ast.Nodes.Statements.AstStatContinue.html
+  name: AstStatContinue
+  nameWithType: AstStatContinue
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatContinue
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatDeclareClass
+  commentId: T:LuauInterop.Ast.Nodes.Statements.AstStatDeclareClass
+  href: LuauInterop.Ast.Nodes.Statements.AstStatDeclareClass.html
+  name: AstStatDeclareClass
+  nameWithType: AstStatDeclareClass
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatDeclareClass
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatDeclareFunction
+  commentId: T:LuauInterop.Ast.Nodes.Statements.AstStatDeclareFunction
+  href: LuauInterop.Ast.Nodes.Statements.AstStatDeclareFunction.html
+  name: AstStatDeclareFunction
+  nameWithType: AstStatDeclareFunction
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatDeclareFunction
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatDeclareGlobal
+  commentId: T:LuauInterop.Ast.Nodes.Statements.AstStatDeclareGlobal
+  href: LuauInterop.Ast.Nodes.Statements.AstStatDeclareGlobal.html
+  name: AstStatDeclareGlobal
+  nameWithType: AstStatDeclareGlobal
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatDeclareGlobal
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatError
+  commentId: T:LuauInterop.Ast.Nodes.Statements.AstStatError
+  href: LuauInterop.Ast.Nodes.Statements.AstStatError.html
+  name: AstStatError
+  nameWithType: AstStatError
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatError
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatExpr
+  commentId: T:LuauInterop.Ast.Nodes.Statements.AstStatExpr
+  href: LuauInterop.Ast.Nodes.Statements.AstStatExpr.html
+  name: AstStatExpr
+  nameWithType: AstStatExpr
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatExpr
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatFor
+  commentId: T:LuauInterop.Ast.Nodes.Statements.AstStatFor
+  href: LuauInterop.Ast.Nodes.Statements.AstStatFor.html
+  name: AstStatFor
+  nameWithType: AstStatFor
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatFor
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatForIn
+  commentId: T:LuauInterop.Ast.Nodes.Statements.AstStatForIn
+  href: LuauInterop.Ast.Nodes.Statements.AstStatForIn.html
+  name: AstStatForIn
+  nameWithType: AstStatForIn
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatForIn
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatFunction
+  commentId: T:LuauInterop.Ast.Nodes.Statements.AstStatFunction
+  href: LuauInterop.Ast.Nodes.Statements.AstStatFunction.html
+  name: AstStatFunction
+  nameWithType: AstStatFunction
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatFunction
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatIf
+  commentId: T:LuauInterop.Ast.Nodes.Statements.AstStatIf
+  href: LuauInterop.Ast.Nodes.Statements.AstStatIf.html
+  name: AstStatIf
+  nameWithType: AstStatIf
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatIf
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatLocal
+  commentId: T:LuauInterop.Ast.Nodes.Statements.AstStatLocal
+  href: LuauInterop.Ast.Nodes.Statements.AstStatLocal.html
+  name: AstStatLocal
+  nameWithType: AstStatLocal
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatLocal
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatLocalFunction
+  commentId: T:LuauInterop.Ast.Nodes.Statements.AstStatLocalFunction
+  href: LuauInterop.Ast.Nodes.Statements.AstStatLocalFunction.html
+  name: AstStatLocalFunction
+  nameWithType: AstStatLocalFunction
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatLocalFunction
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatRepeat
+  commentId: T:LuauInterop.Ast.Nodes.Statements.AstStatRepeat
+  href: LuauInterop.Ast.Nodes.Statements.AstStatRepeat.html
+  name: AstStatRepeat
+  nameWithType: AstStatRepeat
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatRepeat
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatReturn
+  commentId: T:LuauInterop.Ast.Nodes.Statements.AstStatReturn
+  href: LuauInterop.Ast.Nodes.Statements.AstStatReturn.html
+  name: AstStatReturn
+  nameWithType: AstStatReturn
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatReturn
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatTypeAlias
+  commentId: T:LuauInterop.Ast.Nodes.Statements.AstStatTypeAlias
+  href: LuauInterop.Ast.Nodes.Statements.AstStatTypeAlias.html
+  name: AstStatTypeAlias
+  nameWithType: AstStatTypeAlias
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatTypeAlias
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatWhile
+  commentId: T:LuauInterop.Ast.Nodes.Statements.AstStatWhile
+  href: LuauInterop.Ast.Nodes.Statements.AstStatWhile.html
+  name: AstStatWhile
+  nameWithType: AstStatWhile
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatWhile
+- uid: LuauInterop.Ast.Nodes.Statements
+  commentId: N:LuauInterop.Ast.Nodes.Statements
+  href: LuauInterop.html
+  name: LuauInterop.Ast.Nodes.Statements
+  nameWithType: LuauInterop.Ast.Nodes.Statements
+  fullName: LuauInterop.Ast.Nodes.Statements
+  spec.csharp:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Ast
+    name: Ast
+    href: LuauInterop.Ast.html
+  - name: .
+  - uid: LuauInterop.Ast.Nodes
+    name: Nodes
+    href: LuauInterop.Ast.Nodes.html
+  - name: .
+  - uid: LuauInterop.Ast.Nodes.Statements
+    name: Statements
+    href: LuauInterop.Ast.Nodes.Statements.html
+  spec.vb:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Ast
+    name: Ast
+    href: LuauInterop.Ast.html
+  - name: .
+  - uid: LuauInterop.Ast.Nodes
+    name: Nodes
+    href: LuauInterop.Ast.Nodes.html
+  - name: .
+  - uid: LuauInterop.Ast.Nodes.Statements
+    name: Statements
+    href: LuauInterop.Ast.Nodes.Statements.html

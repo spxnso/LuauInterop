@@ -486,3 +486,6 @@ build
 
 # DocFX
 _site/
+
+# VSCode
+.vscode/

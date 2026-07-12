@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 project(LuauInterop)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 set(LUAU_BUILD_SHARED OFF CACHE BOOL "" FORCE)
@@ -15,6 +16,9 @@ add_library(luau SHARED ${CMAKE_SOURCE_DIR}/glue.cpp)
 
 target_include_directories(luau PRIVATE
     ${CMAKE_SOURCE_DIR}/external/luau/Common/include
+    ${CMAKE_SOURCE_DIR}/external/luau/Ast/include
+    ${CMAKE_SOURCE_DIR}/external/luau/Analysis/include
+    ${CMAKE_SOURCE_DIR}/external/luau/VM/include
 )
 
 target_link_libraries(luau PRIVATE
@@ -22,6 +26,8 @@ target_link_libraries(luau PRIVATE
     Luau.Compiler
     Luau.CodeGen
     Luau.Common
+    Luau.Ast
+    Luau.Analysis
 )
 
 if(MSVC)
@@ -30,6 +36,8 @@ if(MSVC)
         /WHOLEARCHIVE:$<TARGET_FILE:Luau.Compiler>
         /WHOLEARCHIVE:$<TARGET_FILE:Luau.CodeGen>
         /WHOLEARCHIVE:$<TARGET_FILE:Luau.Common>
+        /WHOLEARCHIVE:$<TARGET_FILE:Luau.Ast>
+        /WHOLEARCHIVE:$<TARGET_FILE:Luau.Analysis>
         /DEF:${CMAKE_SOURCE_DIR}/luau.def
     )
 elseif(APPLE)
@@ -38,6 +46,8 @@ elseif(APPLE)
         -Wl,-force_load,$<TARGET_FILE:Luau.Compiler>
         -Wl,-force_load,$<TARGET_FILE:Luau.CodeGen>
         -Wl,-force_load,$<TARGET_FILE:Luau.Common>
+        -Wl,-force_load,$<TARGET_FILE:Luau.Ast>
+        -Wl,-force_load,$<TARGET_FILE:Luau.Analysis>
     )
 else()
     target_link_options(luau PRIVATE
@@ -46,6 +56,8 @@ else()
         $<TARGET_FILE:Luau.Compiler>
         $<TARGET_FILE:Luau.CodeGen>
         $<TARGET_FILE:Luau.Common>
+        $<TARGET_FILE:Luau.Ast>
+        $<TARGET_FILE:Luau.Analysis>
         -Wl,--no-whole-archive
     )
 endif()

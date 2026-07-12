@@ -16,11 +16,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/Compilation/LuauCompiler.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: LuauCompiler
     path: ../src/LuauInterop/Compilation/LuauCompiler.cs
-    startLine: 9
+    startLine: 10
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Compilation
@@ -53,11 +53,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/Compilation/LuauCompiler.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Compile
     path: ../src/LuauInterop/Compilation/LuauCompiler.cs
-    startLine: 19
+    startLine: 20
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Compilation

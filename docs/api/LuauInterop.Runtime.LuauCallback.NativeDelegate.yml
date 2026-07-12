@@ -15,7 +15,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauCallback.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: NativeDelegate
     path: ../src/LuauInterop/Runtime/LuauCallback.cs

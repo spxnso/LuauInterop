@@ -3,6 +3,7 @@
     <Project Path="src/LuauInterop.Native/LuauInterop.Native.csproj" />
     <Project Path="src/LuauInterop/LuauInterop.csproj" />
     <Project Path="src/LuauInterop.Sandbox/LuauInterop.Sandbox.csproj" />
+    <Project Path="src/LuauInterop.Ast/LuauInterop.Ast.csproj" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/LuauInterop.Tests/LuauInterop.Tests.csproj" />

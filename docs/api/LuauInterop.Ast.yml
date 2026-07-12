@@ -1,0 +1,67 @@
+### YamlMime:ManagedReference
+items:
+- uid: LuauInterop.Ast
+  commentId: N:LuauInterop.Ast
+  id: LuauInterop.Ast
+  children:
+  - LuauInterop.Ast.LuauComment
+  - LuauInterop.Ast.LuauParseError
+  - LuauInterop.Ast.LuauParser
+  - LuauInterop.Ast.SyntaxTree
+  langs:
+  - csharp
+  - vb
+  name: LuauInterop.Ast
+  nameWithType: LuauInterop.Ast
+  fullName: LuauInterop.Ast
+  type: Namespace
+  assemblies:
+  - LuauInterop.Ast
+references:
+- uid: LuauInterop.Ast.LuauComment
+  commentId: T:LuauInterop.Ast.LuauComment
+  href: LuauInterop.Ast.LuauComment.html
+  name: LuauComment
+  nameWithType: LuauComment
+  fullName: LuauInterop.Ast.LuauComment
+- uid: LuauInterop.Ast.LuauParseError
+  commentId: T:LuauInterop.Ast.LuauParseError
+  href: LuauInterop.Ast.LuauParseError.html
+  name: LuauParseError
+  nameWithType: LuauParseError
+  fullName: LuauInterop.Ast.LuauParseError
+- uid: LuauInterop.Ast.LuauParser
+  commentId: T:LuauInterop.Ast.LuauParser
+  href: LuauInterop.Ast.LuauParser.html
+  name: LuauParser
+  nameWithType: LuauParser
+  fullName: LuauInterop.Ast.LuauParser
+- uid: LuauInterop.Ast.SyntaxTree
+  commentId: T:LuauInterop.Ast.SyntaxTree
+  parent: LuauInterop.Ast
+  href: LuauInterop.Ast.SyntaxTree.html
+  name: SyntaxTree
+  nameWithType: SyntaxTree
+  fullName: LuauInterop.Ast.SyntaxTree
+- uid: LuauInterop.Ast
+  commentId: N:LuauInterop.Ast
+  href: LuauInterop.html
+  name: LuauInterop.Ast
+  nameWithType: LuauInterop.Ast
+  fullName: LuauInterop.Ast
+  spec.csharp:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Ast
+    name: Ast
+    href: LuauInterop.Ast.html
+  spec.vb:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Ast
+    name: Ast
+    href: LuauInterop.Ast.html

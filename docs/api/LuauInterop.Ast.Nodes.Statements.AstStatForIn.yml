@@ -1,0 +1,756 @@
+### YamlMime:ManagedReference
+items:
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatForIn
+  commentId: T:LuauInterop.Ast.Nodes.Statements.AstStatForIn
+  id: AstStatForIn
+  parent: LuauInterop.Ast.Nodes.Statements
+  children:
+  - LuauInterop.Ast.Nodes.Statements.AstStatForIn.#ctor(LuauInterop.Ast.Nodes.Location,System.Collections.Generic.IReadOnlyList{LuauInterop.Ast.Nodes.AstLocal},System.Collections.Generic.IReadOnlyList{LuauInterop.Ast.Nodes.Expressions.AstExpr},LuauInterop.Ast.Nodes.Statements.AstStatBlock,System.Boolean,System.Boolean)
+  - LuauInterop.Ast.Nodes.Statements.AstStatForIn.Body
+  - LuauInterop.Ast.Nodes.Statements.AstStatForIn.HasDo
+  - LuauInterop.Ast.Nodes.Statements.AstStatForIn.HasIn
+  - LuauInterop.Ast.Nodes.Statements.AstStatForIn.Values
+  - LuauInterop.Ast.Nodes.Statements.AstStatForIn.Vars
+  langs:
+  - csharp
+  - vb
+  name: AstStatForIn
+  nameWithType: AstStatForIn
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatForIn
+  type: Class
+  source:
+    remote:
+      path: src/LuauInterop.Ast/Nodes/Statements/AstStatForIn.cs
+      branch: feature/ast
+      repo: https://github.com/spxnso/LuauInterop
+    id: AstStatForIn
+    path: ../src/LuauInterop.Ast/Nodes/Statements/AstStatForIn.cs
+    startLine: 4
+  assemblies:
+  - LuauInterop.Ast
+  namespace: LuauInterop.Ast.Nodes.Statements
+  syntax:
+    content: 'public class AstStatForIn : AstStat'
+    content.vb: Public Class AstStatForIn Inherits AstStat
+  inheritance:
+  - System.Object
+  - LuauInterop.Ast.Nodes.AstNode
+  - LuauInterop.Ast.Nodes.Statements.AstStat
+  inheritedMembers:
+  - LuauInterop.Ast.Nodes.AstNode.Location
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatForIn.#ctor(LuauInterop.Ast.Nodes.Location,System.Collections.Generic.IReadOnlyList{LuauInterop.Ast.Nodes.AstLocal},System.Collections.Generic.IReadOnlyList{LuauInterop.Ast.Nodes.Expressions.AstExpr},LuauInterop.Ast.Nodes.Statements.AstStatBlock,System.Boolean,System.Boolean)
+  commentId: M:LuauInterop.Ast.Nodes.Statements.AstStatForIn.#ctor(LuauInterop.Ast.Nodes.Location,System.Collections.Generic.IReadOnlyList{LuauInterop.Ast.Nodes.AstLocal},System.Collections.Generic.IReadOnlyList{LuauInterop.Ast.Nodes.Expressions.AstExpr},LuauInterop.Ast.Nodes.Statements.AstStatBlock,System.Boolean,System.Boolean)
+  id: '#ctor(LuauInterop.Ast.Nodes.Location,System.Collections.Generic.IReadOnlyList{LuauInterop.Ast.Nodes.AstLocal},System.Collections.Generic.IReadOnlyList{LuauInterop.Ast.Nodes.Expressions.AstExpr},LuauInterop.Ast.Nodes.Statements.AstStatBlock,System.Boolean,System.Boolean)'
+  parent: LuauInterop.Ast.Nodes.Statements.AstStatForIn
+  langs:
+  - csharp
+  - vb
+  name: AstStatForIn(Location, IReadOnlyList<AstLocal>, IReadOnlyList<AstExpr>, AstStatBlock, bool, bool)
+  nameWithType: AstStatForIn.AstStatForIn(Location, IReadOnlyList<AstLocal>, IReadOnlyList<AstExpr>, AstStatBlock, bool, bool)
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatForIn.AstStatForIn(LuauInterop.Ast.Nodes.Location, System.Collections.Generic.IReadOnlyList<LuauInterop.Ast.Nodes.AstLocal>, System.Collections.Generic.IReadOnlyList<LuauInterop.Ast.Nodes.Expressions.AstExpr>, LuauInterop.Ast.Nodes.Statements.AstStatBlock, bool, bool)
+  type: Constructor
+  source:
+    remote:
+      path: src/LuauInterop.Ast/Nodes/Statements/AstStatForIn.cs
+      branch: feature/ast
+      repo: https://github.com/spxnso/LuauInterop
+    id: .ctor
+    path: ../src/LuauInterop.Ast/Nodes/Statements/AstStatForIn.cs
+    startLine: 4
+  assemblies:
+  - LuauInterop.Ast
+  namespace: LuauInterop.Ast.Nodes.Statements
+  syntax:
+    content: public AstStatForIn(Location location, IReadOnlyList<AstLocal> vars, IReadOnlyList<AstExpr> values, AstStatBlock body, bool hasIn, bool hasDo)
+    parameters:
+    - id: location
+      type: LuauInterop.Ast.Nodes.Location
+    - id: vars
+      type: System.Collections.Generic.IReadOnlyList{LuauInterop.Ast.Nodes.AstLocal}
+    - id: values
+      type: System.Collections.Generic.IReadOnlyList{LuauInterop.Ast.Nodes.Expressions.AstExpr}
+    - id: body
+      type: LuauInterop.Ast.Nodes.Statements.AstStatBlock
+    - id: hasIn
+      type: System.Boolean
+    - id: hasDo
+      type: System.Boolean
+    content.vb: Public Sub New(location As Location, vars As IReadOnlyList(Of AstLocal), values As IReadOnlyList(Of AstExpr), body As AstStatBlock, hasIn As Boolean, hasDo As Boolean)
+  overload: LuauInterop.Ast.Nodes.Statements.AstStatForIn.#ctor*
+  nameWithType.vb: AstStatForIn.New(Location, IReadOnlyList(Of AstLocal), IReadOnlyList(Of AstExpr), AstStatBlock, Boolean, Boolean)
+  fullName.vb: LuauInterop.Ast.Nodes.Statements.AstStatForIn.New(LuauInterop.Ast.Nodes.Location, System.Collections.Generic.IReadOnlyList(Of LuauInterop.Ast.Nodes.AstLocal), System.Collections.Generic.IReadOnlyList(Of LuauInterop.Ast.Nodes.Expressions.AstExpr), LuauInterop.Ast.Nodes.Statements.AstStatBlock, Boolean, Boolean)
+  name.vb: New(Location, IReadOnlyList(Of AstLocal), IReadOnlyList(Of AstExpr), AstStatBlock, Boolean, Boolean)
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatForIn.Vars
+  commentId: P:LuauInterop.Ast.Nodes.Statements.AstStatForIn.Vars
+  id: Vars
+  parent: LuauInterop.Ast.Nodes.Statements.AstStatForIn
+  langs:
+  - csharp
+  - vb
+  name: Vars
+  nameWithType: AstStatForIn.Vars
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatForIn.Vars
+  type: Property
+  source:
+    remote:
+      path: src/LuauInterop.Ast/Nodes/Statements/AstStatForIn.cs
+      branch: feature/ast
+      repo: https://github.com/spxnso/LuauInterop
+    id: Vars
+    path: ../src/LuauInterop.Ast/Nodes/Statements/AstStatForIn.cs
+    startLine: 6
+  assemblies:
+  - LuauInterop.Ast
+  namespace: LuauInterop.Ast.Nodes.Statements
+  syntax:
+    content: public IReadOnlyList<AstLocal> Vars { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{LuauInterop.Ast.Nodes.AstLocal}
+    content.vb: Public ReadOnly Property Vars As IReadOnlyList(Of AstLocal)
+  overload: LuauInterop.Ast.Nodes.Statements.AstStatForIn.Vars*
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatForIn.Values
+  commentId: P:LuauInterop.Ast.Nodes.Statements.AstStatForIn.Values
+  id: Values
+  parent: LuauInterop.Ast.Nodes.Statements.AstStatForIn
+  langs:
+  - csharp
+  - vb
+  name: Values
+  nameWithType: AstStatForIn.Values
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatForIn.Values
+  type: Property
+  source:
+    remote:
+      path: src/LuauInterop.Ast/Nodes/Statements/AstStatForIn.cs
+      branch: feature/ast
+      repo: https://github.com/spxnso/LuauInterop
+    id: Values
+    path: ../src/LuauInterop.Ast/Nodes/Statements/AstStatForIn.cs
+    startLine: 7
+  assemblies:
+  - LuauInterop.Ast
+  namespace: LuauInterop.Ast.Nodes.Statements
+  syntax:
+    content: public IReadOnlyList<AstExpr> Values { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{LuauInterop.Ast.Nodes.Expressions.AstExpr}
+    content.vb: Public ReadOnly Property Values As IReadOnlyList(Of AstExpr)
+  overload: LuauInterop.Ast.Nodes.Statements.AstStatForIn.Values*
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatForIn.Body
+  commentId: P:LuauInterop.Ast.Nodes.Statements.AstStatForIn.Body
+  id: Body
+  parent: LuauInterop.Ast.Nodes.Statements.AstStatForIn
+  langs:
+  - csharp
+  - vb
+  name: Body
+  nameWithType: AstStatForIn.Body
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatForIn.Body
+  type: Property
+  source:
+    remote:
+      path: src/LuauInterop.Ast/Nodes/Statements/AstStatForIn.cs
+      branch: feature/ast
+      repo: https://github.com/spxnso/LuauInterop
+    id: Body
+    path: ../src/LuauInterop.Ast/Nodes/Statements/AstStatForIn.cs
+    startLine: 8
+  assemblies:
+  - LuauInterop.Ast
+  namespace: LuauInterop.Ast.Nodes.Statements
+  syntax:
+    content: public AstStatBlock Body { get; }
+    parameters: []
+    return:
+      type: LuauInterop.Ast.Nodes.Statements.AstStatBlock
+    content.vb: Public ReadOnly Property Body As AstStatBlock
+  overload: LuauInterop.Ast.Nodes.Statements.AstStatForIn.Body*
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatForIn.HasIn
+  commentId: P:LuauInterop.Ast.Nodes.Statements.AstStatForIn.HasIn
+  id: HasIn
+  parent: LuauInterop.Ast.Nodes.Statements.AstStatForIn
+  langs:
+  - csharp
+  - vb
+  name: HasIn
+  nameWithType: AstStatForIn.HasIn
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatForIn.HasIn
+  type: Property
+  source:
+    remote:
+      path: src/LuauInterop.Ast/Nodes/Statements/AstStatForIn.cs
+      branch: feature/ast
+      repo: https://github.com/spxnso/LuauInterop
+    id: HasIn
+    path: ../src/LuauInterop.Ast/Nodes/Statements/AstStatForIn.cs
+    startLine: 9
+  assemblies:
+  - LuauInterop.Ast
+  namespace: LuauInterop.Ast.Nodes.Statements
+  syntax:
+    content: public bool HasIn { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HasIn As Boolean
+  overload: LuauInterop.Ast.Nodes.Statements.AstStatForIn.HasIn*
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatForIn.HasDo
+  commentId: P:LuauInterop.Ast.Nodes.Statements.AstStatForIn.HasDo
+  id: HasDo
+  parent: LuauInterop.Ast.Nodes.Statements.AstStatForIn
+  langs:
+  - csharp
+  - vb
+  name: HasDo
+  nameWithType: AstStatForIn.HasDo
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatForIn.HasDo
+  type: Property
+  source:
+    remote:
+      path: src/LuauInterop.Ast/Nodes/Statements/AstStatForIn.cs
+      branch: feature/ast
+      repo: https://github.com/spxnso/LuauInterop
+    id: HasDo
+    path: ../src/LuauInterop.Ast/Nodes/Statements/AstStatForIn.cs
+    startLine: 10
+  assemblies:
+  - LuauInterop.Ast
+  namespace: LuauInterop.Ast.Nodes.Statements
+  syntax:
+    content: public bool HasDo { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HasDo As Boolean
+  overload: LuauInterop.Ast.Nodes.Statements.AstStatForIn.HasDo*
+references:
+- uid: LuauInterop.Ast.Nodes.Statements
+  commentId: N:LuauInterop.Ast.Nodes.Statements
+  href: LuauInterop.html
+  name: LuauInterop.Ast.Nodes.Statements
+  nameWithType: LuauInterop.Ast.Nodes.Statements
+  fullName: LuauInterop.Ast.Nodes.Statements
+  spec.csharp:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Ast
+    name: Ast
+    href: LuauInterop.Ast.html
+  - name: .
+  - uid: LuauInterop.Ast.Nodes
+    name: Nodes
+    href: LuauInterop.Ast.Nodes.html
+  - name: .
+  - uid: LuauInterop.Ast.Nodes.Statements
+    name: Statements
+    href: LuauInterop.Ast.Nodes.Statements.html
+  spec.vb:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Ast
+    name: Ast
+    href: LuauInterop.Ast.html
+  - name: .
+  - uid: LuauInterop.Ast.Nodes
+    name: Nodes
+    href: LuauInterop.Ast.Nodes.html
+  - name: .
+  - uid: LuauInterop.Ast.Nodes.Statements
+    name: Statements
+    href: LuauInterop.Ast.Nodes.Statements.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: LuauInterop.Ast.Nodes.AstNode
+  commentId: T:LuauInterop.Ast.Nodes.AstNode
+  parent: LuauInterop.Ast.Nodes
+  href: LuauInterop.Ast.Nodes.AstNode.html
+  name: AstNode
+  nameWithType: AstNode
+  fullName: LuauInterop.Ast.Nodes.AstNode
+- uid: LuauInterop.Ast.Nodes.Statements.AstStat
+  commentId: T:LuauInterop.Ast.Nodes.Statements.AstStat
+  parent: LuauInterop.Ast.Nodes.Statements
+  href: LuauInterop.Ast.Nodes.Statements.AstStat.html
+  name: AstStat
+  nameWithType: AstStat
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStat
+- uid: LuauInterop.Ast.Nodes.AstNode.Location
+  commentId: P:LuauInterop.Ast.Nodes.AstNode.Location
+  parent: LuauInterop.Ast.Nodes.AstNode
+  href: LuauInterop.Ast.Nodes.AstNode.html#LuauInterop_Ast_Nodes_AstNode_Location
+  name: Location
+  nameWithType: AstNode.Location
+  fullName: LuauInterop.Ast.Nodes.AstNode.Location
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: LuauInterop.Ast.Nodes
+  commentId: N:LuauInterop.Ast.Nodes
+  href: LuauInterop.html
+  name: LuauInterop.Ast.Nodes
+  nameWithType: LuauInterop.Ast.Nodes
+  fullName: LuauInterop.Ast.Nodes
+  spec.csharp:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Ast
+    name: Ast
+    href: LuauInterop.Ast.html
+  - name: .
+  - uid: LuauInterop.Ast.Nodes
+    name: Nodes
+    href: LuauInterop.Ast.Nodes.html
+  spec.vb:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Ast
+    name: Ast
+    href: LuauInterop.Ast.html
+  - name: .
+  - uid: LuauInterop.Ast.Nodes
+    name: Nodes
+    href: LuauInterop.Ast.Nodes.html
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatForIn.#ctor*
+  commentId: Overload:LuauInterop.Ast.Nodes.Statements.AstStatForIn.#ctor
+  href: LuauInterop.Ast.Nodes.Statements.AstStatForIn.html#LuauInterop_Ast_Nodes_Statements_AstStatForIn__ctor_LuauInterop_Ast_Nodes_Location_System_Collections_Generic_IReadOnlyList_LuauInterop_Ast_Nodes_AstLocal__System_Collections_Generic_IReadOnlyList_LuauInterop_Ast_Nodes_Expressions_AstExpr__LuauInterop_Ast_Nodes_Statements_AstStatBlock_System_Boolean_System_Boolean_
+  name: AstStatForIn
+  nameWithType: AstStatForIn.AstStatForIn
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatForIn.AstStatForIn
+  nameWithType.vb: AstStatForIn.New
+  fullName.vb: LuauInterop.Ast.Nodes.Statements.AstStatForIn.New
+  name.vb: New
+- uid: LuauInterop.Ast.Nodes.Location
+  commentId: T:LuauInterop.Ast.Nodes.Location
+  parent: LuauInterop.Ast.Nodes
+  href: LuauInterop.Ast.Nodes.Location.html
+  name: Location
+  nameWithType: Location
+  fullName: LuauInterop.Ast.Nodes.Location
+- uid: System.Collections.Generic.IReadOnlyList{LuauInterop.Ast.Nodes.AstLocal}
+  commentId: T:System.Collections.Generic.IReadOnlyList{LuauInterop.Ast.Nodes.AstLocal}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<AstLocal>
+  nameWithType: IReadOnlyList<AstLocal>
+  fullName: System.Collections.Generic.IReadOnlyList<LuauInterop.Ast.Nodes.AstLocal>
+  nameWithType.vb: IReadOnlyList(Of AstLocal)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of LuauInterop.Ast.Nodes.AstLocal)
+  name.vb: IReadOnlyList(Of AstLocal)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: LuauInterop.Ast.Nodes.AstLocal
+    name: AstLocal
+    href: LuauInterop.Ast.Nodes.AstLocal.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LuauInterop.Ast.Nodes.AstLocal
+    name: AstLocal
+    href: LuauInterop.Ast.Nodes.AstLocal.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList{LuauInterop.Ast.Nodes.Expressions.AstExpr}
+  commentId: T:System.Collections.Generic.IReadOnlyList{LuauInterop.Ast.Nodes.Expressions.AstExpr}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<AstExpr>
+  nameWithType: IReadOnlyList<AstExpr>
+  fullName: System.Collections.Generic.IReadOnlyList<LuauInterop.Ast.Nodes.Expressions.AstExpr>
+  nameWithType.vb: IReadOnlyList(Of AstExpr)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of LuauInterop.Ast.Nodes.Expressions.AstExpr)
+  name.vb: IReadOnlyList(Of AstExpr)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: LuauInterop.Ast.Nodes.Expressions.AstExpr
+    name: AstExpr
+    href: LuauInterop.Ast.Nodes.Expressions.AstExpr.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: LuauInterop.Ast.Nodes.Expressions.AstExpr
+    name: AstExpr
+    href: LuauInterop.Ast.Nodes.Expressions.AstExpr.html
+  - name: )
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatBlock
+  commentId: T:LuauInterop.Ast.Nodes.Statements.AstStatBlock
+  parent: LuauInterop.Ast.Nodes.Statements
+  href: LuauInterop.Ast.Nodes.Statements.AstStatBlock.html
+  name: AstStatBlock
+  nameWithType: AstStatBlock
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatBlock
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatForIn.Vars*
+  commentId: Overload:LuauInterop.Ast.Nodes.Statements.AstStatForIn.Vars
+  href: LuauInterop.Ast.Nodes.Statements.AstStatForIn.html#LuauInterop_Ast_Nodes_Statements_AstStatForIn_Vars
+  name: Vars
+  nameWithType: AstStatForIn.Vars
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatForIn.Vars
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatForIn.Values*
+  commentId: Overload:LuauInterop.Ast.Nodes.Statements.AstStatForIn.Values
+  href: LuauInterop.Ast.Nodes.Statements.AstStatForIn.html#LuauInterop_Ast_Nodes_Statements_AstStatForIn_Values
+  name: Values
+  nameWithType: AstStatForIn.Values
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatForIn.Values
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatForIn.Body*
+  commentId: Overload:LuauInterop.Ast.Nodes.Statements.AstStatForIn.Body
+  href: LuauInterop.Ast.Nodes.Statements.AstStatForIn.html#LuauInterop_Ast_Nodes_Statements_AstStatForIn_Body
+  name: Body
+  nameWithType: AstStatForIn.Body
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatForIn.Body
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatForIn.HasIn*
+  commentId: Overload:LuauInterop.Ast.Nodes.Statements.AstStatForIn.HasIn
+  href: LuauInterop.Ast.Nodes.Statements.AstStatForIn.html#LuauInterop_Ast_Nodes_Statements_AstStatForIn_HasIn
+  name: HasIn
+  nameWithType: AstStatForIn.HasIn
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatForIn.HasIn
+- uid: LuauInterop.Ast.Nodes.Statements.AstStatForIn.HasDo*
+  commentId: Overload:LuauInterop.Ast.Nodes.Statements.AstStatForIn.HasDo
+  href: LuauInterop.Ast.Nodes.Statements.AstStatForIn.html#LuauInterop_Ast_Nodes_Statements_AstStatForIn_HasDo
+  name: HasDo
+  nameWithType: AstStatForIn.HasDo
+  fullName: LuauInterop.Ast.Nodes.Statements.AstStatForIn.HasDo

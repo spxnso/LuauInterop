@@ -8,7 +8,7 @@ items:
   - LuauInterop.Sandbox.LuauSandbox.#ctor(LuauInterop.Sandbox.LuauSandboxOptions)
   - LuauInterop.Sandbox.LuauSandbox.Dispose
   - LuauInterop.Sandbox.LuauSandbox.Dispose(System.Boolean)
-  - LuauInterop.Sandbox.LuauSandbox.Execute(System.String,System.String)
+  - LuauInterop.Sandbox.LuauSandbox.Execute(System.String)
   - LuauInterop.Sandbox.LuauSandbox.Finalize
   - LuauInterop.Sandbox.LuauSandbox.IsDisposed
   - LuauInterop.Sandbox.LuauSandbox.Luau
@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Sandbox/LuauSandbox.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: LuauSandbox
     path: ../src/LuauInterop.Sandbox/LuauSandbox.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Sandbox/LuauSandbox.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: IsDisposed
     path: ../src/LuauInterop.Sandbox/LuauSandbox.cs
@@ -91,7 +91,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Sandbox/LuauSandbox.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Options
     path: ../src/LuauInterop.Sandbox/LuauSandbox.cs
@@ -122,7 +122,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Sandbox/LuauSandbox.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Luau
     path: ../src/LuauInterop.Sandbox/LuauSandbox.cs
@@ -130,7 +130,7 @@ items:
   assemblies:
   - LuauInterop.Sandbox
   namespace: LuauInterop.Sandbox
-  summary: The Luau state associated with this sandbox.
+  summary: The Luau object associated with this sandbox.
   example: []
   syntax:
     content: public Luau Luau { get; }
@@ -153,7 +153,7 @@ items:
   source:
     remote:
       path: src/LuauInterop.Sandbox/LuauSandbox.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: .ctor
     path: ../src/LuauInterop.Sandbox/LuauSandbox.cs
@@ -185,11 +185,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Sandbox/LuauSandbox.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Finalize
     path: ../src/LuauInterop.Sandbox/LuauSandbox.cs
-    startLine: 35
+    startLine: 34
   assemblies:
   - LuauInterop.Sandbox
   namespace: LuauInterop.Sandbox
@@ -214,11 +214,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Sandbox/LuauSandbox.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Dispose
     path: ../src/LuauInterop.Sandbox/LuauSandbox.cs
-    startLine: 40
+    startLine: 39
   assemblies:
   - LuauInterop.Sandbox
   namespace: LuauInterop.Sandbox
@@ -244,11 +244,11 @@ items:
   source:
     remote:
       path: src/LuauInterop.Sandbox/LuauSandbox.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Dispose
     path: ../src/LuauInterop.Sandbox/LuauSandbox.cs
-    startLine: 46
+    startLine: 45
   assemblies:
   - LuauInterop.Sandbox
   namespace: LuauInterop.Sandbox
@@ -262,42 +262,40 @@ items:
   nameWithType.vb: LuauSandbox.Dispose(Boolean)
   fullName.vb: LuauInterop.Sandbox.LuauSandbox.Dispose(Boolean)
   name.vb: Dispose(Boolean)
-- uid: LuauInterop.Sandbox.LuauSandbox.Execute(System.String,System.String)
-  commentId: M:LuauInterop.Sandbox.LuauSandbox.Execute(System.String,System.String)
-  id: Execute(System.String,System.String)
+- uid: LuauInterop.Sandbox.LuauSandbox.Execute(System.String)
+  commentId: M:LuauInterop.Sandbox.LuauSandbox.Execute(System.String)
+  id: Execute(System.String)
   parent: LuauInterop.Sandbox.LuauSandbox
   langs:
   - csharp
   - vb
-  name: Execute(string, string)
-  nameWithType: LuauSandbox.Execute(string, string)
-  fullName: LuauInterop.Sandbox.LuauSandbox.Execute(string, string)
+  name: Execute(string)
+  nameWithType: LuauSandbox.Execute(string)
+  fullName: LuauInterop.Sandbox.LuauSandbox.Execute(string)
   type: Method
   source:
     remote:
       path: src/LuauInterop.Sandbox/LuauSandbox.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Execute
     path: ../src/LuauInterop.Sandbox/LuauSandbox.cs
-    startLine: 56
+    startLine: 54
   assemblies:
   - LuauInterop.Sandbox
   namespace: LuauInterop.Sandbox
   syntax:
-    content: public object?[] Execute(string source, string name = "script")
+    content: public object?[] Execute(string source)
     parameters:
     - id: source
       type: System.String
-    - id: name
-      type: System.String
     return:
       type: System.Object[]
-    content.vb: Public Function Execute(source As String, name As String = "script") As Object()
+    content.vb: Public Function Execute(source As String) As Object()
   overload: LuauInterop.Sandbox.LuauSandbox.Execute*
-  nameWithType.vb: LuauSandbox.Execute(String, String)
-  fullName.vb: LuauInterop.Sandbox.LuauSandbox.Execute(String, String)
-  name.vb: Execute(String, String)
+  nameWithType.vb: LuauSandbox.Execute(String)
+  fullName.vb: LuauInterop.Sandbox.LuauSandbox.Execute(String)
+  name.vb: Execute(String)
 references:
 - uid: LuauInterop.Sandbox
   commentId: N:LuauInterop.Sandbox
@@ -665,7 +663,7 @@ references:
   - name: )
 - uid: LuauInterop.Sandbox.LuauSandbox.Execute*
   commentId: Overload:LuauInterop.Sandbox.LuauSandbox.Execute
-  href: LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_Execute_System_String_System_String_
+  href: LuauInterop.Sandbox.LuauSandbox.html#LuauInterop_Sandbox_LuauSandbox_Execute_System_String_
   name: Execute
   nameWithType: LuauSandbox.Execute
   fullName: LuauInterop.Sandbox.LuauSandbox.Execute

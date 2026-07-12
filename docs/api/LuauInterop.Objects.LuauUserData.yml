@@ -5,7 +5,7 @@ items:
   id: LuauUserData
   parent: LuauInterop.Objects
   children:
-  - LuauInterop.Objects.LuauUserData.#ctor(LuauInterop.Luau,System.Int32)
+  - LuauInterop.Objects.LuauUserData.#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32)
   - LuauInterop.Objects.LuauUserData.Pointer
   - LuauInterop.Objects.LuauUserData.Read``1
   - LuauInterop.Objects.LuauUserData.Tag
@@ -19,11 +19,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/Objects/LuauUserData.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: LuauUserData
     path: ../src/LuauInterop/Objects/LuauUserData.cs
-    startLine: 4
+    startLine: 6
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Objects
@@ -37,6 +37,7 @@ items:
   - System.IDisposable
   inheritedMembers:
   - LuauInterop.LuauBase.Owner
+  - LuauInterop.LuauBase.State
   - LuauInterop.LuauBase.Reference
   - LuauInterop.LuauBase.IsDisposed
   - LuauInterop.LuauBase.Dispose
@@ -47,40 +48,42 @@ items:
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: LuauInterop.Objects.LuauUserData.#ctor(LuauInterop.Luau,System.Int32)
-  commentId: M:LuauInterop.Objects.LuauUserData.#ctor(LuauInterop.Luau,System.Int32)
-  id: '#ctor(LuauInterop.Luau,System.Int32)'
+- uid: LuauInterop.Objects.LuauUserData.#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32)
+  commentId: M:LuauInterop.Objects.LuauUserData.#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32)
+  id: '#ctor(LuauInterop.Luau,LuauInterop.Native.LuaState,System.Int32)'
   parent: LuauInterop.Objects.LuauUserData
   langs:
   - csharp
   - vb
-  name: LuauUserData(Luau, int)
-  nameWithType: LuauUserData.LuauUserData(Luau, int)
-  fullName: LuauInterop.Objects.LuauUserData.LuauUserData(LuauInterop.Luau, int)
+  name: LuauUserData(Luau, LuaState, int)
+  nameWithType: LuauUserData.LuauUserData(Luau, LuaState, int)
+  fullName: LuauInterop.Objects.LuauUserData.LuauUserData(LuauInterop.Luau, LuauInterop.Native.LuaState, int)
   type: Constructor
   source:
     remote:
       path: src/LuauInterop/Objects/LuauUserData.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: .ctor
     path: ../src/LuauInterop/Objects/LuauUserData.cs
-    startLine: 4
+    startLine: 6
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Objects
   syntax:
-    content: public LuauUserData(Luau owner, int reference)
+    content: public LuauUserData(Luau owner, LuaState state, int reference)
     parameters:
     - id: owner
       type: LuauInterop.Luau
+    - id: state
+      type: LuauInterop.Native.LuaState
     - id: reference
       type: System.Int32
-    content.vb: Public Sub New(owner As Luau, reference As Integer)
+    content.vb: Public Sub New(owner As Luau, state As LuaState, reference As Integer)
   overload: LuauInterop.Objects.LuauUserData.#ctor*
-  nameWithType.vb: LuauUserData.New(Luau, Integer)
-  fullName.vb: LuauInterop.Objects.LuauUserData.New(LuauInterop.Luau, Integer)
-  name.vb: New(Luau, Integer)
+  nameWithType.vb: LuauUserData.New(Luau, LuaState, Integer)
+  fullName.vb: LuauInterop.Objects.LuauUserData.New(LuauInterop.Luau, LuauInterop.Native.LuaState, Integer)
+  name.vb: New(Luau, LuaState, Integer)
 - uid: LuauInterop.Objects.LuauUserData.Pointer
   commentId: P:LuauInterop.Objects.LuauUserData.Pointer
   id: Pointer
@@ -95,11 +98,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/Objects/LuauUserData.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Pointer
     path: ../src/LuauInterop/Objects/LuauUserData.cs
-    startLine: 6
+    startLine: 8
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Objects
@@ -124,11 +127,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/Objects/LuauUserData.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Tag
     path: ../src/LuauInterop/Objects/LuauUserData.cs
-    startLine: 24
+    startLine: 26
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Objects
@@ -153,11 +156,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/Objects/LuauUserData.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Read
     path: ../src/LuauInterop/Objects/LuauUserData.cs
-    startLine: 42
+    startLine: 44
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Objects
@@ -228,6 +231,13 @@ references:
   name: Owner
   nameWithType: LuauBase.Owner
   fullName: LuauInterop.LuauBase.Owner
+- uid: LuauInterop.LuauBase.State
+  commentId: P:LuauInterop.LuauBase.State
+  parent: LuauInterop.LuauBase
+  href: LuauInterop.LuauBase.html#LuauInterop_LuauBase_State
+  name: State
+  nameWithType: LuauBase.State
+  fullName: LuauInterop.LuauBase.State
 - uid: LuauInterop.LuauBase.Reference
   commentId: P:LuauInterop.LuauBase.Reference
   parent: LuauInterop.LuauBase
@@ -490,7 +500,7 @@ references:
   fullName: LuauInterop
 - uid: LuauInterop.Objects.LuauUserData.#ctor*
   commentId: Overload:LuauInterop.Objects.LuauUserData.#ctor
-  href: LuauInterop.Objects.LuauUserData.html#LuauInterop_Objects_LuauUserData__ctor_LuauInterop_Luau_System_Int32_
+  href: LuauInterop.Objects.LuauUserData.html#LuauInterop_Objects_LuauUserData__ctor_LuauInterop_Luau_LuauInterop_Native_LuaState_System_Int32_
   name: LuauUserData
   nameWithType: LuauUserData.LuauUserData
   fullName: LuauInterop.Objects.LuauUserData.LuauUserData
@@ -504,6 +514,13 @@ references:
   name: Luau
   nameWithType: Luau
   fullName: LuauInterop.Luau
+- uid: LuauInterop.Native.LuaState
+  commentId: T:LuauInterop.Native.LuaState
+  parent: LuauInterop.Native
+  href: LuauInterop.Native.LuaState.html
+  name: LuaState
+  nameWithType: LuaState
+  fullName: LuauInterop.Native.LuaState
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -515,6 +532,28 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
+- uid: LuauInterop.Native
+  commentId: N:LuauInterop.Native
+  href: LuauInterop.html
+  name: LuauInterop.Native
+  nameWithType: LuauInterop.Native
+  fullName: LuauInterop.Native
+  spec.csharp:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Native
+    name: Native
+    href: LuauInterop.Native.html
+  spec.vb:
+  - uid: LuauInterop
+    name: LuauInterop
+    href: LuauInterop.html
+  - name: .
+  - uid: LuauInterop.Native
+    name: Native
+    href: LuauInterop.Native.html
 - uid: LuauInterop.Objects.LuauUserData.Pointer*
   commentId: Overload:LuauInterop.Objects.LuauUserData.Pointer
   href: LuauInterop.Objects.LuauUserData.html#LuauInterop_Objects_LuauUserData_Pointer

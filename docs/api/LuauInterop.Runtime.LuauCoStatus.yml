@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauCoStatus.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: LuauCoStatus
     path: ../src/LuauInterop/Runtime/LuauCoStatus.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauCoStatus.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Run
     path: ../src/LuauInterop/Runtime/LuauCoStatus.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauCoStatus.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Suspended
     path: ../src/LuauInterop/Runtime/LuauCoStatus.cs
@@ -97,7 +97,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauCoStatus.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Normal
     path: ../src/LuauInterop/Runtime/LuauCoStatus.cs
@@ -123,7 +123,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauCoStatus.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Finished
     path: ../src/LuauInterop/Runtime/LuauCoStatus.cs
@@ -149,7 +149,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauCoStatus.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Errored
     path: ../src/LuauInterop/Runtime/LuauCoStatus.cs

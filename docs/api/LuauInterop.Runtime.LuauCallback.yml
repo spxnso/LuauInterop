@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauCallback.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: LuauCallback
     path: ../src/LuauInterop/Runtime/LuauCallback.cs
@@ -64,7 +64,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauCallback.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: FunctionPointer
     path: ../src/LuauInterop/Runtime/LuauCallback.cs
@@ -95,7 +95,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauCallback.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Managed
     path: ../src/LuauInterop/Runtime/LuauCallback.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauCallback.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Owner
     path: ../src/LuauInterop/Runtime/LuauCallback.cs
@@ -157,7 +157,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauCallback.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Native
     path: ../src/LuauInterop/Runtime/LuauCallback.cs
@@ -188,7 +188,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauCallback.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Pin
     path: ../src/LuauInterop/Runtime/LuauCallback.cs
@@ -219,7 +219,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauCallback.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: IsDisposed
     path: ../src/LuauInterop/Runtime/LuauCallback.cs
@@ -250,7 +250,7 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauCallback.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: .ctor
     path: ../src/LuauInterop/Runtime/LuauCallback.cs
@@ -284,11 +284,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauCallback.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Finalize
     path: ../src/LuauInterop/Runtime/LuauCallback.cs
-    startLine: 72
+    startLine: 77
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Runtime
@@ -313,11 +313,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauCallback.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Dispose
     path: ../src/LuauInterop/Runtime/LuauCallback.cs
-    startLine: 77
+    startLine: 82
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Runtime
@@ -343,11 +343,11 @@ items:
   source:
     remote:
       path: src/LuauInterop/Runtime/LuauCallback.cs
-      branch: master
+      branch: feature/ast
       repo: https://github.com/spxnso/LuauInterop
     id: Dispose
     path: ../src/LuauInterop/Runtime/LuauCallback.cs
-    startLine: 83
+    startLine: 88
   assemblies:
   - LuauInterop
   namespace: LuauInterop.Runtime
