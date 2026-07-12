@@ -32,7 +32,7 @@ static int csharp_trampoline(lua_State* L)
 
 extern "C"
 {
-    void free(void* ptr)
+    void cpp_free(void* ptr)
     {
         free(ptr);
     }

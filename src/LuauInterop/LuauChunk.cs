@@ -40,7 +40,7 @@ public class LuauChunk(nint pointer, nuint size) : IDisposable
 
         if (Pointer != nint.Zero)
         {
-            NativeMethods.free(Pointer);
+            NativeMethods.cpp_free(Pointer);
             Pointer = nint.Zero;
         }
 

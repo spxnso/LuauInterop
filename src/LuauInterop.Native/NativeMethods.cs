@@ -665,7 +665,7 @@ public static partial class NativeMethods
 
     [LibraryImport(LuauLibraryName)]
     [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
-    public static partial void free(nint ptr);
+    public static partial void cpp_free(nint ptr);
 
     [LibraryImport(LuauLibraryName)]
     [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
