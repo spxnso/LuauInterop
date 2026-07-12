@@ -106,13 +106,20 @@
 </tr>
 <tr>
 <td><code>LuauInterop.Sandbox</code></td>
-<td>Sandboxing utilities for untrusted code (optional)</td>
+<td>Sandboxing utilities for untrusted code</td>
+</tr>
+<tr>
+<td><code>LuauInterop.Ast</code></td>
+<td>Parsing and syntax tree utilities for LuauInterop</td>
 </tr>
 </tbody>
 </table>
 <p>Install the core packages:</p>
 <pre><code class="lang-bash">dotnet add package LuauInterop
 dotnet add package LuauInterop.Native
+</code></pre>
+<p>Optionally, add the AST parser package:</p>
+<pre><code class="lang-bash">dotnet add package LuauInterop.Ast
 </code></pre>
 <p>Optionally, add the sandbox package:</p>
 <pre><code class="lang-bash">dotnet add package LuauInterop.Sandbox

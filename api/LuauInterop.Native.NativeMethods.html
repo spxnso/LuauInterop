@@ -153,6 +153,68 @@ Class NativeMethods
 </h2>
 
 
+  <a id="LuauInterop_Native_NativeMethods_cpp_delete_" data-uid="LuauInterop.Native.NativeMethods.cpp_delete*"></a>
+
+  <h3 id="LuauInterop_Native_NativeMethods_cpp_delete_System_IntPtr_" data-uid="LuauInterop.Native.NativeMethods.cpp_delete(System.IntPtr)">
+  cpp_delete(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern void cpp_delete(nint ptr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ptr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="LuauInterop_Native_NativeMethods_cpp_free_" data-uid="LuauInterop.Native.NativeMethods.cpp_free*"></a>
+
+  <h3 id="LuauInterop_Native_NativeMethods_cpp_free_System_IntPtr_" data-uid="LuauInterop.Native.NativeMethods.cpp_free(System.IntPtr)">
+  cpp_free(nint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static extern void cpp_free(nint ptr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ptr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="LuauInterop_Native_NativeMethods_luaL_newstate_" data-uid="LuauInterop.Native.NativeMethods.luaL_newstate*"></a>
 
   <h3 id="LuauInterop_Native_NativeMethods_luaL_newstate" data-uid="LuauInterop.Native.NativeMethods.luaL_newstate">
@@ -5866,42 +5928,11 @@ Class NativeMethods
 
 
 
-  <a id="LuauInterop_Native_NativeMethods_luau_free_" data-uid="LuauInterop.Native.NativeMethods.luau_free*"></a>
-
-  <h3 id="LuauInterop_Native_NativeMethods_luau_free_System_IntPtr_" data-uid="LuauInterop.Native.NativeMethods.luau_free(System.IntPtr)">
-  luau_free(nint)
-  
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static extern void luau_free(nint ptr)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>ptr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
   <a id="LuauInterop_Native_NativeMethods_luau_getfflag_" data-uid="LuauInterop.Native.NativeMethods.luau_getfflag*"></a>
 
   <h3 id="LuauInterop_Native_NativeMethods_luau_getfflag_System_String_" data-uid="LuauInterop.Native.NativeMethods.luau_getfflag(System.String)">
   luau_getfflag(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Native/NativeMethods.cs/#L658"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Native/NativeMethods.cs/#L654"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -5977,6 +6008,44 @@ Class NativeMethods
 
 
 
+  <a id="LuauInterop_Native_NativeMethods_luau_parse_" data-uid="LuauInterop.Native.NativeMethods.luau_parse*"></a>
+
+  <h3 id="LuauInterop_Native_NativeMethods_luau_parse_System_String_System_UIntPtr_" data-uid="LuauInterop.Native.NativeMethods.luau_parse(System.String,System.UIntPtr)">
+  luau_parse(string, nuint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Native/NativeMethods.cs/#L662"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static nint luau_parse(string source, nuint sourceLength)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>sourceLength</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="LuauInterop_Native_NativeMethods_luau_pushcsharpfunc_" data-uid="LuauInterop.Native.NativeMethods.luau_pushcsharpfunc*"></a>
 
   <h3 id="LuauInterop_Native_NativeMethods_luau_pushcsharpfunc_System_IntPtr_System_IntPtr_" data-uid="LuauInterop.Native.NativeMethods.luau_pushcsharpfunc(System.IntPtr,System.IntPtr)">
@@ -6014,7 +6083,7 @@ Class NativeMethods
 
   <h3 id="LuauInterop_Native_NativeMethods_luau_setfflag_System_String_System_Int32_" data-uid="LuauInterop.Native.NativeMethods.luau_setfflag(System.String,System.Int32)">
   luau_setfflag(string, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Native/NativeMethods.cs/#L654"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop.Native/NativeMethods.cs/#L650"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

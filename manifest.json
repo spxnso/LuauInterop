@@ -12,6 +12,1168 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.LuauComment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.LuauComment.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.LuauComment",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.LuauParseError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.LuauParseError.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.LuauParseError",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.LuauParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.LuauParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.LuauParser",
+      "Summary": "<p sourcefile=\"api/LuauInterop.Ast.LuauParser.yml\" sourcestartlinenumber=\"1\">Parses the JSON produced by <code>luau_parse</code> and constructs the AST.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.AstArgumentName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.AstArgumentName.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.AstArgumentName",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.AstAttr.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.AstAttr.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.AstAttr",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.AstLocal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.AstLocal.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.AstLocal",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.AstNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.AstNode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.AstNode",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExpr.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExpr.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Expressions.AstExpr",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprBinary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprBinary.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Expressions.AstExprBinary",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprCall.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprCall.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Expressions.AstExprCall",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprConstantBool.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprConstantBool.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Expressions.AstExprConstantBool",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprConstantInteger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprConstantInteger.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Expressions.AstExprConstantInteger",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprConstantNil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprConstantNil.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Expressions.AstExprConstantNil",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprConstantNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprConstantNumber.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Expressions.AstExprConstantNumber",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprConstantString.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprConstantString.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Expressions.AstExprConstantString",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprError.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Expressions.AstExprError",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprFunction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprFunction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Expressions.AstExprFunction",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprGlobal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprGlobal.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Expressions.AstExprGlobal",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprGroup.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Expressions.AstExprGroup",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprIfElse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprIfElse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Expressions.AstExprIfElse",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprIndexExpr.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprIndexExpr.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Expressions.AstExprIndexExpr",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprIndexName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprIndexName.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Expressions.AstExprIndexName",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprInterpString.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprInterpString.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Expressions.AstExprInterpString",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprLocal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprLocal.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Expressions.AstExprLocal",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprTable.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Expressions.AstExprTable",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprTableItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprTableItem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Expressions.AstExprTableItem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprTypeAssertion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprTypeAssertion.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Expressions.AstExprTypeAssertion",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprUnary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprUnary.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Expressions.AstExprUnary",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprVarargs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Expressions.AstExprVarargs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Expressions.AstExprVarargs",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Expressions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Expressions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Expressions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Location.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Location.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Location",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Position.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Position.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Position",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstDeclaredClassProp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstDeclaredClassProp.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Statements.AstDeclaredClassProp",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStat.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Statements.AstStat",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatAssign.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatAssign.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Statements.AstStatAssign",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatBlock.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatBlock.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Statements.AstStatBlock",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatBreak.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatBreak.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Statements.AstStatBreak",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatCompoundAssign.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatCompoundAssign.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Statements.AstStatCompoundAssign",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatContinue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatContinue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Statements.AstStatContinue",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatDeclareClass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatDeclareClass.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Statements.AstStatDeclareClass",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatDeclareFunction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatDeclareFunction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Statements.AstStatDeclareFunction",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatDeclareGlobal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatDeclareGlobal.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Statements.AstStatDeclareGlobal",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatError.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Statements.AstStatError",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatExpr.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatExpr.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Statements.AstStatExpr",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatFor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatFor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Statements.AstStatFor",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatForIn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatForIn.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Statements.AstStatForIn",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatFunction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatFunction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Statements.AstStatFunction",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatIf.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatIf.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Statements.AstStatIf",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatLocal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatLocal.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Statements.AstStatLocal",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatLocalFunction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatLocalFunction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Statements.AstStatLocalFunction",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatRepeat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatRepeat.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Statements.AstStatRepeat",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatReturn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatReturn.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Statements.AstStatReturn",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatTypeAlias.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatTypeAlias.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Statements.AstStatTypeAlias",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatWhile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Statements.AstStatWhile.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Statements.AstStatWhile",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Statements.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Statements.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Statements",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Types.AstGenericType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Types.AstGenericType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Types.AstGenericType",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Types.AstGenericTypePack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Types.AstGenericTypePack.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Types.AstGenericTypePack",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTableIndexer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTableIndexer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Types.AstTableIndexer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTableProp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTableProp.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Types.AstTableProp",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Types.AstType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Types.AstType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Types.AstType",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypeError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypeError.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Types.AstTypeError",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypeFunction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypeFunction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Types.AstTypeFunction",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypeGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypeGroup.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Types.AstTypeGroup",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypeIntersection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypeIntersection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Types.AstTypeIntersection",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypeList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypeList.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Types.AstTypeList",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypeOptional.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypeOptional.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Types.AstTypeOptional",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypeOrPack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypeOrPack.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Types.AstTypeOrPack",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypePack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypePack.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Types.AstTypePack",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypePackExplicit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypePackExplicit.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Types.AstTypePackExplicit",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypePackGeneric.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypePackGeneric.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Types.AstTypePackGeneric",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypePackVariadic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypePackVariadic.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Types.AstTypePackVariadic",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypeReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypeReference.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Types.AstTypeReference",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypeSingletonBool.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypeSingletonBool.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Types.AstTypeSingletonBool",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypeSingletonString.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypeSingletonString.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Types.AstTypeSingletonString",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypeTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypeTable.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Types.AstTypeTable",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypeTypeof.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypeTypeof.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Types.AstTypeTypeof",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypeUnion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Types.AstTypeUnion.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Types.AstTypeUnion",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.Types.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes.Types",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Nodes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Nodes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Nodes",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Serialization.LuauSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Serialization.LuauSerializer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Serialization.LuauSerializer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.Serialization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.Serialization.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.Serialization",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.SyntaxTree.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.SyntaxTree.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast.SyntaxTree",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LuauInterop.Ast.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LuauInterop.Ast.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "LuauInterop.Ast",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/LuauInterop.Compilation.LuauCompileOptions.yml",
       "output": {
         ".html": {
@@ -462,11 +1624,11 @@
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "api/toc.json"
-        },
         ".html": {
           "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
         }
       },
       "version": ""
@@ -513,6 +1675,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "docs/parsing.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/parsing.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "docs/quickstart.md",
       "output": {
         ".html": {
@@ -535,11 +1707,11 @@
       "type": "Toc",
       "source_relative_path": "docs/toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "docs/toc.json"
-        },
         ".html": {
           "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
         }
       },
       "version": ""
@@ -598,11 +1770,11 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "toc.json"
-        },
         ".html": {
           "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
         }
       },
       "version": ""
