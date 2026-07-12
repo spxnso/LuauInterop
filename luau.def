@@ -188,9 +188,6 @@ EXPORTS
     luaL_sandbox
     luaL_sandboxthread
 
-    ; Memory
-    luau_free
-
     ; Fflags
     luau_setfflag
     luau_getfflag
@@ -200,3 +197,7 @@ EXPORTS
 
     ; Ast
     luau_parse
+
+    ; C++ 
+    cpp_delete
+    cpp_free
