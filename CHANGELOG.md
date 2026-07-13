@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.2.0](https://github.com/spxnso/LuauInterop/compare/v1.1.2...v1.2.0) (2026-07-13)
+
+
+### Features
+
+* add `.vscode` to gitignore ([f268393](https://github.com/spxnso/LuauInterop/commit/f2683937766f12c1464a6f53bfa9a534df888b5e))
+* add `LuauInterop.Ast` ([222399a](https://github.com/spxnso/LuauInterop/commit/222399a6d39386b2de69c6c305c62ea8018e6d8b))
+* add ast ([734d421](https://github.com/spxnso/LuauInterop/commit/734d4211f3529f89ba63370feda01d52e5b1924f))
+
+
+### Bug Fixes
+
+* rename `free` to `cpp_free` to avoid stack overflows ([241a211](https://github.com/spxnso/LuauInterop/commit/241a2110d06d3e669fce7efc9c68c43f94188e7f))
+* update documentations files ([20a942f](https://github.com/spxnso/LuauInterop/commit/20a942f227b8dc71c57498813348dac868316d15))
+* update vs version ([505d276](https://github.com/spxnso/LuauInterop/commit/505d27674a97475f01da1a25bf9efd17819ddbc4))
+
 ## [1.1.2](https://github.com/spxnso/LuauInterop/compare/v1.1.1...v1.1.2) (2026-06-01)
 
 
