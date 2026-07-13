@@ -13,7 +13,7 @@ New-Item $BuildDir -ItemType Directory | Out-Null
 
 Push-Location $BuildDir
 try {
-    cmake $Root -G "Visual Studio 17 2022" -A x64
+    cmake $Root -G "Visual Studio 18 2026" -A x64
     cmake --build . --config Release
 
     if (-not (Test-Path $OutDir)) {
