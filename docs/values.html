@@ -188,15 +188,15 @@ LuauValue nothing = LuauValue.Nil;
 <td><code>Number</code></td>
 </tr>
 <tr>
-<td><code>LuauVector</code></td>
+<td><code>Vector3</code></td>
 <td><code>Vector</code></td>
 </tr>
 <tr>
-<td><code>LuauBuffer</code></td>
+<td><code>byte[] </code></td>
 <td><code>Buffer</code></td>
 </tr>
 <tr>
-<td><code>LuauFunction</code></td>
+<td><code>Func&lt;Luau, int&gt;</code> or <code>Delegate</code></td>
 <td><code>Function</code> (by reference)</td>
 </tr>
 <tr>
@@ -209,16 +209,6 @@ LuauValue nothing = LuauValue.Nil;
 </tr>
 </tbody>
 </table>
-<h2 id="luauvector">LuauVector</h2>
-<p>A 3-component immutable value type:</p>
-<pre><code class="lang-csharp">var v = new LuauVector(1f, 2f, 3f);
-Console.WriteLine(v); // &lt;1, 2, 3&gt;
-</code></pre>
-<h2 id="luaubuffer">LuauBuffer</h2>
-<p>Wraps a byte array:</p>
-<pre><code class="lang-csharp">var buf = new LuauBuffer(new byte[] { 0x01, 0x02, 0x03 });
-Console.WriteLine(buf.Length); // 3
-</code></pre>
 
 </article>
 

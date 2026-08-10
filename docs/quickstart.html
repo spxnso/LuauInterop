@@ -88,8 +88,10 @@
 <h1 id="quick-start">Quick Start</h1>
 
 <h2 id="creating-a-vm">Creating a VM</h2>
-<pre><code class="lang-csharp">using var luau = new Luau();
-luau.OpenLibraries(); // optional
+<pre><code class="lang-csharp">using LuauInterop.Runtime;
+
+using var luau = new Luau();
+luau.OpenLibrary(LuauLibrary.All); // optional
 </code></pre>
 <p>Always wrap the <code>Luau</code> instance in a <code>using</code> block, it owns the native state and must be disposed.</p>
 <h2 id="running-a-script">Running a Script</h2>
@@ -109,7 +111,9 @@ var results1 = thread1.Resume(chunk);
 var results2 = thread2.Resume(chunk);
 </code></pre>
 <h2 id="calling-a-luau-function">Calling a Luau Function</h2>
-<pre><code class="lang-csharp">luau.DoString(@&quot;
+<pre><code class="lang-csharp">using LuauInterop.Objects;
+
+luau.DoString(@&quot;
     function greet(name)
         return 'Hello, ' .. name .. '!'
     end
@@ -153,7 +157,7 @@ Console.WriteLine(version); // 1.0.0
 var co = luau[&quot;co&quot;] as LuauThread;
 using (co)
 {
-    var r1 = co.Resume(10);
+    var r1 = co!.Resume(10); // shouldn't be null.
     Console.WriteLine(r1[0]); // 11
 
     var r2 = co.Resume();
@@ -162,14 +166,16 @@ using (co)
 </code></pre>
 <h2 id="using-fflags">Using FFlags</h2>
 <p>Here's an example using fflags to use the newest Integer type and library.</p>
-<pre><code class="lang-csharp">using var luau = new Luau();
+<pre><code class="lang-csharp">using LuauInterop.Runtime;
+
+using var luau = new Luau();
 
 luau.SetFFlag(&quot;LuauIntegerType&quot;, true);
 luau.SetFFlag(&quot;LuauIntegerLibrary&quot;, true);
 
-Console.WriteLine(luau.GetFFlag(&quot;LuauIntegerType&quot;)) // True
+Console.WriteLine(luau.GetFFlag(&quot;LuauIntegerType&quot;)); // True
 
-luau.OpenLibraries();
+luau.OpenLibrary(LuauLibrary.All);
 
 var results = luau.DoString(@&quot;
     return integer.fromstring('1011100', 2) -- 92
