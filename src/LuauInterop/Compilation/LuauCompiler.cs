@@ -45,7 +45,8 @@ public static class LuauCompiler
 
             if (Marshal.ReadByte(bytecode) == 0)
             {
-                string error = Marshal.PtrToStringUTF8(bytecode + 1, (int)outSize - 1) ?? "Unknown compilation error.";
+                string error = outSize <= 1 ? "Unknown compilation error (empty error message from luau_compile)." : Marshal.PtrToStringUTF8(bytecode + 1, (int)outSize - 1) ?? "Unknown compilation error.";
+
                 NativeMethods.cpp_free(bytecode);
                 throw new LuauException(error);
             }
