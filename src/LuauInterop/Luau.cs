@@ -210,7 +210,7 @@ public class Luau : IDisposable
             LuauType.Boolean => state.ToBoolean(index),
             LuauType.Number => state.ToNumber(index),
             LuauType.Integer => state.ToInteger64(index, out _),
-            LuauType.String => Marshal.PtrToStringUTF8(state.ToLString(index, out nuint len), (int)len),
+            LuauType.String => ReadLuauString(state.ToLString(index, out nuint len), len),
             LuauType.Function => new LuauFunction(this, state, state.Ref(index)),
             LuauType.Table => new LuauTable(this, state, state.Ref(index)),
             LuauType.UserData => new LuauUserData(this, state, state.Ref(index)),
@@ -241,7 +241,7 @@ public class Luau : IDisposable
             case LuauType.Integer: return state.ToInteger64(index, out _);
             case LuauType.String:
                 nint ptr = state.ToLString(index, out nuint len);
-                string? s = ptr == nint.Zero ? null : Marshal.PtrToStringUTF8(ptr, (int)len);
+                string? s = ReadLuauString(ptr, len);
                 return new LuauValue(LuauType.String, number: 0, integer: 0, reference: s);
             case LuauType.Function:
                 return new LuauValue(LuauType.Function, number: state.Ref(index), state: state, integer: 0, reference: this);
@@ -519,6 +519,22 @@ public class Luau : IDisposable
 
             _ => throw new NotSupportedException($"Unsupported CLR type: {value.GetType()}")
         };
+    }
+
+    /// <summary>
+    /// Converts a native UTF-8 string pointer/length pair returned by <c>lua_tolstring</c>
+    /// into a managed string, guarding against <paramref name="len"/> exceeding
+    /// <see cref="int.MaxValue"/> before narrowing it (mirrors the guard in <see cref="ReadBuffer"/>).
+    /// </summary>
+    private static string? ReadLuauString(nint ptr, nuint len)
+    {
+        if (ptr == nint.Zero)
+            return null;
+
+        if (len.ToUInt64() > int.MaxValue)
+            throw new OverflowException("Luau string too large for managed string.");
+
+        return Marshal.PtrToStringUTF8(ptr, (int)len);
     }
 
     private byte[] ReadBuffer(int index, LuaState state)
