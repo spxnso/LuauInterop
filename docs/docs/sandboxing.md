@@ -1,5 +1,10 @@
 ## Sandboxing
 
+## Deprecated
+
+This package is no longer maintained and will not receive bug fixes or support.
+Please do not open issues or reach out with questions about it.
+
 ## Installation
 
 The sandbox is an optional package, make sure to install it:

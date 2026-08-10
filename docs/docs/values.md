@@ -46,26 +46,8 @@ object? obj = value.ToObject();
 | `string`, `char` | `String` |
 | `int`, `long`, `short`, etc. | `Integer` |
 | `float`, `double`, `decimal` | `Number` |
-| `LuauVector` | `Vector` |
-| `LuauBuffer` | `Buffer` |
-| `LuauFunction` | `Function` (by reference) |
+| `Vector3` | `Vector` |
+| `byte[] ` | `Buffer` |
+| `Func<Luau, int>` or `Delegate` | `Function` (by reference) |
 | `LuauTable` | `Table` (by reference) |
 | `LuauThread` | `Thread` (by reference) |
-
-## LuauVector
-
-A 3-component immutable value type:
-
-```csharp
-var v = new LuauVector(1f, 2f, 3f);
-Console.WriteLine(v); // <1, 2, 3>
-```
-
-## LuauBuffer
-
-Wraps a byte array:
-
-```csharp
-var buf = new LuauBuffer(new byte[] { 0x01, 0x02, 0x03 });
-Console.WriteLine(buf.Length); // 3
-```

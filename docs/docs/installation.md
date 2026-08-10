@@ -6,7 +6,7 @@ LuauInterop is split into packages:
 |----------|-------------|
 | `LuauInterop` | The managed bindings |
 | `LuauInterop.Native` | The native Luau runtime libraries |
-| `LuauInterop.Sandbox` | Sandboxing utilities for untrusted code |
+| `LuauInterop.Sandbox` | Sandboxing utilities for untrusted code (DEPRECATED) |
 | `LuauInterop.Ast` | Parsing and syntax tree utilities for LuauInterop |
 
 Install the core packages:
@@ -20,12 +20,6 @@ Optionally, add the AST parser package:
 
 ```bash
 dotnet add package LuauInterop.Ast
-```
-
-Optionally, add the sandbox package:
-
-```bash
-dotnet add package LuauInterop.Sandbox
 ```
 
 ### Supported Platforms

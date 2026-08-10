@@ -3,8 +3,10 @@
 ## Creating a VM
 
 ```csharp
+using LuauInterop.Runtime;
+
 using var luau = new Luau();
-luau.OpenLibraries(); // optional
+luau.OpenLibrary(LuauLibrary.All); // optional
 ```
 
 Always wrap the `Luau` instance in a `using` block, it owns the native state and must be disposed.
@@ -36,6 +38,8 @@ var results2 = thread2.Resume(chunk);
 ## Calling a Luau Function
 
 ```csharp
+using LuauInterop.Objects;
+
 luau.DoString(@"
     function greet(name)
         return 'Hello, ' .. name .. '!'
@@ -89,7 +93,7 @@ luau.DoString(@"
 var co = luau["co"] as LuauThread;
 using (co)
 {
-    var r1 = co.Resume(10);
+    var r1 = co!.Resume(10); // shouldn't be null.
     Console.WriteLine(r1[0]); // 11
 
     var r2 = co.Resume();
@@ -102,14 +106,16 @@ using (co)
 Here's an example using fflags to use the newest Integer type and library.
 
 ```csharp
+using LuauInterop.Runtime;
+
 using var luau = new Luau();
 
 luau.SetFFlag("LuauIntegerType", true);
 luau.SetFFlag("LuauIntegerLibrary", true);
 
-Console.WriteLine(luau.GetFFlag("LuauIntegerType")) // True
+Console.WriteLine(luau.GetFFlag("LuauIntegerType")); // True
 
-luau.OpenLibraries();
+luau.OpenLibrary(LuauLibrary.All);
 
 var results = luau.DoString(@"
     return integer.fromstring('1011100', 2) -- 92
