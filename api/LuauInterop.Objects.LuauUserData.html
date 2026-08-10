@@ -244,6 +244,43 @@ Class LuauUserData  <a class="header-action link-secondary" title="View source" 
 
 
 
+  <a id="LuauInterop_Objects_LuauUserData_Size_" data-uid="LuauInterop.Objects.LuauUserData.Size*"></a>
+
+  <h3 id="LuauInterop_Objects_LuauUserData_Size" data-uid="LuauInterop.Objects.LuauUserData.Size">
+  Size
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/Objects/LuauUserData.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the number of bytes actually allocated for this userdata's payload,
+as reported by the Lua runtime (<code>lua_objlen</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Size { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="LuauInterop_Objects_LuauUserData_Size_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This is the authoritative size of the native block backing this userdata.
+<a class="xref" href="LuauInterop.Objects.LuauUserData.html#LuauInterop_Objects_LuauUserData_Read__1">Read&lt;T&gt;()</a> validates against this value before reading.</p>
+</div>
+
+
+
+
   <a id="LuauInterop_Objects_LuauUserData_Tag_" data-uid="LuauInterop.Objects.LuauUserData.Tag*"></a>
 
   <h3 id="LuauInterop_Objects_LuauUserData_Tag" data-uid="LuauInterop.Objects.LuauUserData.Tag">
@@ -283,10 +320,11 @@ Class LuauUserData  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="LuauInterop_Objects_LuauUserData_Read__1" data-uid="LuauInterop.Objects.LuauUserData.Read``1">
   Read&lt;T&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/Objects/LuauUserData.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/Objects/LuauUserData.cs/#L79"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Reads this userdata's payload as a value of type <code class="typeparamref">T</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -297,6 +335,58 @@ Class LuauUserData  <a class="header-action link-secondary" title="View source" 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown if the userdata's pointer is null, or if the userdata's actual
+allocated size (<a class="xref" href="LuauInterop.Objects.LuauUserData.html#LuauInterop_Objects_LuauUserData_Size">Size</a>) is smaller than <code>sizeof(T)</code>.
+This guards against out-of-bounds reads.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="LuauInterop_Objects_LuauUserData_TryRead_" data-uid="LuauInterop.Objects.LuauUserData.TryRead*"></a>
+
+  <h3 id="LuauInterop_Objects_LuauUserData_TryRead__1___0__" data-uid="LuauInterop.Objects.LuauUserData.TryRead``1(``0@)">
+  TryRead&lt;T&gt;(out T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spxnso/LuauInterop/blob/master/src/LuauInterop/Objects/LuauUserData.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attempts to read this userdata's payload as a value of type
+<code class="typeparamref">T</code>, returning <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> instead of
+throwing if the userdata is too small or its pointer is null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryRead&lt;T&gt;(out T value) where T : unmanaged</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
   </dl>
 

@@ -10346,6 +10346,19 @@ references:
   fullName.vb: LuauInterop.Objects.LuauUserData.Read(Of T)()
   nameWithType: LuauUserData.Read<T>()
   nameWithType.vb: LuauUserData.Read(Of T)()
+- uid: LuauInterop.Objects.LuauUserData.Size
+  name: Size
+  href: api/LuauInterop.Objects.LuauUserData.html#LuauInterop_Objects_LuauUserData_Size
+  commentId: P:LuauInterop.Objects.LuauUserData.Size
+  fullName: LuauInterop.Objects.LuauUserData.Size
+  nameWithType: LuauUserData.Size
+- uid: LuauInterop.Objects.LuauUserData.Size*
+  name: Size
+  href: api/LuauInterop.Objects.LuauUserData.html#LuauInterop_Objects_LuauUserData_Size_
+  commentId: Overload:LuauInterop.Objects.LuauUserData.Size
+  isSpec: "True"
+  fullName: LuauInterop.Objects.LuauUserData.Size
+  nameWithType: LuauUserData.Size
 - uid: LuauInterop.Objects.LuauUserData.Tag
   name: Tag
   href: api/LuauInterop.Objects.LuauUserData.html#LuauInterop_Objects_LuauUserData_Tag
@@ -10359,6 +10372,22 @@ references:
   isSpec: "True"
   fullName: LuauInterop.Objects.LuauUserData.Tag
   nameWithType: LuauUserData.Tag
+- uid: LuauInterop.Objects.LuauUserData.TryRead*
+  name: TryRead
+  href: api/LuauInterop.Objects.LuauUserData.html#LuauInterop_Objects_LuauUserData_TryRead_
+  commentId: Overload:LuauInterop.Objects.LuauUserData.TryRead
+  isSpec: "True"
+  fullName: LuauInterop.Objects.LuauUserData.TryRead
+  nameWithType: LuauUserData.TryRead
+- uid: LuauInterop.Objects.LuauUserData.TryRead``1(``0@)
+  name: TryRead<T>(out T)
+  href: api/LuauInterop.Objects.LuauUserData.html#LuauInterop_Objects_LuauUserData_TryRead__1___0__
+  commentId: M:LuauInterop.Objects.LuauUserData.TryRead``1(``0@)
+  name.vb: TryRead(Of T)(T)
+  fullName: LuauInterop.Objects.LuauUserData.TryRead<T>(out T)
+  fullName.vb: LuauInterop.Objects.LuauUserData.TryRead(Of T)(T)
+  nameWithType: LuauUserData.TryRead<T>(out T)
+  nameWithType.vb: LuauUserData.TryRead(Of T)(T)
 - uid: LuauInterop.Objects.LuauVector
   name: LuauVector
   href: api/LuauInterop.Objects.LuauVector.html
