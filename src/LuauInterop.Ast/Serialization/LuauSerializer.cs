@@ -172,10 +172,10 @@ public static class LuauSerializer
 
         var args = DeserializeLocalList(element.GetProperty("args"));
 
-        AstTypeList? returnAnnotation = null;
+        AstTypePack? returnAnnotation = null;
         if (element.TryGetProperty("returnAnnotation", out var retProp) && retProp.ValueKind == JsonValueKind.Object)
         {
-            returnAnnotation = DeserializeTypeList(retProp);
+            returnAnnotation = DeserializeTypePack(retProp);
         }
 
         // FIX: vararg on AstExprFunction is a bool, not an AstArgumentName object.
@@ -457,7 +457,7 @@ public static class LuauSerializer
             varargLocation = DeserializeLocation(varLocProp.GetString()!);
         }
 
-        var retTypes = DeserializeTypeList(element.GetProperty("retTypes"));
+        var retTypes = DeserializeTypePack(element.GetProperty("retTypes"));
         var generics = DeserializeGenericTypeList(element.GetProperty("generics"));
         var genericPacks = DeserializeGenericTypePackList(element.GetProperty("genericPacks"));
 
@@ -557,7 +557,7 @@ public static class LuauSerializer
         var genericPacks = DeserializeGenericTypePackList(element.GetProperty("genericPacks"));
         var argTypes = DeserializeTypeList(element.GetProperty("argTypes"));
         var argNames = DeserializeArgumentNameList(element.GetProperty("argNames"));
-        var returnTypes = DeserializeTypeList(element.GetProperty("returnTypes"));
+        var returnTypes = DeserializeTypePack(element.GetProperty("returnTypes"));
         return new AstTypeFunction(location, attributes, generics, genericPacks, argTypes, argNames, returnTypes);
     }
 
