@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.2.1](https://github.com/spxnso/LuauInterop/compare/v1.2.0...v1.2.1) (2026-08-10)
+
+
+### Bug Fixes
+
+* guard string length truncation in GetObject/GetValue ([6fa7d77](https://github.com/spxnso/LuauInterop/commit/6fa7d774e5caedfde657a398ba95c593a6dc38a5))
+* handle empty error message from luau_compile ([98d7143](https://github.com/spxnso/LuauInterop/commit/98d71431a790b5efbc83f00fc08be5ca741f6eb5))
+* **parser:** update for upstream type pack changes ([5398c57](https://github.com/spxnso/LuauInterop/commit/5398c572dbb83ebb8ef715dbabedf4fef0bad967))
+* **parser:** update for upstream type pack changes ([56568e5](https://github.com/spxnso/LuauInterop/commit/56568e544b5a1e2acedf2e50de464838f4e56306))
+* **userdata:** validate payload size before reading typed struct ([5e9c610](https://github.com/spxnso/LuauInterop/commit/5e9c6107595719f973039c6ac76dcd9cd9735c95))
+
 ## [1.2.0](https://github.com/spxnso/LuauInterop/compare/v1.1.2...v1.2.0) (2026-07-13)
 
 
