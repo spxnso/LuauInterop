@@ -7,7 +7,7 @@ public class AstTypeFunction(
     IReadOnlyList<AstGenericTypePack> genericPacks,
     AstTypeList argTypes,
     IReadOnlyList<AstArgumentName?> argNames,
-    AstTypeList returnTypes
+    AstTypePack returnTypes
 ) : AstType(location)
 {
     public IReadOnlyList<AstAttr> Attributes { get; } = attributes;
@@ -15,5 +15,5 @@ public class AstTypeFunction(
     public IReadOnlyList<AstGenericTypePack> GenericPacks { get; } = genericPacks;
     public AstTypeList ArgTypes { get; } = argTypes;
     public IReadOnlyList<AstArgumentName?> ArgNames { get; } = argNames;
-    public AstTypeList ReturnTypes { get; } = returnTypes;
+    public AstTypePack ReturnTypes { get; } = returnTypes;
 }

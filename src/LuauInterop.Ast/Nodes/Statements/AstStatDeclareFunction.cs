@@ -11,7 +11,7 @@ public class AstStatDeclareFunction(
     IReadOnlyList<AstArgumentName?> paramNames,
     AstArgumentName? vararg,
     Location? varargLocation,
-    AstTypeList retTypes,
+    AstTypePack retTypes,
     IReadOnlyList<AstGenericType> generics,
     IReadOnlyList<AstGenericTypePack> genericPacks
 ) : AstStat(location)
@@ -23,7 +23,7 @@ public class AstStatDeclareFunction(
     public IReadOnlyList<AstArgumentName?> ParamNames { get; } = paramNames;
     public AstArgumentName? Vararg { get; } = vararg;
     public Location? VarargLocation { get; } = varargLocation;
-    public AstTypeList RetTypes { get; } = retTypes;
+    public AstTypePack RetTypes { get; } = retTypes;
     public IReadOnlyList<AstGenericType> Generics { get; } = generics;
     public IReadOnlyList<AstGenericTypePack> GenericPacks { get; } = genericPacks;
 }

@@ -10,7 +10,7 @@ public class AstExprFunction(
     IReadOnlyList<AstGenericTypePack> genericPacks,
     AstLocal? self,
     IReadOnlyList<AstLocal> args,
-    AstTypeList? returnAnnotation,
+    AstTypePack? returnAnnotation,
     bool? vararg,
     Location? varargLocation,
     AstTypePack? varargAnnotation,
@@ -24,7 +24,7 @@ public class AstExprFunction(
     public IReadOnlyList<AstGenericTypePack> GenericPacks { get; } = genericPacks;
     public AstLocal? Self { get; } = self;
     public IReadOnlyList<AstLocal> Args { get; } = args;
-    public AstTypeList? ReturnAnnotation { get; } = returnAnnotation;
+    public AstTypePack? ReturnAnnotation { get; } = returnAnnotation;
     public bool? Vararg { get; } = vararg;
     public Location? VarargLocation { get; } = varargLocation;
     public AstTypePack? VarargAnnotation { get; } = varargAnnotation;
